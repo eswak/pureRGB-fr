@@ -23,7 +23,7 @@
 	charmap "<RIVAL>",   $53 ; wRivalName
 	charmap "#",         $54 ; "POKé"
 	charmap "<CONT>",    $55
-	charmap "<...>",     $56 ; PureRGBnote: CHANGED: changed from "……" to "..." since it's used way more and looks better
+	charmap "<...>",     $56 ; PureRGBnote: CHANGED: changed from "……" to "..."
 	charmap "<DONE>",    $57
 	charmap "<PROMPT>",  $58
 	charmap "<TARGET>",  $59
@@ -33,6 +33,7 @@
 	charmap "<TRAINER>", $5d ; "TRAINER"
 	charmap "<ROCKET>",  $5e ; "ROCKET"
 	charmap "<DEXEND>",  $5f
+	charmap "<SHINY>",   $72 ; shiny symbol
 
 ; Actual characters (from gfx/font/font_extra.png)
 
@@ -50,17 +51,19 @@
 	charmap "<BOLD_L>",  $6b ; unused
 	charmap "<BOLD_M>",  $6c ; unused
 	charmap "<COLON>",   $6d ; colon with tinier dots than ":"
-	charmap "ぃ",         $6e ; hiragana small i, unused
-	charmap "ぅ",         $6f ; hiragana small u, unused
+	charmap "<",         $6e ; PureRGBnote: ADDED: literal less-than (font_extra tile 6e)
+	charmap ">",         $6f ; PureRGBnote: ADDED: literal greater-than (font_extra tile 6f)
+	charmap "ぃ",         $6e ; hiragana small i (same tile as "<" in Latin)
+	charmap "ぅ",         $6f ; hiragana small u (same tile as ">" in Latin)
 	charmap "‘",         $70 ; opening single quote
 	charmap "’",         $71 ; closing single quote
 	charmap "<EXTRAOPENQUOTE>",         $72 ; opening quote ; PureRGBnote: CHANGED: crappier quotation mark
 	charmap "<EXTRACLOSEQUOTE>",         $73 ; closing quote ; PureRGBnote: CHANGED: crappier quotation mark 2
 	charmap "·",         $74 ; middle dot, unused
 	charmap "…",         $75 ; ellipsis
-	charmap "ぁ",         $76 ; hiragana small a, unused
-	charmap "ぇ",         $77 ; hiragana small e, unused
-	charmap "ぉ",         $78 ; hiragana small o, unused
+	charmap "ぁ",        $76 ; hiragana small a, unused
+	charmap "ぇ",        $77 ; hiragana small e, unused
+	charmap "ぉ",        $78 ; hiragana
 
 	charmap "┌",         $79
 	charmap "─",         $7a
@@ -158,12 +161,37 @@
 	charmap "y",         $b8
 	charmap "z",         $b9
 
-	charmap "é",         $ba
-	charmap "'d",        $bb
-	charmap "'l",        $bc
-	charmap "'s",        $bd
-	charmap "'t",        $be
-	charmap "'v",        $bf
+	charmap "à",         $ba
+	charmap "è",         $bb
+	charmap "é",         $bc
+	charmap "ù",         $bd
+	charmap "ß",         $be
+	charmap "ç",         $bf
+	charmap "Ä",         $c0
+	charmap "Ö",         $c1
+	charmap "Ü",         $c2
+	charmap "ä",         $c3
+	charmap "ö",         $c4
+	charmap "ü",         $c5
+	charmap "ë",         $c6
+	charmap "ï",         $c7
+	charmap "â",         $c8
+	charmap "ô",         $c9
+	charmap "û",         $ca
+	charmap "ê",         $cb
+	charmap "î",         $cc
+	charmap "c'",        $d4
+	charmap "d'",        $d5
+	charmap "j'",        $d6
+	charmap "l'",        $d7
+	charmap "m'",        $d8
+	charmap "n'",        $d9
+	charmap "p'",        $da
+	charmap "s'",        $db
+	charmap "'s",        $dc
+	charmap "t'",        $dd
+	charmap "u'",        $de
+	charmap "y'",        $df
 
 	charmap "'",         $e0
 	charmap "<PK>",      $e1

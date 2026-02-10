@@ -153,7 +153,7 @@ PrintPrizePrice:
 	jp PrintBCDNumber
 
 .CoinString:
-	db "COIN@"
+	db "JETON@"
 
 .SixSpacesString:
 	db "      @"

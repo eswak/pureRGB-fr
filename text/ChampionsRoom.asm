@@ -1,146 +1,158 @@
 _ChampionsRoomRivalIntroText::
-	text "<RIVAL>: Hey!"
+	text "<RIVAL>: Salut!"
 
-	para "I was looking"
-	line "forward to seeing"
-	cont "you, <PLAYER>!"
+	para "J'avais hate"
+	line "de te voir,"
+	cont "<PLAYER>!"
 
-	para "My rival should"
-	line "be strong to keep"
-	cont "me sharp!"
+	para "Mon rival doit"
+	line "etre fort pour"
+	cont "me garder au"
+	cont "top!"
 
-	para "While working on"
-	line "#DEX, I looked"
-	cont "all over for"
-	cont "powerful #MON!"
+	para "En travaillant"
+	line "sur le #DEX,"
+	cont "j'ai cherche"
+	cont "partout des"
+	cont "#MON puissants!"
 
-	para "Not only that, I"
-	line "assembled teams"
-	cont "that would beat"
-	cont "any #MON type!"
+	para "Et en plus, j'ai"
+	line "monte des equipes"
+	cont "pour battre"
+	cont "tous les types!"
 
-	para "And now!"
+	para "Et maintenant!"
 
-	para "I'm the #MON"
-	line "LEAGUE champion!"
+	para "Je suis le"
 
-	para "<PLAYER>! Do you"
-	line "know what that"
-	cont "means?"
+	cont "champion"
+	line "de la LIGUE"
+	cont "#MON!"
 
-	para "I'll tell you!"
+	para "<PLAYER>! Tu sais"
+	line "ce que ca veut"
+	cont "dire?"
 
-	para "I am the most"
-	line "powerful trainer"
-	cont "in the world!"
+	para "Je te le dis!"
+
+	para "Je suis le"
+	line "dresseur le plus"
+	cont "puissant du monde!"
 	done
 
 _RivalDefeatedText::
-	text "NO!"
-	line "That can't be!"
-	cont "You beat my best!"
+	text "NON!"
+	line "C'est pas"
+	cont "possible!"
+	cont "Tu as battu mon"
+	cont "meilleur!"
 
-	para "After all that"
-	line "work to become"
-	cont "LEAGUE champ?"
+	para "Apres tout ce"
+	line "travail pour"
+	cont "devenir champion?"
 
-	para "My reign is over"
-	line "already?"
-	cont "It's not fair!"
+	para "Mon regne est"
+	line "deja fini?"
+	cont "C'est pas juste!"
 	prompt
 
 _RivalVictoryText::
 	text "Hahaha!"
-	line "I won, I won!"
+	line "J'ai gagne!"
 
-	para "I'm too good for"
-	line "you, <PLAYER>!"
+	para "Tu ne fais pas"
+	line "le poids,"
+	cont "<PLAYER>!"
 
-	para "You did well to"
-	line "even reach me,"
-	cont "<RIVAL>, the"
-	cont "#MON genius!"
+	para "C'est deja bien"
+	line "d'etre arrive"
+	cont "jusqu'a moi,"
+	cont "<RIVAL>, le genie"
+	cont "#MON!"
 
-	para "Nice try, loser!"
+	para "Bien essaye!"
 	line "Hahaha!"
 	prompt
 
 _ChampionsRoomRivalAfterBattleText::
-	text "Why?"
-	line "Why did I lose?"
+	text "Pourquoi?"
+	line "Pourquoi j'ai"
+	cont "perdu?"
 
-	para "I never made any"
-	line "mistakes raising"
-	cont "my #MON<...>"
+	para "J'ai jamais fait"
+	line "d'erreur en"
+	cont "elevent mes"
+	cont "#MON..."
 
-	para "Darn it! You're"
-	line "the new #MON"
-	cont "LEAGUE champion!"
+	para "Zut! Tu es le"
+	line "nouveau champion"
+	cont "de la LIGUE #MON!"
 
-	para "Although I don't"
-	line "like to admit it."
+	para "Meme si j'aime"
+	line "pas l'admettre."
 	done
 
 _ChampionsRoomOakText::
-	text "OAK: <PLAYER>!"
+	text "CHEN: <PLAYER>!"
 	done
 
 _ChampionsRoomOakCongratulatesPlayerText::
-	text "OAK: So, you won!"
-	line "Congratulations!"
-	cont "You're the new"
-	cont "#MON LEAGUE"
-	cont "champion!"
+	text "CHEN: Tu as gagne!"
+	line "Felicitations!"
+	cont "Tu es le nouveau"
+	cont "champion de la"
+	cont "LIGUE #MON!"
 
-	para "You've grown up so"
-	line "much since you"
-	cont "first left with"
-	cont "@"
+	para "Tu as bien grandi"
+	line "depuis ton depart"
+	cont "avec @"
 	text_ram wNameBuffer
 	text "!"
 
-	para "<PLAYER>, you have"
-	line "come of age!"
+	para "<PLAYER>, te voila"
+	line "devenu grand!"
 	done
 
 _ChampionsRoomOakDisappointedWithRivalText::
-	text "OAK: <RIVAL>! I'm"
-	line "disappointed!"
+	text "CHEN: <RIVAL>!"
+	line "Je suis decu!"
 
-	para "I came when I"
-	line "heard you beat"
-	cont "the ELITE FOUR!"
+	para "Je suis venu"
+	line "en apprenant"
+	cont "que tu avais battu"
+	cont "le CONSEIL 4!"
 
-	para "But, when I got"
-	line "here, you had"
-	cont "already lost!"
+	para "Mais en arrivant,"
+	line "tu avais deja"
+	cont "perdu!"
 
-	para "<RIVAL>! Do you"
-	line "understand why"
-	cont "you lost?"
+	para "<RIVAL>! Tu"
+	line "comprends pourquoi"
+	cont "tu as perdu?"
 
-	para "You have forgotten"
-	line "to treat your"
-	cont "#MON with"
-	cont "trust and love!"
+	para "Tu as oublie"
+	line "de traiter tes"
+	cont "#MON avec"
+	cont "confiance et"
+	cont "amour!"
 
-	para "Without them, you"
-	line "will never become"
-	cont "a champ again!"
+	para "Sans ca, tu ne"
+	line "redeviendras"
+	cont "jamais champion!"
 	done
 
 _ChampionsRoomOakComeWithMeText::
-	text "OAK: <PLAYER>!"
+	text "CHEN: <PLAYER>!"
 
-	para "You understand"
-	line "that your victory"
-	cont "was not just your"
-	cont "own doing!"
+	para "Tu comprends"
+	line "que ta victoire"
+	cont "n'etait pas"
+	cont "que ton fait!"
 
-	para "The bond you share"
-	line "with your #MON"
-	cont "is marvelous!"
+	para "Le lien avec tes"
+	line "#MON est"
+	cont "merveilleux!"
 
 	para "<PLAYER>!"
-	line "Come with me!"
+	line "Viens avec moi!"
 	done

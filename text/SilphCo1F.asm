@@ -1,92 +1,94 @@
 _SilphCo1FLinkReceptionistText::
-	text "Welcome!"
+	text "Bienvenue!"
 
-	para "The PRESIDENT is"
-	line "in the boardroom"
-	cont "on 11F!"
+	para "Le PRESIDENT est"
+	line "dans la salle du"
+	cont "conseil, au 11ème"
+	cont "étage!"
 	done
 
 _SilphCo1FBattleText1::
-	text "Trying to escape?"
-	para "<TEAM><ROCKET> is"
-	line "going down!"
+	text "Tu essaies de"
+	line "t'échapper?"
+	para "La <TEAM><ROCKET>"
+	line "va tomber!"
 	done
 
 _SilphCo1FEndBattleText1::
 	text "Oh,"
-	line "you're not a"
+	line "tu n'es pas un"
 	cont "<ROCKET>?"
 	prompt
 
 _SilphCo1FAfterBattleText1::
-	text "The police force"
-	line "is cleaning up"
-	cont "the streets."
-	para "We're here to"
-	line "clean out the"
-	cont "<ROCKET>s in their"
-	cont "stead."
-	para "But I guess our"
-	line "job is already"
-	cont "done!"
+	text "La police nettoie"
+	line "les rues."
+	para "Nous sommes ici"
+	line "pour nettoyer les"
+	cont "<ROCKET>s à leur"
+	cont "place."
+	para "Mais je suppose"
+	line "que notre travail"
+	cont "est déjà fait!"
 	done
 
 _SilphCo1FBattleText2::
-	text "Looks like you"
-	line "did our job for"
-	cont "us!"
-	para "Now I need"
-	line "something to do!"
+	text "On dirait que tu"
+	line "as fait notre"
+	cont "travail pour nous!"
+	para "Maintenant j'ai"
+	line "besoin de quelque"
+	cont "chose à faire!"
 	done
 
 _SilphCo1FEndBattleText2::
-	text "So"
-	line "crazy!"
+	text "C'est"
+	line "fou!"
 	prompt
 
 _SilphCo1FAfterBattleText2::
-	text "Did you take"
-	line "down <TEAM><ROCKET>"
-	cont "here all on your"
-	cont "own?!"
+	text "Tu as éliminé la"
+	line "<TEAM><ROCKET>"
+	cont "ici tout seul?!"
 	done
 
 _SilphCo1FBattleText3::
-	text "Hold it right"
-	line "there!"
+	text "Arrête-toi là!"
 	done
 
 _SilphCo1FEndBattleText3::
-	text "Wait,"
-	line "you're not one of"
-	cont "them?"
+	text "Attends,"
+	line "tu n'es pas l'un"
+	cont "d'eux?"
 	prompt
 
 _SilphCo1FAfterBattleText3::
-	text "I was ready to"
-	line "kick some <ROCKET>"
-	cont "behind in battle!"
+	text "J'étais prêt à"
+	line "botter le derrière"
+	cont "de quelques <ROCKET>"
+	cont "en combat!"
 	done
 
 _SilphCo1FBattleText4::
-	text "Who are you?"
+	text "Qui es-tu?"
 	done
 
 _SilphCo1FEndBattleText4::
 	text "H-"
-	line "hmm?!"
+	line "hein?!"
 	prompt
 
 _SilphCo1FAfterBattleText4::
-	text "You'd better"
-	line "get out of here."
-	para "Some crazy <ROCKET>"
-	line "on FIREFIGHTER"
-	cont "#MON battles"
-	cont "are about to"
-	cont "happen."
-	para "Wait a minute<...>"
-	para "All the <ROCKET>s"
-	line "left?!"
-	para "It can't be<...>"
+	text "Tu ferais mieux"
+	line "de sortir d'ici."
+	para "Des <ROCKET> fous"
+	line "sur des combats de"
+	cont "#MON POMPIERS"
+	cont "vont avoir lieu."
+	para "Attends une"
+	line "minute..."
+	para "Tous les <ROCKET>"
+	line "sont partis?!"
+	para "Ce n'est pas"
+	line "possible..."
 	done

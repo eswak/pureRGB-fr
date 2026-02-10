@@ -1,49 +1,53 @@
 _LavenderMartBaldingGuyText::
-	text "I'm searching for"
-	line "items that raise"
-	cont "the abilities of"
-	cont "#MON during a"
-	cont "single battle."
+	text "Je cherche des"
+	line "objets permettant"
+	cont "d'augmenter la"
+	cont "puissance d'un"
+	cont "#MON en"
+	cont "combat."
 
-	para "X ATTACK, X"
-	line "DEFEND, X SPEED"
-	cont "and X SPECIAL are"
-	cont "what I'm after."
+	para "ATTAQUE +,"
+	line "DEFENSE +,"
+	cont "SPECIAL + et"
+	cont "VITESSE +, c'est"
+	cont "ça qu'je cherche."
 
-	para "Do you know where"
-	line "I can get them?"
+	para "Sais-tu où je"
+	line "peux en trouver?"
 	done
 
 _LavenderMartCooltrainerMReviveText::
-	text "You know REVIVE?"
-	line "It revives any"
-	cont "fainted #MON!"
+	text "Connais-tu"
+	line "le RAPPEL? Il"
+	cont "permet de"
+	cont "réanimer un"
+	cont "#MON K.O.!"
 	done
 
 _LavenderMartCooltrainerMNuggetText::
-	text "I found a NUGGET"
-	line "in the mountains."
+	text "J'ai trouvé une"
+	line "PEPITE dans les"
+	cont "montagnes."
 
-	para "I thought it was"
-	line "useless, but it"
-	cont "sold for ¥5000!"
+	para "Je l'ai vendue..."
+	line "...5000¥!"
 	done
 
 _LavenderMartTMKidFlavor::
-	text "<PARA>Me and my dad"
-	line "were on our way"
-	cont "to CELADON CITY"
-	cont "when he got food"
-	cont "poisoning!"
+	text "<PARA>Papa et moi"
+	line "étions en route"
+	cont "vers CELADOPOLE"
+	cont "quand il a eu une"
+	cont "intoxication"
+	cont "alimentaire!"
 	
-	para "Can you believe"
-	line "it?"
+	para "Tu y crois?"
 	
-	para "Must have been"
-	line "the barbecue eel"
-	cont "he had on the"
-	cont "S.S. ANNE."
+	para "Ca devait etre"
+	line "l'anguille grillée"
+	cont "qu'il a mangée sur"
+	cont "l'OCEANE."
 
-	para "He's recovering"
-	line "in the hotel.@"
+	para "Il se remet à"
+	line "l'hôtel.@"
 	text_end

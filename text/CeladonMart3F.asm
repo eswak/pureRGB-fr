@@ -1,155 +1,168 @@
 _CeladonMart3FClerkTM18PreReceiveText::
-	text "Oh, hi! I finally"
-	line "finished #MON!"
+	text "J'ai fini!!!!"
+	line "J'ai fini"
+	cont "#MON!!!!"
 
-	para "Not done yet?"
-	line "This might be"
-	cont "useful!"
+	para "Pas toi? Yahaha!"
+	line "Prends donc ceci,"
+	cont "petit!"
 	prompt
 
 _CeladonMart3FClerkTM18ExplanationText::
-	text "<TM>35 is AGILITY!"
-	para "Use speed to your"
-	line "advantage!"
-	para "If you go first,"
-	line "you can control"
-	cont "what happens in"
-	cont "battle easily!"
-	para "Trust me, I know"
-	line "how things work!"
-	para "That's why I'm"
-	line "the one behind"
-	cont "this counter!"
+	text "CT35 est HATE!"
+	para "Utilise la vitesse"
+	line "à ton avantage!"
+	para "Si tu commences,"
+	line "tu peux contrôler"
+	cont "ce qui se passe"
+	cont "en combat"
+	cont "facilement!"
+	para "Crois-moi, je sais"
+	line "comment ça marche!"
+	para "C'est pour ça que"
+	line "je suis derrière"
+	cont "ce comptoir!"
 	done
 
 _CeladonMart3FClerkTM18NoRoomText::
-	text "Your pack is full"
-	line "of items!"
+	text "Ton sac est plein"
+	line "à craquer!"
 	done
 
 _CeladonMart3FGameBoyKid1Text::
-	text "Captured #MON"
-	line "are registered"
-	cont "with an ID No."
-	cont "and OT, the name"
-	cont "of the Original"
-	cont "Trainer that"
-	cont "caught it!"
+	text "Tous les #MON"
+	line "capturés ont un"
+	cont "numéro d'immatri-"
+	cont "culation et un"
+	cont "nom de DO"
+	cont "(Dresseur"
+	cont "d'Origine)!"
 	done
 
 _CeladonMart3FGameBoyKid2Text::
-	text "All right!"
+	text "Ouaiiis!"
 
-	para "My buddy's going"
-	line "to trade me his"
-	cont "KANGASKHAN for my"
-	cont "GRAVELER!"
+	para "Mon pote va"
+	line "m'échanger son"
+	cont "KANGOUREX contre"
+	cont "mon GRAVALANCH!"
 	done
 
 _CeladonMart3FGameBoyKid3Text::
-	text "Come on GRAVELER!"
+	text "Cool! Un"
+	line "GRAVALANCH!"
 
-	para "I love GRAVELER!"
-	line "I collect them!"
+	para "J'adore les"
+	line "GRAVALANCH!"
 
-	para "Huh?"
+	para "Qu...Hein??"
 
-	para "GRAVELER turned"
-	line "into a different"
-	cont "#MON!"
+	para "GRAVALANCH se"
+	line "transforme en un"
+	cont "autre #MON!"
 	done
 
 _CeladonMart3FLittleBoyText::
-	text "You can identify"
-	line "#MON you got"
-	cont "in trades by"
-	cont "their ID Numbers!"
+	text "Le numéro d'imma-"
+	line "triculation d'un"
+	cont "#MON sert à"
+	cont "l'identifier lors"
+	cont "d'un échange!"
 	done
 
 _CeladonMart3FSNESText::
-	text "It's an SNES!"
+	text "Une SUPER"
+	line "NINTENDO!"
 	done
 
 _CeladonMart3FRPGText::
-	text "An RPG! There's"
-	line "no time for that!"
+	text "Un RPG! Cool..."
+	line "Mais trop dur!"
 	done
 
 _CeladonMart3FSportsGameText::
-	text "A sports game!"
-	line "Dad'll like that!"
+	text "Un jeu de sport!"
+	line "Vive le foot!"
 	done
 
 _CeladonMart3FPuzzleGameText::
-	text "A puzzle game!"
-	line "Looks addictive!"
+	text "Quatre lignes!"
+	line "En un seul coup!"
 	done
 
 _CeladonMart3FFightingGameText::
-	text "A fighting game!"
-	line "Looks tough!"
+	text "Kan contre Ryo!"
+	line "Hadoh Ken!"
 	done
 
 _CeladonMart3FPokemonPosterText::
-	text "Red, Blue, and"
-	line "Green!"
-	cont "All are #MON!"
+	text "Rouge et Bleu!"
+	line "Deux #MON!"
 	done
 
 _CeladonMartTMKidFlavor::
-	text "My dad got kicked"
-	line "out of CELADON"
-	cont "GYM! How funny is"
-	cont "that!"
+	text "Mon papa s'est"
+	cont "fait"
+	line "virer de l'ARENE"
+	cont "de CELADOPOLE!"
+	cont "C'est drôle!"
 
-	para "They said men"
-	line "aren't allowed to"
-	cont "loiter inside!"
+	para "Ils ont dit que"
+	line "les hommes n'ont"
+	cont "pas le droit de"
+	cont "traîner dedans!"
 
-	para "Now he's goofing"
-	line "off at the GAME"
-	cont "CORNER."
+	para "Maintenant il"
+	line "s'amuse au CASINO."
 
-	para "For once the"
-	line "MART here has <TM>s"
-	cont "so I'm not selling"
-	cont "any of my own!"
+	para "Pour une fois, la"
+	line "BOUTIQUE ici a des"
+	cont "CT donc je ne"
+	cont "vends"
+	cont "pas les miennes!"
 
-	para "I think I'll use"
-	line "some of the cash"
-	cont "I made selling"
-	cont "<TM>s to buy a"
-	cont "GAME BOY COLOR."
+	para "Je pense que je"
+	line "vais utiliser une"
+	cont "partie de l'argent"
+	cont "que j'ai gagné en"
+	cont "vendant des CT"
+	cont "pour"
+	cont "acheter une GAME"
+	cont "BOY COLOR."
 	
-	para "I heard that"
-	line "WARIO LAND 3 is"
-	cont "the best game!"
+	para "J'ai entendu que"
+	line "WARIO LAND 3 est"
+	cont "le meilleur jeu!"
 	
-	para "Catch you later!"
+	para "À plus tard!"
 	done
 
 _CeladonMart3FPartyGameText::
-	text "A TV ad for a new"
-	line "party game!"
-	para "That'll be fun"
-	line "with friends!"
-	para "Bunch of kids are"
-	line "mashing buttons"
-	cont "and making crazy"
-	cont "faces."
+	text "Une pub TV pour un"
+	line "nouveau jeu de"
+	cont "société!"
+	para "Ca sera amusant"
+	line "avec des amis!"
+	para "Un groupe"
+	cont "d'enfants"
+	line "appuie sur des"
+	cont "boutons et fait"
+	cont "des grimaces"
+	cont "folles."
 	done
 
 _CeladonMart3FPlatformerGameText::
-	text "A TV ad for a new"
-	line "platformer game!"
-	para "Wow! It's in"
-	line "stunning 3D!"
-	para "The players are"
-	line "making MARIO jump"
-	cont "all over."
+	text "Une pub TV pour un"
+	line "nouveau jeu de"
+	cont "plateforme!"
+	para "Wow! C'est en"
+	line "3D époustouflante!"
+	para "Les joueurs font"
+	line "sauter MARIO"
+	cont "partout."
 	para "Whoa!"
-	para "MARIO came out"
-	line "of their TV!"
-	para "Now he raided"
-	line "their fridge!"
+	para "MARIO est sorti"
+	line "de leur TV!"
+	para "Maintenant il a"
+	line "pillé leur frigo!"
 	done

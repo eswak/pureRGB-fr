@@ -183,13 +183,13 @@ ViridianSchoolBlackboardText2:
 	text_end
 
 StatusAilmentText1:
-	db   " SLP"
+	db   " SOM"
 	next " PSN"
 	next " PAR@"
 
 StatusAilmentText2:
-	db   " BRN"
-	next " FRZ"
+	db   " BRU"
+	next " GEL"
 	next " QUIT@"
 
 	db "@" ; unused

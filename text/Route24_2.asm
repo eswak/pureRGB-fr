@@ -1,90 +1,98 @@
 _Route24CooltrainerM2EndBattleText::
-	text "I"
-	line "thought not!"
+	text "Je m'en"
+	line "doutais!"
 	prompt
 
 _Route24CooltrainerM2AfterBattleText::
-	text "I hid because the"
-	line "people on the"
-	cont "bridge scared me!"
+	text "Je me cachais,"
+	line "les gens sur le"
+	cont "pont me faisaient"
+	cont "peur!"
 	done
 
 _Route24CooltrainerM3BattleText::
-	text "OK! I'm No. 5!"
-	line "I'll stomp you!"
+	text "OK! Je suis le 5e!"
+	line "Je vais t'écraser!"
 	done
 
 _Route24CooltrainerM3EndBattleText::
 	text "Whoa!"
-	line "Too much!"
+	line "Trop fort!"
 	prompt
 
 _Route24CooltrainerM3AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, pas de"
+	cont "regrets!"
 	done
 
 _Route24CooltrainerF1BattleText::
-	text "I'm No. 4!"
-	line "Getting tired?"
+	text "Je suis la 4e!"
+	line "Tu fatigues?"
 	done
 
 _Route24CooltrainerF1EndBattleText::
-	text "I lost"
-	line "too!"
+	text "J'ai"
+	line "perdu aussi!"
 	prompt
 
 _Route24CooltrainerF1AfterBattleText::
-	text "I did my best, so"
-	line "I've no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, pas de"
+	cont "regrets!"
 	done
 
 _Route24Youngster1BattleText::
-	text "Here's No. 3!"
-	line "I won't be easy!"
+	text "Voilà le 3e!"
+	line "Je serai pas"
+	cont "tendré!"
 	done
 
 _Route24Youngster1EndBattleText::
-	text "Ow!"
-	line "Stomped flat!"
+	text "Aie!"
+	line "Ecrasé!"
 	prompt
 
 _Route24Youngster1AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, pas de"
+	cont "regrets!"
 	done
 
 _Route24CooltrainerF2BattleText::
-	text "I'm second!"
-	line "Now it's serious!"
+	text "Je suis deuxième!"
+	line "Là c'est sérieux!"
 	done
 
 _Route24CooltrainerF2EndBattleText::
-	text "How could I"
-	line "lose?"
+	text "Comment"
+	line "j'ai pu perdre?"
 	prompt
 
 _Route24CooltrainerF2AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, pas de"
+	cont "regrets!"
 	done
 
 _Route24Youngster2BattleText::
-	text "This is NUGGET"
-	line "BRIDGE! Beat us 5"
-	cont "trainers and win"
-	cont "a fabulous prize!"
+	text "C'est le PONT"
+	line "NUGGET! Battez"
+	cont "nos 5 dresseurs"
+	cont "pour un super"
+	cont "prix!"
 
-	para "Think you got"
-	line "what it takes?"
+	para "Tu te sens"
+	line "de taille?"
 	done
 
 _Route24Youngster2EndBattleText::
 	text "Whoo!"
-	line "Good stuff!"
+	line "Bon boulot!"
 	prompt
 
 _Route24Youngster2AfterBattleText::
-	text "I did my best, I"
-	line "have no regrets!"
+	text "J'ai fait de mon"
+	line "mieux, pas de"
+	cont "regrets!"
 	done

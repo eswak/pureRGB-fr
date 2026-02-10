@@ -1,189 +1,199 @@
 _SafariZoneGateSafariZoneWorker1Text::
-	text "Welcome to the"
-	line "SAFARI ZONE!"
+	text "Bienvenue au"
+	line "PARC SAFARI!"
 	done
 
 _SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText::
-	text "For just ¥500,"
-	line "you can catch all"
-	cont "the #MON you"
-	cont "want in the park!"
+	text "Pour juste 500¥,"
+	line "tu peux attraper"
+	cont "autant de #MON"
+	cont "qu'il te plaira"
+	cont "dans le parc!"
 
-	para "Would you like to"
-	line "join the hunt?@"
+	para "Qu'en dis-tu?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
-	text "That'll be ¥500"
-	line "please!"
+	text "Ca fera 500¥"
+	line "siouplaît!"
 	prompt
 
 _SafariZoneEntranceWhatGame::
-	text "Which Safari Game"
-	line "would you like?@"
+	text "Quel jeu Safari"
+	line "veux-tu?@"
 	text_end
 
 _SafariZoneClassic::
-	text "Hunt for #MON"
-	line "to catch using"
-	cont "bait and rocks!"
+	text "Chasse des #MON"
+	line "à capturer avec"
+	cont "appâts et"
+	cont "cailloux!"
 
-	para "Try to find the"
-	line "SECRET HOUSE"
-	cont "before time runs"
-	cont "out! Good luck!"
+	para "Essaie de trouver"
+	line "la CABANE SECRETE"
+	cont "avant que le temps"
+	cont "ne s'écoule!"
+	cont "Bonne chance!"
 	prompt
 
 _SafariZoneEntranceSafariBallsReceived::
-	text "We only use a"
-	line "special # BALL"
-	cont "in the CLASSIC"
-	cont "Safari game."
+	text "On utilise"
+	cont "seulement"
+	line "un type spécial de"
+	cont "# BALL dans le"
+	cont "jeu Safari"
+	cont "CLASSIQUE."
 
-	para "<PLAYER> received"
-	line "30 SAFARI BALLs!@"
+	para "<PLAYER> reçoit"
+	line "30 SAFARI BALL!@"
 	text_end
 
 _SafariZoneRangerHunt::
-	text "Find and defeat"
-	line "all 5 RANGERs"
-	cont "before time runs"
-	cont "out to receive an"
-	cont "amazing prize!"
+	text "Trouve et bats"
+	line "les 5 RANGERS"
+	cont "avant que le temps"
+	cont "ne s'écoule pour"
+	cont "recevoir un prix"
+	cont "incroyable!"
 
-	para "Use your #MON"
-	line "at your leisure!"
+	para "Utilise tes #MON"
+	line "à ta guise!"
 
-	para "Watch out for"
-	line "other trainers!"
+	para "Fais attention aux"
+	line "autres dresseurs!"
 	prompt
 
 _SafariZoneFreeRoam::
-	text "Roam the SAFARI"
-	line "ZONE as much as"
-	cont "you like!"
+	text "Explore le PARC"
+	line "SAFARI autant que"
+	cont "tu veux!"
 
-	para "Use your #MON"
-	line "at your leisure!"
+	para "Utilise tes #MON"
+	line "à ta guise!"
 
-	para "No time limits"
-	line "and plenty of"
-	cont "trainers around!"
+	para "Pas de limite de"
+	line "temps et plein de"
+	cont "dresseurs autour!"
 
-	para "Have fun!@"
+	para "Amuse-toi bien!@"
 	text_end
 
 
 _SafariZoneEntranceText_75360::
-	text "We'll call you on"
-	line "the PA when you"
-	cont "run out of time"
-	cont "or SAFARI BALLs!"
+	text "J'utiliserai le"
+	line "HAUT-PARLEUR"
+	cont "lorsque ton temps"
+	cont "ou tes SAFARI"
+	cont "BALL seront"
+	cont "épuisés!"
 	done
 
 _SafariZonePATextNoBalls::
-	text "We'll call you on"
-	line "the PA when you"
-	cont "run out of time!"
+	text "J'utiliserai le"
+	line "HAUT-PARLEUR"
+	cont "lorsque ton temps"
+	cont "sera épuisé!"
 	done
 
 _SafariZoneGateSafariZoneWorker1PleaseComeAgainText::
-	text "OK! Please come"
-	line "again!"
+	text "Très bien!"
+	line "A plus tard!"
 	done
 
 _GenericNotEnoughMoneyText::
 _SafariZoneGateSafariZoneWorker1NotEnoughMoneyText::
-	text "Oops! Not enough"
-	line "money!"
+	text "Hop hop hop!"
+	line "Pas d'sous!"
 	done
 
 _SafariZoneGateSafariZoneWorker1LeavingEarlyText::
-	text "Leaving early?@"
+	text "On part déjà?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1ReturnSafariBallsText::
-	text "Please return any"
-	line "SAFARI BALLs you"
-	cont "have left."
+	text "Donne-moi donc"
+	line "tes SAFARI BALL"
+	cont "neuves."
 	done
 
 _GenericGoodLuckText::
 _SafariZoneGateSafariZoneWorker1GoodLuckText::
-	text "Good Luck!"
+	text "Bonne chance!"
 	done
 
 _SafariZoneGateSafariZoneWorker1GoodHaulComeAgainText::
-	text "Did you get a"
-	line "good haul?"
-	cont "Come again!"
+	text "Bonne chasse?"
+	line "Allez..."
+	cont "A plus tard!"
 	done
 
 _RangerHuntDoneFailText::
-	text "Oh, so close!"
-	para "Didn't find all"
-	line "the RANGERs?"
+	text "Oh, si proche!"
+	para "Tu n'as pas trouvé"
+	line "tous les RANGERS?"
 
-	para "Better luck next"
-	line "time! Come again!"
+	para "Meilleure chance"
+	line "la prochaine fois!"
+	cont "Reviens!"
 	done
 
 _RangerHuntDoneSuccessText::
-	text "You beat every"
-	line "single RANGER!"
-	para "Come right this"
-	line "way!"
+	text "Tu as battu tous"
+	line "les RANGERS!"
+	para "Viens par ici!"
 	done
 
 _ReceivedHyperBallText::
-	text "Here's your well-"
-	line "earned prize!!"
+	text "Voici ton prix"
+	line "bien mérité!!"
 
-	para "<PLAYER> received" ; TODO: use generic message
-	line "a @"
+	para "<PLAYER> reçoit"
+	line "un @"
 	text_ram wStringBuffer
 	text "!@"
 	text_end
 
 _SafariZoneEntranceHyperBallOwedText::
-	text "You're back!@"
+	text "Tu es de retour!@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker2FirstTimeHereText::
-	text "Hi! Is it your"
-	line "first time here?"
+	text "C'est...c'est la"
+	line "première fois?"
 	done
 
 _SafariZoneHelp::
-	text "There are 3 types"
-	line "of Safari game."
+	text "Il y a 3 types"
+	line "de jeu Safari."
 
-	para "Need any info?@"
+	para "Besoin d'infos?@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
-	text "SAFARI ZONE has 4"
-	line "zones in it."
+	text "Le PARC SAFARI a"
+	line "4 zones."
 
-	para "Each zone has"
-	line "different kinds"
-	cont "of #MON. Use"
-	cont "SAFARI BALLs to"
-	cont "catch them!"
+	para "Tu y trouveras"
+	line "des #MON"
+	cont "différents."
+	cont "Utilise tes"
+	cont "SAFARI BALL pour"
+	cont "les capturer!"
 
-	para "When you run out"
-	line "of time or SAFARI"
-	cont "BALLs, it's game"
-	cont "over for you!"
+	para "Le Safari sera"
+	line "terminé lorsque"
+	cont "tu auras épuisé"
+	cont "tes SAFARI BALL!"
 
-	para "Before you go,"
-	line "open an unused"
-	cont "#MON BOX so"
-	cont "there's room for"
-	cont "new #MON!"
+	para "Avant de partir,"
+	line "ouvre donc une"
+	cont "nouvelle boite de"
+	cont "#MON pour"
+	cont "avoir plus de"
+	cont "place!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::
-	text "Sorry, you're a"
-	line "regular here!"
+	text "Oh! T'es un"
+	line "habitué!"
 	done

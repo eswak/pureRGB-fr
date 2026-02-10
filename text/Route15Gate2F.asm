@@ -1,46 +1,44 @@
 _Route15Gate2FOaksAideBoosterChipText::
-	text "A BOOSTER CHIP"
-	line "increases EXP"
-	cont "gained by all"
-	cont "your #MON!"
+	text "Une PUCE BOOST"
+	line "augmente l'EXP"
+	cont "de tous tes"
+	cont "#MON!"
 	
-	para "Just slot it in"
-	line "to your POKéBALL"
-	cont "belt!"
+	para "Fixe-la sur"
+	line "ta ceinture"
+	cont "# BALL!"
 	
-	para "It's a bit hard"
-	line "to uninstall"
-	cont "though."
+	para "C'est un peu"
+	line "dur a enlever."
 
-	para "If you want to,"
-	line "just speak to me!"
+	para "Si tu veux,"
+	line "parle-moi!"
 	done
 
 _Route15Gate2FBinocularsText::
-	text "Looked into the"
-	line "binoculars."
+	text "Regarde dans"
+	line "les jumelles."
 
-	para "It looks like a"
-	line "small island!"
+	para "On dirait une"
+	line "petite ile!"
 	done
 
 _Route15GateUpstairsRemoveBoosterText::
-	text "Ah, I see you"
-	line "installed the"
-	cont "BOOSTER CHIP that"
-	cont "I gave you!"
+	text "Ah, tu as installe"
+	line "la PUCE BOOST"
+	cont "que je t'ai"
+	cont "donnee!"
 	
-	para "Is it working"
-	line "well?"
+	para "Ca marche bien?"
 	
-	para "Or would you like"
-	line "me to unplug it?"
+	para "Tu veux que"
+	line "je la debranche?"
 	
-	para "I'll give it back"
-	line "to you after.@"
+	para "Je te la rendrai"
+	line "apres.@"
 	text_end
 
 _Route15GateUpstairsDoneText::
-	text "Done! Here's the"
-	line "BOOSTER CHIP!@"
+	text "Voila! Ta PUCE"
+	line "BOOST!@"
 	text_end

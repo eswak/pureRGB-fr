@@ -487,19 +487,19 @@ DrawPokedexVerticalLine:
 	ret
 
 PokedexSeenText:
-	db "SEEN@"
+	db "VUS@"
 
 PokedexOwnText:
-	db "OWN@"
+	db "PRIS@"
 
 PokedexContentsText:
-	db "CONTENTS@"
+	db "SOMMAIRE@"
 
 PokedexMenuItemsText:
-	db   "DATA"
-	next "CRY"
-	next "AREA"
-	next "QUIT@"
+	db   "INFO"
+	next "CRI"
+	next "ZONE"
+	next "RET@"
 
 ; tests if a pokemon's bit is set in the seen or owned pokemon bit fields
 ; INPUT:
@@ -618,7 +618,10 @@ ShowNextPokemonData:
 	ld [wPokedexNum], a
 
 	hlcoord 9, 6
-	ld de, HeightWeightText
+	ld de, HeightText
+	call PlaceString
+	hlcoord 9, 7
+	ld de, WeightText
 	call PlaceString
 
 	call GetMonName
@@ -755,63 +758,107 @@ ShowNextPokemonData:
 
 
 .printHeightWeight
-	inc de ; de = address of feet (height)
-	ld a, [de] ; reads feet, but a is overwritten without being used
-	hlcoord 12, 6
-	lb bc, 1, 2
-	call PrintNumber ; print feet (height)
-	ld [hl], "′"
+	; Read dex entry from bank10 - switch to bank, read data, switch back
+	ld a, e
+	ld [wBuffer + 0], a
+	ld a, d
+	ld [wBuffer + 1], a
+	ldh a, [hLoadedROMBank]
+	push af
+	ld a, BANK(CharmanderDexEntry)
+	call SetCurBank
+	; Now read the data with [de] reading from correct bank
+	ld a, [wBuffer + 0]
+	ld e, a
+	ld a, [wBuffer + 1]
+	ld d, a
+.skipCategoryString
+	ld a, [de]
 	inc de
-	inc de ; de = address of inches (height)
-	hlcoord 15, 6
-	lb bc, LEADING_ZEROES | 1, 2
-	call PrintNumber ; print inches (height)
-	ld [hl], "″"
-; now print the weight (note that weight is stored in tenths of pounds internally)
+	cp "@"
+	jr nz, .skipCategoryString
+	ld a, [de]
+	ld [wBuffer + 0], a ; height
 	inc de
+	ld a, [de]
+	ld [wBuffer + 4], a ; weight low
 	inc de
-	inc de ; de = address of upper byte of weight
-	push de
-; put weight in big-endian order at hDexWeight
+	ld a, [de]
+	ld [wBuffer + 5], a ; weight high
+	inc de
+	ld a, e
+	ld [wBuffer + 2], a ; text_far address low
+	ld a, d
+	ld [wBuffer + 3], a ; text_far address high
+	pop af
+	call SetCurBank
+	; wBuffer+0 = height (decimetres), wBuffer+4,5 = weight (lo,hi), wBuffer+2,3 = text_far address
+	; Height: use PrintNumber like pokered-fr
+	ld a, [wBuffer + 0]
+	push af
+	hlcoord 13, 6
+	lb bc, 1, 3
+	call PrintNumber ; print decimetre (height)
+	hlcoord 14, 6
+	pop af
+	cp $a
+	jr nc, .heightNext
+	ld [hl], '0' ; if the height is less than 10, put a 0 before the decimal point
+.heightNext
+	inc hl
+	ld a, [hli]
+	ld [hld], a ; make space for the decimal point by moving the last digit forward one tile
+	ld [hl], '<DOT>' ; decimal point tile
+	; Weight: format as "X.X kg" or "XX.X kg" (weight in tenths of kg)
+	; Use PrintNumber like pokered-fr - put weight in big-endian order at hDexWeight
 	ld hl, hDexWeight
 	ld a, [hl] ; save existing value of [hDexWeight]
 	push af
-	ld a, [de] ; a = upper byte of weight
+	ld a, [wBuffer + 5] ; high byte (second byte after height)
 	ld [hli], a ; store upper byte of weight in [hDexWeight]
 	ld a, [hl] ; save existing value of [hDexWeight + 1]
 	push af
-	dec de
-	ld a, [de] ; a = lower byte of weight
+	ld a, [wBuffer + 4] ; low byte (first byte after height)
 	ld [hl], a ; store lower byte of weight in [hDexWeight + 1]
 	ld de, hDexWeight
-	hlcoord 11, 8
-	lb bc, 2, 5 ; 2 bytes, 5 digits
+	hlcoord 12, 7 ; column 12 like pokered-fr (but line 7 instead of 8 to match our layout)
+	lb bc, 2, 4 ; 2 bytes, 4 digits
 	call PrintNumber ; print weight
-	hlcoord 14, 8
+	hlcoord 14, 7
 	ldh a, [hDexWeight + 1]
 	sub 10
 	ldh a, [hDexWeight]
 	sbc 0
-	jr nc, .next
-	ld [hl], "0" ; if the weight is less than 10, put a 0 before the decimal point
-.next
+	jr nc, .weightNext
+	ld [hl], '0' ; if the weight is less than 10, put a 0 before the decimal point
+.weightNext
 	inc hl
 	ld a, [hli]
 	ld [hld], a ; make space for the decimal point by moving the last digit forward one tile
-	ld [hl], "<DOT>" ; decimal point tile
+	ld [hl], '<DOT>' ; decimal point tile
 	pop af
 	ldh [hDexWeight + 1], a ; restore original value of [hDexWeight + 1]
 	pop af
 	ldh [hDexWeight], a ; restore original value of [hDexWeight]
 
 .printDescription
-	pop hl
+	; hl = address of pokedex description text (text_far), stored by ReadDexEntryData in wBuffer+2,3
+	ld a, [wBuffer + 2]
+	ld l, a
+	ld a, [wBuffer + 3]
+	ld h, a
 	push hl
-	inc hl ; hl = address of pokedex description text
 	bccoord 1, 11
 	ld a, %10
 	ldh [hClearLetterPrintingDelayFlags], a
+	; Dex entries (and thus text_far pointer) are in bank10; ensure we read from that bank
+	ldh a, [hLoadedROMBank]
+	push af
+	ld a, BANK(CharmanderDexEntry)
+	call SetCurBank
 	call TextCommandProcessor ; print pokedex description text
+	pop af
+	call SetCurBank
 	CheckEvent EVENT_GOT_POKEDEX
 	jp z, .starterDisplay ; don't display additional page if we're showing the starters before getting the pokedex.
 	ld a, [wMenuWatchedKeys]
@@ -1050,9 +1097,37 @@ ShowNextPokemonData:
 	pop hl
 	jp ShowNextPokemonData
 
-HeightWeightText:
-	db   "HT  ?′??″"
-	next "WT   ???lb@"
+; Called via Bankswitch from .printHeightWeight. Runs in bank10 so [de] reads dex entry.
+; Input: wBuffer+0,1 = dex entry address (de). Output: wBuffer+0 = height, wBuffer+4,5 = weight (lo,hi), wBuffer+2,3 = text_far address.
+ReadDexEntryData:
+	ld a, [wBuffer + 0]
+	ld e, a
+	ld a, [wBuffer + 1]
+	ld d, a
+.skipCategoryString
+	ld a, [de]
+	inc de
+	cp "@"
+	jr nz, .skipCategoryString
+	ld a, [de]
+	ld [wBuffer + 0], a
+	inc de
+	ld a, [de]
+	ld [wBuffer + 4], a
+	inc de
+	ld a, [de]
+	ld [wBuffer + 5], a
+	inc de
+	ld a, e
+	ld [wBuffer + 2], a
+	ld a, d
+	ld [wBuffer + 3], a
+	ret
+
+HeightText:
+	db "TAI  ???m@"
+WeightText:
+	db "PDS  ???kg@"
 
 ; XXX does anything point to this? ; PureRGBnote: CHANGED: no, so comment out
 ;PokeText:
@@ -1112,22 +1187,22 @@ DexType2Text:
 	db "TYPE2/@"
 
 BaseStatsText:
-	db "BASE STATS@"
+	db "STATS BASE@"
 
 HPText:
-	db "HP@"
+	db "PV@"
 
 AtkText:
-	db "ATK@"
+	db "ATQ@"
 
 DefText:
 	db "DEF@"
 
 SpdText:
-	db "SPD@"
+	db "VIT@"
 
 SpcText:
-	db "SPC@"
+	db "SPE@"
 
 TotalText:
 	db "TOTAL@"

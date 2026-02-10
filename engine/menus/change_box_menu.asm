@@ -188,6 +188,6 @@ DrawCurrentBoxPrompt::
 	jp PlaceString
 
 BoxText:
-	db "BOX@"
+	db "BOITE@"
 BoxOutOf20:
 	db "/20@"

@@ -7,108 +7,113 @@ _PowerPlantZapdosBattleText::
 	text_end
 
 _PowerPlantOpenGateText::
-	text "Tripped a breaker!"
-	para "Electricity was"
-	line "cut off somewhere."
+	text "Un disjoncteur"
+	line "a sauté!"
+	para "Le courant a été"
+	line "coupé quelque"
+	cont "part."
 	done
 
 _PowerPlantElectricityText::
-	text "Electrical arcs"
-	line "are blocking the"
-	cont "way forward."
-	para "Is there any way"
-	line "to shut off the"
-	cont "power?"
+	text "Des arcs"
+	line "électriques"
+	cont "bloquent la route."
+	para "Y a-t-il un moyen"
+	line "de couper le"
+	cont "courant?"
 	done
 
 _ZapdosFlewAway::
-	text "The huge #MON"
-	line "caused a power"
-	cont "outage!"
-	para "It flew through"
-	line "a hole up to the"
-	cont "roof!"
-	para "Gotta follow it!"
+	text "L'énorme #MON"
+	line "a coupé le"
+	cont "courant!"
+	para "Il s'est envolé"
+	line "par un trou vers"
+	cont "le toit!"
+	para "Faut le suivre!"
 	done
 
 _PowerPlantRoofDarkCloudsText::
-	text "Huh? Dark clouds"
-	line "are rolling in."
-	para "A thunderstorm"
-	line "is coming!"
+	text "Hein? Des nuages"
+	line "sombres arrivent."
+	para "Un orage"
+	line "approche!"
 	done
 
 _PowersOutCantUse::
-	text "It's not working"
-	line "because of the"
-	cont "power outage."
+	text "Ça ne marche pas"
+	line "à cause de la"
+	cont "coupure."
 	done
 
 _PowerCameBackText::
-	text "Looks like the"
-	line "power's back!"
+	text "On dirait que le"
+	line "courant est"
+	cont "revenu!"
 	done
 
 _MagnetText::
-	text "This magnet seems"
-	line "to have powerful"
-	cont "electromagnetic"
-	cont "waves running"
-	cont "through it."
+	text "Cet aimant semble"
+	line "avoir de"
+	cont "puissantes"
+	cont "ondes"
+	cont "électromagnétiques."
 	prompt
 
 _MagnetMagnemiteText::
-	text "It won't be able"
-	line "to deal with such"
-	cont "high magnetism"
-	cont "yet."
+	text "Il ne supporte"
+	line "pas encore un"
+	cont "tel magnétisme."
 	done
 
 _MagnetFloatingMagnetonText::
-	text "It's already been"
-	line "supercharged."
+	text "Il est déjà"
+	line "surchargé."
 	done
 
 _PowerPlantComputer1::
-	text "MAGNETIC RAIL"
-	line "FULLY CHARGED"
+	text "RAIL MAGNETIQUE"
+	line "CHARGE"
 	done
 
 _PowerPlantComputer2::
-	text "SUPERCONDUCTOR"
-	line "COOLANT DEPLETED"
+	text "REFROIDISSEUR"
+	line "SUPERCONDUCTEUR"
+	cont "VIDE"
 	done
 
 _PowerPlantComputer3::
-	text "POLARITY REVERSAL"
-	line "CONTROL UNIT"
+	text "INVERSION DE"
+	line "POLARITE"
+	cont "CONTROLE"
 	done
 
 _PowerPlantComputer4::
-	text "RESONANCE MATCHER"
+	text "ACCORD DE"
+	line "RESONANCE"
 	done
 
 _MagnetMagnetonText1::
 	text_ram wNameBuffer
-	text " went"
-	line "close to the"
-	cont "magnet."
+	text " s'est"
+	line "approché de"
+	cont "l'aimant."
 	done
 
 _MagnetMagnetonText2::
 	text_ram wNameBuffer
-	text "'s"
-	line "antigravity power"
-	cont "was supercharged!"
+	text " a"
+	line "été surchargé"
+	cont "par l'antigravité!"
 	done
 
 _MagnetMagnetonText3::
 	text_start
-	para "It can float"
-	line "higher now."
+	para "Il peut flotter"
+	line "plus haut."
 	para "@"
 	text_ram wNameBuffer
-	text " became"
-	line "immune to GROUND"
-	cont "type attacks!"
+	text " est"
+	line "immunisé aux"
+	cont "attaques SOL!"
 	done

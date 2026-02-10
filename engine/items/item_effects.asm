@@ -3452,6 +3452,10 @@ INCLUDE "data/wild/super_rod.asm"
 ; for items that cause the overworld to be displayed
 ItemUseReloadOverworldData:
 	call LoadCurrentMapView
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors
+	; This ensures the vBGMap1 space gets updated when the side menu goes away.
+	rst _DelayFrame
+	farcall MakeAndTransferOverworldBGMapAttributes_OpenText
 	jp UpdateSprites
 
 ;;;;;;;;;; pureRGBnote: ADDED: text indicating your box is full or how much is left

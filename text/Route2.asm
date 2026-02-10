@@ -1,69 +1,72 @@
 _Route2SignText::
 	text "ROUTE 2"
-	line "VIRIDIAN CITY -"
-	cont "PEWTER CITY"
+	line "JADIELLE -"
+	cont "ARGENTA"
 	done
 
 _Route2DiglettsCaveSignText::
-	text "DIGLETT's CAVE"
+	text "CAVE TAUPIQUEUR"
 	done
 
 _Route2BattleText1::
-	text "This field is a"
-	line "nice place!"
-	para "So much sunnier"
-	line "than VIRIDIAN"
-	cont "FOREST."
+	text "Ce champ est un"
+	line "endroit agréable!"
+	para "Beaucoup plus"
+	line "ensoleillé que la"
+	cont "FORET DE JADE."
 	done
 
 _Route2EndBattleText1::
-	text "I"
-	line "don't mind losing!"
+	text "Je"
+	line "ne m'en fais pas"
+	cont "de perdre!"
 	prompt
 
 _Route2AfterBattleText1::
-	text "Imagine a thunder"
-	line "storm hitting"
-	cont "this field."
-	para "Wouldn't that be"
-	line "exciting!"
+	text "Imagine un"
+	line "orage frappant"
+	cont "ce champ."
+	para "Ce serait"
+	line "excitant!"
 	done
 
 _Route2BattleText2::
-	text "Amazing how"
-	line "DIGLETT'S CAVE"
-	cont "leads all the way"
-	cont "to the outskirts"
-	cont "of VIRIDIAN CITY!"
+	text "C'est incroyable"
+	line "comment la CAVE"
+	cont "TAUPIQUEUR mène"
+	cont "jusqu'aux abords"
+	cont "de JADIELLE!"
 	done
 
 _Route2EndBattleText2::
-	text "Not"
-	line "enough DIGLETTs!"
+	text "Pas"
+	line "assez de"
+	cont "TAUPIQUEUR!"
 	prompt
 
 _Route2AfterBattleText2::
-	text "Wouldn't it be"
-	line "intimidating if"
-	cont "I had an army of"
-	cont "DIGLETTs trailing"
-	cont "everywhere I go?"
+	text "Ne serait-ce pas"
+	line "intimidant si"
+	cont "j'avais une armée"
+	cont "de TAUPIQUEUR"
+	cont "me suivant"
+	cont "partout?"
 	done
 
 _Route2BattleText3::
-	text "Don't trod on"
-	line "the flowers!"
+	text "Ne marche pas sur"
+	line "les fleurs!"
 	done
 
 _Route2EndBattleText3::
-	text "Be"
-	line "careful!"
+	text "Sois"
+	line "prudent!"
 	prompt
 
 _Route2AfterBattleText3::
-	text "I come here for"
-	line "picnics."
-	para "It's a beautiful"
-	line "quiet spot to"
-	cont "relax."
+	text "Je viens ici pour"
+	line "pique-niquer."
+	para "C'est un bel"
+	line "endroit calme pour"
+	cont "se détendre."
 	done

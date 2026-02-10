@@ -192,7 +192,7 @@ DEF PALETTES_YELLOW2    EQU  %01000011
 	const BIT_EXP_BAR          ; 4
 	const BIT_NPC_STAT_EXP     ; 5
 	const BIT_NPC_PP           ; 6
-	; unused bit 7
+	const BIT_TRAINER_CANDIES  ; 7 ; ON = give 1 super bonbon after each trainer win
 
 ; wSpriteOptions
 	const_def

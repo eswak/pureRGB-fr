@@ -134,7 +134,7 @@ CheckMonAltPaletteLeaguePC:
 
 
 HallOfFameNoText:
-	db "HALL OF FAME No   @"
+	db "CELEBRITE No.     @"
 
 AccessedHoFPCText:
 	text_far _AccessedHoFPCText

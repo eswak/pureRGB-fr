@@ -1,5 +1,26 @@
 BattleCore:
 
+; Set to 1 to show last step on screen: bottom-right shows letter A=step1, B=step2, ... P=step16
+; Step list: A=post LoadEnemyMonData B=post HP copy C=post DoBattleTransition D=post LoadMonFrontSprite
+;            E=_InitBattleCommon F=post GBCSetCPU1xSpeed G=post SlidePlayerAndEnemy H=post ClearScreen
+;            I=wild branch J=post CheckInitSpecialBattleEffect K=pre StartBattle L=StartBattle entry
+;            M=foundFirstAliveEnemyMon N=post EnemySendOut O=post DelayFrames P=post SaveScreenTilesToBuffer1
+DEF DEBUG_WILD_BATTLE EQU 0
+; Set to 1 to show coords 1-9 at (7,9)-(9,11) during slide - find which number is where A/shinny appear
+; Grid: 1=(7,9) 2=(8,9) 3=(9,9) | 4=(7,10) 5=(8,10) 6=(9,10) | 7=(7,11) 8=(8,11) 9=(9,11)
+; Ghost tiles at (7,10) and (7,11)
+DEF DEBUG_SLIDE_GHOST_TILES EQU 0
+
+MACRO debug_wild_step
+	IF DEBUG_WILD_BATTLE == 1
+		ld a, \1
+		ld [wDebugWildBattleStep], a
+		add a, $7f
+		coord hl, 19, 17
+		ld [hl], a
+	ENDC
+ENDM
+
 INCLUDE "data/battle/residual_effects_1.asm"
 INCLUDE "data/battle/set_damage_effects.asm"
 INCLUDE "data/battle/residual_effects_2.asm"
@@ -15,6 +36,37 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	hlcoord 1, 5
 	lb bc, 3, 7
 	call ClearScreenArea
+	IF DEBUG_SLIDE_GHOST_TILES == 1
+	; Draw coords 1-9 to find A/shinny position: which number appears where they were?
+	ld a, "1"
+	coord hl, 7, 9
+	ld [hl], a
+	ld a, "2"
+	coord hl, 8, 9
+	ld [hl], a
+	ld a, "3"
+	coord hl, 9, 9
+	ld [hl], a
+	ld a, "4"
+	coord hl, 7, 10
+	ld [hl], a
+	ld a, "5"
+	coord hl, 8, 10
+	ld [hl], a
+	ld a, "6"
+	coord hl, 9, 10
+	ld [hl], a
+	ld a, "7"
+	coord hl, 7, 11
+	ld [hl], a
+	ld a, "8"
+	coord hl, 8, 11
+	ld [hl], a
+	ld a, "9"
+	coord hl, 9, 11
+	ld [hl], a
+	ELSE
+	ENDC
 	call DisableLCD
 	call LoadFontTilePatterns
 	call LoadHudAndHpBarAndStatusTilePatterns
@@ -47,6 +99,12 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 .noCarry
 	dec b
 	jr nz, .copyRowLoop
+	; Force-clear ghost tiles (7,10) and (7,11) in vBGMap0 so they don't show during slide
+	ld a, " "
+	ld hl, vBGMap0 + 10 * BG_MAP_WIDTH + 7
+	ld [hl], a
+	ld hl, vBGMap0 + 11 * BG_MAP_WIDTH + 7
+	ld [hl], a
 	ld a, $90
 	ldh [hWY], a
 	ldh [rWY], a
@@ -109,10 +167,26 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	ldh [hStartTileID], a
 	hlcoord 1, 5
 	predef CopyUncompressedPicToTilemap
-
+	; Draw empty tiles at ghost positions when animation ends (A at 7,10, shiny at 7,11)
+	call DisableLCD
+	ld a, " "
+	ld hl, vBGMap1 + 10 * BG_MAP_WIDTH + 7
+	ld [hl], a
+	ld hl, vBGMap1 + 11 * BG_MAP_WIDTH + 7
+	ld [hl], a
+	hlcoord 7, 10
+	ld [hl], a
+	hlcoord 7, 11
+	ld [hl], a
+	call EnableLCD
 	xor a
 	ldh [hWY], a
 	ldh [rWY], a
+	ld a, HIGH(vBGMap1)
+	ldh [hAutoBGTransferDest + 1], a
+	xor a
+	ldh [hAutoBGTransferDest], a
+	ldh [hAutoBGTransferPortion], a
 	inc a
 	ldh [hAutoBGTransferEnabled], a
 
@@ -160,13 +234,20 @@ SetScrollXForSlidingPlayerBodyLeft:
 	ret
 
 StartBattle:
+	debug_wild_step $0C
 	xor a
 	ld [wPartyGainExpFlags], a
 	ld [wPartyFoughtCurrentEnemyFlags], a
 	ld [wActionResultOrTookBattleTurn], a
 	ld [wLowHealthTonePairs], a ; shinpokerednote: FIXED: low health alarm sanity: clear low health tone tracker
+	;shinpokerednote: ADDED: initialize shiny animation flags
+	ld [wUnusedD366], a
 	inc a
 	ld [wFirstMonsNotOutYet], a
+	; PureRGBnote: Wild battle uses wEnemyMon only; skip loop and use slot 1
+	ld a, [wIsInBattle]
+	dec a
+	jr z, .wildBattleFirstEnemy
 	ld hl, wEnemyMon1HP
 	ld bc, wEnemyMon2 - wEnemyMon1 - 1
 	ld d, $3
@@ -177,15 +258,21 @@ StartBattle:
 	jr nz, .foundFirstAliveEnemyMon
 	add hl, bc
 	jr .findFirstAliveEnemyMonLoop
+.wildBattleFirstEnemy
+	ld d, $4
 .foundFirstAliveEnemyMon
+	debug_wild_step $0D
 	ld a, d
 	ld [wSerialExchangeNybbleReceiveData], a
 	ld a, [wIsInBattle]
 	dec a ; is it a trainer battle?
 	call nz, EnemySendOutFirstMon ; if it is a trainer battle, send out enemy mon
+	debug_wild_step $0E
 	ld c, 40
 	rst _DelayFrames
+	debug_wild_step $0F
 	call SaveScreenTilesToBuffer1
+	debug_wild_step $10
 .checkAnyPartyAlive
 	call AnyPartyAlive
 	ld a, d
@@ -243,6 +330,13 @@ StartBattle:
 	text_end
 
 .playerSendOutFirstMon
+	;shinpokerednote: ADDED: shiny symbol + palette + encounter animation for wild
+	ld a, [wIsInBattle]
+	dec a
+	jr nz, .playerSendOutFirstMon_cont
+	farcall ShinyEnemyPaletteAndSymbolOnly
+	call DrawEnemyHUDAndHPBar
+.playerSendOutFirstMon_cont
 	xor a
 	ld [wWhichPokemon], a
 .findFirstAliveMonLoop
@@ -994,7 +1088,7 @@ TrainerBattleVictory:
 	bit BIT_MUSIC, a
 	jr z, .skipFemaleTrainerCheck
 	callfar IsFemaleTrainer
-	jr c, .battlevictoryguide
+	jp c, .battlevictoryguide
 .skipFemaleTrainerCheck
 ;;;;;;;;;;
 	CheckFlag FLAG_ALTERNATE_BATTLE_WIN_THEME
@@ -1042,7 +1136,22 @@ TrainerBattleVictory:
 	ld de, wPlayerMoney + 2
 	ld hl, wAmountMoneyWon + 2
 	ld c, $3
-	predef_jump AddBCDPredef
+	predef AddBCDPredef
+	; PureRGBnote: Bonbons dresseurs option - give 1 super bonbon after trainer win when ON
+	; (store in WRAM before callfar because callfar clobbers b/c with bank and address)
+	ld a, [wOptions3]
+	bit BIT_TRAINER_CANDIES, a
+	jr z, .skipTrainerCandy
+	ld a, RARE_CANDY
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantity], a
+	callfar GiveItemFromWram
+	jr nc, .skipTrainerCandy
+	ld hl, TrainerCandyReceivedText
+	rst _PrintText
+.skipTrainerCandy
+	ret
 .specialWinMusic
 	ResetFlag FLAG_ALTERNATE_BATTLE_WIN_THEME
 	ld a, [wCurMap]
@@ -1061,6 +1170,10 @@ MoneyForWinningText:
 
 TrainerDefeatedText:
 	text_far _TrainerDefeatedText
+	text_end
+
+TrainerCandyReceivedText:
+	text_far _TrainerCandyReceivedText
 	text_end
 
 StopAllMusicWait:
@@ -1578,6 +1691,13 @@ EnemySendOutFirstMon:
 	predef AnimateSendingOutMon
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
+	;shinpokerednote: ADDED: clear enemy shiny bit (bit 7) so ShinyEnemyAnimation
+	; can set it based on the NEW enemy mon's DVs. Preserve player shiny bit (bit 0).
+	ld a, [wUnusedD366]
+	and %00000001
+	ld [wUnusedD366], a
+	;shinpokerednote: ADDED: play shiny animation if enemy mon is shiny
+	farcall ShinyEnemyAnimation
 	call DrawEnemyHUDAndHPBar
 	ld a, [wCurrentMenuItem]
 	and a
@@ -1887,6 +2007,12 @@ LoadEnemyMonFromParty:
 	jpfar TryRemapTyping
 	
 SendOutMon:
+	;shinpokerednote: ADDED: when player sends out a pokemon, clear player shiny bit (bit 0)
+	; so ShinyPlayerAnimation can set it based on the NEW pokemon's DVs.
+	; Preserve enemy shiny bit (bit 7) since the enemy hasn't changed.
+	ld a, [wUnusedD366]
+	and %10000000
+	ld [wUnusedD366], a
 	callfar PrintSendOutMonMessage
 	ld hl, wEnemyMonHP
 	ld a, [hli]
@@ -1926,9 +2052,12 @@ SendOutMon:
 	predef AnimateSendingOutMon
 	ld a, [wCurPartySpecies]
 	call PlayCry
+	;shinpokerednote: ADDED: play shiny animation if player mon is shiny
+	farcall ShinyPlayerAnimation
 	call PrintEmptyString
 	call SaveScreenTilesToBuffer1
-	jpfar CheckOnSendOutSpecialEffect
+	callfar CheckOnSendOutSpecialEffect ; pureGREENFRnote: update from jpfar
+	ret
 
 ; show 2 stages of the player mon getting smaller before disappearing
 AnimateRetreatingPlayerMon:
@@ -2206,12 +2335,12 @@ DisplayBattleMenu::
 	ld bc, NAME_LENGTH
 	rst _CopyData
 ; the following simulates the keystrokes by drawing menus on screen
-	hlcoord 9, 14
+	hlcoord 7, 14
 	ld [hl], "▶"
 	ld c, 80
 	rst _DelayFrames
 	ld [hl], " "
-	hlcoord 9, 16
+	hlcoord 7, 16
 	ld [hl], "▶"
 	ld c, 50
 	rst _DelayFrames
@@ -2236,13 +2365,13 @@ DisplayBattleMenu::
 	ld a, " "
 	jr z, .safariLeftColumn
 ; put cursor in left column for normal battle menu (i.e. when it's not a Safari battle)
-	ldcoord_a 15, 14 ; clear upper cursor position in right column
-	ldcoord_a 15, 16 ; clear lower cursor position in right column
-	ld b, $9 ; top menu item X
+	ldcoord_a 13, 14 ; clear upper cursor position in right column
+	ldcoord_a 13, 16 ; clear lower cursor position in right column
+	ld b, $7 ; top menu item X (same as pokered-fr: text at 8,14 so cursor at 7)
 	jr .leftColumn_WaitForInput
 .safariLeftColumn
-	ldcoord_a 13, 14
-	ldcoord_a 13, 16
+	ldcoord_a 12, 14
+	ldcoord_a 12, 16
 	hlcoord 7, 14
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
@@ -2268,9 +2397,9 @@ DisplayBattleMenu::
 	ld a, " "
 	jr z, .safariRightColumn
 ; put cursor in right column for normal battle menu (i.e. when it's not a Safari battle)
-	ldcoord_a 9, 14 ; clear upper cursor position in left column
-	ldcoord_a 9, 16 ; clear lower cursor position in left column
-	ld b, $f ; top menu item X
+	ldcoord_a 7, 14 ; clear upper cursor position in left column
+	ldcoord_a 7, 16 ; clear lower cursor position in left column
+	ld b, $d ; top menu item X (13 = to the left of "F" of FUITE, same as pokered-fr)
 	jr .rightColumn_WaitForInput
 .safariRightColumn
 	ldcoord_a 1, 14 ; clear upper cursor position in left column
@@ -2279,7 +2408,7 @@ DisplayBattleMenu::
 	ld de, wNumSafariBalls
 	lb bc, 1, 2
 	call PrintNumber
-	ld b, $d ; top menu item X
+	ld b, $c ; top menu item X
 .rightColumn_WaitForInput
 	ld hl, wTopMenuItemY
 	ld a, $e
@@ -2399,7 +2528,7 @@ DisplayBagMenu:
 	call DisplayListMenuID
 	ld a, [wCurrentMenuItem]
 	ld [wBagSavedMenuItem], a
-	ld a, 0
+	ld a, 0 ; use "ld a, 0" instead of "xor a" to preserve carry flag from DisplayListMenuID
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld [wMenuItemToSwap], a
 	jp c, DisplayBattleMenu ; go back to battle menu if an item was not selected
@@ -2627,9 +2756,9 @@ BattleMenu_RunWasSelected:
 	ld hl, wBattleMonSpeed
 	ld de, wEnemyMonSpeed
 	call TryRunningFromBattle
-	ld a, 0
+	ret c ; return if the player fled (carry must not be clobbered before ret)
+	xor a
 	ld [wForcePlayerToChooseMon], a
-	ret c
 	ld a, [wActionResultOrTookBattleTurn]
 	and a
 	ret nz ; return if the player couldn't escape
@@ -2879,7 +3008,7 @@ MoveDisabledText:
 	text_end
 
 WhichTechniqueString:
-	db "WHICH TECHNIQUE?@"
+	db "Quelle technique?@"
 
 SelectMenuItem_CursorUp:
 	ld a, [wCurrentMenuItem]
@@ -3103,7 +3232,7 @@ PrintMenuItem:
 	jp Delay3
 
 DisabledText:
-	db "disabled!@"
+	db "annulée!@"
 
 TypeText:
 	db "TYPE@"
@@ -3342,7 +3471,13 @@ PlayerCanExecuteChargingMove:
 	                    ; resulting in the Pokemon being invulnerable for the whole battle
 	res INVULNERABLE, [hl]
 PlayerCanExecuteMove:
-	call PrintMonName1Text
+	ld a, BANK(PlayerCanExecuteMove)
+	ld hl, PrintMonName1Text
+	ld b, BANK(PrintMonName1Text)
+	call WrapperCallBattleCoreThenRestoreBank ; ROM0: call (hl) in bank b then restore bank a (fixes Wrap/Bind crash)
+	; pureGREENFRnote: FIXED: ensure Battle Core bank is active after text (fixes Disable crash on turn 1)
+	ld a, BANK(PlayerCanExecuteMove)
+	call SetCurBank
 	callfar CheckRemapMoveData
 	callfar CheckSpecialBattleMoveModifiersPlayer
 	ld hl, DecrementPP
@@ -3353,8 +3488,7 @@ PlayerCanExecuteMove:
 	ld hl, ResidualEffects1
 	ld de, 1
 	call IsInArray
-	jp c, JumpMoveEffect ; ResidualEffects1 moves skip damage calculation and accuracy tests
-	                    ; unless executed as part of their exclusive effect functions
+	call c, JumpMoveEffect ; pureGREENFRnote: FIXED: must be call not jp so return continues to SpecialEffectsCont check (same fix as enemy Wrap/Bind crash)
 	ld a, [wPlayerMoveEffect]
 	ld hl, SpecialEffectsCont
 	ld de, 1
@@ -3390,6 +3524,9 @@ handleIfPlayerMoveMissed:
 .explodeAnimation
 	xor a
 	jr playPlayerMoveAnimation
+; When player continues a trapping move (Bind/Wrap etc.); wPlayerMoveNum/Effect and wDamage still from first hit — do NOT call GetCurrentMove (wrong bank on return, crash)
+PlayerTrappingContinuation:
+	jp getPlayerAnimationType
 getPlayerAnimationType:
 	ld a, [wPlayerMoveEffect]
 	and a
@@ -3406,10 +3543,20 @@ playPlayerMoveAnimation:
 	pop af
 	ld [wAnimationType], a
 	ld a, [wPlayerMoveNum]
+	; PureRGBnote: FIXED: use BIND anim for WRAP to avoid crash (wAnimationID=35 causes undefined behaviour somewhere in animation path)
+	cp WRAP
+	jr nz, .playerAnimNotWrap
+	ld a, BIND
+.playerAnimNotWrap
 ;;;;;;;;;; PureRGBnote: ADDED: set the flag that makes the animation code mark this move as seen in the movedex
 	ld hl, wBattleFunctionalFlags
 	set 0, [hl]
 ;;;;;;;;;;
+	; PureRGBnote: FIXED: ensure Battle Core bank before animation (fixes crash). Preserve move ID in a for PlayMoveAnimation.
+	push af
+	ld a, BANK(PlayMoveAnimation)
+	call SetCurBank
+	pop af
 	call PlayMoveAnimation
 	call HandleExplodingAnimation
 	call DrawPlayerHUDAndHPBar
@@ -3808,8 +3955,7 @@ CheckPlayerStatusConditions:
 	rst _PrintText
 	ld hl, wPlayerNumAttacksLeft
 	dec [hl] ; did multi-turn move end?
-	ld hl, getPlayerAnimationType ; if it didn't, skip damage calculation (deal damage equal to last hit),
-	                ; DecrementPP and MoveHitTest
+	ld hl, PlayerTrappingContinuation ; animation + apply wDamage from first hit (move data already in RAM)
 ;	jp nz, .returnToHL  ; PureRGBnote: Rage effect was changed, don't need this code
 ;	jp .returnToHL
 
@@ -4841,22 +4987,8 @@ CriticalHitTest:
 	jr c, .capCritical
 ;;;;;;;;;;
 .noFocusEnergyUsed
-	ld hl, HighCriticalMoves     ; table of high critical hit moves
-.Loop
-	ld a, [hli]                  ; read move from move table
-	cp c                         ; does it match the move about to be used?
-	jr z, .HighCritical          ; if so, the move about to be used is a high critical hit ratio move
-	inc a                        ; move on to the next move, FF terminates loop
-	jr nz, .Loop                 ; check the next move in HighCriticalMoves
-	srl b                        ; /2 for regular move (effective (base speed / 2))
-	jr .finishcalc               ; continue as a normal move
-.HighCritical
-	sla b                        ; *2 for high critical hit moves (effective (base speed/2)*2))
-	jr c, .capCritical
-	sla b                        ; *4 for high critical hit moves (effective (base speed/2)*4))
-	jr c, .capCritical
-	sla b 						 ; *8 for high critical move (effective (base speed/2)*8))
-	jr nc, .finishcalc
+	callfar CalcCriticalHitRateInBank
+	jr .finishcalc
 .capCritical
 	ld b, $ff
 .finishcalc
@@ -4870,7 +5002,7 @@ CriticalHitTest:
 	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
 	ret
 
-INCLUDE "data/battle/critical_hit_moves.asm"
+; PureRGBnote: MOVED: critical_hit_moves.asm moved to Battle Core Data section
 
 ; PureRGBnote: CHANGED: counter's effect was changed to be a draining move and its name was changed to DRAIN PUNCH, so dont need this block of code anymore
 ; function to determine if Counter hits and if so, how much damage it does
@@ -5755,8 +5887,6 @@ AIGetTypeEffectiveness:
 
 INCLUDE "data/types/type_matchups.asm"
 
-INCLUDE "data/battle/mist_blocked_moves.asm"
-
 ; some tests that need to pass for a move to hit
 MoveHitTest:
 ; player's turn
@@ -5864,9 +5994,8 @@ MoveHitTest:
 	ret
 
 CheckIsMistBlockedMove:
-	ld de, 1
-	ld hl, MistBlockedMoves
-	jp IsInArray
+	callfar CheckIsMistBlockedMoveInBank
+	ret
 
 ; values for player turn
 CalcHitChance:
@@ -6014,7 +6143,9 @@ ExecuteEnemyMove:
 	bit CHARGING_UP, [hl] ; is the enemy charging up for attack?
 	jr nz, EnemyCanExecuteChargingMove ; if so, jump
 	call GetCurrentMove
-
+	; pureGREENFRnote: FIXED: GetCurrentMove (GetName/FarCopyData) can leave wrong bank; restore Battle Core before EnemyCanExecuteMove (fixes enemy Wrap/Bind crash)
+	ld a, BANK(EnemyCanExecuteMove)
+	call SetCurBank
 CheckIfEnemyNeedsToChargeUp:
 	ld a, [wEnemyMoveEffect]
 	cp CHARGE_EFFECT
@@ -6038,14 +6169,20 @@ EnemyCanExecuteChargingMove:
 EnemyCanExecuteMove:
 	xor a
 	ld [wMonIsDisobedient], a
-	call PrintMonName1Text
+	ld a, BANK(EnemyCanExecuteMove)
+	ld hl, PrintMonName1Text
+	ld b, BANK(PrintMonName1Text)
+	call WrapperCallBattleCoreThenRestoreBank ; ROM0: call (hl) in bank b then restore bank a (fixes Wrap/Bind crash)
+	; pureGREENFRnote: FIXED: ensure Battle Core bank is active after text (fixes Disable crash on turn 1)
+	ld a, BANK(EnemyCanExecuteMove)
+	call SetCurBank
 	callfar CheckRemapMoveData
 	callfar CheckSpecialBattleMoveModifiersEnemy
 	ld a, [wEnemyMoveEffect]
 	ld hl, ResidualEffects1
 	ld de, $1
 	call IsInArray
-	jp c, JumpMoveEffect
+	call c, JumpMoveEffect ; PureRGBnote: FIXED: must be call not jp so return continues to SpecialEffectsCont check (was causing infinite loop / crash when enemy used Wrap/Bind etc.)
 	ld a, [wEnemyMoveEffect]
 	ld hl, SpecialEffectsCont
 	ld de, $1
@@ -6083,6 +6220,18 @@ handleIfEnemyMoveMissed:
 	jr EnemyCheckIfFlyOrChargeEffect
 .moveDidNotMiss
 	call SwapPlayerAndEnemyLevels
+; When enemy continues a trapping move (Bind/Wrap etc.) we skip damage calc; reload move data without GetCurrentMove (CopyToStringBuffer bank issue)
+EnemyTrappingContinuation:
+	; Ensure move data is correct (may have been overwritten)
+	ld a, [wEnemySelectedMove]
+	dec a
+	ld hl, Moves
+	ld bc, MOVE_LENGTH
+	call AddNTimes
+	ld de, wEnemyMoveNum
+	ld a, BANK(Moves)
+	call FarCopyData
+	jp GetEnemyAnimationType
 
 GetEnemyAnimationType:
 	ld a, [wEnemyMoveEffect]
@@ -6104,10 +6253,20 @@ playEnemyMoveAnimation:
 	pop af
 	ld [wAnimationType], a
 	ld a, [wEnemyMoveNum]
+	; pureGREENFRnote: FIXED: use BIND anim for WRAP to avoid crash (wAnimationID=35 causes undefined behaviour somewhere in animation path)
+	cp WRAP
+	jr nz, .enemyAnimNotWrap
+	ld a, BIND
+.enemyAnimNotWrap
 ;;;;;;;;;; PureRGBnote: ADDED: set the flag that makes the animation code mark this move as seen in the movedex
 	ld hl, wBattleFunctionalFlags
 	set 0, [hl]
 ;;;;;;;;;;
+	; pureGREENFRnote: FIXED: ensure Battle Core bank before animation (fixes crash). Preserve move ID in a for PlayMoveAnimation.
+	push af
+	ld a, BANK(PlayMoveAnimation)
+	call SetCurBank
+	pop af
 	call PlayMoveAnimation
 	call HandleExplodingAnimation
 	call DrawEnemyHUDAndHPBar
@@ -6475,8 +6634,7 @@ CheckEnemyStatusConditions:
 	rst _PrintText
 	ld hl, wEnemyNumAttacksLeft
 	dec [hl] ; did multi-turn move end?
-	ld hl, GetEnemyAnimationType ; if it didn't, skip damage calculation (deal damage equal to last hit),
-	                             ; DecrementPP and MoveHitTest
+	ld hl, EnemyTrappingContinuation ; animation + apply wDamage from first hit (move data already in RAM)
 ;	jp nz, .enemyReturnToHL ; PureRGBnote: Rage effect was changed, don't need this code
 ;	jp .enemyReturnToHL
 ;.checkIfUsingRage
@@ -6529,7 +6687,8 @@ GetCurrentMove:
 	ld [wNameListType], a
 	call GetName
 	ld de, wNameBuffer
-	jp CopyToStringBuffer
+	call CopyToStringBuffer ; ROM0, always accessible - no Bankswitch needed
+	ret
 
 LoadEnemyMonData:
 	ld a, [wLinkState]
@@ -6559,13 +6718,14 @@ LoadEnemyMonData:
 	ld b, SPDSPCDV_TRAINER
 	jr z, .storeDVs
 ; random DVs for wild mon
-	call BattleRandom
-	ld b, a
-	call BattleRandom
+;shinpokerednote: ADDED: use DetermineWildMonDVs for 50% shiny chance (writes to wEnemyMonDVs itself)
+	farcall DetermineWildMonDVs
+	jr .afterStoreDVs
 .storeDVs
 	ld hl, wEnemyMonDVs
 	ld [hli], a
 	ld [hl], b
+.afterStoreDVs
 
 	ld de, wEnemyMonLevel
 	ld a, [wCurEnemyLevel]
@@ -7134,6 +7294,9 @@ ApplyBoostToStat:
 	ret
 
 LoadHudAndHpBarAndStatusTilePatterns:
+	; Load font_extra to $60, then copy font_extra tile $78 to VRAM $61 so <SHINY> ($61) shows font_extra.png $78, not font_battle_extra
+	call LoadTextBoxTilePatterns
+	call LoadShinyTileFromFontExtra
 	call LoadHpBarAndStatusTilePatterns
 
 LoadHudTilePatterns:
@@ -7172,11 +7335,13 @@ PrintEmptyString:
 
 BattleRandom:
 ; Link battles use a shared PRNG.
-
+; pureGREENFRnote: FIXED: jp nz,Random leaves wrong bank on return. Call ROM0 helper that saves/restores bank (fixes all call BattleRandom e.g. Entrave).
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
-	jp nz, Random
-
+	jr z, .linkBattle
+	call BattleRandomNonLink
+	ret
+.linkBattle
 	push hl
 	push bc
 	ld a, [wLinkBattleRandomNumberListIndex]
@@ -7268,8 +7433,29 @@ PlayMoveAnimation:
 	vc_hook_red Reduce_move_anim_flashing_Psychic
 ;;;;;;;;;; shinpokerednote: gbcnote: color code from yellow
 	predef MoveAnimation
-	jpfar Func_78e98
+	; pureGREENFRnote: Restore Battle Core bank after predef (predef can leave wrong bank active)
+	ld a, BANK(PlayMoveAnimation)
+	call SetCurBank
+	; Use callfar (same as PlayBattleAnimationGotID in effects.asm) so Func_78e98 returns via Bankswitch properly
+	callfar Func_78e98
+	ret
 ;;;;;;;;;;
+
+;shinpokerednote: ADDED: play an animation such as for shiny DVs
+;register e should hold the animation's constant value
+;d = 00 for player animation / d = 01 for enemy animation
+PlaySelectedAnimation:
+	ldh a, [hWhoseTurn]
+	push af
+	ld a, d
+	ldh [hWhoseTurn], a
+	xor a
+	ld [wAnimationType], a
+	ld a, e
+	call PlayMoveAnimation
+	pop af
+	ldh [hWhoseTurn], a
+	ret
 
 InitBattle::
 	ld a, [wCurOpponent]
@@ -7300,6 +7486,9 @@ InitBattleCommon:
 ; shinpokerednote: ADDED: store PKMN Levels at the beginning of the Battle.
 	farcall StorePKMNLevels
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;shinpokerednote: ADDED: initialize shiny flag byte before InitBattleVariables
+	xor a
+	ld [wUnusedD366], a
 	ld a, [wMapPalOffset]
 	push af
 	ld hl, wLetterPrintingDelayFlags
@@ -7344,7 +7533,18 @@ InitWildBattle:
 	ld a, $1
 	ld [wIsInBattle], a
 	call LoadEnemyMonData
+	debug_wild_step $01
+	; PureRGBnote: Copy current enemy mon to slot 1 so StartBattle's findFirstAliveEnemyMon loop finds valid HP
+	ld hl, wEnemyMonHP
+	ld de, wEnemyMon1HP
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	debug_wild_step $02
 	call DoBattleTransitionAndInitBattleVariables
+	debug_wild_step $03
 	callfar CheckShouldLoadGhostSprite
 	jr nc, .isNoGhost
 .isGhost
@@ -7354,6 +7554,7 @@ InitWildBattle:
 	ld de, vFrontPic
 	call LoadMonFrontSprite ; load mon sprite
 .spriteLoaded
+	debug_wild_step $04
 	xor a
 	ld [wTrainerClass], a
 	ldh [hStartTileID], a
@@ -7362,14 +7563,21 @@ InitWildBattle:
 
 ; common code that executes after init battle code specific to trainer or wild battles
 _InitBattleCommon:
+	debug_wild_step $05
 	callfar GBCSetCPU1xSpeed	; shinpokerednote: ADDED: deactivate gbc 2x cpu speed during battle as it causes visual bugs
+	debug_wild_step $06
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	call SlidePlayerAndEnemySilhouettesOnScreen
+	debug_wild_step $07
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	ld hl, .emptyString
 	rst _PrintText
+	; Clear ghost tiles (7,10)-(9,11) in wTileMap before save, so buffer has clean state
+	hlcoord 7, 10
+	lb bc, 2, 3
+	call ClearScreenArea
 	call SaveScreenTilesToBuffer1
 	call ClearScreen
 	ld a, $98
@@ -7380,17 +7588,39 @@ _InitBattleCommon:
 	ld a, $9c
 	ldh [hAutoBGTransferDest + 1], a
 	call LoadScreenTilesFromBuffer1
-	hlcoord 9, 7
-	lb bc, 5, 10
+	; Include col 8 to clear ghost A/shinny next to trainer (8,10)-(9,11)
+	hlcoord 8, 7
+	lb bc, 5, 11
 	call ClearScreenArea
+	; Direct VRAM clear to vBGMap1 (display uses window when hWY=0)
+	push af
+	call DisableLCD
+	ld a, " "
+	ld hl, vBGMap1 + 10 * BG_MAP_WIDTH + 8
+	ld [hl], a
+	inc l
+	ld [hl], a
+	ld hl, vBGMap1 + 11 * BG_MAP_WIDTH + 8
+	ld [hl], a
+	inc l
+	ld [hl], a
+	call EnableLCD
+	pop af
 	hlcoord 1, 0
 	lb bc, 4, 10
 	call ClearScreenArea
 	call ClearSprites
+	debug_wild_step $08
 	ld a, [wIsInBattle]
 	dec a ; is it a wild battle?
-	call z, DrawEnemyHUDAndHPBar ; draw enemy HUD and HP bar if it's a wild battle
+	jr nz, .notWildBattle
+	debug_wild_step $09
+	; PureRGBnote: Skip DrawEnemyHUDAndHPBar at start to isolate crash; HUD drawn when first mon sent
+	; call DrawEnemyHUDAndHPBar
+.notWildBattle
+	debug_wild_step $0A
 	callfar CheckInitSpecialBattleEffect
+	debug_wild_step $0B
 	call StartBattle
 	callfar EndOfBattle
 	pop af

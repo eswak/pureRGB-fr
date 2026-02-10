@@ -101,6 +101,8 @@ StatusScreen:
 	ld hl, vChars2 tile $72
 	lb bc, BANK(PTile), 1
 	call CopyVideoDataDouble ; bold P (for PP)
+;;;;; PureRGBnote: ADDED: Load shiny tile at $61 so we can display it (PTile occupies $72, same as <SHINY>)
+	call LoadShinyTileFromFontExtra
 ;;;;; PureRGBnote: ADDED: If the pokemon has max DVs, load the APEX prompt into vram.
 	call DoesLoadedMonHaveMaxDVs
 	jr nc, .notMaxDVs
@@ -163,6 +165,14 @@ StatusScreen:
 	ld e, l
 	hlcoord 9, 1
 	call PlaceString ; Pokémon name
+	;shinpokerednote: ADDED: print shiny symbol if applicable
+	; Use tile $61 (loaded by LoadShinyTileFromFontExtra) - cannot use <SHINY> ($72) as PTile occupies that slot
+	farcall CheckLoadedShinyDVs
+	jr z, .noshiny
+	coord hl, 8, 1
+	ld a, $61
+	ld [hl], a
+.noshiny
 	ld hl, OTPointers
 	call .GetStringPointer
 	ld d, h
@@ -238,7 +248,7 @@ OTText:
 	next "@"
 
 StatusText:
-	db "STATUS/@"
+	db "STATUT/@"
 
 OKText:
 	db "OK@"
@@ -305,9 +315,9 @@ PrintStat:
 	ret
 
 StatsText:
-	db   "ATTACK"
+	db   "ATTAQUE"
 	next "DEFENSE"
-	next "SPEED"
+	next "VITESSE"
 	next "SPECIAL@"
 
 StatusScreen2:
@@ -470,8 +480,8 @@ CalcExpToLevelUp:
 	ret
 
 StatusScreenExpText:
-	db   "EXP POINTS"
-	next "LEVEL UP@"
+	db   "POINTS EXP"
+	next "NIV SUIV@"
 
 StatusScreen_ClearName:
 	ld bc, 10

@@ -1,64 +1,62 @@
 _CeladonDinerCookText::
-	text "Hi!"
+	text "Salut!"
 
-	para "We're taking a"
-	line "break now."
+	para "On fait une"
+	line "p'tite pause."
 	done
 
 _CeladonDinerMiddleAgedWomanText::
-	text "My #MON are"
-	line "weak, so I often"
-	cont "have to go to the"
-	cont "DRUG STORE."
+	text "Mes #MON sont"
+	line "faibles alors je"
+	cont "vais souvent"
+	cont "à la PHARMACIE."
 	done
 
 _CeladonDinerMiddleAgedManText::
-	text "Psst! There's a"
-	line "basement under"
-	cont "the GAME CORNER."
+	text "Pssst! Il y a un"
+	line "sous-sol sous le"
+	cont "CASINO."
 	done
 
 _CeladonDinerFisherText::
-	text "Munch<...>"
+	text "Miam..."
 
-	para "The man at that"
-	line "table lost it all"
-	cont "at the slots."
+	para "Le type à cette"
+	line "table a tout"
+	cont "perdu aux slots."
 	done
 
 _CeladonDinerCoinCaseGuyImFlatOutBustedText::
-	text "Go ahead! Laugh!"
+	text "Vas-y! Rigole!"
 
-	para "I'm flat out"
-	line "busted!"
+	para "J'ai plus une"
+	line "thune!"
 
-	para "No more slots for"
-	line "me! I'm going"
-	cont "straight!"
+	para "Fini les slots!"
+	line "Je me reprends"
+	cont "en main!"
 
-	para "Here! I won't be"
-	line "needing this any-"
-	cont "more!"
+	para "Tiens! J'en ai"
+	line "plus besoin!"
 	prompt
 
 _CeladonDinerCoinCaseGuyReceivedCoinCaseText::
-	text "<PLAYER> received"
-	line "a COIN CASE!@"
+	text "<PLAYER> reçoit"
+	line "une BOITE JETONS!@"
 	text_end
 	
 ;_CeladonDinerCoinCaseGuyCoinCaseNoRoomText::
-;	text "Make room for"
-;	line "this!"
+;	text "Fais de la place!"
 ;	done
 
 _CeladonDinerCoinCaseGuyWinItBackText::
-	text "I always thought"
-	line "I was going to"
-	cont "win it back<...>"
+	text "Je croyais que"
+	line "j'allais tout"
+	cont "récupérer..."
 	done
 
 _CeladonDinerOpenText::
-	text "Welcome to"
-	line "CELADON DINER!"
-	cont "Fancy a drink?"
+	text "Bienvenue au"
+	line "RESTAU CELADOPOLE!"
+	cont "Un verre?"
 	done

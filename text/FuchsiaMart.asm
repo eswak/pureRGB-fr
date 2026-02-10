@@ -1,22 +1,24 @@
 _FuchsiaMartMiddleAgedManText::
-	text "Do you have a"
-	line "SAFARI ZONE flag?"
+	text "As-tu une affiche"
+	line "du PARC SAFARI?"
 
-	para "What about cards"
-	line "or calendars?"
+	para "Et des cartes?"
+	line "Et des almanachs?"
 	done
 
 _FuchsiaMartCooltrainerFText::
-	text "Did you try X"
-	line "SPEED? It speeds"
-	cont "up a #MON in"
-	cont "battle!"
+	text "Tu connais la"
+	line "VITESSE +? Elle"
+	cont "augmente la"
+	cont "vitesse de ton"
+	cont "#MON pendant"
+	cont "un combat!"
 	done
 
 _FuchsiaMartTMKidFlavor::
-	text "<PARA>I hear someone"
-	line "donated a"
-	cont "prehistoric"
-	cont "#MON to the"
-	cont "zoo here! Cool!@"
+	text "<PARA>J'ai entendu que"
+	line "quelqu'un a donné"
+	cont "un #MON"
+	cont "préhistorique au"
+	cont "zoo ici! Cool!@"
 	text_end

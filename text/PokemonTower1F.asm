@@ -1,59 +1,65 @@
 _PokemonTower1FReceptionistText::
-	text "#MON TOWER was"
-	line "erected in the"
-	cont "memory of #MON"
-	cont "that had died."
+	text "La TOUR #MON a"
+	line "été érigée en"
+	cont "mémoire des"
+	cont "braves #MON"
+	cont "morts au combat."
 	done
 
 _PokemonTower1FMiddleAgedWomanText::
-	text "Did you come to"
-	line "pay respects?"
-	cont "Bless you!"
+	text "Tu es venu leur"
+	line "rendre hommage?"
+	cont "Grand bien t'en"
+	cont "fasse!"
 	done
 
 _PokemonTower1FBaldingGuyText::
-	text "I came to pray"
-	line "for my CLEFAIRY."
+	text "Je suis venu"
+	line "prier pour mon"
+	cont "MELOFEE."
 
-	para "Sniff! I can't"
-	line "stop crying<...>"
+	para "Sniff! J'arrête"
+	line "pas de pleurer..."
 	done
 
 _PokemonTower1FGirlText::
-	text "My GROWLITHE<...>"
-	line "Why did you die?"
+	text "Mon CANINOS..."
+	line "Reviens..."
 	done
 
 _PokemonTower1FChannelerText::
-	text "I am a CHANNELER!"
-	line "There are spirits"
-	cont "up to mischief!"
+	text "Je suis une"
+	line "EXORCISTE! Je"
+	cont "chasse les"
+	cont "esprits!"
 	done
 
 _PokemonTower1FRocketText::
-	text "Scram! No one's"
-	line "going downstairs!"
+	text "Dégage! Personne"
+	line "ne descend!"
 	prompt
 
 _PokemonTower1FRocketText2::
-	text "Here's a better"
-	line "idea:"
-	para "Why don't you"
-	line "head west to"
-	cont "CELADON CITY's"
-	cont "GAME CORNER?"
-	para "Spend lots of"
-	line "money while you're"
-	cont "there!"
-	para "Hyuck hyuck"
-	line "hyuck hyuck!"
+	text "Voici une"
+	cont "meilleure"
+	line "idée:"
+	para "Pourquoi ne pas"
+	line "aller à l'ouest"
+	cont "vers le CASINO de"
+	cont "CELADOPOLE?"
+	para "Dépense plein"
+	line "d'argent pendant"
+	cont "que tu y es!"
+	para "Hihihi"
+	line "hihihi!"
 	done
 
 _PokemonTower1FRocketText3::
-	text "We've got an"
-	line "operation going!"
-	para "Until the boys"
-	line "come back from"
-	cont "the upper floors"
-	cont "I ain't moving!"
+	text "On a une opération"
+	line "en cours!"
+	para "Jusqu'à ce que les"
+	line "gars reviennent"
+	cont "des"
+	cont "étages supérieurs"
+	cont "je bouge pas!"
 	done

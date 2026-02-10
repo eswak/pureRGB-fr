@@ -82,16 +82,16 @@ StartMenuPokemonText:
 	db "POKéMON@"
 
 StartMenuItemText:
-	db "ITEM@"
+	db "OBJET@"
 
 StartMenuSaveText:
-	db "SAVE@"
+	db "SAUVER@"
 
 StartMenuResetText:
-	db "RESET@"
+	db "QUITTER@"
 
 StartMenuExitText:
-	db "EXIT@"
+	db "RETOUR@"
 
 StartMenuOptionText:
 	db "OPTION@"

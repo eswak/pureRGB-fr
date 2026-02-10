@@ -1,4 +1,10 @@
 _RunPaletteCommand:
+	; pureGREENFRnote: ADDED: reset enhanced GBC overworld flag at start of every palette command
+	; This ensures the flag only stays set when SetPal_Overworld re-sets it for enhanced colors.
+	; Without this, the flag persists incorrectly across non-overworld palette commands.
+	ld hl, hFlagsFFFA
+	res 4, [hl]
+
 	call GetPredefRegisters
 	ld a, b
 	cp SET_PAL_DEFAULT
@@ -59,6 +65,17 @@ SetPal_Battle:
 	inc hl
 	ld a, c
 	ld [hl], a
+	
+	;shinpokerednote: ADDED: check for shiny pokemon and apply shiny palettes
+	farcall CheckEnemyShinyDVs
+	jr z, .noshinyenemy
+	farcall ShinyEnemyMon
+.noshinyenemy
+	farcall CheckPlayerShinyDVs
+	jr z, .noshinyplayer
+	farcall ShinyPlayerMon
+.noshinyplayer
+	
 	ld hl, wPalPacket
 	ld de, BlkPacket_Battle
 	ld a, SET_PAL_BATTLE
@@ -99,6 +116,13 @@ SetPal_StatusScreen:
 	inc hl
 	pop af
 	ld [hl], a
+	
+	;shinpokerednote: ADDED: check for shiny pokemon and apply shiny palette
+	farcall CheckLoadedShinyDVs
+	jr z, .noshiny
+	farcall ShinyStatusScreen
+.noshiny
+	
 	ld hl, wPalPacket
 	ld de, BlkPacket_StatusScreen
 	ret
@@ -221,6 +245,17 @@ SetPal_GameFreakIntro:
 ; also switched to using a lookup table instead of many comparisons.
 ; uses PalPacket_Empty to build a packet based on the current map
 SetPal_Overworld:
+	;shinpokerednote: ADDED: check for enhanced GBC colors
+	ld a, [hGBC]
+	and a
+	jr z, .notGBC
+	ldh a, [$FFF6]
+	bit 4, a		;gbcnote - check bit that indicates cable club menus are being displayed
+	jr nz, .notGBC
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr nz, .enhancedGBCOverworld
+.notGBC
 	CheckEvent EVENT_CELADON_RAINBOW_COLORS_ACTIVE
 	jr z, .notCeladon
 	ld a, [wCurMap]
@@ -257,6 +292,41 @@ SetPal_Overworld:
 	ld de, BlkPacket_Celadon
 	ld a, SET_PAL_OVERWORLD
 	ld [wDefaultPaletteCommand], a
+	ret
+
+;shinpokerednote: ADDED: enhanced GBC overworld color mode
+;It loads a full BG Map Attributes table directly from w2BGMapAttributes
+.enhancedGBCOverworld
+	ld a, SET_PAL_OVERWORLD
+	ld [wDefaultPaletteCommand], a
+
+	ld hl, hFlagsFFFA
+	set 4, [hl]
+
+;flag to not generate or transfer attributes
+	ld a, [hFlagsFFFA]
+	bit 5, a
+	jr nz, .done_attributes
+	
+
+	;first make the BG Map Attribute table
+	; pureGREENFRnote: CHANGED: use _Force entry to bypass hAutoBGTransferEnabled check.
+	; During overworld loop, hAutoBGTransferEnabled is typically 1, which causes
+	; MakeOverworldBGMapAttributes to return immediately without generating attributes.
+	farcall MakeOverworldBGMapAttributes_Force
+
+	;now transfer the BG Map Attributes
+	farcall TransferGBCEnhancedBGMapAttributes
+	
+.done_attributes
+	;now we've effectively done the same thing as TranslatePalPacketToBGMapAttributes
+	;now transfer the palette data to accomplish what InitGBCPalettes does
+	farcall TransferGBCEnhancedOverworldPalettes	
+
+	;we don't want to go to SendSGBPackets when we return
+	;so undo the push that was done at the end of _RunPaletteCommand
+	;you only want to do this if you realy, really know what you're doing
+	pop de
 	ret
 
 ; some maps look weird with the celadon rainbow so don't use it in them even if turned on.
@@ -1141,6 +1211,16 @@ TransferPalColorLCDDisabled:
 	ret
 	
 _UpdateGBCPal_BGP:: ;shinpokerednote: gbcnote: code from pokemon yellow
+	; pureGREENFRnote: ADDED: redirect to enhanced color path when in enhanced GBC overworld mode
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .notEnhancedGBC
+	ld hl, hFlagsFFFA
+	bit 4, [hl]
+	jr z, .notEnhancedGBC
+	farcall UpdateEnhancedGBCPal_BGP
+	ret
+.notEnhancedGBC
 	;prevent the BGmap from updating during vblank 
 	;because this is going to take a frame or two in order to fully run
 	;otherwise a partial update (like during a screen whiteout) can be distracting
@@ -1164,6 +1244,16 @@ DEF index = index + 1
 	ret
 
 _UpdateGBCPal_OBP:: ;shinpokerednote: gbcnote: code from pokemon yellow
+	; pureGREENFRnote: ADDED: redirect to enhanced color path when in enhanced GBC overworld mode
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .notEnhancedGBC
+	ld hl, hFlagsFFFA
+	bit 4, [hl]
+	jr z, .notEnhancedGBC
+	farcall UpdateEnhancedGBCPal_OBP
+	ret
+.notEnhancedGBC
 ; d then c = CONVERT_OBP0 or CONVERT_OBP1
 	ld a, d
 	ld c, a

@@ -293,3 +293,18 @@ PrintText::
 PrintText_NoCreatingTextBox::
 	bccoord 1, 14
 	jp TextCommandProcessor
+
+; pureGREENFRnote: FIXED: Text engine (text_far) can leave wrong ROM bank active. This wrapper runs in ROM0,
+; switches to bank b and calls (hl), then restores the bank passed in a (fixes Wrap/Bind crash).
+; Still required: do not remove. Call with: a = bank to restore, hl = PrintMonName1Text, b = BANK(PrintMonName1Text)
+WrapperCallBattleCoreThenRestoreBank::
+	push af
+	ld a, b
+	call SetCurBank
+	ld de, WrapperCallBattleCoreThenRestoreBankReturn
+	push de
+	jp hl
+WrapperCallBattleCoreThenRestoreBankReturn::
+	pop af
+	call SetCurBank
+	ret

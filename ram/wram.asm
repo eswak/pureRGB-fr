@@ -850,6 +850,8 @@ wOptions5CursorX:: db
 wOptions6CursorX:: db
 wOptions7CursorX:: db
 wOptionsCancelCursorX:: db
+; PureRGBnote: ADDED: 1 = exit options only, 2 = exit and perform unlock (fly/teleport) warp
+wDoUnlockFromOptions:: db
 
 NEXTU
 ; tile ID of the badge number being drawn
@@ -2100,8 +2102,6 @@ wWarpEntries:: ds 32 * 4 ; Y, X, warp ID, map ID
 ; if $ff, the player's coordinates are not updated when entering the map
 wDestinationWarpID:: db
 
-
-
 ;;;;;;;;;; PureRGBnote: CHANGED: this empty space is now used for bigger bag space and a couple more properties
 UNION
 ; original size of this empty space
@@ -2127,6 +2127,12 @@ wBoxItems:: ds PC_ITEM_CAPACITY * 2 + 1 ; now holds 60 items
 
 ; 6 bytes remain
 ; unused save file 6 bytes
+
+NEXTU
+;shinpokerednote: ADDED: buffer for backing-up all GBC palettes (must be in WRAM bank 0, not bank 2)
+;This matches shinpokered's implementation and avoids bank switching issues
+;NOTE: This shares space with wNumBoxItems/wBoxItems, but they are only used in PC menus, not during map transitions
+wGBCFullPalBuffer:: ds 128
 
 ENDU
 ;;;;;;;;;;
@@ -2708,6 +2714,25 @@ wEXPBarCurEXP::       ds 3
 wEXPBarNeededEXP::    ds 3
 wEXPBarKeepFullFlag:: ds 1
 
+;shinpokerednote: ADDED: use to set various wram flags
+;bit 0 - player is female trainer if set (reserved for _FPLAYER tagged code)
+;bit 1 - Gets set when forfeiting a battle
+;bit 2 - override bit 0 for specific bank switching instances (usually reserved for _FPLAYER tagged code)
+;bit 3 - if set, the enemy trainer AI will not use intelligent switching
+;bit 4 - 60fps option flag
+;bit 5 - obedience level cap
+;bit 6 - nuzlocke mode activated
+;bit 7 - enhanced GBC colors toggle
+wUnusedD721:: ds 1
+
+;shinpokerednote: ADDED: use this to track which ai pokemon have switched & shiny state
+;bit 0: set if player mon shiny animation already shown
+;bit 7: set if enemy mon shiny animation already shown
+wUnusedD366:: ds 1
+
+; PureRGBnote: Debug marker for wild battle init (set DEBUG_WILD_BATTLE = 1 in constants to enable)
+; Last value written = last step reached before crash. See engine/battle/core.asm for step list.
+wDebugWildBattleStep:: ds 1
 
 SECTION "Stack", WRAMX
 

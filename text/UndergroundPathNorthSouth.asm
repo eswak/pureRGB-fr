@@ -1,59 +1,63 @@
 _UndergroundPathNorthSouthBattleText1::
-	text "I've got a"
-	line "business trip"
-	cont "in CERULEAN CITY!"
+	text "J'ai un voyage"
+	line "d'affaires à"
+	cont "AZURIA!"
 	done
 
 _UndergroundPathNorthSouthEndBattleText1::
-	text "Not"
-	line "bad!"
+	text "Pas"
+	line "mal!"
 	prompt
 
 _UndergroundPathNorthSouthAfterBattleText1::
-	text "I've been taking"
-	line "this path between"
-	cont "CERULEAN CITY and"
-	cont "VERMILION CITY"
-	cont "for years."
-	para "Walking is great"
-	line "exercise!"
+	text "J'emprunte ce"
+	line "chemin entre"
+	cont "AZURIA et"
+	cont "CARMIN depuis"
+	cont "des années."
+	para "Marcher, c'est"
+	line "un excellent"
+	cont "exercice!"
 	done
 
 _UndergroundPathNorthSouthBattleText2::
-	text "Underground fight"
-	line "club!"
-	para "Challenge start!"
+	text "Club de combat"
+	line "souterrain!"
+	para "Le défi commence!"
 	done
 
 _UndergroundPathNorthSouthEndBattleText2::
-	text "Knock-"
-	line "out!"
+	text "K.O.!"
 	prompt
  
 _UndergroundPathNorthSouthAfterBattleText2::
-	text "Battling in low-"
-	line "light conditions"
-	cont "is one of the"
-	cont "coolest things!"
-	para "Don't you agree?"
+	text "Combattre dans"
+	line "des conditions de"
+	cont "faible luminosité"
+	cont "est l'une des"
+	cont "choses les plus"
+	cont "cool!"
+	para "Tu n'es pas"
+	line "d'accord?"
 	done
 
 _UndergroundPathNorthSouthBattleText3::
-	text "Underground fight"
-	line "club!"
-	para "Invitational!"
-	para "Let's go!"
+	text "Club de combat"
+	line "souterrain!"
+	para "Invitation!"
+	para "Allons-y!"
 	done
 
 _UndergroundPathNorthSouthEndBattleText3::
-	text "You're"
-	line "good!"
+	text "Tu es"
+	line "bon!"
 	prompt
 
 _UndergroundPathNorthSouthAfterBattleText3::
-	text "We need strong"
-	line "trainers to join"
-	cont "our club."
-	para "Are you in or are"
-	line "you out?"
+	text "Nous avons besoin"
+	line "de dresseurs forts"
+	cont "pour rejoindre"
+	cont "notre club."
+	para "Tu es partant ou"
+	line "pas?"
 	done

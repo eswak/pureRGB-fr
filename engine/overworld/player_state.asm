@@ -283,7 +283,7 @@ RangersLeftText:
 	db "RANGERs@"
 
 RangersLeftText2:
-	db "Left: @"
+	db "Restant: @"
 
 GetTileAndCoordsInFrontOfPlayer:
 	call GetPredefRegisters

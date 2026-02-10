@@ -50,3 +50,8 @@ MACRO homecall_sf ; homecall but save flags by popping into bc instead of af
 	ld a, b
 	call SetCurBank
 ENDM
+
+; shinpokerednote: ADDED: alias for farcall (for compatibility with shinpokered code)
+MACRO callba
+	farcall \1
+ENDM

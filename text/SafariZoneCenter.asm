@@ -1,67 +1,73 @@
 _SafariZoneCenterRestHouseSignText::
-	text "REST HOUSE"
+	text "ABRI"
 	done
 
 _SafariZoneCenterTrainerTipsSignText::
-	text "<TIPS>"
+	text "ASTUCE"
 
-	para "Press the START"
-	line "Button to check"
-	cont "remaining time!"
+	para "Appuyez sur START"
+	line "pour consulter la"
+	cont "montre!"
 	done
 
 _SafariZoneCenterRangerText::
-	text "RANGER number 1!"
-	line "At your service!"
+	text "RANGER numéro 1!"
+	line "A votre service!"
 	done
 
 _SafariZoneCenterRangerEndBattleText::
 	text "Wow!"
-	line "Good battle!"
+	line "Bon combat!"
 	prompt
 
 _SafariZoneCenterRangerAfterBattleText::
-	text "I'm actually the"
-	line "lifeguard here!"
-	para "This tiny island"
-	line "is my happy place"
-	cont "of relaxation."
+	text "Je suis en fait"
+	line "le maître-nageur"
+	cont "ici!"
+	para "Cette petite île"
+	line "est mon endroit"
+	cont "heureux de"
+	cont "détente."
 	done
 
 _SafariZoneCenterEngineerText::
-	text "I'm on break!"
-	para "I'll eat a tasty"
-	line "sandwich while"
-	cont "battling you!"
+	text "Je suis en pause!"
+	para "Je vais manger un"
+	line "délicieux sandwich"
+	cont "en te combattant!"
 	done
 
 _SafariZoneCenterEngineerEndBattleText::
-	text "Mmm<...>"
+	text "Mmm..."
 	line "Pastrami!"
 	prompt
 
 _SafariZoneCenterEngineerAfterBattleText::
-	text "I'm installing AC"
-	line "on this REST"
-	cont "HOUSE."
-	para "I love my job!"
-	para "I also love my"
-	line "wife's pastrami"
-	cont "sandwiches."
-	para "I make her tasty"
-	line "grilled cheese"
-	cont "for her lunch!"
-	para "She's the nurse"
-	line "at the #MON"
-	cont "CENTER."
+	text "J'installe la"
+	line "climatisation sur"
+	cont "cet ABRI."
+	para "J'adore mon"
+	line "travail!"
+	para "J'adore aussi les"
+	line "sandwichs au"
+	cont "pastrami de ma"
+	cont "femme."
+	para "Je lui fais de"
+	line "délicieux"
+	cont "sandwichs au"
+	cont "fromage grillé"
+	cont "pour son déjeuner!"
+	para "Elle est"
+	line "infirmière au"
+	cont "CENTRE #MON."
 	done
 
 _SafariZoneCenterRockerText::
-	text "Careful! don't"
-	line "spook the wild"
-	cont "#MON!"
-	para "I want to feed"
-	line "them by hand!"
+	text "Attention! Ne"
+	line "fais pas peur aux"
+	cont "#MON sauvages!"
+	para "Je veux les"
+	line "nourrir à la main!"
 	done
 
 _SafariZoneCenterRockerEndBattleText::
@@ -69,47 +75,51 @@ _SafariZoneCenterRockerEndBattleText::
 	prompt
 
 _SafariZoneCenterRockerAfterBattleText::
-	text "What? Didn't"
-	line "expect a ROCKER"
-	cont "to be so gentle?"
+	text "Quoi? Tu ne"
+	line "t'attendais pas"
+	cont "qu'un ROCKER soit"
+	cont "si doux?"
 	done	
 
 _SafariZoneCenterJugglerText::
-	text "Why can't I hold"
-	line "all these TAUROS?"
+	text "Pourquoi je ne"
+	line "peux pas tenir"
+	cont "tous ces TAUROS?"
 	done
 
 _SafariZoneCenterJugglerEndBattleText::
-	text "Just"
-	line "call me"
-	cont "“The Matador”!"
+	text "Appelle-moi"
+	line "juste"
+	cont "Le Matador!"
 	prompt
 
 _SafariZoneCenterJugglerAfterBattleText::
-	text "It's SAFARI ZONE"
-	line "tradition to"
-	cont "catch plenty of"
-	cont "TAUROS."
+	text "C'est la tradition"
+	line "du PARC SAFARI"
+	cont "d'attraper plein"
+	cont "de TAUROS."
 	done
 
 _SafariZoneCenterManiacText::
-	text "Let me introduce"
-	line "you to Team"
-	cont "Brushfire!"
+	text "Laisse-moi te"
+	line "présenter l'Equipe"
+	cont "Broussaille!"
 	done
 
 _SafariZoneCenterManiacEndBattleText::
-	text "Still"
-	line "building my team!"
+	text "Encore en"
+	line "train de"
+	cont "construire mon"
+	cont "équipe!"
 	prompt
 
 _SafariZoneCenterManiacAfterBattleText::
-	text "I'm putting"
-	line "together a party"
-	cont "of exotic fire"
-	cont "and grass-type"
-	cont "#MON."
+	text "Je rassemble une"
+	line "équipe de #MON"
+	cont "exotiques de type"
+	cont "feu et plante."
 
-	para "I call them"
-	line "Team Brushfire!"
+	para "Je les appelle"
+	line "l'Equipe"
+	cont "Broussaille!"
 	done

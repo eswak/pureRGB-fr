@@ -43,7 +43,14 @@ RedrawRowOrColumn::
 	ldh a, [hRedrawRowOrColumnMode]
 	and a
 	ret z
-	ld b, a
+	ld b, a	;00, 01, or 02
+
+	;GBCnote - saving this for later in vblank
+	ldh a, [$FFEF]
+	and %11111100
+	or b
+	ldh [$FFEF], a	
+
 	xor a
 	ldh [hRedrawRowOrColumnMode], a
 	dec b

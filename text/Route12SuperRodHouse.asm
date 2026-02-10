@@ -1,48 +1,50 @@
 _Route12GuruIntro::
-	text "I'm the FISHING"
-	line "GURU's younger"
-	cont "brother!"
+	text "Je suis le petit"
+	line "frère du MAITRE"
+	cont "PECHEUR!"
 	prompt
 
 _Route12GuruEnd::
-	text "Hello there,"
+	text "Salut,"
 	line "<PLAYER>!"
 
-	para "Use the SUPER ROD"
-	line "in any water!"
-	cont "You can catch"
-	cont "different kinds"
-	cont "of #MON.@"
+	para "Utilise la MEGA"
+	line "CANNE dans l'eau!"
+	cont "Tu peux attraper"
+	cont "des #MON"
+	cont "différents.@"
 	text_end
 
 _Route12GuruColor::
-	text "Depending on"
-	line "where you fish,"
-	cont "you may even find"
-	cont "differently"
-	cont "colored #MON!"
+	text "Selon l'endroit"
+	line "où tu pêches,"
+	cont "tu peux trouver"
+	cont "des #MON de"
+	cont "couleurs"
+	cont "différentes!"
 
-	para "Try fishing"
-	line "wherever you can!"
+	para "Pêche partout"
+	line "où tu peux!"
 	done
 
 _LastTwoGurusFishingGuideReceived::
-	text "<PLAYER> received"
-	line "a FISHING GUIDE!@"
+	text "<PLAYER> reçoit"
+	line "un GUIDE PECHE!@"
 	text_end
 
 _LastTwoGurusFishingGuideInfo::
-	text "Since you have"
-	line "a FISHING GUIDE"
-	cont "of your own, your"
-	cont "#DEX will show"
-	cont "fishing locations"
-	cont "of #MON in it!"
+	text "Comme tu as un"
+	line "GUIDE PECHE,"
+	cont "ton #DEX"
+	cont "affichera les"
+	cont "spots de pêche"
+	cont "des #MON!"
 	done
 
 _FishingGuideBookText::
-	text "It's a big book."
-	para "It says FISHING"
-	line "GUIDE in big"
-	cont "letters."
+	text "C'est un gros"
+	line "livre."
+	para "C'est écrit"
+	line "GUIDE PECHE"
+	cont "en gros."
 	done

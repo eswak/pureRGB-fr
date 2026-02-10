@@ -365,9 +365,7 @@ ShowMoveData:
 	ld de, MoveAccuracyText
 	hlcoord 1, 8
 	call PlaceString
-	ld de, MovePercentText
-	hlcoord 13, 8
-	call PlaceString
+	; MovePercentText removed - "%" character tile doesn't exist in graphics
 
 	hlcoord 10, 16 ; where the text down arrow should end up flashing at
 	ld a, h
@@ -1017,16 +1015,16 @@ INCLUDE "data/moves/movedex_order.asm"
 INCLUDE "data/moves/movedex_entries.asm"
 
 MovedexText:
-	db "MOVEDEX@"
+	db "CAPACITES@"
 
 MoveTypeText:
 	db "TYPE/@"
 
 MovePowerText:
-	db "POWER:@"
+	db "PUIS.:@"
 
 MoveAccuracyText:
-	db "ACCURACY:@"
+	db "PREC.:@"
 
 MovePPText:
 	db "PP:@"

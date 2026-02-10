@@ -1,64 +1,71 @@
 _LancesRoomLanceBeforeBattleText::
-	text "Ah! I heard about"
-	line "you <PLAYER>!"
+	text "Ah! J'ai entendu"
+	line "parler de toi"
+	cont "<PLAYER>!"
 
-	para "I lead the ELITE"
-	line "FOUR! You can"
-	cont "call me LANCE the"
-	cont "dragon trainer!"
+	para "Je mène le CONSEIL"
+	line "DES 4! Tu peux"
+	cont "m'appeler PETER"
+	cont "le dresseur de"
+	cont "dragons!"
 
-	para "You know that"
-	line "dragons are"
-	cont "mythical #MON!"
+	para "Tu sais que les"
+	line "dragons sont des"
+	cont "#MON mythiques!"
 
-	para "They're hard to"
-	line "catch and raise,"
-	cont "but their powers"
-	cont "are superior!"
+	para "Ils sont durs à"
+	line "capturer et"
+	cont "élever, mais"
+	cont "leurs pouvoirs"
+	cont "sont supérieurs!"
 
-	para "They're virtually"
-	line "indestructible!"
+	para "Ils sont quasi"
+	line "indestructibles!"
 
-	para "Well, are you"
-	line "ready to lose?"
+	para "Alors, prêt à"
+	line "perdre?"
 
-	para "Your LEAGUE"
-	line "challenge ends"
-	cont "with me, <PLAYER>!"
+	para "Ton défi à la"
+	line "LIGUE s'arrête"
+	cont "avec moi, <PLAYER>!"
 	done
 
 _LancesRoomLanceEndBattleText::
-	text "That's it!"
+	text "C'est tout!"
 
-	para "I hate to admit"
-	line "it, but you are a"
-	cont "#MON master!"
+	para "Je déteste"
+
+	cont "l'admettre"
+	line "mais tu es un"
+	cont "maître #MON!"
 	prompt
 
 _LancesRoomLanceAfterBattleText::
-	text "I still can't"
-	line "believe my"
-	cont "dragons lost to"
-	cont "you, <PLAYER>!"
+	text "Je n'arrive pas"
+	line "à croire que mes"
+	cont "dragons ont perdu"
+	cont "contre toi, <PLAYER>!"
 
-	para "You are now the"
-	line "#MON LEAGUE"
-	cont "champion!"
+	para "Tu es maintenant"
+	line "le champion de la"
+	cont "LIGUE #MON!"
 
-	para "<...>Or, you would"
-	line "have been, but"
-	cont "you have one more"
-	cont "challenge ahead."
+	para "... Enfin, tu"
 
-	para "You have to face"
-	line "another trainer!"
-	cont "His name is<...>"
+	cont "l'aurais"
+	line "été, mais il te"
+	cont "reste un défi."
+
+	para "Tu dois affronter"
+	line "un autre dresseur!"
+	cont "Son nom est..."
 
 	para "<RIVAL>!"
-	line "He beat the ELITE"
-	cont "FOUR before you!"
+	line "Il a battu le"
+	cont "CONSEIL DES 4"
+	cont "avant toi!"
 
-	para "He is the real"
-	line "#MON LEAGUE"
-	cont "champion!@"
+	para "C'est le vrai"
+	line "champion de la"
+	cont "LIGUE #MON!@"
 	text_end

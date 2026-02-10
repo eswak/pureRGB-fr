@@ -1,9 +1,11 @@
 _CeruleanTradeHouseGrannyText::
-	text "My husband likes"
-	line "trading #MON."
+	text "Mon mari adore"
+	line "echanger des"
+	cont "#MON."
 
-	para "If you are a"
-	line "collector, would"
-	cont "you please trade"
-	cont "with him?"
+	para "Si tu"
+
+	cont "collectionnes,"
+	line "pourrais-tu"
+	cont "echanger avec lui?"
 	done

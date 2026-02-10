@@ -163,7 +163,7 @@ DisplayAmountLeftBox:
 	ret
 
 AmountLeftString:
-	db "× Left@"
+	db "× Restant@"
 
 DoBuySellQuitMenu:
 	ld a, [wStatusFlags5]
@@ -488,12 +488,24 @@ DisplayFieldMoveMonMenu:
 	jr nz, .skipNameLoop
 	jr .skipNamesLoop
 .reachedName
+	; Copy name to wStringBuffer so PlaceString (home bank) reads correct data
 	ld b, h
 	ld c, l
 	pop hl
 	push de
-	ld d, b
-	ld e, c
+	push bc
+	ld de, wStringBuffer
+.copyNameLoop
+	ld a, [bc]
+	inc bc
+	ld [de], a
+	inc de
+	cp "@"
+	jr nz, .copyNameLoop
+	pop bc
+	pop de
+	push de
+	ld de, wStringBuffer
 	call PlaceString
 	ld bc, SCREEN_WIDTH * 2
 	add hl, bc
@@ -517,8 +529,8 @@ INCLUDE "data/moves/field_move_names.asm"
 
 PokemonMenuEntries:
 	db   "STATS"
-	next "SWITCH"
-	next "CANCEL@"
+	next "ORDRE"
+	next "RETOUR@"
 
 GetMonFieldMoves:
 	ld a, [wWhichPokemon]

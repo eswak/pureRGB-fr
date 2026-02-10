@@ -1,138 +1,138 @@
 _BikeShopClerkWelcomeText::
-	text "Hi! Welcome to"
-	line "our BIKE SHOP."
+	text "Salut! Bienvenue"
+	line "au CYCLES A GOGO."
 
-	para "Have we got just"
-	line "the BIKE for you!"
+	para "On a justement"
+	line "le vélo qu'il"
+	cont "te faut!"
 	prompt
 
 _BikeShopClerkDoYouLikeItText::
-	text "It's a cool BIKE!"
-	line "Do you want it?"
+	text "C'est un super"
+	line "vélo, le veux-tu?"
 	done
 
 _BikeShopCantAffordText::
-	text "Sorry! You can't"
-	line "afford it!"
+	text "Désolé! Tu n'as"
+	line "pas assez"
+	cont "d'argent!"
 	prompt
 
 _BikeShopClerkOhThatsAVoucherText::
-	text "Oh, that's<...>"
+	text "Oh, c'est..."
 
-	para "A BIKE VOUCHER!" ; TODO: load item name into string buffer?
+	para "Un BON pour"
+	line "une BICYCLETTE!"
 
-	para "OK! Here you go!" ; TODO: generic Here you go! text?
+	para "OK! La voilà!"
 	prompt
 
 _BikeShopExchangedVoucherText::
-	text "<PLAYER> exchanged"
-	line "the BIKE VOUCHER"
-	cont "for a BICYCLE.@"
+	text "<PLAYER> échange"
+	line "le BON contre"
+	cont "une BICYCLETTE.@"
 	text_end
 
 _BikeShopComeAgainText::
-	text "Come back again"
-	line "some time!"
+	text "Reviens quand tu"
+	line "veux!"
 	done
 
 _BikeShopClerkHowDoYouLikeYourBicycleText::
-	text "How do you like"
-	line "your new BICYCLE?"
+	text "Comment se porte"
+	line "ta BICYCLETTE?"
 
-	para "You can take it"
-	line "on CYCLING ROAD"
-	cont "and in caves!"
+	para "Tu peux aller sur"
+	line "la PISTE CYCLABLE"
+	cont "et dans les"
+	cont "GROTTES!"
 	done
 
 _CeruleanGymMistyTM11NoRoomText::
 _BikeShopBagFullText::
-	text "You better make"
-	line "room for this!"
+	text "Fais de la place"
+	line "pour ça!"
 	done
 
 _BikeShopMiddleAgedWomanText::
-	text "A plain city BIKE"
-	line "is good enough"
-	cont "for me!"
+	text "Un vélo de ville"
+	line "me suffit!"
 
-	para "You can't put a"
-	line "shopping basket"
-	cont "on an MTB!"
+	para "On peut pas mettre"
+	line "de panier sur"
+	cont "un VTT!"
 	done
 
 _BikeShopYoungsterTheseBikesAreExpensiveText::
-	text "These BIKEs are"
-	line "cool, but they're"
-	cont "way expensive!"
+	text "Ces vélos sont"
+	line "super mais trop"
+	cont "chers!"
 	done
 
 _BikeShopYoungsterCoolBikeText::
-	text "Wow. Your BIKE is"
-	line "really cool!"
+	text "Waou! Ton vélo"
+	line "est trop cool!"
 	done
 
 _BikeShopBasketBikeText::
-	text "This BIKE has a"
-	line "basket attached."
-	para "Very practical!"
+	text "Ce vélo a un"
+	line "panier. Pratique!"
 	done
 
 _BikeShopToolboxText::
-	text "A toolbox for"
-	line "repairing BIKEs!"
-	para "Tire patches,"
-	line "a pump, hex keys,"
-	cont "tools galore!"
+	text "Une caisse à"
+	line "outils pour"
+	cont "réparer les vélos!"
+	para "Rustines, pompe,"
+	line "clés, tout!"
 	done
 
 _BikeShopSignRightText::
-	text "WELCOME TO"
-	line "MIRACLE CYCLE!"
+	text "BIENVENUE"
+	line "CYCLES A GOGO!"
 	done
 
 
 _BikeShopSignLeftText::
-	text "MIRACLE CYCLE"
-	para "The trendsetter of"
-	line "the bicycle boom!"
+	text "CYCLES A GOGO"
+	para "Le précurseur"
+	line "du boom du vélo!"
 	done
 
 _BikeShopStatsText::
-	text "Graphs and data"
-	line "comparing many"
-	cont "different BIKEs!"
-	para "Number of gears,"
-	line "shock absorption,"
-	cont "reliability<...>"
+	text "Graphiques et"
+	line "données sur"
+	cont "plein de vélos!"
+	para "Vitesses,"
+	line "amorti,"
+	cont "fiabilité..."
 	done
 
 _BikeShopArcade1Text::
 	text "Whoa!"
-	para "It's EXCITEBIKE!"
-	para "This game's a"
-	line "classic!"
-	para "It's one of Dad's"
-	line "favorites!"
-	para "There's an arcade"
-	line "version?!"
-	para "And it has two-"
-	line "player mode too!"
+	para "C'est EXCITEBIKE!"
+	para "Un jeu culte!"
+	para "Mon papa adore"
+	line "ce jeu!"
+	para "Une version"
+	line "arcade?!"
+	para "Avec le mode"
+	line "deux joueurs!"
 	done
 
 _BikeShopArcade2Text::
-	text "A freestyle BMX"
-	line "arcade game!"
-	para "Wow, the biker"
-	line "did a backflip!"
+	text "Un jeu de BMX"
+	line "freestyle!"
+	para "Le rider fait"
+	line "un backflip!"
 	done
 
 _BikeShopArcade3Text::
-	text "An 8-bit arcade"
-	line "game starring a"
-	cont "paper delivery"
-	cont "boy on a bicycle!"
+	text "Un jeu 8-bit avec"
+	line "un livreur de"
+	cont "journaux à vélo!"
 	para "Hah!"
-	para "He threw a"
-	line "newspaper through"
-	cont "someone's window!"
+	para "Il a lancé un"
+	line "journal dans une"
+	cont "fenêtre!"
 	done

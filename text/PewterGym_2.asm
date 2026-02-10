@@ -1,197 +1,208 @@
 _PewterGymBrockPostBattleAdviceText::
-	text "There are all"
-	line "kinds of trainers"
-	cont "in the world!"
+	text "Il y a plusieurs"
+	line "types de"
+	cont "dresseurs dans le"
+	cont "monde!"
 
-	para "You appear to be"
-	line "very gifted as a"
-	cont "#MON trainer!"
+	para "Tu sembles être"
+	line "un dresseur"
+	cont "d'exception!"
 
-	para "Go to the GYM in"
-	line "CERULEAN and test"
-	cont "your abilities!"
+	para "Va à l'ARENE"
+	line "d'AZURIA pour"
+	cont "tester tes"
+	cont "capacités."
 	done
 
 _PewterGymBrockWaitTakeThisText::
-	text "Wait! Take this"
-	line "with you!"
+	text "Attends! Prends"
+	line "ça avec toi!"
 	done
 
 _TM34ExplanationText::
 	text_start
 
-	para "A <TM> contains a"
-	line "technique that"
-	cont "can be taught to"
+	para "Une CT (Capsule"
+	line "Tech.) contient"
+	cont "une attaque à"
+	cont "enseigner à un"
 	cont "#MON!"
 
-	para "A <TM> is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
+	para "Une CT ne marche"
+	line "qu'une fois!"
+	cont "Alors choisis"
+	cont "bien le #MON"
+	cont "à qui la donner!"
 
 	para "@"
 	text_ram wStringBuffer
-	text " contains"
-	line "BIDE!"
+	text " contient"
+	line "PATIENCE!"
 
-	para "Your #MON will"
-	line "steel itself,"
-	cont "raising ATTACK"
-	cont "and DEFENSE!"
+	para "Ton #MON"
+	line "absorbera les"
+	cont "dégâts pour"
+	cont "ensuite infliger"
+	cont "le double!"
 	done
 
 _GenericNoRoomText::
 _PewterGymTM34NoRoomText::
-	text "You don't have"
-	line "room for this!"
+	text "Votre inventaire"
+	line "est plein!"
 	done
 
 _PewterGymBrockReceivedBoulderBadgeText::
-	text "I took"
-	line "you for granted."
+	text "Hmm..."
+	line "Beau combat."
 
-	para "As proof of your"
-	line "victory, here's"
-	cont "the BOULDERBADGE!"
+	para "En reconnaissance"
+	line "de ta victoire,"
+	cont "voici le BADGE"
+	cont "ROCHE!"
 
-	para "<PLAYER> received"
-	line "the BOULDERBADGE!@"
+	para "<PLAYER> reçoit"
+	line "le BADGE ROCHE!@"
 	text_end
 
 _PewterGymBrockBoulderBadgeInfoText::
 	text_start
 
-	para "That's an official"
-	line "#MON LEAGUE"
-	cont "BADGE!"
+	para "C'est un BADGE"
+	line "officiel de la"
+	cont "LIGUE #MON!"
 
-	para "Its bearer's"
-	line "#MON become"
-	cont "more powerful!"
+	para "Les #MON de"
+	line "son détenteur"
+	cont "deviennent plus"
+	cont "puissants!"
 
-	para "The technique"
-	line "FLASH can now be"
-	cont "used any time!"
+	para "La technique"
+	line "FLASH peut être"
+	cont "utilisée!"
 	prompt
 
 _PewterGymCooltrainerMBattleText::
-	text "Stop right there,"
-	line "kid!"
+	text "Une minute,"
+	line "gamin!"
 
-	para "You're still light"
-	line "years from facing"
-	cont "BROCK!"
+	para "Tu es encore loin"
+	line "de PIERRE, tu"
+	cont "vas devoir"
+	cont "m'affronter!"
 	done
 
 _PewterGymCooltrainerMEndBattleText::
-	text "Darn!"
+	text "Zut!"
 
-	para "Light years isn't"
-	line "time! It measures"
-	cont "distance!"
+	para "J'aurais dû te"
+	line "laisser passer!"
 	prompt
 
 _PewterGymCooltrainerMAfterBattleText::
-	text "You're pretty hot,"
-	line "but not as hot"
-	cont "as BROCK!"
+	text "Tu es fort..."
+	line "Mais pas autant"
+	cont "que PIERRE!"
 	done
 
 _PewterGymGuidePreAdviceText::
-	text "Hiya! I can tell"
-	line "you have what it"
-	cont "takes to become a"
-	cont "#MON champ!"
+	text "Salut graine de"
+	line "CHAMPION!"
 
-	para "I'm no trainer,"
-	line "but I can tell"
-	cont "you how to win!"
+	para "Je ne suis pas"
+	line "dresseur mais mes"
+	cont "conseils sont"
+	cont "avisés!"
 
-	para "Let me take you"
-	line "to the top!"
+	para "Laisse-moi te"
+	line "mener à la"
+	cont "victoire!"
 	done
 
 _PewterGymGuideBeginAdviceText::
-	text "All right! Let's"
-	line "get happening!"
+	text "OK! C'est"
+	line "parti!"
 	prompt
 
 _PewterGymGuideAdviceText::
-	text "The 1st #MON"
-	line "out in a match is"
-	cont "at the top of the"
-	cont "#MON LIST!"
+	text "Le 1er #MON"
+	line "apparaissant dans"
+	cont "un combat est"
+	cont "celui en tête de"
+	cont "la LISTE #MON!"
 
-	para "By changing the"
-	line "order of #MON,"
-	cont "matches could be"
-	cont "made easier!"
+	para "En changeant"
+	line "l'ordre des"
+	cont "#MON, tu"
+	cont "peux changer de"
+	cont "stratégie!"
 	done
 
 _PewterGymGuideFreeServiceText::
-	text "It's a free"
-	line "service! Let's"
-	cont "get happening!"
+	text "C'est gratuit,"
+	line "profites-en! "
 	prompt
 
 _PewterGymGuidePostBattleText::
-	text "Just as I thought!"
-	line "You're #MON"
-	cont "champ material!"
+	text "Je le savais!"
+	line "Tu as l'âme d'un"
+	cont "champion!"
 	prompt
 
 _PewterGymGuideApexChipText::
-	text "I want you"
-	line "to have these!"
+	text "Je veux que tu"
+	line "aies ça!"
 	prompt
 
 _ReceivedApexChipsText::
-	text "<PLAYER> received"
-	line "2 APEX CHIPs!@"
+	text "<PLAYER> reçoit"
+	line "2 PUCE APEX!@"
 	text_end
 
 _ApexChipExplanationText::
 	text_start
 
-	para "The APEX CHIP is a"
-	line "special microchip"
-	cont "I developed."
+	para "La PUCE APEX est"
+	line "une micropuce"
+	cont "spéciale que j'ai"
+	cont "développée."
 	
-	para "You install it"
-	line "onto a #MON's"
-	cont "Poké Ball."
+	para "Tu l'installes"
+	line "sur la # BALL"
+	cont "d'un #MON."
 
-	para "It simulates the"
-	line "natural wild"
-	cont "environment of"
-	cont "the #MON"
-	cont "inside its Poké"
-	cont "Ball!"
+	para "Elle simule"
+	line "l'environnement"
+	cont "sauvage naturel"
+	cont "du #MON"
+	cont "dans sa # BALL!"
 
-	para "It makes #MON"
-	line "happy and helps"
-	cont "achieve their"
-	cont "max potential!"
+	para "Elle rend les"
+	line "#MON heureux"
+	cont "et les aide à"
+	cont "atteindre leur"
+	cont "potentiel max!"
 
-	para "Use them on your"
-	line "best #MON!"
+	para "Utilise-les sur"
+	line "tes meilleurs"
+	cont "#MON!"
 
-	para "For Rock-type"
-	line "#MON, an APEX"
-	cont "CHIP simulates"
-	cont "a jagged craggy"
-	cont "ridge with cave"
-	cont "systems and steep"
-	cont "mountain terrain."
+	para "Pour les #MON"
+	line "de type ROCHE,"
+	cont "une PUCE APEX"
+	cont "simule une crête"
+	cont "déchiquetée avec"
+	cont "des systèmes de"
+	cont "grottes et un"
+	cont "terrain montagneux"
+	cont "escarpé."
 	prompt
 
 _AlreadyReceivedApexChipsText::
-	text "Talk to me at"
-	line "the next GYM if"
-	cont "you defeat the"
-	cont "LEADER for more"
-	cont "APEX CHIPs!"
+	text "Parle-moi à la"
+	line "prochaine ARENE"
+	cont "si tu bats le"
+	cont "CHAMPION pour"
+	cont "obtenir plus de"
+	cont "PUCES APEX!"
 	done

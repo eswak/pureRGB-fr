@@ -1399,7 +1399,14 @@ LoadCurrentMapView::
 	dec b
 	jr nz, .rowLoop2
 	pop af
-	jp SetCurBank ; restore previous ROM bank
+	call SetCurBank ; restore previous ROM bank
+	; pureGREENFRnote: ADDED: regenerate BG map attributes for enhanced GBC colors.
+	; This ensures w2BGMapAttributes is updated every time the tile map changes
+	; (during initial load AND during scrolling). Without this, scrolling shows
+	; stale attributes from the previous map position, causing wrong tile colors.
+	; This matches shinpokered which has callba MakeOverworldBGMapAttributes here.
+	farcall MakeOverworldBGMapAttributes
+	ret
 
 AdvancePlayerSprite::
 	ld a, [wSpritePlayerStateData1YStepVector]
@@ -1535,7 +1542,14 @@ AdvancePlayerSprite::
 	ld a, [wCurMapWidth]
 	call MoveTileBlockMapPointerNorth
 .updateMapView
+	; pureGREENFRnote: ADDED: set flag to indicate LoadCurrentMapView is called during player movement.
+	; This tells MakeOverworldBGMapAttributes to do a partial row/column update instead of full update.
+	; Matches shinpokered's hFlags_0xFFF6 bit 3 set/clear around this call.
+	ld hl, $FFF6
+	set 3, [hl]
 	call LoadCurrentMapView
+	ld hl, $FFF6
+	res 3, [hl]
 	ld a, [wSpritePlayerStateData1YStepVector]
 	cp $01
 	jr nz, .checkIfMovingNorth2

@@ -486,17 +486,17 @@ TownMapCoordsToOAMCoords2:
 
 
 MonsNestText:
-	db "'s NEST@"
+	db " NID@"
 
 AreaUnknownText:
-	db " AREA UNKNOWN@"
+	db "ZONE INCONNUE@"
 
 AnyWaterText:
-	db "Any Water@"
+	db "Toute eau@"
 
 FreshWaterText:
-	db "Any Fresh Water@"
+	db "Eau douce@"
 
 SaltWaterText:
-	db "Any Salt Water@"
+	db "Eau salée@"
 

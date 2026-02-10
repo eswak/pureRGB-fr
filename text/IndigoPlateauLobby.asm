@@ -1,116 +1,136 @@
 _IndigoPlateauLobbyGymGuideText::
-	text "Yo! Champ in" ; TODO: genericize text
-	line "making!"
+	text "Salut! Champion"
+	line "en herbe!"
 
-	para "At #MON LEAGUE,"
-	line "you have to face"
-	cont "the ELITE FOUR in"
-	cont "succession."
+	para "Tu vas devoir"
+	line "affronter le"
+	cont "CONSEIL des 4"
+	cont "dans l'ordre pour"
+	cont "triompher de la"
+	cont "LIGUE #MON."
 
-	para "If you lose, you"
-	line "have to start all"
-	cont "over again! This"
-	cont "is it! Go for it!"
+	para "Si tu perds,"
+	line "d'abord tu auras"
+	cont "honte, et ensuite"
+	cont "tu devras tout"
+	cont "recommencer!"
+	cont "Alors fais bien"
+	cont "attention et..."
+	cont "Ecrase-les!"
 
-	para "If you need <TM>s"
-	line "just talk to"
-	cont "my son!"
+	para "Si tu as besoin"
+	line "de CT, parle à"
+	cont "mon fils!"
 
-	para "He's a chip off"
-	line "the old block!@"
+	para "C'est une vraie"
+	line "copie de son"
+	cont "père!@"
 	text_end
 
 _IndigoPlateauGymGuideChampGreeting::
-	text "Yo! Champ!!"
-	line "Congratulations!"
+	text "Salut! Champion!!"
+	line "Félicitations!"
 
-	para "I saw a fire in"
-	line "your eyes back in"
-	cont "PEWTER CITY<...>"
-	cont "I knew you'd go"
-	cont "places!"
+	para "J'ai vu le feu"
+	line "dans tes yeux à"
+	cont "ARGENTA..."
+	cont "Je savais que tu"
+	cont "irais loin!"
 
-	para "By the way, could"
-	line "you sign an auto-"
-	cont "graph for my son?"
-	cont "He's a big fan!@"
+	para "Au fait, tu"
+	line "pourrais signer"
+	cont "un autographe"
+	cont "pour mon fils?"
+	cont "C'est un grand"
+	cont "fan!@"
 	text_end
 
 _IndigoPlateauGymGuideChampApexChips::
-	text "Come talk to me"
-	line "whenever you need"
-	cont "some APEX CHIPs."
+	text "Viens me parler"
+	line "quand tu as besoin"
+	cont "de PUCEs APEX."
 	done
 
 _IndigoPlateauGymGuideChampAfterGreet::
-	text "Yo! Champ!!"
-	line "How's it going?"
+	text "Salut! Champion!!"
+	line "Comment ça va?"
 
-	para "My son and I are"
-	line "here to help!@"
+	para "Mon fils et moi"
+	line "sommes là pour"
+	cont "t'aider!@"
 	text_end
 
 _IndigoPlateauLobbyCooltrainerFText::
-	text "From here on, you"
-	line "face the ELITE"
-	cont "FOUR one by one!"
+	text "A partir d'ici,"
+	line "tu affronteras"
+	cont "les quatre"
+	cont "membres du...."
+	cont "CONSEIL des 4!"
 
-	para "If you win, a"
-	line "door opens to the"
-	cont "next trainer!"
-	cont "Good luck!"
+	para "Remporte la"
+	line "victoire et une"
+	cont "porte s'ouvrira"
+	cont "vers le prochain"
+	cont "dresseur. Bonne"
+	cont "chance, petit!"
 	done
 
 _IndigoPlateauApexChipsAfterChamp::
-	text "If you beat the"
-	line "ELITE FOUR and"
-	cont "become champ,"
-	cont "remember to come"
-	cont "talk to me."
+	text "Si tu bats le"
+	line "CONSEIL des 4 et"
+	cont "devient champion,"
+	cont "n'oublie pas de"
+	cont "venir me parler."
 
-	para "I'll always be"
-	line "here to help,"
-	cont "even after you"
-	cont "become champ!@"
+	para "Je serai toujours"
+	line "là pour t'aider,"
+	cont "même après que tu"
+	cont "sois devenu"
+	cont "champion!@"
 	text_end
 
 _IndigoPlateauGymGuideSonText::
-	text "Yo! Champ in"
-	line "making!"
+	text "Salut! Champion"
+	line "en herbe!"
 
-	para "It's me! The <TM>"
-	line "Pirate and Gym"
-	cont "Guide in making!"
+	para "C'est moi! Le"
+	line "Pirate CT et"
+	cont "Guide d'Arène en"
+	cont "herbe!"
 	prompt
 
 _IndigoPlateauGymGuideSonChampText::
-	text "Yo! Champ!!"
+	text "Salut! Champion!!"
 
-	para "It's me! The <TM>"
-	line "Pirate and Gym"
-	cont "Guide in making!"
+	para "C'est moi! Le"
+	line "Pirate CT et"
+	cont "Guide d'Arène en"
+	cont "herbe!"
 	prompt
 
 _IndigoPlateauGymGuideSonIntro::
-	text "I'm going to be"
-	line "a great gym guide"
-	cont "like my dad some"
-	cont "day!"
+	text "Je vais être un"
+	line "super guide"
+	cont "d'arène comme"
+	cont "mon papa un jour!"
 
-	para "I'm a certified"
-	line "<TM> engineer now!"
+	para "Je suis maintenant"
+	line "un ingénieur CT"
+	cont "certifié!"
 
-	para "Got some powerful"
-	line "<TM>s copied from"
-	cont "dad's originals!"
+	para "J'ai des CT"
+	line "puissantes copiées"
+	cont "des originales de"
+	cont "papa!"
 
-	para "Want some?"
+	para "Tu en veux?"
 	done
 
 _IndigoPlateauGymGuideSonMoreTMs::
-	text "I've got every"
-	line "single <TM> copied"
-	cont "and ready for you"
-	cont "now! Want some?"
+	text "J'ai toutes les"
+	line "CT copiées et"
+	cont "prêtes pour toi"
+	cont "maintenant! Tu en"
+	cont "veux?"
 	done
 	

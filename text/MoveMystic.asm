@@ -1,36 +1,39 @@
 _MoveMysticIntro::
-	text "I am the"
-	line "MOVE MYSTIC!"
-	para "Certain #MON"
-	line "have hidden"
-	cont "talents!"
-	para "I can scry for"
-	line "their secrets in"
-	cont "my crystal ball!"
-	para "But only if"
-	line "you've seen the"
-	cont "#MON before!"
+	text "Je suis le"
+	line "MYSTIQUE DES CAPS!"
+	para "Certains #MON"
+	line "ont des talents"
+	cont "cachés!"
+	para "Je peux lire leurs"
+	line "secrets dans ma"
+	cont "boule de cristal!"
+	para "Mais seulement si"
+	line "tu as déjà vu le"
+	cont "#MON!"
 	prompt
 
 _MoveMysticAgain::
-	text "You've returned to"
-	line "the MOVE MYSTIC!"
+	text "Tu reviens voir"
+	line "le MYSTIQUE DES"
+	cont "CAPS!"
 	prompt
 
 _MoveMysticQuestion::
-	text "What #MON"
-	line "shall I divine"
-	cont "the secrets of?"
+	text "De quel #MON"
+	line "veux-tu que je"
+	cont "révèle les"
+	cont "secrets?"
 	prompt
 
 _MoveMysticLookDeep::
-	text "Look deep into"
-	line "my crystal ball!"
+	text "Regarde au fond"
+	line "de ma boule de"
+	cont "cristal!"
 	prompt
 
 _MoveMysticAhYes::
-	text "Ah yes<...>"
-	line "I see it."
+	text "Ah oui..."
+	line "Je le vois."
 	para "@"
 	text_ram wStringBuffer
 	text ", the@"
@@ -39,98 +42,103 @@ _MoveMysticAhYes::
 ; TODO: use pokemon's names correctly with stringbuffer
 _BeedrillMoveMysticText::
 	text_start
-	line "hypodermic"
-	cont "hornet."
+	line "frelon"
+	cont "hypodermique."
 	prompt
 
 _ArbokMoveMysticText::
 	text_start
-	line "venomous viper."
+	line "vipère venimeuse."
 	prompt
 
 _FearowMoveMysticText::
 	text_start
-	line "bloodthirsty"
-	cont "beak."
+	line "bec assoiffé"
+	cont "de sang."
 	prompt
 
 _GolemMoveMysticText::
 	text_start
-	line "rolling rock."
+	line "rocher roulant."
 	prompt
 
 _HitmonleeMoveMysticText::
 	text_start
-	line "king of kicks."
+	line "roi des coups"
+	cont "de pied."
 	prompt
 
 _HitmonchanMoveMysticText::
 	text_start
-	line "furious fist."
+	line "poing furieux."
 	prompt
 
 _ElectabuzzMoveMysticText::
 	text_start
-	line "voltaic vanguard."
+	line "avant-garde"
+	cont "voltaïque."
 	prompt
 
 _MagmarMoveMysticText::
 	text_start
-	line "pyroclastic"
-	cont "punisher."
+	line "punisseur"
+	cont "pyroclastique."
 	prompt
 
 _JynxMoveMysticText::
 	text_start
-	line "glacial goddess."
+	line "déesse glaciale."
 	prompt
 
 _HypnoMoveMysticText::
 	text_start
-	line "hypnotic horror."
+	line "horreur"
+	cont "hypnotique."
 	prompt
 
 _DragoniteMoveMysticText::
 	text_start
-	line "mystical monarch."
+	line "monarque"
+	cont "mystique."
 	prompt
 
 _SeakingMoveMysticText::
 	text_start
-	line "fabulous fish."
+	line "poisson fabuleux."
 	prompt
 	
 _KangaskhanMoveMysticText::
 	text_start
-	line "parental"
-	cont "powerhouse."
+	line "puissance"
+	cont "parentale."
 	prompt
 	
 _LickitungMoveMysticText::
 	text_start
-	line "salivating"
-	cont "slurper."
+	line "lécheur"
+	cont "baveux."
 	prompt
 
 _OmastarMoveMysticText::
 	text_start
-	line "ancient ammonite."
+	line "ammonite"
+	cont "antique."
 	prompt
 
 _JigglypuffMoveMysticText::
 	text_start
-	line "spherical"
-	cont "songstress."
+	line "cantatrice"
+	cont "sphérique."
 	prompt
 
 _WigglytuffMoveMysticText::
 	text_start
-	line "globular glory."
+	line "gloire globulaire."
 	prompt
 
 _MoveMysticMasterOfMoveText::
-	text "It's a master"
-	line "of @"
+	text "C'est un maître"
+	line "de @"
 	text_ram wNameBuffer
 	text "!"
 	prompt
@@ -139,50 +147,50 @@ _MoveMysticTalentOfMoveText::
 	text "@"
 	text_ram wNameBuffer
 	text ""
-	line "is its talent!"
+	line "est son talent!"
 	prompt
 
 _MoveMysticSoulCallsForMoveText::
-	text "Its soul calls"
-	line "for @"
+	text "Son âme appelle"
+	line "@"
 	text_ram wNameBuffer
 	text "!"
 	prompt
 
 _MoveMysticLovesMoveText::
-	text "It loves to use"
+	text "Il adore utiliser"
 	line "@"
 	text_ram wNameBuffer
 	text "!"
 	prompt
 
 _MoveMysticBeedrillText::
-	text "Its deadly"
-	line "stingers help in"
-	cont "multiple ways!"
-	para "POISON STING's"
-	line "POWER triples to"
-	cont "45!"
-	para "On top of that,"
-	line "TWINEEDLE's POWER"
-	cont "increases to 65!"
+	text "Ses dards"
+	line "mortels aident"
+	cont "à plusieurs"
+	cont "niveaux!"
+	para "DARD-VENIN:"
+	line "PUISSANCE x3 = 45!"
+	para "Et DOUBLE-DARD:"
+	line "PUISSANCE = 65!"
 	done
 
 _MoveMysticAccuracy85::
-	text "Its ACCURACY"
-	line "increases to 85%!"
+	text "Sa PRECISION"
+	line "monte à 85%!"
 	done
 
 _MoveMysticJigglyWigglyOnlyLevel20Text::
 	text_start
-	para "But only when"
-	line "above level 20!"
+	para "Mais seulement"
+	line "au-dessus du"
+	cont "niveau 20!"
 	done
 
 ; TODO: use another smaller buffer
 _GenericMovePowerIncreasesText::
-	text "Its POWER"
-	line "increases to @"
+	text "Sa PUISSANCE"
+	line "monte à @"
 	text_decimal w2CharStringBuffer, 1, 3
 	text "!"
 	done

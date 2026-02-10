@@ -66,6 +66,10 @@ DisplayTextIDInit::
 	jr nz, .spriteStandStillLoop
 	ld b, $9c ; window background address
 	call CopyScreenTileBufferToVRAM ; transfer background in WRAM to VRAM
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors on the window layer (vBGMap1)
+	; The map view tiles for the text display are now in vBGMap1.
+	; This transfers the color attributes so the window has correct colors when it slides onto the screen.
+	farcall MakeAndTransferOverworldBGMapAttributes_OpenText
 	xor a
 	ldh [hWY], a ; put the window on the screen
 	call LoadFontTilePatterns

@@ -1,5 +1,8 @@
 JumpMoveEffect:
 	call _JumpMoveEffect
+	; pureGREENFRnote: FIXED: effect routines (e.g. Disable) may call _PrintText which leaves wrong bank; restore Battle Core before return
+	ld a, BANK(JumpMoveEffect)
+	call SetCurBank
 	ld b, $1
 	ret
 
@@ -1317,9 +1320,10 @@ TrappingEffect:
                         ; the target won't need to recharge even if the trapping move missed
 	set USING_TRAPPING_MOVE, [hl] ; mon is now using a trapping move
 
-;;;;;;;;;;;;;;;;; PureRGBnote: CHANGED: trapping moves do 2-3 turns maximum but a bit more damage to compensate.	
+;;;;;;;;;;;;;;;;; PureRGBnote: CHANGED: trapping moves do 2-3 turns maximum but a bit more damage to compensate.
+; pureGREENFRnote: FIXED: call Random directly (ROM0, always accessible); no need for farcall + hRandomAdd workaround.
 .reroll
-	call BattleRandom 	
+	call Random
 	and %11
 	cp %11
 	jr z, .reroll ; only want 3 possible results, not 4
@@ -1587,7 +1591,7 @@ DisableEffect:
 ; no effect if target already has a move disabled
 	ld a, [de]
 	and a
-	jr nz, .moveMissed
+	jp nz, .moveMissed ; pureGREENFRnote update from jr
 .pickMoveToDisable
 	ld a, b ; load the player or enemy's previously used move
 	and a 
@@ -1603,6 +1607,7 @@ DisableEffect:
 .doRandomSelection
 	push hl
 	call BattleRandom
+	; pureGREENFRnote: FIXED: use call (same bank) instead of farcall; BattleRandomNonLink now preserves hl
 	and $3
 	ld c, a
 	ld b, $0
@@ -1645,6 +1650,7 @@ DisableEffect:
 .finishDisabling
 ; non-link battle enemies have unlimited PP so the previous checks aren't needed
 	call BattleRandom
+	; pureGREENFRnote: FIXED: use call (same bank) instead of farcall; no bank restore needed
 	and $7
 	cp 7
 	jr z, .finishDisabling ; redo randomization if we have a value of 7 so we can't have 9 turns disabled
@@ -1876,7 +1882,12 @@ PlayBattleAnimationGotID:
 	push de
 	push bc
 	predef MoveAnimation
+	; pureGREENFRnote: FIXED: predef/callfar can leave wrong bank; restore before callfar and before return (fixes Disable/ENTRAVE freeze)
+	ld a, BANK(PlayBattleAnimationGotID)
+	call SetCurBank
 	callfar Func_78e98 ; shinpokerednote: gbcnote: functions from pokemon yellow related to gbc color
+	ld a, BANK(PlayBattleAnimationGotID)
+	call SetCurBank
 	pop bc
 	pop de
 	pop hl

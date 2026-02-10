@@ -39,11 +39,11 @@ DisplayPCMainMenu::
 .next2
 	call PlaceString
 	hlcoord 2, 4
-	ld de, wPlayerName
+	ld de, PlayersPCText
 	call PlaceString
 	ld l, c
 	ld h, b
-	ld de, PlayersPCText
+	ld de, wPlayerName
 	call PlaceString
 	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .noOaksPC2
@@ -85,12 +85,12 @@ DisplayPCMainMenu::
 	ldh [hAutoBGTransferEnabled], a
 	ret
 
-SomeonesPCText:   db "SOMEONE's PC@"
-BillsPCText:      db "BILL's PC@"
-PlayersPCText:    db "'s PC@"
-OaksPCText:       db "PROF.OAK's PC@"
-PKMNLeaguePCText: db "<PKMN>LEAGUE@"
-LogOffPCText:     db "LOG OFF@"
+SomeonesPCText:   db "PC DE ???@"
+BillsPCText:      db "PC DE LEO@"
+PlayersPCText:    db "PC DE @"
+OaksPCText:       db "PC DE CHEN@"
+PKMNLeaguePCText: db "LIGUE <PKMN>@"
+LogOffPCText:     db "DECONNEXION@"
 
 BillsPC_::
 	ld hl, wStatusFlags5
@@ -118,7 +118,7 @@ BillsPCMenu:
 	callfar LoadBillsPCExtraTiles
 	call LoadScreenTilesFromBuffer2DisableBGTransfer
 	hlcoord 0, 0
-	lb bc, 10, 12
+	lb bc, 10, 14
 	call TextBoxBorder
 	hlcoord 2, 2
 	ld de, BillsPCMenuText
@@ -423,11 +423,11 @@ DisplayMonListMenu:
 	ret
 
 BillsPCMenuText:
-	db   "WITHDRAW <PKMN>"
-	next "DEPOSIT <PKMN>"
-	next "RELEASE <PKMN>"
-	next "CHANGE BOX"
-	next "SEE YA!"
+	db   "RETIRER <PKMN>"
+	next "STOCKER <PKMN>"
+	next "RELACHER <PKMN>"
+	next "CHANGER BOITE"
+	next "SALUT!"
 	db "@"
 	
 ; PureRGBnote: FIXED: pokemon are never considered to have HMs, allows them to be stored in daycare no matter what
@@ -527,11 +527,11 @@ DisplayDepositWithdrawMenu:
 	jr nz, .exit
 	jr .loop
 
-DepositPCText:  db "DEPOSIT@"
-WithdrawPCText: db "WITHDRAW@"
+DepositPCText:  db "STOCKER@"
+WithdrawPCText: db "RETIRER@"
 StatsCancelPCText:
 	db   "STATS"
-	next "CANCEL@"
+	next "RETOUR@"
 
 SwitchOnText:
 	text_far _SwitchOnText

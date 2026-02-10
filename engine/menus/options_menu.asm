@@ -1,9 +1,9 @@
 DEF OPTION_PAGE_1_COUNT EQU 3 ; number of options on this page
 DEF MAX_OPTIONS_PER_PAGE EQU 7
 DEF OPTION_PAGE_NUMBER EQU 1 ; must be 1 digit
-DEF HOW_MANY_MAIN_OPTIONS_PAGES EQU 4 ; must be 1 digit
-DEF NEXT_BUTTON_X_COORD EQU 1
-DEF BACK_BUTTON_X_COORD EQU 7
+DEF HOW_MANY_MAIN_OPTIONS_PAGES EQU 5 ; must be 1 digit
+DEF NEXT_BUTTON_X_COORD EQU 0
+DEF BACK_BUTTON_X_COORD EQU 6
 DEF PAGE_CONTROLS_Y_COORD EQU 17
 
 ; first byte = y coord
@@ -15,7 +15,7 @@ ArrowYcoordXVariableOffsetList:
 	db PAGE_CONTROLS_Y_COORD, MAX_OPTIONS_PER_PAGE
 
 OptionsNextBackText::
-	db "  NEXT  PREV  @"
+	db "SUIV.  PREC.  @"
 
 OptionsDoNothing:
 	ret
@@ -99,12 +99,12 @@ DrawOptionsPageInfo:
 	ld [hli], a
 	ld [hl], a
 .skip
-	hlcoord 0, PAGE_CONTROLS_Y_COORD
+; add cursor in front of NEXT (at 0 so it doesn't overwrite first letter)
+	hlcoord NEXT_BUTTON_X_COORD, PAGE_CONTROLS_Y_COORD
+	ld [hl], "▷"
+	hlcoord 1, PAGE_CONTROLS_Y_COORD
 	ld de, OptionsNextBackText
 	call PlaceString
-; add cursor in front of NEXT
-	hlcoord 1, PAGE_CONTROLS_Y_COORD
-	ld [hl], "▷"
 ; add SELECT:INFO prompt to top of menu
 	push bc
 	hlcoord 14, 0
@@ -156,7 +156,7 @@ OptionMenu1Header:
 	dw SetOptionsFromCursorPositions
 	dw OptionLeftRightFuncs
 	dw DisplayOptions2
-	dw DisplaySpriteOptions
+	dw DisplayOptions3
 	dw OptionsPageAorSelectButtonDefault
 	dw OptionsMenu1InfoTextJumpTable
 	; fall through (options display address should be after A button pointer)
@@ -241,6 +241,12 @@ DisplayOptionMenuCommon:
 	; fall through
 OptionsMenuLoop:
 	push hl
+	ld a, [wDoUnlockFromOptions]
+	and a
+	jr z, .noUnlockExit
+	pop hl
+	jr .exitMenu
+.noUnlockExit
 	call PlaceMenuCursor
 	pop hl
 	push hl
@@ -388,8 +394,8 @@ CursorInBattleStyle:
 	jr EraseOldMenuCursor
 
 CursorCancelRow:
-	ld a, [wOptionsCancelCursorX] ; battle style cursor X coordinate
-	xor 6 ; toggle between 1 and 7
+	ld a, [wOptionsCancelCursorX]
+	xor 6 ; toggle between 0 (SUIV) and 6 (PREC)
 	ld [wOptionsCancelCursorX], a
 	; fall through
 
@@ -588,10 +594,14 @@ CopyOptionsFromSRAM::
 	jr nc, .doneLoad
 	ld a, [sOptions2]
 	ld [wOptions2], a
+	ld a, [sOptions3]
+	ld [wOptions3], a
 	ld a, [sSpriteOptions]
 	ld [wSpriteOptions], a
 	ld a, [sSpriteOptions3]
 	ld [wSpriteOptions3], a
+	ld a, [sEnhancedColorFlag]
+	ld [wUnusedD721], a
 .doneLoad
 	xor a
 	ld [MBC1SRamBankingMode], a

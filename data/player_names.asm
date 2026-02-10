@@ -32,16 +32,16 @@ ENDC
 
 IF DEF(_GREEN) ; PureRGBnote: GREENBUILD: default names specific to pokemon green
 DefaultNamesPlayer:
-	db   "NEW NAME"
+	db   "NOUV NOM"
 	next "GREEN"
-	next "ASH"
-	next "MIKE"
+	next "KIM"
+	next "MIRA"
 	db   "@"
 
 DefaultNamesRival:
-	db   "NEW NAME"
+	db   "NOUV NOM"
 	next "BLUE"
-	next "GARY"
-	next "GABE"
+	next "REGIS"
+	next "OSCAR"
 	db   "@"
 ENDC

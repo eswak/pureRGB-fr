@@ -1,118 +1,113 @@
 _ViridianSchoolHouseBrunetteGirlText::
-	text "Whew! I'm trying"
-	line "to memorize all"
-	cont "my notes."
+	text "Pfiou! J'essaie"
+	line "de retenir toutes"
+	cont "mes notes."
 	done
 
 _ViridianSchoolHouseCooltrainerFText::
-	text "Okay!"
+	text "OK!"
 
-	para "Be sure to read"
-	line "the blackboard"
-	cont "carefully!"
+	para "Lis le tableau"
+	line "attentivement!"
 	done
 
 _SchoolText3::
-	text "Whew! Detention"
-	line "feels like it"
-	cont "never ends!"
+	text "Pfiou! La colle"
+	line "n'en finit pas!"
 	done
 
 _SchoolText4::
-	text "DETENTION ROOM"
+	text "SALLE DE RETENUE"
 	done
 
 ; basement
 
 _SchoolB1FGuyNearStairs::
-	text "Why do we have"
-	line "our classrooms"
-	cont "in the basement?"
+	text "Pourquoi nos"
+	line "classes sont"
+	cont "au sous-sol?"
 
-	para "Well, we love"
-	line "GROUND-type"
-	cont "#MON here in"
-	cont "VIRIDIAN CITY!"
+	para "On adore les"
+	line "#MON SOL à"
+	cont "JADIELLE!"
 
-	para "So it's only"
-	line "natural we study"
-	cont "below ground!"
+	para "C'est normal"
+	line "d'étudier sous"
+	cont "terre!"
 	done
 
 _SchoolB1FCornerGameboyKid::
-	text "Shh! Don't tell"
-	line "anyone that I'm"
-	cont "hiding here."
+	text "Chut! Dis pas"
+	line "que je me cache"
+	cont "ici."
 
-	para "I already"
-	line "memorized the"
-	cont "whole textbook"
-	cont "anyway."
+	para "J'ai déjà appris"
+	line "tout le manuel."
 	
-	para "Gotta beat this"
-	line "videogame!"
+	para "Faut que je"
+	line "finisse ce jeu!"
 	
-	para "What is it?"
-	line "It's called:"
+	para "C'est quoi?"
+	line "Ca s'appelle:"
 	
 	para "FOR THE FROG"
 	line "THE BELL TOLLS"
 	
-	para "I'm totally"
-	line "hooked!"
+	para "J'accroche"
+	line "grave!"
 	done
 
 
 _SchoolB1FLittleGirlProdigy::
-	text "I skipped 3"
-	line "grades!"
+	text "J'ai sauté 3"
+	line "classes!"
 
-	para "Mom says I'm"
-	line "going places!"
+	para "Maman dit que"
+	line "j'irai loin!"
 	
-	para "Did you know?"
+	para "Tu savais?"
 	
-	para "A move that is"
-	line "the same TYPE"
-	cont "as the #MON"
-	cont "using it gets"
-	cont "bonus damage!"
+	para "Une capacité du"
+	line "même TYPE que le"
+	cont "#MON qui l'utilise"
+	cont "fait plus de"
+	cont "dégâts!"
 	
-	para "I find that so"
-	line "fascinating!"
+	para "Je trouve ça"
+	line "génial!"
 	done
 
 
 _SchoolB1FNerd::
-	text "Ahh! Don't"
-	line "distract me!"
+	text "Ahh! Me"
+	line "déconcentre pas!"
 	
-	para "I won't let this"
-	line "tiny girl insult"
-	cont "my superior"
+	para "Je laisserai pas"
+	line "cette gamine"
+	cont "insulter mon"
 	cont "intellect!"
 	
-	para "Here's a smidgen"
-	line "of knowledge from"
-	cont "the vast database"
-	cont "that is my brain:"
+	para "Un peu de savoir"
+	line "de l'immense"
+	cont "base de données"
+	cont "qu'est mon"
+	cont "cerveau:"
 	
-	para "PSYCHIC-type"
-	line "#MON are near"
-	cont "unstoppable due"
-	cont "to having zero"
-	cont "weaknesses!"
+	para "Les #MON"
+	line "PSY ont presque"
+	cont "aucune faiblesse!"
 	prompt
 
 _SchoolB1FLittleGirlRetort::
-	text "Actually, they're"
-	line "weak to BUG-type."
+	text "Ils sont faibles"
+	line "au TYPE INSECTE."
 	prompt
 
 _SchoolB1FLittleGirlRetort2::
-	text "Actually, they're"
-	line "weak to BUG and"
-	cont "GHOST types."
+	text "Ils sont faibles"
+	line "aux types"
+	cont "INSECTE et"
+	cont "SPECTRE."
 	prompt
 
 _SchoolB1FNerdSilence::
@@ -120,310 +115,320 @@ _SchoolB1FNerdSilence::
 	prompt
 
 _SchoolB1FLittleGirlBro::
-	text "Don't forget to"
-	line "eat the greens"
-	cont "mom gave you at"
-	cont "lunch, big bro!"
+	text "Oublie pas de"
+	line "manger les légumes"
+	cont "de maman au"
+	cont "déjeuner, frérot!"
 	prompt
 
 _SchoolB1FNerdAck::
-	text "Ack!!"
+	text "Argh!!"
 	done
 
 _SchoolB1FRocker::
-	text "GUS: Bah. School"
-	line "is for losers."
-	para "Cool people learn"
-	line "about #MON by"
-	cont "battling theirs!"
-	para "Am I right?"
+	text "GUS: L'école"
+	line "c'est pour les"
+	cont "nuls."
+	para "Les vrais"
+	line "apprennent les"
+	cont "#MON en"
+	cont "combat!"
+	para "Pas vrai?"
 	done
 
 _SchoolB1FRockerYes::
-	text "Winners like us"
-	line "think the same!"
-	para "You're firin'"
-	line "me up, dude!@"
+	text "Les gagnants"
+	line "pensent pareil!"
+	para "Tu me motives,"
+	line "mec!@"
 	text_jump _SchoolB1FRockerBattleNow
 
 _SchoolB1FRockerNo::
-	text "Now I'm angry!"
-	para "Dweebs like you"
-	line "need to be taken"
-	cont "down a peg!"
+	text "Là je suis énervé!"
+	para "Les bouffons"
+	line "comme toi doivent"
+	cont "être remis à leur"
+	cont "place!"
 	; fall through
 _SchoolB1FRockerBattleNow::
-	para "Lets battle right"
-	line "here, right now!!"
+	para "Battons-nous"
+	line "ici et"
+	cont "maintenant!!"
 	done
 
 _SchoolB1FDetentionText::
-	text "PA: GUS G -"
-	line "PLEASE REPORT"
-	para "TO THE DETENTION"
-	line "ROOM FOR BATTLING"
-	cont "DURING CLASS."
-	para "GUS: Yikes!"
+	text "HAUT-PARLEUR: GUS"
+	cont "G"
+	line "- SE PRESENTER"
+	para "EN RETENUE POUR"
+	line "AVOIR COMBATTU"
+	cont "EN CLASSE."
+	para "GUS: Aïe!"
 	done
 
 _SchoolB1FStudentTeacher::	
-	text "I'm a teacher-in-"
-	line "-training."
-	para "I'm helping out"
-	line "this class!"
-	para "Did you know?"
-	para "There's a move"
-	line "that has elements"
-	cont "of three TYPEs:"
-	para "FIRE, ICE, and"
-	line "ELECTRIC!"
-	para "It's called"
-	line "TRI ATTACK!"
+	text "Je suis"
+	line "stagiaire."
+	para "J'aide cette"
+	line "classe!"
+	para "Tu savais?"
+	para "Une capacité"
+	line "a des éléments"
+	cont "de 3 TYPEs:"
+	para "FEU, GLACE et"
+	line "ELECTRIQUE!"
+	para "Ca s'appelle"
+	line "TRIPLATTAQUE!"
 	done
 
 _SchoolB1FBrunetteGirl::
 	text "JEN: Psst!"
-	para "What's the answer"
-	line "to number 3?"
+	para "C'est quoi la"
+	line "réponse au 3?"
 	done
 
 _SchoolB1FDetention2Text::
-	text "PA: JEN J -"
-	line "PLEASE REPORT"
-	para "TO DETENTION FOR"
-	line "TRYING TO CHEAT"
-	cont "ON YOUR QUIZ."
+	text "HAUT-PARLEUR: JEN"
+	cont "J"
+	line "- SE PRESENTER"
+	para "EN RETENUE POUR"
+	line "AVOIR TRICHE"
+	cont "AU QUIZ."
 	prompt
 
 _SchoolB1FNotAgainText::
-	text "JEN: Not again!"
+	text "JEN: Pas encore!"
 	done
 
 _SchoolB1FTutorText::
-	text "You guys have to"
-	line "learn about all"
-	cont "15 #MON types!"
-	para "Not just half of"
-	line "them!"
-	para "You asked me to"
-	line "tutor you after"
-	cont "all!"
+	text "Vous devez"
+	line "apprendre les 15"
+	cont "types #MON!"
+	para "Pas la moitié!"
+	para "C'est vous qui"
+	line "m'avez demandé"
+	cont "de vous aider!"
 	done
 
 _SchoolB1FLeftTuteeText::
-	text "Moves that do"
-	line "physical damage"
-	cont "are my favorite!"
-	para "That means they"
-	line "use the ATTACK"
-	cont "and DEFENSE stats"
-	cont "to determine"
-	cont "their damage."
-	para "It all depends on"
-	line "the move's TYPE!"
-	para "I wrote down the"
-	line "physical TYPEs"
-	cont "in my notebook."
+	text "Les capacités"
+	line "physiques,"
+	cont "c'est mes"
+	cont "préférées!"
+	para "Elles utilisent"
+	line "l'ATTAQUE et la"
+	cont "DEFENSE pour"
+	cont "les dégâts."
+	para "Selon le TYPE"
+	line "de la capacité!"
+	para "J'ai noté les"
+	line "TYPEs physiques"
+	cont "dans mon cahier."
 	done
 
 _SchoolB1FRightTuteeText::
-	text "Flashy special"
-	line "moves are my"
-	cont "favorite!"
-	para "That means they"
-	line "use the SPECIAL"
-	cont "stat to determine"
-	cont "their damage."
-	para "It all depends on"
-	line "the move's TYPE!"
-	para "My tutor wrote"
-	line "the special TYPEs"
-	cont "in her notebook."
+	text "Les capacités"
+	line "spéciales,"
+	cont "c'est mes"
+	cont "préférées!"
+	para "Elles utilisent"
+	line "le statut SPECIAL"
+	cont "pour les dégâts."
+	para "Selon le TYPE"
+	line "de la capacité!"
+	para "Ma prof a noté"
+	line "les TYPEs spéciaux"
+	cont "dans son cahier."
 	done
 
 _SchoolB1FLeftTuteeNotebook::
-	text "Physical move"
-	line "TYPEs list:"
-	para "NORMAL, FIGHTING," 
-	line "BUG, ROCK, GROUND" 
-	para "POISON, FLYING"
+	text "Liste TYPEs"
+	line "physiques:"
+	para "NORMAL, COMBAT," 
+	line "INSECTE, ROCHE,"
+	cont "SOL" 
+	para "POISON, VOL"
 	done
 
 _SchoolB1FTutorNotebook::
-	text "Special move"
-	line "TYPEs list:"
-	para "FIRE, WATER, ICE" 
-	line "GRASS, ELECTRIC" 
-	para "PSYCHIC, DRAGON"
+	text "Liste TYPEs"
+	line "spéciaux:"
+	para "FEU, EAU, GLACE" 
+	line "PLANTE, ELECTRIQUE" 
+	para "PSY, DRAGON"
 	done
 
 _SchoolB1FBottomLeftNotebook::
-	text "In battle, some"
-	line "moves always go"
-	cont "first!"
-	para "QUICK ATTACK,"
-	line "COMET PUNCH, and"
-	cont "WING ATTACK are"
-	cont "some examples."
+	text "En combat,"
+	cont "certaines"
+	line "capacités frappent"
+	cont "toujours en"
+	cont "premier!"
+	para "COUP D'BOULE,"
+	line "POING COMETE,"
+	cont "COUPE VENT sont"
+	cont "des exemples."
 	done
 
 _SchoolB1FRightBlackboard::
-	text "FIRE beats GRASS"
-	para "GRASS beats WATER"
-	para "WATER beats FIRE!"
-	para "Just like rock-"
-	line "-paper-scissors!"
+	text "FEU bat PLANTE"
+	para "PLANTE bat EAU"
+	para "EAU bat FEU!"
+	para "Comme pierre-"
+	line "-feuille-ciseaux!"
 	done
 
 _SchoolB1FBottomRightNotebook::
 	text "WOW!"
-	para "GHOST-type #MON"
-	line "are immune to"
-	para "both FIGHTING"
-	line "and NORMAL-type"
-	cont "moves!"
+	para "Les #MON"
+	line "SPECTRE sont"
+	para "immunisés aux"
+	line "capacités COMBAT"
+	cont "et NORMAL!"
 	done
 
 
 _SchoolB1FNerdTextbook::
-	text "Notes on each"
-	line "#MON stat."
+	text "Notes sur chaque"
+	line "stat #MON."
 	prompt
 
 _SchoolB1FNerdNotebookRepeat::
-	text "Read about which"
+	text "Lire sur quelle"
 	line "stat?"
 	done
 
 _SchoolB1FNerdNotebookHP::
-	text "Decides how much"
-	line "HP (Hit points)"
-	cont "a #MON has."
-	para "The more it has,"
-	line "the harder it is"
-	cont "to faint."
+	text "Détermine les PV"
+	line "du #MON."
+	para "Plus il en a,"
+	line "plus il est"
+	cont "dur à K.O."
 	prompt
 
 _SchoolB1FNerdNotebookAttack::
-	text "Decides how much"
-	line "damage a #MON's"
-	cont "physical attacks"
-	cont "do."
+	text "Détermine les"
+	line "dégâts des"
+	cont "attaques"
+	cont "physiques."
 	prompt
 
 _SchoolB1FNerdNotebookDefense::
-	text "Decides how much"
-	line "damage a #MON"
-	cont "takes when hit by"
-	cont "physical attacks."
+	text "Détermine les"
+	line "dégâts reçus"
+	cont "par les attaques"
+	cont "physiques."
 	prompt
 
 _SchoolB1FNerdNotebookSpeed::
-	text "Decides which"
-	line "#MON will go"
-	cont "first in battle."
-	para "Whoever has the"
-	line "highest SPEED"
-	cont "will go first."
+	text "Détermine quel"
+	line "#MON frappe"
+	cont "en premier."
+	para "Celui qui a la"
+	line "VITESSE la plus"
+	cont "haute commence."
 	prompt
 
 _SchoolB1FNerdNotebookSpecial::
-	text "Decides how much"
-	line "damage a #MON's"
-	cont "special attacks"
-	cont "do, as well as"
-	cont "how much damage"
-	cont "it will take from"
-	cont "special attacks."
+	text "Détermine les"
+	line "dégâts des"
+	cont "attaques"
+	cont "spéciales et"
+	cont "les dégâts reçus"
+	cont "des attaques"
+	cont "spéciales."
 	prompt
 
 _SchoolB1FRightTeacher::
-	text "Knowing which"
-	line "TYPEs are good"
-	cont "against which"
-	cont "takes a lot of"
-	cont "memorization!"
-	para "But if you're on"
-	line "a big #MON"
-	cont "adventure, you'll"
-	cont "learn quick!"
-	para "Have fun!"
+	text "Savoir quels"
+	line "TYPEs sont bons"
+	cont "contre lesquels"
+	cont "à mémoriser!"
+	para "Mais en aventure"
+	line "#MON tu"
+	cont "apprendras vite!"
+	para "Amuse-toi bien!"
 	done
 
 _SchoolB1FRockerNotebook::
-	text "It's a bunch of"
-	line "detailed doodles."
-	para "A goofy version"
-	line "of the teacher"
-	cont "is being attacked"
-	cont "by a flock of"
-	cont "angry SPEAROW."
+	text "Plein de"
+	line "gribouillis."
+	para "Une version"
+	line "rigolote du prof"
+	cont "attaquée par des"
+	cont "PIAFABEC en"
+	cont "colère."
 	done
 
 _SchoolB1FBrunetteGirlNotebook::
-	text "Cutest #MON:"
-	line "DIGLETT"
-	para "Cutest guy: He"
-	line "sits behind me!"
+	text "#MON le plus"
+	line "mignon: TAUPIQUEUR"
+	para "Mec le plus"
+	cont "mignon:"
+	line "Celui derrière"
+	cont "moi!"
 	done
 
 _SchoolB1FBottomCenterNotebook::
-	text "Some moves cause"
-	line "confusion."
-	para "When a #MON is"
-	line "confused, it can"
-	cont "hurt itself by"
-	cont "accident when"
-	cont "attacking."
-	para "This confusion"
-	line "lasts 2-5 turns."
-	para "It goes away by"
-	line "switching #MON"
-	cont "or finishing the"
-	cont "battle."
+	text "Certaines"
+	cont "capacités"
+	line "causent la"
+	cont "confusion."
+	para "Un #MON confus"
+	line "peut se blesser"
+	cont "en attaquant."
+	para "La confusion"
+	line "dure 2 à 5 tours."
+	para "Elle part en"
+	line "changeant de"
+	cont "#MON ou en"
+	cont "finissant le"
+	cont "combat."
 	done
 
 _SchoolB1FLeftClassroomSign::
-	text "CLASS 2A -"
-	line "#MON MOVES"
+	text "CLASSE 2A -"
+	line "CAPACITES #MON"
 	done
 
 _SchoolB1FRightClassroomSign::
-	text "CLASS 1A -"
-	line "#MON BASICS"
+	text "CLASSE 1A -"
+	line "BASES #MON"
 	done
 
 _SchoolB1FRightPoster::
-	text "It's a beautiful"
-	line "landscape artwork"
-	cont "of VIRIDIAN CITY."
-	para "It says in big"
-	line "letters:"
-	para "THE WONDERFUL"
-	line "WORLD OF #MON"
-	para "-It starts with"
-	line "learning!-"
+	text "Un beau paysage"
+	line "de JADIELLE."
+	para "En grosses"
+	line "lettres:"
+	para "LE MONDE"
+	line "MERVEILLEUX DES"
+	cont "#MON"
+	para "-Ca commence"
+	line "par apprendre!-"
 	done
 
 _SchoolB1FLeftPoster::
-	text "A chart of all"
-	line "15 #MON TYPEs"
-	cont "as colorful"
-	cont "circular icons."
-	para "Behind it is a"
-	line "sunset photo of"
-	cont "INDIGO PLATEAU."
+	text "Un tableau des 15"
+	line "TYPEs #MON en"
+	cont "icônes colorées."
+	para "Derrière, une"
+	line "photo du PLATEAU"
+	cont "INDIGO au coucher"
+	cont "du soleil."
 	done
 
 _SchoolB1FLeftBlackboard::
-	text "TODAY'S HOMEWORK:"
-	para "Write a poem"
-	line "about 10 #MON"
-	cont "moves you love!"
-	para "EXAMPLE:"
-	para "WATER GUN is fun"
-	line "SQUIRTLE is the"
-	cont "one-a nice shower"
-	cont "waters my flowers!"
+	text "DEVOIRS DU JOUR:"
+	para "Ecris un poème"
+	line "sur 10 capacités"
+	cont "#MON que tu"
+	cont "aimes!"
+	para "EXEMPLE:"
+	para "PISTOLET A O est"
+	line "cool, CARAPUCE"
+	cont "c'est le bon - une"
+	cont "douche arrose mes"
+	cont "fleurs!"
 	done
 

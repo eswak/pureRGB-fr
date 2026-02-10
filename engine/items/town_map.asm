@@ -285,7 +285,7 @@ LoadTownMap_Fly_Common:
 	jr .pressedDown
 
 ToText:
-	db "To@"
+	db "Vers@"
 
 BuildFlyLocationsList:
 	ld hl, wFlyAnimUsingCoordList

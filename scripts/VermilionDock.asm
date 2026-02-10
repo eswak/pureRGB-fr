@@ -81,6 +81,9 @@ VermilionDockSSAnneLeavesScript:
 	ld a, 1
 	ldh [hAutoBGTransferEnabled], a
 	call Delay3
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors
+	; The water tiles just written to vBGMap1 need their palette attributes updated.
+	farcall MakeAndTransferOverworldBGMapAttributes_OpenText
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	ld [wSSAnneSmokeDriftAmount], a

@@ -1,97 +1,101 @@
 _Route5UndergroundPathSignText::
-	text "UNDERGROUND PATH"
-	line "CERULEAN CITY -"
-	cont "VERMILION CITY"
+	text "SOUTERRAIN"
+	line "AZURIA -"
+	cont "CARMIN SUR MER"
 	done
 
 _Route5BattleText1::
-	text "I'm practicing"
-	line "some positive"
-	cont "thinking."
-	para "You know what?"
-	para "I'm positively"
-	line "going to beat you!"
+	text "Je pratique la"
+	line "pensée positive."
+	para "Tu sais quoi?"
+	para "Je vais"
+	line "positivement"
+	cont "te battre!"
 	done
 
 _Route5EndBattleText1::
-	text "I'll get"
-	line "better!"
-	para "Just a matter"
-	line "of time!"
+	text "Je vais"
+	line "m'améliorer!"
+	para "C'est juste"
+	line "une question de"
+	cont "temps!"
 	prompt
 
 _Route5AfterBattleText1::
-	text "Sometimes you'll"
-	line "fail."
-	para "But if you're"
-	line "positive about"
-	cont "your goal,"
-	cont "you'll eventually"
-	cont "achieve it!"
+	text "Parfois tu"
+	line "échoueras."
+	para "Mais si tu es"
+	line "positif sur ton"
+	cont "objectif,"
+	cont "tu finiras par"
+	cont "l'atteindre!"
 	done
 
 _Route5BattleText2::
-	text "I'm practicing"
-	line "some negative"
-	cont "thinking."
-	para "You look tough."
-	para "There's a big"
-	line "chance I might"
-	cont "lose to you!"
+	text "Je pratique la"
+	line "pensée négative."
+	para "Tu as l'air"
+	line "fort."
+	para "Il y a de grandes"
+	line "chances que je"
+	cont "perde contre toi!"
 	done
 
 _Route5EndBattleText2::
-	text "See!"
-	line "I told you so."
+	text "Tu vois!"
+	line "Je te l'avais dit."
 	prompt
 
 _Route5AfterBattleText2::
-	text "When you expect"
-	line "to lose, losing"
-	cont "isn't so bad."
-	para "Both positive"
-	line "and negative"
-	cont "thinking can"
-	cont "be good things."
+	text "Quand tu t'attends"
+	line "à perdre, perdre"
+	cont "n'est pas si mal."
+	para "La pensée positive"
+	line "et négative"
+	cont "peuvent"
+	cont "toutes deux être"
+	cont "de bonnes choses."
 	done
 
 _Route5BattleText3::
-	text "Have you been"
-	line "to the DAYCARE?"
-	para "I'm heading"
-	line "there."
+	text "Es-tu allé à la"
+	line "PENSION?"
+	para "Je m'y rends."
 	done
 
 _Route5EndBattleText3::
-	text "Raising"
-	line "#MON is hard."
+	text "Elever des"
+	line "#MON, c'est"
+	cont "dur."
 	prompt
 
 _Route5AfterBattleText3::
-	text "The DAYCARE can"
-	line "help raise an"
-	cont "extra #MON for"
-	cont "you."
-	para "Come back later"
-	line "and it will be"
-	cont "stronger!"
+	text "La PENSION peut"
+	line "t'aider à élever"
+	cont "un #MON"
+	cont "supplémentaire."
+	para "Reviens plus tard"
+	line "et il sera plus"
+	cont "fort!"
 	done
 
 _Route5BattleText4::
-	text "On the road"
-	line "again!"
+	text "Sur la route"
+	line "encore!"
 	done
 
 _Route5EndBattleText4::
-	text "I'll"
-	line "keep walking."
+	text "Je vais"
+	line "continuer à"
+	cont "marcher."
 	prompt
 
 _Route5AfterBattleText4::
-	text "I'll travel"
-	line "far and wide in"
-	cont "search of new"
-	cont "#MON to tame!"
-	para "This is my own"
-	line "quest!"
+	text "Je vais voyager"
+	line "loin et large à"
+	cont "la recherche de"
+	cont "nouveaux #MON"
+	cont "à apprivoiser!"
+	para "C'est ma propre"
+	line "quête!"
 	done

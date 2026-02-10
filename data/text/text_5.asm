@@ -1,188 +1,197 @@
 _CableClubNPCPleaseComeAgainText::
-	text "Please come again!"
+	text "A bientôt!"
 	done
 
 _CableClubNPCMakingPreparationsText::
-	text "We're making"
-	line "preparations."
-	cont "Please wait."
+	text "Nous préparons"
+	line "le lien."
+	cont "Patience s.v.p.!"
 	done
 
 _UsedStrengthText::
 	text_ram wNameBuffer
-	text " used"
-	line "STRENGTH.@"
+	text_start
+	line "utilise FORCE.@"
 	text_end
 
 _CanMoveBouldersText::
 	text_ram wNameBuffer
-	text " can"
-	line "move boulders."
+	text_start
+	line "peut bouger"
+	cont "les rochers."
 	done
 
 _CurrentTooFastText::
 	text_start
 _CurrentTooFastTextEntry::
-	db "The current is"
-	line "much too fast!"
+	db "Le courant est"
+	line "trop rapide!"
 	done
 
 _CurrentTooFastText2::
-	text "Can't SURF here!"
+	text "Impossible de"
+	line "SURFER ici!"
 	para "@"
 	text_jump _CurrentTooFastTextEntry
 
 _CyclingIsFunText::
-	text "Cycling is fun!"
-	line "Forget SURFing!"
+	text "Le vélo,"
+	line "c'est cool!"
+	cont "Oublie le SURF!"
 	prompt
 
 _FlashLightsAreaText::
-	text "A blinding FLASH"
-	line "lights the area!"
+	text "Un FLASH éclaire"
+	line "les environs!"
 	prompt
 
 _EscapeText::
-	text "Escape@"
+	text "Fuite@"
 	text_end
 
 _WarpText::
-	text "Warp@"
+	text "Téléportation@"
 	text_end
 
 _ToLastPkmnCenterText::
-	text " to the last"
-	line "#MON CENTER?"
+	text " au dernier"
+	line "CENTRE #MON?"
 	prompt
 
 _PocketAbraFlavorText1::
 	text_ram wPocketAbraNick
-	text " "
-	line "grabbed your"
-	cont "hand quickly in"
-	cont "anticipation."
+	text_start
+	line "attrape rapidement"
+	cont "votre main avec"
+	cont "impatience."
 	prompt
 
 _PocketAbraFlavorText2::
 	text_ram wPocketAbraNick
-	text " looks"
-	line "very excited!"
+	text_start
+	line "a l'air très"
+	cont "excité!"
 	prompt
 
 _PocketAbraFlavorText3::
 	text_ram wPocketAbraNick
-	text " was"
-	line "dozing off in"
-	cont "your bag."
+	text_start
+	line "somnolait dans"
+	cont "votre sac."
 	prompt
 
 _PocketAbraFlavorText4::
 	text_ram wPocketAbraNick
-	text " sat"
-	line "on your shoulder"
-	cont "comfily."
+	text_start
+	line "s'est installé"
+	cont "confortablement"
+	cont "sur votre épaule."
 	prompt
 
 _PocketAbraFlavorText5::
 	text_ram wPocketAbraNick
-	text " "
-	line "focused with"
-	cont "all its might!"
+	text_start
+	line "se concentre de"
+	cont "toutes ses forces!"
 	prompt
 
 _PocketAbraNo::
 	text_ram wPocketAbraNick
-	text " looks"
-	line "disappointed<...>"
+	text_start
+	line "a l'air déçu..."
 	prompt
 
 _WarpToLastPokemonCenterText::
-	text "Warp to the last"
-	line "#MON CENTER."
+	text "Téléportation au"
+	line "dernier CENTRE"
+	cont "#MON visité."
 	prompt
 
 _CannotUseTeleportNowText::
 	text_ram wNameBuffer
-	text " can't"
-	line "use TELEPORT now."
+	text " ne"
+	line "peut utiliser la"
+	cont "TELEPORTATION."
 	prompt
 
 _CannotFlyHereText::
 	text_ram wNameBuffer
-	text " can't"
-	line "FLY here."
+	text " ne"
+	line "peut VOLER ici."
 	prompt
 
 _CannotDigHereText::
 	text_ram wNameBuffer
-	text " can't"
-	line "DIG here."
+	text " ne"
+	line "peut creuser ici."
 	prompt
 
 _CannotDigWhileSurfingText::
-	text "Can't DIG while"
-	line "SURFing on water!"
+	text "Impossible de"
+	line "creuser en SURFANT"
+	cont "sur l'eau!"
 	prompt
 
 _NoWhereToDigDown::
-	text "You'll hit water"
-	line "if you dig here."
-	para "Find some"
-	line "stabler ground."
+	text "Vous allez"
+	line "atteindre l'eau"
+	cont "si vous creusez"
+	cont "ici."
+	para "Trouvez un sol"
+	line "plus stable."
 	prompt
 
 _NotHealthyEnoughText::
-	text "Not healthy"
-	line "enough."
+	text "Points de vie"
+	line "insuffisants."
 	prompt
 
 _AlreadyBrightText::
-	text "It's already"
-	line "bright enough."
+	text "C'est déjà"
+	line "assez lumineux."
 	prompt
 
 _NewBadgeRequiredText::
-	text "No! A new BADGE"
-	line "is required."
+	text "Non! Un nouveau"
+	line "BADGE est requis."
 	prompt
 
 _CannotUseItemsHereText::
-	text "You can't use items"
-	line "here."
+	text "Pas d'objets ici!"
 	prompt
 
 _CannotGetOffHereText::
-	text "You can't get off"
-	line "here."
+	text "Impossible de"
+	line "descendre ici!"
 	prompt
 
 _GotMonText::
-	text "<PLAYER> got"
+	text "<PLAYER> obtient:"
 	line "@"
 	text_ram wNameBuffer
 	text "!@"
 	text_end
 
 _SentToBoxText::
-	text "There's no more"
-	line "room for #MON!"
+	text "Plus de place"
+	line "pour un #MON!"
 	cont "@"
 	text_ram wBoxMonNicks
-	text " was"
-	cont "sent to #MON"
-	cont "BOX @"
+	text " est"
+	cont "transféré à la"
+	cont "BOITE @"
 	text_ram wStringBuffer
-	text " on <PC>!"
+	text " du PC!"
 	prompt
 
 _BoxIsFullText::
-	text "There's no more"
-	line "room for #MON!"
+	text "Plus de place"
+	line "pour un #MON!"
 
-	para "The #MON BOX"
-	line "is full and can't"
-	cont "accept any more!"
+	para "La BOITE #MON"
+	line "est pleine!"
 
-	para "Change the BOX at"
-	line "a #MON CENTER!"
+	para "Changez de BOITE"
+	line "dans un CENTRE"
+	cont "#MON!"
 	done

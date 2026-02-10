@@ -1,224 +1,237 @@
 _SafariZoneWestRestHouseSignText::
-	text "REST HOUSE"
+	text "ABRI"
 	done
 
 _SafariZoneWestFindWardensTeethSignText::
-	text "REQUEST NOTICE"
+	text "AVIS"
 
-	para "Please find the"
-	line "SAFARI WARDEN's"
-	cont "lost GOLD TEETH."
-	cont "They're around"
-	cont "here somewhere."
+	para "Veuillez trouver"
+	line "la DENT D'OR du"
+	cont "GARDIEN. Explorez"
+	cont "les environs."
 
-	para "Reward offered!"
-	line "Contact: WARDEN"
+	para "Récompense"
+	line "assurée! "
+	cont "Contactez le"
+	cont "GARDIEN."
 	done
 
 _SafariZoneWestTrainerTipsText::
-	text "<TIPS>"
+	text "ASTUCE"
 
-	para "Zone Exploration"
-	line "Campaign!"
+	para "Grand concours"
+	line "organisé:"
 
-	para "The Search for"
-	line "the SECRET HOUSE!"
+	para "Cherchez la"
+	line "CABANE SECRETE!"
 	done
 
 _SafariZoneWestSignText::
-	text "AREA 3"
-	line "EAST: CENTER AREA"
+	text "PARC 3"
+	line "EST: PARC CENTRAL"
 	done
 
 _SafariZoneWestRanger0Text::
-	text "That's right."
-	line "I'm a RANGER."
+	text "C'est ça."
+	line "Je suis un RANGER."
 
-	para "RANGER number 4"
-	line "to be exact."
+	para "RANGER numéro 4"
+	line "pour être précis."
 
-	para "Another trainer,"
-	line "another battle."
+	para "Un autre dresseur,"
+	line "un autre combat."
 	done
 
 _SafariZoneWestRanger0EndBattleText::
-	text "Yawn-"
-	line "I just want to"
-	cont "slack off."
+	text "Bâille-"
+	line "Je veux juste"
+	cont "me la couler"
+	cont "douce."
 	prompt
 
 _SafariZoneWestRanger0AfterBattleText::
-	text "I'll tell you a"
-	line "secret about the"
-	cont "prize."
+	text "Je vais te dire un"
+	line "secret sur le"
+	cont "prix."
 
-	para "It's a POKéBALL"
-	line "that never fails"
-	cont "to catch #MON"
-	cont "if they're at"
-	cont "low health."
+	para "C'est une # BALL"
+	line "qui ne rate jamais"
+	cont "de capturer un"
+	cont "#MON s'il est"
+	cont "en mauvaise santé."
 
-	para "Solid reward."
+	para "Récompense solide."
 
-	para "Don't squander"
-	line "your win."
+	para "Ne gaspille pas"
+	line "ta victoire."
 	done
 
 _SafariZoneWestRanger1Text::
-	text "RANGER Number 5!"
+	text "RANGER Numéro 5!"
 
-	para "They call me the"
-	line "RANGER KING!"
+	para "On m'appelle le"
+	line "ROI DES RANGERS!"
 
-	para "This rocky"
-	line "outcrop is my"
-	cont "royal domain!"
+	para "Cet affleurement"
+	line "rocheux est mon"
+	cont "domaine royal!"
 	done
 
 _SafariZoneWestRanger1EndBattleText::
-	text "Shall I"
-	line "knight you?"
+	text "Dois-je"
+	line "te faire"
+	cont "chevalier?"
 	prompt
 
 _SafariZoneWestRanger1AfterBattleText::
-	text "It's not easy"
-	line "wearing this"
-	cont "crown!"
+	text "Ce n'est pas"
+	cont "facile"
+	line "de porter cette"
+	cont "couronne!"
 
-	para "But someone's"
-	line "gotta do it!"
+	para "Mais quelqu'un"
+	line "doit le faire!"
 
-	para "Begone, peasant!"
+	para "Va-t'en, paysan!"
 
-	para "Just kidding!"
-	line "You're alright."
+	para "Je rigole!"
+	line "T'es cool."
 	done
 
 _SafariZoneWestBurglarText::
-	text "I've got a sack"
-	line "full of #MON!"
+	text "J'ai un sac"
+	line "plein de #MON!"
 	done
 
 _SafariZoneWestBurglarEndBattleText::
-	text "I've"
-	line "been sacked!"
+	text "J'ai"
+	line "été viré!"
 	prompt
 
 _SafariZoneWestBurglarAfterBattleText::
-	text "I'm an elementary"
-	line "school teacher."
+	text "Je suis"
+	cont "instituteur"
+	line "en école primaire."
 
-	para "Raising #MON"
-	line "is part of the"
-	cont "curriculum!"
+	para "Elever des #MON"
+	line "fait partie du"
+	cont "programme!"
 
-	para "I have to catch"
-	line "enough #MON"
-	cont "for my class!"
+	para "Je dois attraper"
+	line "assez de #MON"
+	cont "pour ma classe!"
 
-	para "Even if I look"
-	line "goofy with this"
-	cont "big sack slung"
-	cont "over my back!"
+	para "Même si j'ai l'air"
+	line "bizarre avec ce"
+	cont "gros sac sur le"
+	cont "dos!"
 	done
 
 _SafariZoneWestManiacText::
-	text "Target acquired."
-	line "Initiate POKéBALL"
-	cont "launch sequence."
+	text "Cible acquise."
+	line "Initier séquence"
+	cont "de lancement"
+	cont "# BALL."
 	done
 
 _SafariZoneWestManiacEndBattleText::
-	text "Fatal"
-	line "error, abort!"
-	cont "Abort!"
+	text "Erreur"
+	line "fatale, abandon!"
+	cont "Abandon!"
 	prompt
 
 _SafariZoneWestManiacAfterBattleText::
-	text "Disaster recovery"
-	line "mode initiated."
+	text "Mode récupération"
+	line "désastre activé."
 
-	para "Collecting battle"
-	line "analytics."
+	para "Collecte des"
+	line "analyses de"
+	cont "combat."
 
 	para "."
 
 	para ".."
 
-	para "<...>"
+	para "..."
 
-	para "Analytics"
-	line "complete."
+	para "Analyses"
+	line "complètes."
 
-	para "Failure cause:"
-	line "Skill issue."
+	para "Cause de l'échec:"
+	line "Problème de"
+	cont "compétence."
 	done
 
 _SafariZoneWestRockerText::
-	text "We're making this"
-	line "house into our"
-	cont "secret base!"
+	text "On transforme"
+	cont "cette"
+	line "maison en notre"
+	cont "base secrète!"
 	done
 
 _SafariZoneWestRockerEndBattleText::
-	text "Care to"
-	line "join us?"
+	text "Tu veux"
+	line "nous rejoindre?"
 	prompt
 
 _SafariZoneWestRockerAfterBattleText::
-	text "Everyone knows"
-	line "secret bases are"
-	cont "totally radical."
+	text "Tout le monde sait"
+	line "que les bases"
+	cont "secrètes sont"
+	cont "totalement"
+	cont "radicales."
 
-	para "Every group of"
-	line "friends needs to"
-	cont "have one!"
+	para "Chaque groupe"
+	line "d'amis doit en"
+	cont "avoir une!"
 	done
 
 _SafariZoneWestJugglerText::
-	text "We need some"
-	line "secret passages"
-	cont "out of our base!"
+	text "On a besoin de"
+	line "passages secrets"
+	cont "pour sortir de"
+	cont "notre base!"
 	done
 
 _SafariZoneWestJugglerEndBattleText::
-	text "Into"
-	line "the bunker!"
+	text "Dans"
+	line "le bunker!"
 	prompt
 
 _SafariZoneWestJugglerAfterBattleText::
-	text "A secret base"
-	line "just isn't a"
-	cont "secret base"
-	cont "without hidden"
-	cont "passageways."
+	text "Une base secrète"
+	line "n'est pas vraiment"
+	cont "une base secrète"
+	cont "sans passages"
+	cont "cachés."
 
-	para "You know I'm"
-	line "right!"
+	para "Tu sais que j'ai"
+	line "raison!"
 	done
 
 _SafariZoneWestPsychicText::
-	text "It's obvious I'm"
-	line "the brains of"
-	cont "this operation!"
+	text "C'est évident que"
+	line "je suis le cerveau"
+	cont "de cette"
+	cont "opération!"
 	done
 
 _SafariZoneWestPsychicEndBattleText::
-	text "Their"
-	line "incessant"
-	cont "chattering"
-	cont "distracted me!"
+	text "Leur"
+	line "bavardage"
+	cont "incessant m'a"
+	cont "distrait!"
 	prompt
 
 _SafariZoneWestPsychicAfterBattleText::
-	text "They've got"
-	line "plenty of ideas"
-	cont "for our secret"
-	cont "base."
+	text "Ils ont plein"
+	line "d'idées pour notre"
+	cont "base secrète."
 
-	para "But I'm always"
-	line "the one who has"
-	cont "to figure out how"
-	cont "to make them"
-	cont "happen!"
+	para "Mais c'est"
+
+	cont "toujours"
+	line "moi qui dois"
+	cont "trouver comment"
+	cont "les réaliser!"
 	done

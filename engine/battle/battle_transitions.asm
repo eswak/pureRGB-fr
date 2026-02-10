@@ -1,6 +1,9 @@
 BattleTransition:
 	ld a, 1
 	ldh [hAutoBGTransferEnabled], a
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors before battle transition
+	; Without this, colors will be wrong when the window slides onto the screen during the transition.
+	farcall MakeAndTransferOverworldBGMapAttributes_OpenText
 	call Delay3
 	xor a
 	ldh [hWY], a

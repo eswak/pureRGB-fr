@@ -402,5 +402,12 @@ hDisableJoypadPolling:: db
 hFlagsFFFA::db 
 hRGB:: ds 3 ; FFFB=Red, FFFC=Green, FFFD=BLUE ; shinpokerednote: ADDED: used to store color RGB color values
 hGBC:: db ; shinpokerednote: gbcnote: hram indicator from pokeyellow for where we're playing on GBC
+; shinpokerednote: ADDED: for various uses involving enhanced GBC colors (using unused HRAM space)
+; Note: These are accessed via direct addresses $FFEF and $FFF6 since HRAM is full
+; hVblankBackup EQU $FFEF
+; hFlags_0xFFF6 EQU $FFF6
 
 ENDSECTION
+
+DEF hVblankBackup EQU $FFEF ; shinpokerednote: ADDED: for various uses involving enhanced GBC colors
+DEF hFlags_0xFFF6 EQU $FFF6 ; shinpokerednote: ADDED: has to do with a bunch of menu spacing and stuff

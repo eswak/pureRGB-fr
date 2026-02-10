@@ -1,62 +1,65 @@
 _PokemonTower6FGhostWasCubonesMotherText::
-	text "The GHOST was the"
-	line "restless soul of"
-	cont "CUBONE's mother!"
+	text "Le SPECTRE était"
+	line "l'esprit damné de"
+	cont "la mère de"
+	cont "OSSELAIT!"
 	done
 
 _PokemonTower6FSoulWasCalmedText::
-	text "The mother's soul"
-	line "was calmed."
+	text "L'âme de la mère"
+	line "a été apaisée."
 	prompt
 
 _PokemonTower2Text_toAfterlife::
-	text "It departed to"
-	line "the afterlife!"
+	text "Elle est partie"
+	line "vers l'autre"
+	cont "monde!"
 	done
 
 _PokemonTower2Text_Caught::
-	text "It wants to"
-	line "fight alongside"
-	cont "you against"
-	cont "<TEAM><ROCKET>!"
-	para "This is its"
-	line "final wish before"
-	cont "departing to the"
-	cont "afterlife!"
+	text "Elle veut"
+	line "combattre à tes"
+	cont "côtés contre la"
+	cont "TEAM ROCKET!"
+	para "C'est son"
+	line "dernier souhait"
+	cont "avant de partir"
+	cont "vers l'autre"
+	cont "monde!"
 	done
 
 _PokemonTower6FChanneler1BattleText::
-	text "Give<...>me<...>"
-	line "blood<...>"
+	text "Ton...Sang..."
+	line "Donne..."
 	done
 
 _PokemonTower6FChanneler1EndBattleText::
-	text "Groan!"
+	text "Grargh!"
 	prompt
 
 _PokemonTower6FChanneler1AfterBattleText::
-	text "I feel anemic and"
-	line "weak<...>"
+	text "Je me sens"
+	line "faible..."
 	done
 
 _PokemonTower6FChanneler2BattleText::
-	text "Urff<...> Kwaah!"
+	text "Urff... Kwaah!"
 	done
 
 _PokemonTower6FChanneler2EndBattleText::
-	text "Some-"
-	line "thing fell out!"
+	text "Haaa!"
+	line "Je me sens mieux!"
 	prompt
 
 _PokemonTower6FChanneler2AfterBattleText::
-	text "Hair didn't fall"
-	line "out! It was an"
-	cont "evil spirit!"
+	text "J'étais sous"
+	line "l'emprise d'un"
+	cont "esprit!"
 	done
 
 _PokemonTower6FChanneler3BattleText::
-	text "Ke<...>ke<...>ke<...>"
-	line "ke<...>ke<...>ke!!"
+	text "Ke..ke...ke..."
+	line "ke..ke...ke!!"
 	done
 
 _PokemonTower6FChanneler3EndBattleText::
@@ -64,11 +67,11 @@ _PokemonTower6FChanneler3EndBattleText::
 	prompt
 
 _PokemonTower6FChanneler3AfterBattleText::
-	text "What's going on"
-	line "here?"
+	text "Mais qu'est-ce"
+	line "qui se passe ici?"
 	done
 
 _PokemonTower6FBeGoneText::
-	text "Be gone<...>"
-	line "Intruders<...>"
+	text "Fuis..."
+	line "Impudent..."
 	done

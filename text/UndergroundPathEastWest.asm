@@ -1,56 +1,58 @@
 _UndergroundPathWestEastBattleText1::
-	text "CELADON CITY?"
-	para "Another meeting"
-	line "over there?!"
+	text "CELADOPOLE?"
+	para "Encore une"
+	line "réunion là-bas?!"
 	done
 
 _UndergroundPathWestEastEndBattleText1::
-	text "O-"
-	line "okay<...>"
+	text "D'"
+	line "accord..."
 	prompt
 
 _UndergroundPathWestEastAfterBattleText1::
-	text "I want to shop at"
-	line "the dept. store"
-	cont "in CELADON but<...>"
+	text "Je veux faire"
+	line "du shopping au"
+	cont "centre commercial"
+	cont "de CELADOPOLE"
+	cont "mais..."
 
-	para "There are so many"
-	line "rough looking"
-	cont "people there."
+	para "Il y a tellement"
+	line "de gens à l'air"
+	cont "louche là-bas."
 	done
 
 _UndergroundPathWestEastBattleText2::
-	text "My colleague and"
-	line "I are running"
-	cont "late!"
+	text "Mon collègue et"
+	line "moi sommes en"
+	cont "retard!"
 	done
 
 _UndergroundPathWestEastEndBattleText2::
-	text "Let's"
-	line "hurry!"
+	text "Dépêchons-"
+	line "nous!"
 	prompt
  
 _UndergroundPathWestEastAfterBattleText2::
-	text "After the meeting"
-	line "I'm going to hit"
-	cont "the slots!"
-	para "Woohoo!"
+	text "Après la réunion"
+	line "je vais jouer aux"
+	cont "machines à sous!"
+	para "Youpi!"
 	done
 
 _UndergroundPathWestEastBattleText3::
-	text "Hey dude."
-	para "What's up?"
+	text "Hé mec."
+	para "Quoi de neuf?"
 	done
 
 _UndergroundPathWestEastEndBattleText3::
-	text "Lame!"
+	text "Nul!"
 	prompt
 
 _UndergroundPathWestEastAfterBattleText3::
-	text "I'm trying to"
-	line "count the tiles"
-	cont "along the length"
-	cont "of this path."
-	para "But it's making"
-	line "me dizzy!"
+	text "J'essaie de"
+	line "compter les"
+	cont "carreaux le long"
+	cont "de ce chemin."
+	para "Mais ça me rend"
+	line "étourdi!"
 	done

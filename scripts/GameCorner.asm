@@ -576,10 +576,10 @@ GameCornerDrawCoinBox:
 	ret
 
 GameCornerMoneyText:
-	db "MONEY@"
+	db "ARGENT@"
 
 GameCornerCoinText:
-	db "COIN@"
+	db "PIECES@"
 
 ; TODO: just clear the screen area instead of making this pointless blank text data
 GameCornerBlankText:

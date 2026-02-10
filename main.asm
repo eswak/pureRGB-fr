@@ -206,6 +206,11 @@ INCLUDE "engine/battle/core.asm"
 INCLUDE "engine/battle/effects.asm"
 
 
+SECTION "Battle Core Data", ROMX
+
+INCLUDE "engine/battle/battle_core_data.asm"
+
+
 SECTION "bank10", ROMX
 
 INCLUDE "engine/menus/pokedex.asm"
@@ -385,7 +390,7 @@ INCLUDE "engine/overworld/fly_animation.asm"
 ; moved from audio home code
 INCLUDE "audio/check_bike_surf_music.asm"
 
-SECTION "Party Sprites", ROMX, BANK[$34]
+SECTION "Party Sprites", ROMX, BANK[$35]
 ; PureRGBnote: ADDED: new menu sprite icons raw data
 PartyMonSprites1:: INCBIN "gfx/icons/menusprites1.2bpp"
 PartyMonSprites2:: INCBIN "gfx/icons/menusprites2.2bpp"
@@ -416,6 +421,7 @@ INCLUDE "engine/menus/options_menu.asm" ; PureRGBnote: MOVED: used to be part of
 INCLUDE "engine/menus/options_menu2.asm"
 INCLUDE "engine/menus/battle_options.asm"
 INCLUDE "engine/menus/sprite_options_menu.asm"
+INCLUDE "engine/menus/options_menu3.asm"
 INCLUDE "engine/menus/front_sprite_options.asm"
 INCLUDE "engine/menus/front_sprite_options2.asm"
 INCLUDE "engine/menus/front_sprite_options3.asm"
@@ -456,4 +462,7 @@ INCLUDE "engine/gfx/enter_map_replace_tiles_check.asm"
 INCLUDE "engine/battle/move_effects/defense_curl_effect.asm"
 INCLUDE "engine/battle/remap_move_data.asm"
 INCLUDE "engine/battle/move_effects/conversion.asm"
+
+INCLUDE "custom_functions/func_enhancedcolor.asm"
+INCLUDE "custom_functions/func_shiny.asm"
 INCLUDE "engine/overworld/overworld_animation.asm"

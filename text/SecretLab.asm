@@ -1,278 +1,308 @@
 _SecretLabBattleText1::
-	text "What are you"
-	line "doing here kid?"
-	para "This area's under"
-	line "military"
-	cont "jurisdiction!"
+	text "Qu'est-ce que tu"
+	line "fais ici, gamin?"
+	para "Cette zone est"
+	line "sous juridiction"
+	cont "militaire!"
 	done
 
 _SecretLabEndBattleText1::
-	text "I need"
-	line "backup here!"
+	text "J'ai besoin"
+	line "de renforts ici!"
 	prompt
 
 _SecretLabAfterBattleText1::
-	text "Command'll"
-	line "just love hearing"
-	cont "about this!"
+	text "Le commandement"
+	line "va adorer entendre"
+	cont "ça!"
 	done
 
 _SecretLabBattleText2::
-	text "Stop! This area"
-	line "is for those with"
-	cont "top secret-level"
-	cont "clearance only!"
+	text "Arrête! Cette zone"
+	line "est réservée à"
+	cont "ceux qui ont une"
+	cont "autorisation"
+	cont "top secret!"
 	done
 
 _SecretLabEndBattleText2::
-	text "Power"
-	line "overwhelming!"
+	text "Puissance"
+	line "écrasante!"
 	prompt
 
 _SecretLabAfterBattleText2::
-	text "The CHIEF will"
-	line "deal with you!"
-	para "I'm out of here!"
+	text "Le CHEF va"
+	line "s'occuper de toi!"
+	para "Je me tire!"
 	done
 
 _SecretLabBattleText3::
-	text "CHIEF: How'd"
-	line "you get in here?"
-	para "<PLAYER>, eh?"
-	para "You're the CHAMP"
-	line "aren't you?"
-	para "That civilian"
-	line "title doesn't"
-	cont "sway me at all."
-	para "This is a top"
-	line "secret military"
-	cont "investigation"
-	cont "area."
-	para "I won't allow you"
-	line "to mess with it!"
+	text "CHEF: Comment"
+	line "es-tu entré ici?"
+	para "<PLAYER>, hein?"
+	para "Tu es le CHAMPION"
+	line "n'est-ce pas?"
+	para "Ce titre civil ne"
+	line "m'impressionne"
+	cont "pas du tout."
+	para "C'est une zone"
+	line "d'investigation"
+	cont "militaire top"
+	cont "secret."
+	para "Je ne te laisserai"
+	line "pas y toucher!"
 	done
 
 _SecretLabEndBattleText3::
-	text "Well just"
-	line "blow me down!"
+	text "Bon sang!"
+	line "Tu m'as battu!"
 	prompt
 
 _SecretLabAfterBattleText3::
-	text "LT.SURGE wasn't"
-	line "lying when he"
-	cont "said you had"
-	cont "potential!"
-	para "He's always had"
-	line "a good eye for"
-	cont "quality soldiers."
-	para "That's why I made"
-	line "him a lieutenant!"
-	para "Well, do what you"
-	line "must."
-	para "We haven't opened"
-	line "this door yet."
-	para "Maybe you can"
-	line "figure it out."
+	text "MAJOR BOB n'avait"
+	line "pas menti quand"
+	cont "il a dit que tu"
+	cont "avais du"
+	cont "potentiel!"
+	para "Il a toujours eu"
+	line "un bon oeil pour"
+	cont "les soldats de"
+	cont "qualité."
+	para "C'est pour ça que"
+	line "je l'ai fait"
+	cont "major!"
+	para "Bon, fais ce que"
+	line "tu dois faire."
+	para "On n'a pas encore"
+	line "ouvert cette"
+	cont "porte."
+	para "Peut-être que tu"
+	line "pourras la"
+	cont "débloquer."
 	done
 
 _SecretLabFailedClone1Text::
-	text "SUBJECT ALPHA"
-	line "STATUS: TERMINAL"
-	para "Psychic nodules"
-	line "grew to a massive"
-	cont "size."
-	para "Brain function"
-	line "however failed"
-	cont "to materialize."
+	text "SUJET ALPHA"
+	line "STATUT: TERMINAL"
+	para "Les nodules"
+	line "psychiques ont"
+	cont "atteint une taille"
+	cont "massive."
+	para "Cependant, les"
+	line "fonctions"
+	cont "cérébrales"
+	cont "n'ont pas réussi"
+	cont "à se matérialiser."
 	done
 
 _SecretLabFailedClone2Text::
-	text "SUBJECT BETA"
-	line "STATUS: TERMINAL"
-	para "Mutation caused"
-	line "the growth of a"
-	cont "third optical"
-	cont "appendage."
-	para "Gestation halted"
-	line "after 12 weeks."
+	text "SUJET BETA"
+	line "STATUT: TERMINAL"
+	para "Une mutation a"
+	line "causé la"
+	cont "croissance"
+	cont "d'un troisième"
+	cont "appendice optique."
+	para "La gestation s'est"
+	line "arrêtée après"
+	cont "12 semaines."
 	done
 
 _SecretLabFailedClone3Text::
-	text "SUBJECT GAMMA"
-	line "STATUS: TERMINAL"
-	para "Mutation avoided"
-	line "with this clone,"
-	para "but a gestational"
-	line "halt still seemed"
-	cont "to occur."
+	text "SUJET GAMMA"
+	line "STATUT: TERMINAL"
+	para "La mutation a été"
+	line "évitée avec ce"
+	cont "clone,"
+	para "mais un arrêt de"
+	line "gestation semble"
+	cont "toujours s'être"
+	cont "produit."
 	done
 
 _SecretLabFailedClone4Text::
-	text "SUBJECT DELTA"
-	line "STATUS: TERMINAL"
-	para "For the first"
-	line "time, ambulatory"
-	cont "appendages began"
-	cont "to form."
-	para "However severe"
-	line "lacerations to"
-	cont "sternum occured."
+	text "SUJET DELTA"
+	line "STATUT: TERMINAL"
+	para "Pour la première"
+	line "fois, des"
+	cont "appendices"
+	cont "ambulatoires ont"
+	cont "commencé à se"
+	cont "former."
+	para "Cependant, des"
+	line "lacérations"
+	cont "sévères au"
+	cont "sternum se sont"
+	cont "produites."
 	done
 
 _SecretLabFailedClone5Text::
-	text "SUBJECT EPSILON"
-	line "STATUS: TERMINAL"
-	para "Gestation period"
-	line "was longer than"
-	cont "usual."
-	para "Very promising"
-	line "formations as a"
-	cont "result."
-	para "Heart formation"
-	line "still lacking."
+	text "SUJET EPSILON"
+	line "STATUT: TERMINAL"
+	para "La période de"
+	line "gestation était"
+	cont "plus longue que"
+	cont "d'habitude."
+	para "Des formations"
+	line "très prometteuses"
+	cont "en résultent."
+	para "La formation du"
+	line "coeur manque"
+	cont "toujours."
 	done
 
 _SecretLabFailedClone6Text::
-	text "SUBJECT ZETA"
-	line "STATUS: TERMINAL"
-	para "Highly formed"
-	line "with mutation"
-	cont "present."
-	para "However, immune"
-	line "system proved"
-	cont "inadequate."
+	text "SUJET ZETA"
+	line "STATUT: TERMINAL"
+	para "Très bien formé"
+	line "avec une mutation"
+	cont "présente."
+	para "Cependant, le"
+	line "système"
+	cont "immunitaire"
+	cont "s'est avéré"
+	cont "insuffisant."
 	done
 
 _SecretLabFailedClone7Text::
-	text "SUBJECT IOTA"
-	line "STATUS: TERMINAL"
-	para "Severe cerebral"
-	line "mutation as a"
-	cont "result of a bad"
-	cont "batch of feeding"
-	cont "fluid."
+	text "SUJET IOTA"
+	line "STATUT: TERMINAL"
+	para "Mutation cérébrale"
+	line "sévère résultant"
+	cont "d'un mauvais lot"
+	cont "de fluide"
+	cont "nutritif."
 	done
 
 _SecretLabFailedClone8Text::
-	text "SUBJECT LAMBDA"
-	line "STATUS: COMATOSE"
-	para "Life signs"
-	line "present but very"
-	cont "faint."
-	para "If all goes well,"
-	line "perhaps the next"
-	cont "subject, MU, will"
-	cont "be a success."
+	text "SUJET LAMBDA"
+	line "STATUT: COMATEUX"
+	para "Signes vitaux"
+	line "présents mais très"
+	cont "faibles."
+	para "Si tout va bien,"
+	line "peut-être que le"
+	cont "prochain sujet,"
+	cont "MU,"
+	cont "sera un succès."
 	done
 
 _SecretLabComputer1Text::
-	text "COOLANT SYSTEM"
-	line "NOMINAL"
+	text "SYSTEME DE"
+	line "REFROIDISSEMENT"
+	cont "NOMINAL"
 	done
 
 _SecretLabComputer2Text::
-	text "CLONING PROCESS"
-	line "MALFUNCTION"
-	para "CIPHER DISCS"
-	line "BLANK"
+	text "PROCESSUS DE"
+	line "CLONAGE EN"
+	cont "PANNE"
+	para "DISQUES CHIFFRES"
+	line "VIDES"
 	done
 
 _SecretLabComputer3Text::
-	text "SUBJECT MU"
-	line "STATUS: MISSING"
+	text "SUJET MU"
+	line "STATUT: DISPARU"
 	done
 
 _SecretLabComputer4Text::
-	text "ARMING SYSTEM"
-	line "READY"
-	para "AWAITING SUBJECT"
-	line "CONTAINMENT"
+	text "SYSTEME D'ARMEMENT"
+	line "PRET"
+	para "EN ATTENTE DE"
+	line "CONFINEMENT DU"
+	cont "SUJET"
 	done
 
 _SecretLabMewMachineText::
-	text "A miniaturized"
-	line "version of the"
-	cont "machine on the"
-	cont "right."
-	para "Looks like it's"
-	line "been permanently"
-	cont "shut down."
+	text "Une version"
+	line "miniaturisée de la"
+	cont "machine à droite."
+	para "Il semble qu'elle"
+	line "ait été"
+	cont "définitivement"
+	cont "fermée."
 	done
 
 _SecretLabMewReactionText::
-	text "MEW is shuddering"
-	line "when it gets near"
-	cont "this smaller"
-	cont "machine."
-	para "The poor thing"
-	line "is petrified."
+	text "MEW frissonne"
+	line "quand il"
+	cont "s'approche"
+	cont "de cette machine"
+	cont "plus petite."
+	para "La pauvre créature"
+	line "est pétrifiée."
 	done
 
 _SecretLabMewtwoMachineText::
-	text "This machine looks"
-	line "big enough for a"
-	cont "person to fit"
-	cont "inside."
-	para "It still has some"
-	line "power."
-	para "There is a dark"
-	line "silhouette within"
-	cont "the viewport."
+	text "Cette machine"
+	line "semble assez"
+	cont "grande"
+	cont "pour qu'une"
+	cont "personne puisse"
+	cont "rentrer dedans."
+	para "Elle a encore un"
+	line "peu d'énergie."
+	para "Il y a une"
+	line "silhouette sombre"
+	cont "dans le hublot."
 	done
 
 _SecretLabMewtwoReactionText::
-	text "MEWTWO is eying"
-	line "this machine with"
-	cont "a serious gaze."
-	para "It wants to go"
-	line "inside it."
+	text "MEWTWO regarde"
+	line "cette machine avec"
+	cont "un regard sérieux."
+	para "Il veut y entrer."
 	prompt
 
 _SecretLabMewtwoReactionText3::
-	text "But the entry"
-	line "hatch has to be"
-	cont "open first."
+	text "Mais la trappe"
+	line "d'entrée doit être"
+	cont "ouverte d'abord."
 	done
 
 _SecretLabMewtwoReactionText4::
-	text "Wrong #MON."
+	text "Mauvais #MON."
 	done
 
 _SecretLabMewtwoHereWeGoText::
-	text "MEWTWO went"
-	line "inside."
-	para "Time to power"
-	line "this thing up!"
+	text "MEWTWO est entré"
+	line "dedans."
+	para "Il est temps"
+	line "d'activer cette"
+	cont "chose!"
 	done
 
 _SecretLabMewtwoTransformText::
-	text "ARMING SYSTEM"
-	line "ACTIVATED"
+	text "SYSTEME D'ARMEMENT"
+	line "ACTIVE"
 	prompt
 
 _SecretLabMewtwoTransformArmorText::
-	text "ATTACHING HYPER"
-	line "ARMOR TO SUBJECT"
+	text "ATTACHEMENT DE"
+	line "L'ARMURE HYPER AU"
+	cont "SUJET"
 	prompt
 
 _SecretLabMewtwoTransformNormalText::
-	text "DETACHING HYPER"
-	line "ARMOR FROM"
-	cont "SUBJECT"
+	text "DETACHEMENT DE"
+	line "L'ARMURE HYPER DU"
+	cont "SUJET"
 	prompt
 
 _SecretLabMewtwoGotArmorText::
-	text "The machine put"
-	line "armor on MEWTWO!"
+	text "La machine a mis"
+	line "une armure sur"
+	cont "MEWTWO!"
 	done
 
 _SecretLabMewtwoRemovedArmorText::
-	text "MEWTWO's armor was"
-	line "taken off!"
+	text "L'armure de MEWTWO"
+	line "a été retirée!"
 	done
 
 _SecretLabMewtwoTransformCompleteText::
-	text "ARMING PROCESS"
-	line "COMPLETED"
-	para "STANDING BY"
+	text "PROCESSUS"
+	line "D'ARMEMENT TERMINE"
+	para "EN ATTENTE"
 	done

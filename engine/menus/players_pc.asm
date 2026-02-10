@@ -428,11 +428,11 @@ WorldOptions:
 
 
 PlayersPCMenuEntries:
-	db   "WITHDRAW ITEM"
-	next "DEPOSIT ITEM"
-	next "TOSS ITEM"
-	next "WORLD OPTIONS"
-	next "LOG OFF@"
+	db   "RETIRER OBJET"
+	next "STOCKER OBJET"
+	next "JETER OBJET"
+	next "OPTIONS MONDE"
+	next "DECONNEXION@"
 
 TurnedOnPC2Text:
 	text_far _TurnedOnPC2Text

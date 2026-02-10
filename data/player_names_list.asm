@@ -30,13 +30,13 @@ IF DEF(_GREEN) ; PureRGBnote: GREENBUILD: default names specific to pokemon gree
 DefaultNamesPlayerList:
 	db "NEW NAME@"
 	db "GREEN@"
-	db "ASH@"
-	db "MIKE@"
+	db "KIM@"
+	db "MIRA@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
 	db "BLUE@"
-	db "GARY@"
-	db "GABE@"
+	db "REGIS@"
+	db "OSCAR@"
 ENDC
 

@@ -5,7 +5,7 @@ GetRGB:
 	;red bits in e are %00011111
 	ld a, e
 	and %00011111	;mask to get just the color value
-	ldh [hRGB + 0], a
+	ld [hRGB + 0], a
 ;GetGreen:
 	;green bits in de are %00000011 11100000
 	ld a, e
@@ -23,27 +23,27 @@ GetRGB:
 	;a is now 000xx000
 	or b
 	;a is now 000xxxxx
-	ldh [hRGB + 1], a
+	ld [hRGB + 1], a
 ;GetBlue:
 	;blue bits in d are %01111100
 	ld a, d
 	rra
 	rra
 	and %00011111	;mask to get just the color value
-	ldh [hRGB + 2], a
+	ld [hRGB + 2], a
 	ret
 
 ;write a colors at hRGB into their proper bit placement in de
 WriteRGB:
 ;writeRed:
-	ldh a, [hRGB + 0]
+	ld a, [hRGB + 0]
 	ld b, a
 	ld a, e
 	and %11100000
 	or b
 	ld e, a
 ;writeGreen:
-	ldh a, [hRGB + 1]
+	ld a, [hRGB + 1]
 	;					d		e
 	;green bits are 00000011 11100000
 	;bits in a are 00011111
@@ -53,19 +53,25 @@ WriteRGB:
 	ld b, a
 	;bits in b are 11100011	
 	;now load into d
-	xor d
 	and %00000011
-	xor d
+	ld c, a
+	;bits in c are 00000011
+	ld a, d
+	and %11111100
+	or c
 	ld d, a
 	;bits in b are still 11100011	
 	;now load into e
 	ld a, b
-	xor e
 	and %11100000
-	xor e
+	ld c, a
+	;bits in c are 11100000
+	ld a, e
+	and %00011111
+	or c
 	ld e, a
 ;writeBlue:
-	ldh a, [hRGB + 2]	;blue bits are 00011111
+	ld a, [hRGB + 2]	;blue bits are 00011111
 	add a			;blue bits are 00111110
 	add a			;blue bits are 01111100
 	ld b, a
@@ -78,7 +84,8 @@ WriteRGB:
 ;This is does gamma conversions of hRGB color values via lookup list.
 GammaConv:
 	ld hl, hRGB
-	lb bc, 0, 3
+	ld c, 3
+	ld b, 0
 .loop
 	ld a, [hl]
 	push hl
@@ -136,7 +143,7 @@ MixColorMatrix:
 	ld h, a
 	; multiply red value by 13 and add to hl
 	; uses shift and add
-	ldh a, [hRGB + 0]
+	ld a, [hRGB + 0]
 	ld c, a		; bc = r * 1
 	add a		;  a = r * 2
 	add a		;  a = r * 4
@@ -146,11 +153,11 @@ MixColorMatrix:
 	add hl, hl	; hl = (r * 4) * 2 = r * 8
 	add hl, bc	; hl = r * 8 + r * 5 = r * 13
 	;multiply green value by 2, add to blue and hl
-	ldh a, [hRGB + 1]
+	ld a, [hRGB + 1]
 	add a
 	ld c, a
 	;multiply blue value by 1 and add to hl
-	ldh a, [hRGB + 2]
+	ld a, [hRGB + 2]
 	add c
 	ld c, a
 	add hl, bc
@@ -159,24 +166,26 @@ MixColorMatrix:
 	swap h
 	swap l
 	ld a, l
-	xor h
 	and $0F
-	xor h
+	ld l, a
+	ld a, h
+	and $F0
+	or l
 	;store now because red isn't used after this
-	ldh [hRGB + 0], a
+	ld [hRGB + 0], a
 	
 ;calculate green row and store it
 ;this only needs 8-bit math: 31 * 3 + 31 * 1 == 124 < 255
 	;multiply red value by 0 and add to c
 	;no actions for this
 	;multiply green value by 3 and add to c
-	ldh a, [hRGB + 1]
+	ld a, [hRGB + 1]
 	ld c, a
 	add a
 	add c
 	ld c, a
 	;multiply blue value by 1 and add to c
-	ldh a, [hRGB + 2]
+	ld a, [hRGB + 2]
 	add c
 	;shift 2 bits to the right
 	srl a
@@ -189,7 +198,7 @@ MixColorMatrix:
 ;which will not require a 16-bit register and will have the same result
 	;while the math is for 8 bit 
 	;multiply blue value by 7 and add to c
-	ldh a, [hRGB + 2]
+	ld a, [hRGB + 2]
 	ld c, a	; c = b * 1
 	add a	; a = b * 2
 	add a	; a = b * 4
@@ -199,7 +208,7 @@ MixColorMatrix:
 	;multiply red value by 0 and add to c
 	;no actions for this
 	;multiply green value by 1 and add to c
-	ldh a, [hRGB + 1]
+	ld a, [hRGB + 1]
 	add c
 	;shift 3 bits to the right
 	rrca
@@ -207,9 +216,9 @@ MixColorMatrix:
 	rrca
 	and $1F
 ;now store the color-mixed values
-	ldh [hRGB + 2], a	; blue
+	ld [hRGB + 2], a	; blue
 	pop af
-	ldh [hRGB + 1], a	; green
+	ld [hRGB + 1], a	; green
 	; red was stored earlier
 	ret
 
@@ -418,9 +427,23 @@ DecrementAllColorsGBC:
 	jr nc, .return	;return if finished with OBP 7
 	cp 16
 	jr nz, .next
+	; pureGREENFRnote: ADDED: don't skip BGP 4-7 when enhanced GBC overworld mode is active
+	; Enhanced mode uses all 8 BGP palettes, so they must all participate in the fade.
+	push af
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .skipBGP4to7
+	ldh a, [hFlagsFFFA]
+	bit 4, a
+	jr nz, .keepBGP4to7
+.skipBGP4to7
+	pop af
 .unusedBGP ;increment past unused color locations and loop if at BGP 4
 	add a	;add 16 to the location so we skip to color 32 which is OBP 0
 	inc a	; color 0 of OBP 0 to 7 are always transparent, so increment to color 33
+	jr .next
+.keepBGP4to7
+	pop af
 .next
 	ld [wGBCColorControl], a
 	jr .mainLoop
@@ -535,9 +558,23 @@ IncrementAllColorsGBC:
 	jr nc, .return	;return if finished with OBP 7
 	cp 16
 	jr nz, .next
+	; pureGREENFRnote: ADDED: don't skip BGP 4-7 when enhanced GBC overworld mode is active
+	; Enhanced mode uses all 8 BGP palettes, so they must all participate in the fade.
+	push af
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .skipBGP4to7
+	ldh a, [hFlagsFFFA]
+	bit 4, a
+	jr nz, .keepBGP4to7
+.skipBGP4to7
+	pop af
 .unusedBGP ;increment past unused color locations and loop if at BGP 4
 	add a	;add 16 to the location so we skip to color 32 which is OBP 0
 	inc a	; color 0 of OBP 0 to 7 are always transparent, so increment to color 33
+	jr .next
+.keepBGP4to7
+	pop af
 .next
 	ld [wGBCColorControl], a
 	jr .mainLoop
@@ -618,7 +655,8 @@ GBCFadeOutToBlack::
 	push de
 	rst _DelayFrame ; allow player sprite to refresh before doing the fadeout
 	ld de, FadePal4
-	farcall BufferAllPokeyellowColorsGBC		;back up all colors to a buffer space in wram
+	; pureGREENFRnote: CHANGED: use helper that routes to enhanced palette buffering when in enhanced mode
+	call BufferAllColorsGBC_helper		;back up all colors to a buffer space in wram
 	
 	ldh a, [hFlagsFFFA]	;need to set a flag that skips the $FF80 OAM call in VBLANK
 	push af
@@ -668,7 +706,8 @@ GBCFadeOutToWhite::
 	push de
 	call DelayFrame ; allow player sprite to refresh before doing the fadeout
 	ld de, FadePal4
-	farcall BufferAllPokeyellowColorsGBC		;back up all colors to a buffer space in wram
+	; pureGREENFRnote: CHANGED: use helper that routes to enhanced palette buffering when in enhanced mode
+	call BufferAllColorsGBC_helper		;back up all colors to a buffer space in wram
 	
 	ldh a, [hFlagsFFFA]	;need to set a flag that skips the $FF80 OAM call in VBLANK
 	push af
@@ -718,7 +757,8 @@ GBCFadeInFromWhite::
 	push de
 	call DelayFrame ; allow player sprite to refresh before doing the fadeout
 	ld de, FadePal4
-	farcall BufferAllPokeyellowColorsGBC		;back up all colors to a buffer space in wram
+	; pureGREENFRnote: CHANGED: use helper that routes to enhanced palette buffering when in enhanced mode
+	call BufferAllColorsGBC_helper		;back up all colors to a buffer space in wram
 	
 	ldh a, [hFlagsFFFA]	;need to set a flag that skips the $FF80 OAM call in VBLANK
 	push af
@@ -762,7 +802,8 @@ GBCFadeInFromBlack::
 	push de
 	call DelayFrame ; allow player sprite to refresh before doing the fadeout
 	ld de, FadePal4
-	farcall BufferAllPokeyellowColorsGBC		;back up all colors to a buffer space in wram
+	; pureGREENFRnote: CHANGED: use helper that routes to enhanced palette buffering when in enhanced mode
+	call BufferAllColorsGBC_helper		;back up all colors to a buffer space in wram
 	
 	ldh a, [hFlagsFFFA]	;need to set a flag that skips the $FF80 OAM call in VBLANK
 	push af
@@ -815,7 +856,27 @@ SetFadeDoubleCPUSpeedIfNecessary:
 	call GBCSetCPU2xSpeed
 	xor a
 	ret
-	
+
+; pureGREENFRnote: ADDED: helper that routes to enhanced or standard palette buffering.
+; When enhanced GBC overworld mode is active (wUnusedD721 bit 7 AND hFlagsFFFA bit 4),
+; uses BufferAllEnhancedColorsGBC which buffers all 8 BGP palettes + 8 OBP palettes.
+; Otherwise uses standard BufferAllPokeyellowColorsGBC which only buffers BGP 0-3 + OBP 0-7.
+; This is critical: without it, the GBC fade functions overwrite enhanced palette data
+; for BGP 0-3 with standard pokeyellow colors, causing incorrect colors on tiles that
+; use palettes 0-3 (e.g., GRAY walls in caves show as purple instead of green-gray).
+BufferAllColorsGBC_helper:
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .doNormal
+	ldh a, [hFlagsFFFA]
+	bit 4, a
+	jr z, .doNormal
+	farcall BufferAllEnhancedColorsGBC
+	ret
+.doNormal
+	farcall BufferAllPokeyellowColorsGBC
+	ret
+
 	
 	
 ;This function uses DE as a passthrough to buffer all the BGP 0-7 and OBP 0-7 colors at wGBCFullPalBuffer	

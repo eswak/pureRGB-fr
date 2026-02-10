@@ -1,52 +1,56 @@
 _RedsHouse1FMomWakeUpText::
-	text "MOM: Right."
-	line "All boys leave"
-	cont "home some day."
-	cont "It said so on TV."
+	text "MAMAN: Bon."
+	line "Un jour les filles"
+	cont "quittent la"
+	cont "maison."
+	cont "C'était à la télé."
 
-	para "PROF.OAK, next"
-	line "door, is looking"
-	cont "for you."
+	para "Le PROF.CHEN,"
+	line "à côté, te"
+	cont "cherche."
 	done
 
 _RedsHouse1FMomYouShouldRestText::
-	text "MOM: <PLAYER>!"
-	line "You should take a"
-	cont "quick rest."
+	text "MAMAN: <PLAYER>!"
+	line "Tu devrais faire"
+	cont "une petite sieste."
 	prompt
 
 _RedsHouse1FMomLookingGreatText::
-	text "MOM: Oh good!"
-	line "You and your"
-	cont "#MON are"
-	cont "looking great!"
-	cont "Take care now!"
+	text "MAMAN: Ah bien!"
+	line "Toi et tes"
+	cont "#MON avez"
+	cont "l'air en forme!"
+	cont "Prends soin de"
+	cont "toi!"
 	done
 
 _RedsHouse1FTVStandByMeMovieText::
-	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
-	cont "railroad tracks."
+	text "Une pub à la télé."
+	line "Pour des baskets."
+	cont "“Appuyez sur B"
+	cont "pour courrir”."
 
-	para "I better go too."
+	para "Je ferais mieux"
+	line "d'y aller."
 	done
 
 _RedsHouse1FTVWrongSideText::
-	text "Oops, wrong side."
+	text "Oups, mauvais"
+	line "côté."
 	done
 
 _DadHealText1::
-	text "DAD: <PLAYER>!"
-	line "Lets sit down and"
-	cont "talk, maybe play"
-	cont "some SNES."
+	text "PAPA: <PLAYER>!"
+	line "Assieds-toi, on"
+	cont "cause, ou on joue"
+	cont "à la SNES."
 	prompt
 
 _DadHealText2::
-	text "DAD: Looks like"
-	line "you're raring to"
-	cont "go! Good stuff."
-	para "Get back out"
-	line "there, son!"
+	text "PAPA: T'as l'air"
+	line "d'avoir la patate!"
+	cont "Bon ben."
+	para "Retourne dehors,"
+	line "fils!"
 	done

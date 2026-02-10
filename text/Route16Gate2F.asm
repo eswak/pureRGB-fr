@@ -1,26 +1,26 @@
 _Route16Gate2FLittleBoyText::
-	text "I'm going for a"
-	line "ride with my girl"
-	cont "friend!"
+	text "Je pars en balade"
+	line "avec ma copine!"
 	done
 
 _Route16Gate2FLittleGirlText::
-	text "We're going"
-	line "riding together!"
+	text "On part faire"
+	line "du velo ensemble!"
 	done
 
 _Route16Gate2FLeftBinocularsText::
-	text "Looked into the"
-	line "binoculars."
+	text "Regarde dans"
+	line "les jumelles."
 
-	para "It's CELADON DEPT."
-	line "STORE!"
+	para "C'est le CENTRE"
+	line "COMMERCIAL"
+	cont "CELADOPOLE!"
 	done
 
 _Route16Gate2FRightBinocularsText::
-	text "Looked into the"
-	line "binoculars."
+	text "Regarde dans"
+	line "les jumelles."
 
-	para "There's a long"
-	line "path over water!"
+	para "Un long chemin"
+	line "sur l'eau!"
 	done

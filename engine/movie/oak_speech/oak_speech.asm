@@ -54,6 +54,13 @@ PrepareOakSpeech:
 	ld a, [wOptionsInitialized]
 	and a
 	call z, InitOptions
+	; PureRGBnote: Bonbons dresseurs ON by default for new game only
+	jr nz, .options3Done
+	ld hl, wOptions3
+	ld a, [hl]
+	or (1 << BIT_TRAINER_CANDIES)
+	ld [hl], a
+.options3Done
 	; These debug names are used for StartNewGameDebug.
 	; TestBattle uses the debug names from DebugMenu.
 	; A variant of this process is performed in PrepareTitleScreen.

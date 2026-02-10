@@ -1,47 +1,49 @@
 _Route7UndergroundPathSignText::
-	text "UNDERGROUND PATH"
-	line "CELADON CITY -"
-	cont "LAVENDER TOWN"
+	text "SOUTERRAIN"
+	line "CELADOPOLE -"
+	cont "LAVANVILLE"
 	done
 
 _Route7BattleText1::
-	text "I'm the oldest"
-	line "gambler alive!"
+	text "Je suis le plus"
+	line "vieux joueur"
+	cont "vivant!"
 	done
 
 _Route7EndBattleText1::
-	text "You"
-	line "don't believe me?"
+	text "Tu"
+	line "ne me crois pas?"
 	prompt
 
 _Route7AfterBattleText1::
-	text "Don't listen to"
-	line "what the other"
-	cont "guy says to you."
-	para "I was a GAMBLER"
-	line "when he was in"
-	cont "diapers!"
+	text "N'écoute pas ce"
+	line "que l'autre te"
+	cont "dit."
+	para "J'étais un JOUEUR"
+	line "quand il était"
+	cont "encore en couches!"
 	done
 
 _Route7BattleText2::
-	text "I invented"
-	line "gambling when I"
-	cont "was young!"
+	text "J'ai inventé le"
+	line "jeu quand j'étais"
+	cont "jeune!"
 	done
 
 _Route7EndBattleText2::
-	text "Listen"
-	line "to me!"
+	text "Ecoute"
+	line "moi!"
 	prompt
 
 _Route7AfterBattleText2::
-	text "Don't believe"
-	line "what the other"
-	cont "guy says to you."
-	para "CELADON CITY"
-	line "wouldn't be the"
-	cont "same without my"
-	cont "gambling!"
-	para "I lost more money"
-	line "than anyone else!"
+	text "Ne crois pas ce"
+	line "que l'autre te"
+	cont "dit."
+	para "CELADOPOLE"
+	line "ne serait pas la"
+	cont "même sans mon"
+	cont "jeu!"
+	para "J'ai perdu plus"
+	line "d'argent que"
+	cont "n'importe qui!"
 	done	

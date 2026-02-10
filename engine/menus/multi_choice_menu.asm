@@ -242,103 +242,103 @@ ChampArenaMusicSelectMenu::
 
 MoveDexQuestion1::
 	dw FourOptionMenu
-	db   "FLYING"
+	db   "VOL"
 	next "NORMAL"
-	next "GRASS"
-	next "ICE@"
+	next "PLANTE"
+	next "GLACE@"
 
 MoveDexQuestion2::
 	dw FourOptionMenu
-	db   "AGILITY"
-	next "QUICK ATTACK"
-	next "WHIRLWIND"
-	next "PIN MISSILE@"
+	db   "HATE"
+	next "VIVE-ATTAQUE"
+	next "CYCLONE"
+	next "DARD-NUEE@"
 
 MoveDexQuestion3::
 	dw FourOptionMenu
-	db   "BURN"
-	next "PARALYZE"
+	db   "BRULURE"
+	next "PARALYSIE"
 	next "POISON"
-	next "FREEZE@"
+	next "GEL@"
 
 MoveDexQuestion4::
 	dw FourOptionMenu
-	db   "DOUBLE KICK"
-	next "TRI ATTACK"
-	next "TWINEEDLE"
-	next "DOUBLESLAP@"
+	db   "DOUBLE PIED"
+	next "TRIPLATTAQUE"
+	next "DOUBLE-DARD"
+	next "TORGNOLES@"
 
 MoveDexQuestion5::
 	dw FourOptionMenu
-	db   "TACKLE"
-	next "GROWL"
-	next "TAIL WHIP"
-	next "WATER GUN@"
+	db   "CHARGE"
+	next "RUGISSEMENT"
+	next "MIMI-QUEUE"
+	next "PISTOLET A O@"
 
 StatTextList::
 	dw FiveOptionMenu
-	db "HP"
-	next "ATTACK"
+	db "PV"
+	next "ATTAQUE"
 	next "DEFENSE"
-	next "SPEED"
+	next "VITESSE"
 	next "SPECIAL@"
 	
 YesNoHide::
 	dw ThreeOptionMenuSmall
-	db "YES"
-	next "NO"
-	next "HIDE@"
+	db "OUI"
+	next "NON"
+	next "CACHER@"
 
 YesNoHideTM::
 	dw ThreeOptionMenuSmallLower
-	db "YES"
-	next "NO"
-	next "HIDE@"
+	db "OUI"
+	next "NON"
+	next "CACHER@"
 
 YesNoSmall::
 	dw TwoOptionSmallMenu
-	db "YES"
-	next "NO@"
+	db "OUI"
+	next "NON@"
 
 CeladonMartPhoneList::
 	dw ThreeOptionMenu
-	db "HOME"
-	next "PROF.OAK"
+	db "MAISON"
+	next "PROF. CHEN"
 	next "<RIVAL>@"
 
 CeladonMartCallMomQuestion1::
 	dw ThreeOptionMenu
-	db "Great!"
-	next "Bored"
-	next "Homesick@"
+	db "Super!"
+	next "Ennuye"
+	next "Nostalgique@"
 	
 CeladonMartCallMomQuestion2::
 	dw TwoOptionMenu
-	db "Good idea!"
-	next "It's gambling!@"
+	db "Bonne idee!"
+	next "C'est du jeu!@"
 
 CeladonMartCallMomQuestion3::
 	dw FourOptionMenu
-	db "Rice Balls"
-	next "Jelly Donuts"
-	next "Brisket"
-	next "Lasagna@"
+	db "Boules de riz"
+	next "Beignets"
+	next "Boeuf braise"
+	next "Lasagnes@"
 	
 CeladonMartCallMomQuestion4::
 	dw ThreeOptionMenu
-	db "See ya!"
+	db "A plus!"
 	next "Sayonara!"
-	next "Love you!@"
+	next "Je t'aime!@"
 	
 CeladonMartCallOakQuestion1::
 	dw TwoOptionMenu
-	db "It evolved!"
-	next "I love it!@"
+	db "Il evolue!"
+	next "J'adore!@"
 
 CeladonMartCallOakQuestion2::
 	dw TwoOptionMenu
-	db "How's the lab?"
-	next "How's DAISY?@"
+	db "Le labo va?"
+	next "DAISY va bien?@"
 
 BillsGardenBlueThanks::
 	dw TwoOptionMenu
@@ -348,21 +348,21 @@ BillsGardenBlueThanks::
 TreeDeleterOptions::
 	dw FourOptionMenuBig
 	db "ROUTE 2"
-	next "CERULEAN CITY"
+	next "AZURIA"
 	next "ROUTE 9"
-	next "FUCHSIA CITY@"
+	next "PARMANIE@"
 
 SafariTypeOptions::
 	dw ThreeOptionMenu
-	db "CLASSIC"
-	next "RANGER HUNT"
-	next "FREE ROAM@"
+	db "CLASSIQUE"
+	next "CHASSE RANGER"
+	next "LIBRE@"
 
 ClassicText:
-	db "CLASSIC@"
+	db "CLASSIQUE@"
 
 TitleText:
-	db "TITLE@"
+	db "TITRE@"
 
 ChampArenaMusicSelectErika::
 	dw ChampArenaMusicSelectMenu
@@ -414,10 +414,10 @@ ChampArenaMusicSelectGymGuide::
 
 ChampArenaMusicSelectBlue::
 	dw FourOptionMenu
-	db "CLASSIC"
+	db "CLASSIQUE"
 	next "COOL"
-	next "FRIENDLY"
-	next "TITLE@"
+	next "AMICAL"
+	next "TITRE@"
 
 GetChampArenaMusicNameIntoWRAM:
 	ld a, [wNamedObjectIndex]
@@ -456,30 +456,30 @@ GetChampArenaMusicName:
 	jr .loop
 
 ChampArenaMusicTextData::
-	li "FRIENDLY"
-	li "CUTE"
+	li "AMICAL"
+	li "MIGNON"
 	li "MACHO"
 	li "JAZZY"
 	li "COOL"
 	li "ROCKIN"
-	li "ANTHEMIC"
-	li "GENIUS"
-	li "SERIOUS"
-	li "INSPIRING"
-	li "TENSE"
+	li "HYMNE"
+	li "GENIE"
+	li "SERIEUX"
+	li "INSPIRANT"
+	li "TENDU"
 	db -1
 
 ConversionMenu::
 	dw TwoOptionMenu
-	db "ATTACK"
+	db "ATTAQUE"
 	next "DEFENSE@"
 
 SSAnneFoodMenu::
 	dw FourOptionMenu
-	db "Barbecue Eel"
-	next "Prime Steak"
-	next "Salmon Salad"
-	next "Cherry Pie@"
+	db "Anguille BBQ"
+	next "Entrecote"
+	next "Salade saumon"
+	next "Tarte cerise@"
 
 RocketPasswordMenu::
 	dw FourOptionMenu
@@ -490,5 +490,5 @@ RocketPasswordMenu::
 
 SaveFileUpdaterMenu::
 	dw TwoOptionMenu
-	db "Before v2.6.0"
-	next "Original Game@"
+	db "Avant v2.6.0"
+	next "Jeu original@"

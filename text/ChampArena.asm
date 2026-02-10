@@ -1,238 +1,237 @@
 _ChampArenaAssistantWelcome::
-	text "Welcome,"
+	text "Bienvenue,"
 	line "<PLAYER>!"
 	prompt
 
 _ChampArenaAssistantTrainersWaitingToBattle::
-	text "There are"
-	line "trainers waiting"
-	cont "to battle you."
+	text "Des dresseurs"
+	line "t'attendent pour"
+	cont "te défier."
 	prompt
 
 _ChampArenaAssistantWelcome2::
-	text "Still @"
+	text "Encore @"
 	text_ram w2CharStringBuffer
-	text " in line!"
-	line "Ready to go?"
+	text " en file!"
+	line "Prêt?"
 	done
 
 _ChampArenaAssistantWelcome3::
-	text "Just 1 left!"
-	line "Ready to go?"
+	text "Plus qu'un!"
+	line "Prêt?"
 	done
 
 _ChampArenaAssistantSeeYa::
-	text "Come back soon!"
-	para "Let's not keep"
-	line "the challengers"
-	cont "waiting!"
+	text "A bientot!"
+	para "Ne fais pas"
+	line "attendre les"
+	cont "challengers!"
 	done
 
 _ChampArenaAssistantInviteIn::
-	text "Perfect!"
-	para "Let's invite in"
-	line "another <opponent>!"
-	para "This is so"
-	line "exciting!"
+	text "Parfait!"
+	para "Faisons entrer"
+	line "un autre"
+	cont "<opponent>!"
+	para "C'est trop"
+	line "excitant!"
 	done
 
 _ChampArenaAssistantStartBattle::
-	text "It's another"
-	line "fine day at"
-	cont "INDIGO PLATEAU!"
-	para "Ladies and"
-	line "gentlemen!"
-	para "We have a new"
-	line "challenger for"
-	cont "our reigning"
-	cont "CHAMP!"
+	text "Encore un beau"
+	line "jour au PLATEAU"
+	cont "INDIGO!"
+	para "Mesdames et"
+	line "messieurs!"
+	para "Un nouveau"
+	line "challenger pour"
+	cont "notre CHAMP"
+	cont "régnant!"
 	done
 
 _ErikaIntroText::
-	text "The lovely flower"
-	line "maiden, ERIKA!"
+	text "La douce"
+	line "fleur, ERIKA!"
 	prompt
 
 _ErikaIntroText2::
-	text "ERIKA: Wow! I'm"
-	line "surprised you"
-	cont "ended up such a"
-	cont "strong trainer!"
-	para "I just had to"
-	line "see how my GRASS"
-	cont "#MON stack up!"
+	text "ERIKA: Ouah! Tu"
+	line "es devenu un"
+	cont "dresseur si fort!"
+	para "Je devais voir"
+	line "ce que valent"
+	cont "mes #MON"
+	cont "PLANTE!"
 	prompt
 
 _ErikaLostText::
-	text "My poor"
-	line "GRASS #MON!"
+	text "Mes pauvres"
+	line "#MON PLANTE!"
 	prompt
 
 _ErikaWonText::
-	text "You"
-	line "underestimated"
-	cont "me!"
+	text "Tu m'as"
+	line "sous-estimée!"
 	prompt
 
 _BlaineIntroText::
-	text "The fiery"
-	line "quipster, BLAINE!"
+	text "Le pyromane"
+	line "blagueur, BLAINE!"
 	prompt
 
 _BlaineIntroText2::
 	text "BLAINE: Hah!"
-	para "You're something"
-	line "else, my boy!"
-	para "Ain't no joke"
-	line "you made it this"
-	cont "far!"
-	para "How's the air"
-	line "up there on the"
-	cont "CHAMP throne?"
+	para "T'es pas commun,"
+	line "ma p'tite!"
+	para "C'est pas une"
+	line "blague que t'aies"
+	cont "été si loin!"
+	para "L'air est bon"
+	line "là-haut sur le"
+	cont "trône de CHAMP?"
 	prompt
 
 _BlaineLostText::
-	text "Yowch!"
-	line "You're on fire!"
+	text "Aïe!"
+	line "T'es en feu!"
 	prompt
 
 _BlaineWonText::
-	text "I burn"
-	line "as hot as a"
-	cont "thousand suns!"
+	text "Je brûle"
+	line "comme mille"
+	cont "soleils!"
 	prompt
 
 _SurgeIntroText::
-	text "The lightning"
-	line "Lieutenant SURGE!"
+	text "L'eclair"
+	line "Major BOB!"
 	prompt
 
 _SurgeIntroText2::
-	text "LT.SURGE: Been"
-	line "a while, kid!"
-	para "Or should I say,"
-	line "CHAMP!"
-	para "You've got more"
-	line "guts than I"
-	cont "thought!"
-	para "But I was going"
-	line "easy on you back"
-	cont "in VERMILION!"
+	text "Major BOB: Ca"
+	line "fait un moment!"
+	para "Ou plutot, CHAMP!"
+	para "T'as plus de"
+	line "cran que je"
+	cont "pensais!"
+	para "Mais je me"
+	line "retenais à"
+	cont "CARMIN!"
 	prompt
 
 _SurgeLostText::
-	text "That's"
-	line "what I like to"
-	cont "see!"
+	text "C'est ça"
+	line "que j'aime"
+	cont "voir!"
 	prompt
 
 _SurgeWonText::
-	text "You"
-	line "let me down, kid!"
+	text "Tu m'as"
+	line "déçu, gamin!"
 	prompt
 
 _SabrinaIntroText::
-	text "The stunning"
-	line "oracle, SABRINA!"
+	text "L'oracle"
+	line "fulgurante,"
+	cont "SABRINA!"
 	prompt
 
 _SabrinaIntroText2::
-	text "SABRINA: After"
-	line "our battle in"
-	cont "SAFFRON, it was"
-	cont "only natural you"
-	cont "reached such a"
-	cont "pinnacle."
-	para "Suffering defeat"
-	line "by your hands has"
-	cont "made me desire to"
-	cont "battle you again."
-	para "Oh, please. Don't"
-	line "be like that."
-	para "I know what"
-	line "you're about to"
-	cont "say, and I can't"
-	cont "say I'm surprised."
+	text "SABRINA: Après"
+	line "notre combat à"
+	cont "SAFRANIA, c'était"
+	cont "normal que tu"
+	cont "atteignes ce"
+	cont "sommet."
+	para "Ma défaite face"
+	line "à toi m'a donnée"
+	cont "envie de te"
+	cont "revoir en combat."
+	para "Oh, s'il te plaît."
+	line "Ne fais pas ça."
+	para "Je sais ce que"
+	line "tu vas dire, ça"
+	cont "ne m'étonne pas."
 	prompt
 
 _SabrinaLostText::
-	text "I have"
-	line "to see your"
-	cont "battles to truly"
-	cont "believe them!"
-	para "Astounding!"
+	text "Il faut que"
+	line "je voie tes"
+	cont "combats pour"
+	cont "y croire!"
+	para "Stupéfiant!"
 	prompt
 
 _SabrinaWonText::
-	text "That's<...>"
-	line "disappointing."
+	text "C'est..."
+	line "décevant."
 	prompt
 
 _BrunoIntroText::
-	text "The powerhouse"
-	line "stoic, BRUNO!"
+	text "Le roc"
+	line "stoïque, BRUNO!"
 	prompt
 
 _BrunoIntroText2::
-	text "BRUNO: How's it"
-	line "been going CHAMP?"
-	para "I've been off"
-	line "on a training"
-	cont "escapade in the"
-	cont "great outdoors!"
-	para "Nothing beats"
-	line "meditating with"
-	cont "your #MON"
-	cont "under waterfalls!"
-	para "We've gotten"
-	line "leagues stronger!"
+	text "BRUNO: Ca va"
+	line "CHAMP?"
+	para "J'étais parti"
+	line "m'entraîner en"
+	cont "pleine nature!"
+	para "Rien ne vaut la"
+	line "méditation avec"
+	cont "tes #MON"
+	cont "sous les cascades!"
+	para "On s'est"
+	line "renforcés!"
 	prompt
 
 _BrunoLostText::
-	text "Back to"
-	line "the drawing"
-	cont "board!"
+	text "Retour"
+	line "à la case"
+	cont "départ!"
 	prompt
 
 _BrunoWonText::
 	text "Hah!"
-	para "Grinded down"
-	line "to nothing!"
+	para "Réduit en"
+	line "poussière!"
 	prompt
 
 _MistyIntroText::
-	text "The tomboyish"
-	line "mermaid, MISTY!"
+	text "La sirène"
+	line "garçon manqué,"
+	cont "MISTY!"
 	prompt
 
 _MistyIntroText2::
-	text "MISTY: Hey, what's"
-	line "the big idea?"
-	para "I'm not a tomboy"
-	line "at all, lady!"
-	para "I like the mermaid"
-	line "part though!"
+	text "MISTY: Hé, c'est"
+	line "quoi l'idée?"
+	para "Je suis pas"
+	line "garçon manqué!"
+	para "La sirène ça me"
+	line "va bien!"
 	prompt
 
 _MistyIntroText3::
-	text "Alright kid, I'm"
-	line "here to give you"
-	cont "another taste of"
-	cont "my water #MON."
-	para "Remember to hold"
-	line "your breath!"
+	text "Alors gamin, je"
+	line "te refile une"
+	cont "leçon de mes"
+	cont "#MON d'eau."
+	para "Retiens ton"
+	line "souffle!"
 	prompt
 
 _MistyLostText::
-	text "Hehe,"
-	line "we both got"
-	cont "totally soaked!"
-	para "Great battle!"
+	text "Héhé,"
+	line "on s'est pris"
+	cont "une trempée!"
+	para "Super combat!"
 	prompt
 
 _MistyWonText::
-	text "I think"
-	line "you need a towel!"
+	text "T'as besoin"
+	line "d'une serviette!"
 	prompt
 
 _LanceIntroText::
@@ -299,62 +298,61 @@ _KogaWonText::
 	prompt
 
 _LoreleiIntroText::
-	text "The queen of"
-	line "ice, LORELEI!"
+	text "La reine"
+	line "des glaces,"
+	cont "OLGA!"
 	prompt
 
 _LoreleiIntroText2::
-	text "LORELEI: You"
-	line "really thoroughly"
-	cont "thrashed me not"
-	cont "too long ago."
-	para "MISTY really has"
-	line "it out for you."
-	para "She gets jealous"
-	line "of trainers who"
-	cont "can beat me!"
-	para "Well I'm a bit"
-	line "better prepared"
-	cont "now. Let's do it!"
-	para "Everybody better"
-	line "bundle up, it's"
-	cont "about to get very"
-	cont "cold in here!"
+	text "OLGA: Tu m'as"
+	line "vraiment battue"
+	cont "il n'y a pas"
+	cont "longtemps."
+	para "MISTY en a"
+	line "après toi."
+	para "Elle est jalouse"
+	line "des dresseurs"
+	cont "qui me battent!"
+	para "Je suis mieux"
+	line "préparée."
+	cont "C'est parti!"
+	para "Couvrez-vous,"
+	line "il va faire"
+	cont "très froid!"
 	prompt
 
 _LoreleiLostText::
-	text "You've"
-	line "got a real fire"
-	cont "in your heart!"
-	para "I like that!"
+	text "Tu as un"
+	line "vrai feu"
+	cont "au coeur!"
+	para "J'aime ça!"
 	prompt
 
 _LoreleiWonText::
-	text "My new"
-	line "tactics worked"
-	cont "just as planned!"
+	text "Mes nouvelles"
+	line "tactiques ont"
+	cont "marché!"
 	prompt
 
 _BrockIntroText::
-	text "The perseverant"
-	line "rock pro, BROCK!"
+	text "Le pro du"
+	line "roc, PIERRE!"
 	prompt
 
 _BrockIntroText2::
-	text "BROCK: You know,"
-	line "I have to take"
-	cont "it easy on new"
-	cont "trainers back in"
-	cont "PEWTER CITY!"
-	para "But it's rare I"
-	line "get to go full"
-	cont "force!"
-	para "I joined BRUNO"
-	line "in training so we"
-	cont "could get strong"
-	cont "enough to really"
-	cont "test your limits!"
-	para "I'll crush you,"
+	text "PIERRE: Tu sais,"
+	line "je dois faire"
+	cont "attention aux"
+	cont "nouveaux à"
+	cont "ARGENTA!"
+	para "Mais c'est rare"
+	line "que je puisse"
+	cont "y aller à fond!"
+	para "J'ai rejoint"
+	line "BRUNO à"
+	cont "l'entraînement"
+	cont "pour te tester!"
+	para "Je vais t'écraser,"
 	line "<PLAYER>!"
 	prompt
 
@@ -364,338 +362,341 @@ _BrockIntroText2::
 	;cont "they fall!"
 
 _BrockLostText::
-	text "I got"
-	line "rocked!"
+	text "J'ai pris"
+	line "la pierre!"
 	prompt
 
 _BrockWonText::
-	text "Guess"
-	line "I just rocked"
-	cont "your world!"
+	text "J'ai"
+	line "secoué ton"
+	cont "monde!"
 	prompt
 
 _AgathaIntroText::
-	text "The stern ghost"
-	line "tamer, AGATHA!"
+	text "La dompteuse"
+	line "de spectres,"
+	cont "AGATHA!"
 	prompt
 
 _AgathaIntroText2::
-	text "AGATHA: It must"
-	line "have been hard to"
-	cont "come up with that"
-	cont "intro while not"
-	cont "calling me an old"
-	cont "bag somehow!"
-	para "I'm impressed,"
-	line "child!"
+	text "AGATHA: Ca a du"
+	line "être dur de"
+	cont "trouver cette"
+	cont "intro sans"
+	cont "m'appeler vieille"
+	cont "sorcière!"
+	para "Je suis"
+	line "impressionnée!"
 	prompt
 
 _AgathaIntroText3::
-	text "As for you CHAMP,"
-	line "I've got a few"
-	cont "lessons to teach."
-	para "You'll learn"
-	line "through battle!"
+	text "Pour toi CHAMP,"
+	line "j'ai des leçons"
+	cont "à donner."
+	para "Tu apprendras"
+	line "par le combat!"
 	prompt
 
 _AgathaLostText::
-	text "You've got"
-	line "some nerve,"
-	cont "child!"
+	text "Tu en as"
+	line "du cran,"
+	cont "enfant!"
 	prompt
 
 _AgathaWonText::
-	text "You've"
-	line "been slacking"
-	cont "on your training,"
-	cont "just like OAK!"
+	text "Tu as"
+	line "relâché"
+	cont "l'entraînement,"
+	cont "comme CHEN!"
 	prompt
 
 _GymGuideIntroText::
-	text "How unexpected!"
-	para "The GYM GUIDE"
-	line "wants to battle"
-	cont "the CHAMP?"
+	text "Quelle surprise!"
+	para "Le GUIDE de"
+	line "l'ARENE veut"
+	cont "affronter le"
+	cont "CHAMP?"
 	prompt
 
 _GymGuideIntroText2::
-	text "GYM GUIDE: Yo!"
+	text "GUIDE: Yo!"
 	line "Champ!"
-	para "I noticed lots"
-	line "of battling was"
-	cont "going down over"
-	cont "here and thought"
-	cont "to take a look!"
-	para "Lets see how my"
-	line "#MON fare"
-	cont "against yours!"
+	para "J'ai vu qu'il"
+	line "y avait des"
+	cont "combats ici,"
+	cont "j'ai regardé!"
+	para "Voyons ce que"
+	line "valent mes"
+	cont "#MON!"
 	prompt
 
 _ChampArenaGymGuideSonText::
-	text "<TM> KID: I'm here"
-	line "too!"
-	para "Our #MON team"
-	line "learned lots of"
-	cont "great <TM>s!"
-	para "Okay dad, I'll"
-	line "help strategize"
-	cont "in the battle!"
+	text "KID <TM>: Moi"
+	line "aussi!"
+	para "Notre équipe"
+	line "a appris plein"
+	cont "de <TM>s!"
+	para "Papa, je t'aide"
+	line "à faire la"
+	cont "stratégie!"
 	prompt
 
 _GymGuideLostText::
-	text "Guess"
-	line "even with all"
-	cont "those <TM>s we"
-	cont "couldn't win!"
+	text "Même avec"
+	line "toutes ces"
+	cont "<TM>s on a"
+	cont "pas gagné!"
 	prompt
 
 _GymGuideWonText::
-	text "You"
-	line "picked great"
-	cont "<TM>s, son!"
+	text "T'as choisi"
+	line "de super"
+	cont "<TM>s, fiston!"
 	prompt
 
 _RivalIntroText::
-	text "The former CHAMP,"
+	text "L'ancien CHAMP,"
 	line "<RIVAL>!"
 	prompt
 
 _RivalIntroText2::
-	text "<RIVAL>: You"
-	line "made a fool of"
-	cont "me last time."
-	para "I've trained and"
-	line "reflected, and"
-	cont "now I'm here to"
-	cont "take you down"
-	cont "once and for all!"
-	para "I'll always be"
-	line "a step ahead!"
+	text "<RIVAL>: Tu m'as"
+	line "ridiculisé la"
+	cont "dernière fois."
+	para "J'ai réfléchi"
+	line "et m'entraîné,"
+	cont "je suis là pour"
+	cont "t'écraser"
+	cont "définitivement!"
+	para "J'avancerai"
+	line "toujours plus!"
 	prompt
 
 _RivalLostText::
 	text "Tch."
-	line "I'll be back."
-	para "Just you wait."
+	line "Je reviendrai."
+	para "Tu verras."
 	prompt
 
 _RivalWonText::
-	text "Get"
-	line "wrecked!"
-	para "Feel it,"
+	text "Prends"
+	line "ça!"
+	para "Ressens,"
 	line "<PLAYER>!"
 	prompt
 
 _ChampArenaAssistantMusic::
-	text "Play which music"
-	line "in battle?"
+	text "Quelle musique"
+	line "pendant le combat?"
 	prompt
 
 _ChampArenaAssistantBattleCommence::
-	text "Let the battle"
+	text "Que le combat"
 	line "commence!"
 	done
 
 _HowDoYouRespond::
-	text "How do you"
-	line "respond?"
+	text "Comment"
+	line "réponds-tu?"
 	prompt
 
 _ChampArenaAssistantDefeatedText::
 	text_ram wTrainerName
-	text " has"
-	line "been defeated by"
+	text " a été"
+	line "vaincu par"
 	cont "<PLAYER>!!"
 	prompt
 
 _ChampArenaAssistantStillOpponentsLeft::
-	text "More <opponent>s"
-	line "are waiting to"
-	cont "battle you!"
+	text "D'autres"
+	line "<opponent>s"
+	cont "t'attendent!"
 	prompt
 
 _ChampArenaAssistantDefeatedAllTrainers::
-	text "Wow! <PLAYER>"
-	line "has defeated all"
-	cont "challengers!"
-	para "Congratulations!@"
+	text "Ouah! <PLAYER>"
+	line "a vaincu tous"
+	cont "les challengers!"
+	para "Félicitations!@"
 	text_end
 
 _ChampArenaAssistantCallInChallengers::
-	text "If you want, you"
-	line "can call previous"
-	cont "challengers back."
+	text "Si tu veux, tu"
+	line "peux rappeler"
+	cont "d'anciens défis."
 	prompt
 
 _ChampArenaAssistantCallInChallengers2::
-	text "Call someone in?"
+	text "Rappeler"
+	cont "quelqu'un?"
 	prompt
 
 _ChampArenaAssistantStillOpponentsLeft2::
-	text "Still @"
+	text "Encore @"
 	text_ram w2CharStringBuffer
-	text " left!"
-	line "Keep going?"
+	text "!"
+	line "On continue?"
 	prompt
 
 _ChampArenaAssistantStillOpponentsLeft3::
-	text "Just 1 left!"
-	line "Keep going?"
+	text "Plus qu'un!"
+	line "On continue?"
 	prompt
 
 _ChampArenaAssistantBattlePositions::
-	text "Alright,"
-	line "trainers!"
-	para "Take battle"
+	text "Allez,"
+	line "dresseurs!"
+	para "Prenez"
 	line "positions!"
 	prompt
 
 _ChampArenaMomCheersPlayerOn::
-	text "MOM: Go <PLAYER>!"
-	line "I love you!"
+	text "MAMAN: Allez"
+	line "<PLAYER>! Je t'aime!"
 	prompt
 
 _ChampArenaDadCheersPlayerOn::
-	text "DAD: Go <PLAYER>!"
-	line "Make us proud!"
+	text "PAPA: Allez"
+	line "<PLAYER> ! Fais-nous"
+	cont "honneur!"
 	prompt
 
 _ChampArenaErikaBeforeLeaves::
 	text_ram wTrainerName
-	text ": Ah, that"
-	line "was refreshing!"
-	para "Time to go tend"
-	line "to my garden."
+	text ": Ah, ça"
+	line "fait du bien!"
+	para "Je vais m'occuper"
+	line "de mon jardin."
 	done
 
 _ChampArenaBlaineBeforeLeaves::
 	text_ram wTrainerName
-	text ": When you"
-	line "turn up the heat,"
-	para "no one can handle"
-	line "your moves, kid!"
-	para "I think I'll go"
-	line "jump in a lake!"
+	text ": Quand tu"
+	line "montes en"
+	cont "température,"
+	para "personne ne suit,"
+	line "gamin!"
+	para "Je vais aller"
+	line "me jeter à l'eau!"
 	done
 
 _ChampArenaSurgeBeforeLeaves::
 	text_ram wTrainerName
-	text ": Huh."
-	line "You really won!"
-	para "Guess I owe the"
-	line "CHIEF 500 pushups!"
+	text ": Tu as"
+	line "vraiment gagné!"
+	para "Je dois 500"
+	line "pompes au CHEF!"
 	done
 
 _ChampArenaSabrinaBeforeLeaves::
 	text_ram wTrainerName
-	text ": I'm"
-	line "already scrying"
-	cont "for a glimpse of"
-	cont "our next battle."
-	para "I'm looking"
-	line "forward to it!"
+	text ": Je"
+	line "scrute déjà"
+	cont "notre prochain"
+	cont "combat."
+	para "J'ai hâte!"
 	done
 
 _ChampArenaBrunoBeforeLeaves::
 	text_ram wTrainerName
-	text ": I'm out!"
-	para "Back under that"
-	line "waterfall I go!"
+	text ": J'y vais!"
+	para "Retour sous"
+	line "la cascade!"
 	done
 
 _ChampArenaMistyBeforeLeaves::
 	text_ram wTrainerName
-	text ": Now you"
-	line "know why I wear"
-	cont "a bathing suit."
-	para "You look goofy"
-	line "with your hat"
-	cont "and backpack"
-	cont "drenched through."
+	text ": Tu sais"
+	line "pourquoi je porte"
+	cont "un maillot."
+	para "T'as l'air con"
+	line "avec ton chapeau"
+	cont "et ton sac"
+	cont "trempés."
 	done
 
 _ChampArenaLanceBeforeLeaves::
 	text_ram wTrainerName
-	text ": Still not"
-	line "enough it seems!"
-	para "Excellent battle!"
+	text ": Pas"
+	line "assez apparemment!"
+	para "Excellent combat!"
 	done
 
 _ChampArenaKogaBeforeLeaves::
 	text_ram wTrainerName
-	text ": Your team"
-	line "is quite hardy."
-	para "To survive such"
-	line "a battle is no"
-	cont "mean feat."
+	text ": Ton équipe"
+	line "est costaude."
+	para "Survivre à un"
+	line "tel combat,"
+	cont "chapeau!"
 	done
 
 _ChampArenaLoreleiBeforeLeaves::
 	text_ram wTrainerName
-	text ": You look"
-	line "pale, <PLAYER>."
-	para "A bit of ICE HEAL"
-	line "spray helps warm"
-	cont "up after battle."
-	para "I prefer hot"
-	line "chocolate though!"
+	text ": Tu as"
+	line "le teint pâle,"
+	cont "<PLAYER>."
+	para "Un peu d'ANTIGEL"
+	line "réchauffe après"
+	cont "le combat."
+	para "Je préfère le"
+	line "chocolat chaud!"
 	done
 
 _ChampArenaBrockBeforeLeaves::
 	text_ram wTrainerName
-	text ": I'm too"
-	line "hardheaded."
-	para "Gotta go refine"
-	line "my strategy."
-	para "But first, to the"
-	line "#CENTER nurse!"
+	text ": Je suis"
+	line "trop têtu."
+	para "Je vais peaufiner"
+	line "ma stratégie."
+	para "D'abord la"
+	line "INFIRMIERE du"
+	cont "#MON CENTER!"
 	done
 
 _ChampArenaAgathaBeforeLeaves::
 	text_ram wTrainerName
-	text ": Respect"
-	line "your elders,"
-	cont "child!"
-	para "Never go easy on"
-	line "them in battle!"
-	para "But it seems you"
-	line "knew that already!"
+	text ": Respecte"
+	line "tes aînés,"
+	cont "enfant!"
+	para "Ne les épargne"
+	line "jamais au combat!"
+	para "Tu le savais"
+	line "déjà!"
 	done
 
 _ChampArenaGymGuideBeforeLeaves::
 	text_ram wTrainerName
-	text ": Weird!"
-	para "I thought we only"
-	line "had 5 #MON!"
-	para "Where'd that last"
-	line "one come from?!"
-	para "<TM> KID: That was"
-	line "spooky!"
+	text ": Bizarre!"
+	para "On n'avait que"
+	line "5 #MON!"
+	para "D'où sort"
+	line "le dernier?!"
+	para "KID <TM>: Ca"
+	line "faisait peur!"
 	done
 
 _ChampArenaRivalBeforeLeaves::
-	text "<RIVAL>: Feh!"
-	line "Don't get cocky."
+	text "<RIVAL>: Pff!"
+	line "Garde la tête!"
 	done
 
 _IndigoPlateauArenaAssistantOnlyEliteFourAllowed::
-	text "Sorry!"
-	para "Only the CHAMP"
-	line "and ELITE FOUR"
-	cont "are allowed past"
-	cont "this point."
-	para "If you'd like to"
-	line "challenge them,"
-	para "head to the other"
-	line "stairway."
+	text "Desole!"
+	para "Seuls le CHAMP"
+	line "et le CONSEIL 4"
+	cont "peuvent passer."
+	para "Pour les"
+	line "défier,"
+	para "prends l'autre"
+	line "escalier."
 	done
 
 _IndigoPlateauArenaAssistantChampAttained::
-	text "Oh my gosh!"
-	para "There you are,"
+	text "Oh là là!"
+	para "Te voilà,"
 	line "CHAMP!"
-	para "We've been looking"
-	line "for you!"
-	para "Follow me into"
-	line "the CHAMP arena!"
+	para "On te cherchait!"
+	para "Suis-moi dans"
+	line "l'arène du CHAMP!"
 	done

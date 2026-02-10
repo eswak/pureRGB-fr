@@ -105,8 +105,9 @@ OptionsPage2AButton:
 	cp b ;is the cursor on the COLORS row?
 	jr nz, .done
 	ld a, [wTopMenuItemX]
-	cp OPTION_COLORS_LEFT_XPOS ; is the cursor on anything other than OG?
-	call nz, ToggleAltSGBYellowColors
+	cp OPTION_COLORS_LEFT_XPOS ; is the cursor on OG?
+	jr z, .done ; don't toggle if on OG
+	call ToggleAltSGBYellowColors
 .done
 	and a ; clear carry
 	ret
@@ -179,6 +180,9 @@ SetOptions2FromCursorPositions:
 	ld a, [wOptions2]
 	ld b, a
 	ld d, a
+	; shinpokerednote: ADDED: save enhanced colors state before changing
+	ld a, [wUnusedD721]
+	push af
 	push bc
 	call SetTwoBitPropFromXPosition
 	ld hl, wOptions2
@@ -198,6 +202,8 @@ SetOptions2FromCursorPositions:
 	lb bc, BIT_GBC_FADE, OPTION_GBC_FADE_RIGHT_XPOS
 	call SetSingleBitOption
 	pop bc
+	pop af ; restore old enhanced colors state
+	ld c, a
 	jp CompareOptions2
 
 SetTwoBitPropFromXPosition:
@@ -208,36 +214,76 @@ SetTwoBitPropFromXPosition:
 	jr z, .option1setMiddle
 .option1setLeft
 	ld b, PALETTES_DEFAULT
+	; shinpokerednote: ADDED: disable enhanced colors when not Y
+	ld a, [wUnusedD721]
+	res 7, a
+	ld [wUnusedD721], a
 	jr .done
 .option1setRight
 	ld a, [wOptions2]
 	and %01000011
 	cp PALETTES_YELLOW2
-	ret z ; don't set middle if we set it to the second SGB type
+	ret z ; preserve Y2/Y3 state when moving to Y
 	ld b, PALETTES_YELLOW
+	; shinpokerednote: ADDED: disable enhanced colors when moving to Y (will be set by ToggleAltSGBYellowColors if Y3)
+	ld a, [wUnusedD721]
+	res 7, a
+	ld [wUnusedD721], a
 	jr .done
 .option1setMiddle
 	ld a, [wOptions2]
 	and %01000011
 	cp PALETTES_SGB2
-	ret z ; don't set middle if we set it to the second SGB type
+	ret z ; preserve SGB2 state when moving to SGB
 	ld b, PALETTES_SGB
+	; shinpokerednote: ADDED: disable enhanced colors when not Y
+	ld a, [wUnusedD721]
+	res 7, a
+	ld [wUnusedD721], a
 .done
 	ld a, [wOptions2]
-	and %10111100 ; always reset bit 6 when we move between colors
+	and %10111100 ; reset bit 6 when moving between main color modes
 	xor b
 	ld [wOptions2], a
 	ret
 
 CompareOptions2:
+	; b = old setting of Options2 before changing it
+	; c = old setting of wUnusedD721 before changing it
 	ld hl, wOptions2
-	ld a, b ; b = old setting of Options2 before changing it
+	ld a, b ; old Options2
 	and %01000011
-	ld c, a
-	ld a, [hl]
+	ld d, a
+	ld a, [hl] ; new Options2
 	and %01000011
-	cp c
-	jp nz, RunDefaultPaletteCommand ; reset palettes according to the colors we just selected if colors changed
+	cp d
+	jp nz, RunDefaultPaletteCommand ; reset palettes if main color mode changed
+	; check if we're switching to/from Y3 (Y2 + enhanced colors)
+	ld a, [hl] ; new Options2
+	and %01000011
+	cp PALETTES_YELLOW2
+	jr nz, .notY2orY3
+	; we're in Y2 mode, check if enhanced colors state changed
+	ld a, [wUnusedD721]
+	bit 7, a ; new enhanced colors state
+	ld e, a
+	ld a, c
+	bit 7, a ; old enhanced colors state
+	cp e
+	jp nz, RunDefaultPaletteCommand ; refresh if enhanced colors toggle changed
+	jr .checkOtherOptions
+.notY2orY3
+	; not in Y2/Y3 mode, check if we were in Y3 before
+	ld a, b ; old Options2
+	and %01000011
+	cp PALETTES_YELLOW2
+	jr nz, .checkOtherOptions
+	ld a, c ; old wUnusedD721
+	bit 7, a
+	jr z, .checkOtherOptions
+	; was Y3, now something else - refresh palettes
+	jp RunDefaultPaletteCommand
+.checkOtherOptions
 	ld a, [wNewInGameFlags]
 	bit IN_GAME, a
 	ret z ; don't need to do anything else if we're in the title screen menus
@@ -328,6 +374,47 @@ ToggleAltSGBYellowColors:
 	ld a, SFX_PRESS_AB
 	rst _PlaySound
 	ld a, [wOptions2]
+	and %11 ; check only bits 0-1 to see if we're in Y mode
+	cp %11 ; PALETTES_YELLOW has bits 0-1 = %11
+	jr nz, .notYellow
+	; We're on Y, cycle between Y1, Y2, Y3
+	ld a, [wOptions2]
+	bit BIT_SECONDARY_PALETTES, a
+	jr z, .isY1
+	; bit 6 is set, so we're either Y2 or Y3
+	ld a, [wUnusedD721]
+	bit 7, a
+	jr z, .isY2
+	; Currently Y3, go back to Y1
+	ld a, [wOptions2]
+	res BIT_SECONDARY_PALETTES, a
+	ld [wOptions2], a
+	ld a, [wUnusedD721]
+	res 7, a
+	ld [wUnusedD721], a
+	jr .doneYellow
+.isY2
+	; Currently Y2, go to Y3
+	ld a, [wUnusedD721]
+	set 7, a
+	ld [wUnusedD721], a
+	jr .doneYellow
+.isY1
+	; Currently Y1, go to Y2
+	ld a, [wOptions2]
+	set BIT_SECONDARY_PALETTES, a
+	ld [wOptions2], a
+	ld a, [wUnusedD721]
+	res 7, a
+	ld [wUnusedD721], a
+.doneYellow
+	ld a, [wOptions2]
+	and %01000011
+	call PrintSGBYellowOptionNumbers
+	jp RunDefaultPaletteCommand
+.notYellow
+	; We're on SGB, toggle between SGB1 and SGB2
+	ld a, [wOptions2]
 	xor %01000000
 	ld [wOptions2], a
 	and %01000011
@@ -344,8 +431,15 @@ PrintSGBYellowOptionNumbers:
 .next
 	hlcoord 18, 3
 	cp %01000011
+	jr nz, .notY2orY3
+	; shinpokerednote: ADDED: check if Y3 is selected (Y2 + enhanced colors)
+	ld a, [wUnusedD721]
+	bit 7, a
+	ld [hl], "3"
+	ret nz
 	ld [hl], "2"
-	ret z
+	ret
+.notY2orY3
 	ld [hl], "1"
 	ret
 

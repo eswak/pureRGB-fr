@@ -76,6 +76,13 @@ VBlank::
 	and a
 	call z, ReadJoypad
 
+;GBCnote - for enhanced GBC colors, do the bg map attributes for new rows/columns if required
+	ldh a, [$FFEF]
+	and %11
+	jr z, .skip_GBCEnhancedRedrawRowOrColumn
+	farcall GBCEnhancedRedrawRowOrColumn
+.skip_GBCEnhancedRedrawRowOrColumn
+
 	ld a, [wVBlankSavedROMBank]
 	call SetCurBank
 

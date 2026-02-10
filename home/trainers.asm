@@ -96,11 +96,25 @@ TalkToTrainer::
 	ld a, c
 	and a
 	jr z, .trainerNotYetFought     ; test trainer's flag
+	;shinpokerednote: ADDED: have a rematch with most trainers?
+	call TrainerRematch
+	jr nz, .skipRematch
+	;shinpokerednote: ADDED: player wants rematch, start battle
+	; Reset the flag temporarily so the battle can start (StartTrainerBattle doesn't check the flag)
+	; The flag will be set again after battle in EndTrainerBattle, allowing future rematches
+	ld b, FLAG_RESET
+	call TrainerFlagAction
+	; Reset EVENT_REMATCH_DELAY so we can rematch again after this battle
+	ResetEvent EVENT_REMATCH_DELAY
+	; fall through to start battle like a new trainer
+.skipRematch
 	ld a, $6
 	call ReadTrainerHeaderInfo     ; print after battle text
 	rst _PrintText
 	ret
 .trainerNotYetFought
+	;shinpokerednote: ADDED: make it so you cannot rematch a defeated trainer until talking to any defeated trainer
+	SetEvent EVENT_REMATCH_DELAY
 	ld a, $4
 	call ReadTrainerHeaderInfo     ; print before battle text
 	rst _PrintText
@@ -192,6 +206,8 @@ EndTrainerBattle::
 	jp z, ResetButtonPressedAndMapScript
 	ld b, FLAG_SET
 	call TrainerFlagAction   ; flag trainer as fought
+	; shinpokerednote: ADDED: reset rematch delay after battle so rematch prompt can appear again
+	ResetEvent EVENT_REMATCH_DELAY
 	ld a, [wEnemyMonOrTrainerClass]
 	cp OPP_ID_OFFSET
 	jr nc, .skipRemoveSprite    ; test if trainer was fought (in that case skip removing the corresponding sprite)
@@ -328,6 +344,27 @@ EngageMapTrainer::
 	ld a, [hl]     ; load trainer mon set
 	ld [wEngagedTrainerSet], a
 	jpfar PlayTrainerMusic ; PureRGBnote: MOVED: playtrainermusic was moved to another bank
+
+RematchTrainerText:: ; shinpokerednote: ADDED: for trainer rematch
+	text_far _RematchTrainerText
+	text_end
+
+; shinpokerednote: ADDED: trainer rematch function
+; Returns nz if rematch should be skipped, z if rematch should proceed
+TrainerRematch::
+	xor a
+	CheckEvent EVENT_REMATCH_DELAY
+	jr nz, .skip_rematch_choice
+	ld hl, RematchTrainerText
+	rst _PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	ret nz
+.skip_rematch_choice
+	ResetEvent EVENT_REMATCH_DELAY
+	xor a
+	ret
 
 PrintEndBattleText::
 	push hl

@@ -1,17 +1,17 @@
 _ProspectorsHousePaperText1::
-	text "It's a note."
-	para "Gone digging on"
-	line "ROUTE 8!"
+	text "C'est un mot."
+	para "Parti creuser sur"
+	line "la ROUTE 8!"
 	done
 
 _ProspectorsHouseBoomboxText1::
-	text "Shouldn't touch it"
-	line "without asking!"
+	text "Faut pas toucher"
+	line "sans demander!"
 	done
 
 _ProspectorsHouseBoomboxText2::
-	text "<PLAYER> switched"
-	line "the boombox @"
+	text "<PLAYER> a mis"
+	line "la sono @"
 	text_end
 
 _ProspectorsHouseBoomboxOn::
@@ -23,85 +23,91 @@ _ProspectorsHouseBoomboxOff::
 	done
 
 _ProspectorsHousePaperText2::
-	text "A topographical"
-	line "TOWN MAP with"
-	cont "many lines marked"
-	cont "between cities."
-	para "TUNNEL MAP is"
-	line "written on it."
+	text "Une CARTE des"
+	line "villes avec des"
+	cont "traits entre les"
+	cont "villes."
+	para "C'est écrit"
+	line "CARTE TUNNELS."
 	done
 
 _ProspectorsHouseProspectorText1::
-	text "Look who it is!"
-	line "Thanks again kid!"
-	para "You really helped"
-	line "me dig deep for"
-	cont "those diamonds!"
+	text "Regarde qui voilà!"
+	line "Merci encore!"
+	para "Tu m'as vraiment"
+	line "aidé à creuser"
+	cont "pour ces diamants!"
 	done
 
 _ProspectorsHouseProspectorText2::
-	text "I see you can"
-	line "FLY between towns"
-	cont "now!"
-	para "Believe it or"
-	line "not, you can DIG"
-	cont "between them too!"
-	para "We've got a great"
-	line "tunnel system"
-	cont "below the region!"
-	para "CELADON's tunnel"
-	line "starts in my"
-	cont "house! Hahaha!"
-	para "Let me teach you"
-	line "how to dig down"
-	cont "to the tunnels."
+	text "Tu peux VOL entre"
+	line "les villes"
+	cont "maintenant!"
+	para "Crois-le ou non,"
+	line "tu peux creuser"
+	cont "entre elles aussi!"
+	para "On a un super"
+	line "réseau de tunnels"
+	cont "sous la région!"
+	para "Le tunnel de"
+	line "CELADOPOLE part"
+	cont "de chez moi! Haha!"
+	para "Je vais"
+	cont "t'apprendre"
+	line "à creuser"
+	cont "jusqu'aux"
+	cont "tunnels."
 	prompt
 
 _ProspectorsHouseProspectorText3::
-	text "Have a look at"
-	line "this map!"
+	text "Regarde cette"
+	line "carte!"
 	prompt
 
 _ProspectorsHouseProspectorText4::
-	text "<PLAYER> learned"
-	line "how to DIG"
-	cont "between towns!"
+	text "<PLAYER> a appris"
+	line "à creuser entre"
+	cont "les villes!"
 	done
 
 _ProspectorsHouseBookcase1Text::
-	text "UNDERGROUND"
-	line "#MON HABITATS@"
+	text "HABITATS"
+	cont "SOUTERRAINS"
+	line "#MON@"
 	text_end
 
 _ProspectorsHouseBookcase1Text2::
-	text "<PARA>Often DIGLETT"
-	line "live in tunnels"
-	cont "left by burrowing"
+	text "<PARA>Les TAUPIQUEUR"
+	line "vivent souvent"
+	cont "dans"
+	cont "les tunnels des"
 	cont "ONIX."
-	para "DIGLETT tends to"
-	line "burrow in search"
-	cont "of tree roots to"
-	cont "nibble on."
+	para "Les TAUPIQUEUR"
+	line "creusent pour"
+	cont "grignoter des"
+	cont "racines."
 	done
 
 _ProspectorsHouseBookcase2Text::
-	text "A large chunk"
-	line "of gold NUGGET!"
+	text "Un gros morceau"
+	line "de NUGGET d'or!"
 	done
 
 _ProspectorsHouseBookcase3Text::
-	text "IGNEOUS ROCKS OF"
-	line "CINNABAR VOLCANO@"
+	text "ROCHES IGNEES DU"
+	line "VOLCAN"
+	cont "CRAMOIS'ILE@"
 	text_end
 
 _ProspectorsHouseBookcase3Text2::
-	text "<PARA>Obsidian:"
-	line "A black glass"
-	cont "formed by rapidly"
-	cont "cooled lava."
-	para "Rarely, deposits"
-	line "can also be found"
-	cont "near where male"
-	cont "MAGMAR fought for"
-	cont "dominance."
+	text "<PARA>Obsidienne:"
+	line "un verre noir"
+	cont "formé par lave"
+	cont "refroidie vite."
+	para "On en trouve"
+	cont "parfois"
+	line "là où des MAGMAR"
+	cont "mâles se sont"
+	cont "battus pour"
+	cont "dominer."
 	done

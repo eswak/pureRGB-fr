@@ -1,4 +1,4 @@
-db "2.6.4"
+db "2.6.4-fr"
 
 ; wGameInternalVersion values
 	const_def

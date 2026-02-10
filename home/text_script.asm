@@ -154,6 +154,10 @@ CloseTextDisplayPart2:
 	bit BIT_FLY_WARP, a
 	call z, LoadPlayerSpriteGraphics
 	call LoadCurrentMapView
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors on the background layer (vBGMap0)
+	; The map view tiles for the normal overworld are now loaded in wTileMap.
+	; This transfers the color attributes so the background has correct colors after the text window closes.
+	farcall MakeAndTransferOverworldBGMapAttributes_CloseText
 	pop af
 	call SetCurBank
 	jp UpdateSprites

@@ -1,229 +1,253 @@
 _CeladonMart1FReceptionistText::
-	text "Hello! Welcome to"
-	line "CELADON DEPT."
-	cont "STORE."
+	text "Bonjour et bien-"
+	line "venue au CENTRE"
+	cont "COMMERCIAL de"
+	cont "CELADOPOLE."
 
-	para "The board on the"
-	line "right describes"
-	cont "the store layout."
+	para "Le tableau sur la"
+	line "droite décrit les"
+	cont "différents rayons"
+	cont "du magasin."
 	done
 
 _CeladonMart1FCurrentFloorSignText::
-	text "1F: SERVICE"
-	line "    COUNTER"
+	text "RDC: "
+	line "RENSEIGNEMENTS"
 	done
 
 _CeladonMart2FCurrentFloorSignText::
-	text "Top Grade Items"
-	line "for Trainers!"
+	text "Objets de qualité"
+	line "pour dresseurs!"
 	prompt
 
 _CeladonMart2FDirectorySignText::
-	text "2F: <TRAINER>'S"
-	line "    MARKET"
+	text "1er: MARCHE DES"
+	line "DRESSEURS"
 	done
 
 _CeladonMart3FCurrentFloorSignText::
-	text "3F: TV GAME SHOP"
+	text "2ème: JEUX VIDEO"
 	done
 
 _CeladonMart4FDirectorySignText::
-	text "4F: WISEMAN GIFTS"
+	text "3ème: CADEAUX"
 	prompt
 
 _CeladonMart5FCurrentFloorSignText::
-	text "5F: DRUG STORE"
+	text "4ème: MEDICAMENTS"
 	done
 
 _CeladonMartRoofCurrentFloorSignText::
-	text "ROOFTOP SQUARE:"
-	line "VENDING MACHINES"
+	text "DERNIER ETAGE:"
+	line "DISTRIBUTEURS"
 	done
 
 _CeladonMartUsePhoneText::
-	text "Use the payphone?"
-	line "It costs ¥25."
+	text "Utiliser le"
+	line "téléphone? C'est"
+	cont "25¥."
 	done
 
 _GenericForgetItText::
 _CeladonMartUsePhoneTextNo::
-	text "Forget it!"
+	text "Oublie ça!"
 	done
 
 _CeladonMartCallWhoText::
-	text "Call who?"
+	text "Appeler qui?"
 	done
 
 _CeladonMartCallStartText::
-	text "Here we go!"
-	line "Dialing<...>"
+	text "C'est parti!"
+	line "Composition..."
 	done
 
 _CeladonMartUsePhoneCallEnd::
-	text "Click!"
+	text "Décroché!"
 	done
 
 _CeladonMartCallMomText::
-	text "MOM: <PLAYER>?!"
-	para "Is that you??"
-	para "I miss"
-	line "you so much!"
-	para "How are you"
-	line "feeling?"
+	text "MAMAN: <PLAYER>?!"
+	para "C'est toi??"
+	para "Tu me manques"
+	line "tellement!"
+	para "Comment tu te"
+	line "sens?"
 	prompt
 
 _CeladonMartCallMomGreatText::
-	text "Of course you"
-	line "are!"
-	para "You always were"
-	line "determined."
-	para "My son is doing"
-	line "well on his big"
-	cont "#MON journey."
-	para "Stay safe and"
-	line "have fun!"
+	text "Bien sûr que"
+	line "tu l'es!"
+	para "Tu as toujours"
+	line "été déterminée."
+	para "Ma fille se"
+	line "débrouille bien"
+	cont "dans son grand"
+	cont "voyage #MON."
+	para "Reste prudente et"
+	line "amuse-toi bien!"
 	prompt
 
 _CeladonMartCallMomBoredText::
-	text "Getting bored of"
-	line "battling?"
-	para "Well, you're in"
-	line "CELADON CITY<...>"
-	para "I heard they have"
-	line "some sort of GAME"
-	cont "CORNER there."
-	para "I know you love"
-	line "games!"
-	para "You'd probably"
-	line "have fun there."
+	text "Tu t'ennuies des"
+	line "combats?"
+	para "Eh bien, tu es à"
+	line "CELADOPOLE..."
+	para "J'ai entendu dire"
+	line "qu'il y a une"
+	cont "CASINO là-bas."
+	para "Je sais que tu"
+	line "adores les jeux!"
+	para "Tu t'amuserais"
+	line "probablement là-"
+	cont "bas."
 	prompt
 
 _CeladonMartCallMomGoodIdeaText::
-	text "Perfect!"
-	para "Remember to save"
-	line "around half the"
-	cont "money you earn."
-	para "It's just a good"
-	line "rule to live by!"
-	para "Another one is"
-	line "to wear fresh"
-	cont "underwear daily."
-	para "You'd best follow"
-	line "that one too!"
+	text "Parfait!"
+	para "N'oublie pas de"
+	line "mettre de côté"
+	cont "environ la moitié"
+	cont "de l'argent que"
+	cont "tu gagnes."
+	para "C'est une bonne"
+	line "règle de vie!"
+	para "Une autre est de"
+	line "porter des"
+	cont "sous-vêtements"
+	cont "propres chaque"
+	cont "jour."
+	para "Tu ferais mieux"
+	line "de suivre celle-"
+	cont "là aussi!"
 	prompt
 
 _CeladonMartCallMomGamblingText::
-	text "What??"
-	para "My son, gambling?"
-	para "Bad idea!"
-	para "Guess you'll have"
-	line "to go somewhere"
-	cont "else!"
-	para "How about"
-	line "CYCLING ROAD?"
-	para "I remember when"
-	line "DAD taught you to"
-	cont "ride a bike!"
-	para "You were so cute!"
-	para "You kept falling"
-	line "over but kept on"
-	cont "trying anyway!"
-	para "So tenacious!"
+	text "Quoi??"
+	para "Ma fille, jouer?"
+	para "Mauvaise idée!"
+	para "Je suppose que"
+	line "tu devras aller"
+	cont "ailleurs!"
+	para "Que dis-tu de la"
+	line "PISTE CYCLABLE?"
+	para "Je me souviens"
+	line "quand PAPA t'a"
+	cont "apprise à faire"
+	cont "du vélo!"
+	para "Tu étais si"
+	cont "mignonne!"
+	para "Tu tombais sans"
+	line "cesse mais tu"
+	cont "continuais quand"
+	cont "même!"
+	para "Si tenace!"
 	prompt
 
 _CeladonMartCallMomHomesickText::
-	text "You poor thing!"
-	para "You miss your"
-	line "MOM, I knew it!"
-	para "Come by PALLET"
-	line "TOWN any time!"
-	para "I'll make you"
-	line "some food."
+	text "Mon pauvre!"
+	para "Tu manques à ta"
+	line "MAMAN, je le"
+	cont "savais!"
+	para "Passe à BOURG"
+	line "PALETTE quand tu"
+	cont "veux!"
+	para "Je te préparerai"
+	line "à manger."
 	para "@"
 	; fall through
 _WhatWouldYouLikeText::
-	text "What would you"
-	line "like?"
+	text "Qu'est-ce que tu"
+	line "aimerais?"
 	prompt
 
 _CeladonMartCallMomRiceBallsText::
-	text "Got it!"
-	para "I'll make you"
-	line "some rice balls"
-	cont "as a nice snack."
-	para "Some with"
-	line "tuna inside, and"
-	cont "some with boiled"
-	cont "eggs inside!"
-	para "I know you love"
-	line "those."
-	para "Come get them!"
+	text "D'accord!"
+	para "Je vais te faire"
+	line "des boulettes de"
+	cont "riz comme"
+	cont "collation."
+	para "Certaines avec"
+	line "du thon dedans, et"
+	cont "d'autres avec des"
+	cont "oeufs durs!"
+	para "Je sais que tu"
+	line "les adores."
+	para "Viens les"
+	cont "chercher!"
 	prompt
 
 _CeladonMartCallMomJellyDonutsText::
-	text "Alright, jelly"
-	line "donuts it is!"
-	para "Just as a treat"
-	line "though!"
-	para "You mustn't have"
-	line "too much sugar."
-	para "You always had"
-	line "a sweet tooth!"
-	para "Come get them!"
+	text "D'accord, des"
+	line "beignets à la"
+	cont "gelée alors!"
+	para "Juste comme"
+	line "récompense!"
+	para "Tu ne dois pas"
+	line "manger trop de"
+	cont "sucre."
+	para "Tu as toujours"
+	line "eu la dent"
+	cont "sucrée!"
+	para "Viens les"
+	cont "chercher!"
 	prompt
 
 _CeladonMartCallMomBrisketText::
-	text "Some of DAD's"
-	line "slow-cooked"
-	cont "brisket?"
-	para "Great idea!"
+	text "Du boeuf braise de"
+	line "PAPA?"
+	para "Excellente idée!"
 	prompt
 
 _CeladonMartCallMomBrisketText2::
-	text "He's not here"
-	line "right now, but"
-	cont "I'll use the"
-	cont "recipe he wrote"
-	cont "down."
+	text "Il n'est pas là"
+	line "maintenant, mais"
+	cont "j'utiliserai la"
+	cont "recette qu'il a"
+	cont "écrite."
 	prompt
 
 _CeladonMartDadBrisketText::
-	text "Honey! <PLAYER>"
-	line "wants brisket"
-	cont "for dinner!"
-	para "Okay, he's on it."
-	line "Sounds good!"
+	text "Chéri! <PLAYER>"
+	line "veut du boeuf"
+	cont "braisé pour le"
+	cont "dîner!"
+	para "D'accord, il s'en"
+	line "occupe. Ca me va!"
 	prompt
 
 _CeladonMartCallMomBrisketText3::
-	text "I wouldn't mind"
-	line "having some"
-	cont "either."
-	para "Come and get it!"
+	text "Ca ne me"
+	cont "derangerait"
+	line "pas d'en avoir"
+	cont "non plus."
+	para "Viens le chercher!"
 	prompt
 
 _CeladonMartCallMomLasagnaText::
-	text "Oh, you just love"
-	line "your MOM's home"
-	cont "cooked lasagna!"
-	para "I'll put in extra"
-	line "cheese, just how"
-	cont "you like it!"
-	para "A growing boy"
-	line "has to eat well!"
-	para "A hearty meal"
-	line "will be waiting"
-	cont "for you at home!"
+	text "Oh, tu adores la"
+	line "lasagne maison de"
+	cont "ta MAMAN!"
+	para "Je mettrai plus"
+	line "de fromage, comme"
+	cont "tu l'aimes!"
+	para "Une fille qui"
+	line "grandit doit bien"
+	cont "manger!"
+	para "Un repas copieux"
+	line "t'attendra à la"
+	cont "maison!"
 	prompt
 
 _CeladonMartCallMomGoodbyeText::
-	text "Goodbye <PLAYER>!"
-	line "Love you!"
+	text "Au revoir <PLAYER>!"
+	line "Je t'aime!"
 	prompt
 	
 _CeladonMartCallMomGoodbyeSweetSon::
-	text "Oh, my son is so"
-	line "sweet. Bye bye!"
+	text "Oh, ma fille est"
+	line "si gentille. Bye"
+	cont "bye!"
 	prompt
 
 _CeladonMartCallMomGoodbyeComplete::
@@ -231,36 +255,41 @@ _CeladonMartCallMomGoodbyeComplete::
 	prompt
 
 _CeladonMartCallDadText::
-	text "DAD: Who is it?"
+	text "PAPA: Qui est-ce?"
 	para "<PLAYER>?"
-	para "You left without"
-	line "even saying bye"
-	cont "to your old man!"
-	para "Haha, I know you"
-	line "were eager to go"
-	cont "catch #MON."
-	para "I heard you chose"
-	line "@"
+	para "Tu es partie sans"
+	line "même dire au"
+	cont "revoir à ton"
+	cont "vieux père!"
+	para "Haha, je sais que"
+	line "tu étais pressée"
+	cont "d'aller capturer"
+	cont "des #MON."
+	para "J'ai entendu que"
+	line "tu as choisi @"
 	text_ram wNameBuffer
 	text "!"
 	prompt
 
 _CeladonMartCallDadText2::
-	text "So you have @"
+	text "Donc tu as @"
 	text_ram w2CharStringBuffer
 	text " "
-	line "badges<...>"
-	para "I'm impressed!"
-	para "You're doing"
-	line "very well!"
-	para "Keep at it!"
-	para "I'm at home right"
-	line "now, why don't"
-	cont "you come say hi?"
-	para "We can play some"
+	line "badges..."
+	para "Je suis"
+	cont "impressionné!"
+	para "Tu t'en sors"
+	line "très bien!"
+	para "Continue!"
+	para "Je suis à la"
+	line "maison maintenant,"
+	cont "pourquoi ne viens-"
+	cont "tu pas dire"
+	cont "bonjour?"
+	para "On peut jouer à"
 	line "KIRBY SUPER STAR"
-	cont "on the SNES."
-	para "I'll be waiting!"
-	line "Bye now!"
+	cont "sur la SNES."
+	para "Je t'attendrai!"
+	line "Bye maintenant!"
 	prompt
 

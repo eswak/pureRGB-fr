@@ -1,116 +1,123 @@
 _Route4CooltrainerF1Text::
-	text "Ouch! I tripped"
-	line "over a rocky"
-	cont "#MON, GEODUDE!"
+	text "Ha! J'ai trébuché"
+	line "sur un #MON de"
+	cont "pierre: RACAILLOU!"
 	done
 
 _Route4CooltrainerF2BattleText::
-	text "I came to get my"
-	line "mushroom #MON!"
+	text "Je viens chercher"
+	line "mon #MON"
+	cont "champignon!"
 	done
 
 _Route4CooltrainerF2EndBattleText::
-	text "Oh! My cute"
-	line "mushroom #MON!"
+	text "Oh!"
+	line "Mon #MON!"
 	prompt
 
 _Route4CooltrainerF2AfterBattleText::
-	text "There might not"
-	line "be any more"
-	cont "mushrooms here."
+	text "Je crois qu'il"
+	line "n'y a plus de"
+	cont "champignons dans"
+	cont "le coin."
 
-	para "I think I got"
-	line "them all."
+	para "Je les ai tous"
+	line "ramassés."
 	done
 
 _Route4MtMoonSignText::
-	text "MT.MOON"
-	line "Tunnel Entrance"
+	text "MONT SELENITE"
+	line "Entrée du tunnel"
 	done
 
 _Route4SignText::
 	text "ROUTE 4"
-	line "MT.MOON -"
-	cont "CERULEAN CITY"
+	line "MONT SELENITE -"
+	cont "AZURIA"
 	done
 
 _Route4BattleText2::
-	text "Trying to butt"
-	line "in on our battle?"
-	para "I'll take you"
-	line "all on!"
+	text "Tu veux te mêler"
+	line "à notre combat?"
+	para "Je vais tous"
+	line "vous affronter!"
 	done
 
 _Route4EndBattleText2::
-	text "I"
-	line "overextended!"
+	text "Je me"
+	line "suis trop avancé!"
 	prompt
 
 _Route4AfterBattleText2::
-	text "This is a great"
-	line "open place to"
-	cont "train with my"
-	cont "rival!"
+	text "C'est un super"
+	line "endroit ouvert"
+	cont "pour s'entraîner"
+	cont "avec mon rival!"
 	done
 
 _Route4BattleText3::
-	text "You want a piece"
-	line "of me too?"
-	para "Get in here!"
+	text "Tu veux aussi"
+	line "ta part?"
+	para "Viens ici!"
 	done
 
 _Route4EndBattleText3::
-	text "You're"
-	line "on my list!"
+	text "Tu es"
+	line "sur ma liste!"
 	prompt
 
 _Route4AfterBattleText3::
-	text "Even though we're"
-	line "rivals, when we"
-	cont "battle together"
-	cont "we both improve!"
+	text "Même si on est"
+	line "rivaux, quand on"
+	cont "se bat ensemble"
+	cont "on s'améliore"
+	cont "tous les deux!"
 	done
 
 _Route4BattleText4::
-	text "I'm on a journey"
-	line "to MT.MOON to"
-	cont "catch some rare"
-	cont "#MON."
+	text "Je suis en voyage"
+	line "vers le MONT"
+	cont "SELENITE pour"
+	cont "capturer des"
+	cont "#MON rares."
 	done
 
 _Route4EndBattleText4::
-	text "Almost"
-	line "made it!"
+	text "J'y"
+	line "étais presque!"
 	prompt
 
 _Route4AfterBattleText4::
-	text "Luckily you took"
-	line "me down near a"
-	cont "#MON CENTER"
-	cont "or I would've"
-	cont "turned back!"
+	text "Heureusement tu"
+	line "m'as battu près"
+	cont "d'un CENTRE"
+	cont "#MON sinon"
+	cont "j'aurais fait"
+	cont "demi-tour!"
 	done
 
 _Route4Text8::
-	text "<TIPS>"
-	para "Press LEFT D-PAD"
-	line "at the top of the"
-	cont "ITEM menu to"
-	cont "jump to the"
-	cont "bottom and back."
+	text "ASTUCE"
+	para "Appuie sur GAUCHE"
+	line "en haut du menu"
+	cont "OBJETS pour"
+	cont "sauter en bas"
+	cont "et revenir."
 
-	para "This works with"
-	line "<PC> menus as well!"
+	para "Ca marche aussi"
+	line "avec les menus"
+	cont "du <PC>!"
 	done
 
 _Route4Text9::
-	text "<TIPS>"
-	para "You can hold up"
-	line "to 30 items."
-	para "If you run out"
-	line "of item space,"
-	cont "press START in"
-	cont "the ITEM menu to"
-	cont "deposit an item"
-	cont "to your <PC>!"
+	text "ASTUCE"
+	para "Tu peux porter"
+	line "jusqu'à 30 objets."
+	para "Si tu manques"
+	line "de place, appuie"
+	cont "sur START dans"
+	cont "le menu OBJETS"
+	cont "pour stocker un"
+	cont "objet dans ton"
+	cont "<PC>!"
 	done

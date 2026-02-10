@@ -1,117 +1,127 @@
 _SSAnneCaptainsRoomRubCaptainsBackText::
-	text "CAPTAIN: Ooargh<...>"
-	line "I feel hideous<...>"
-	cont "Urrp! Seasick<...>"
+	text "CAPITAINE: Blorf."
+	line "J'suis pas bien."
+	cont "Beurp..."
 
-	para "<PLAYER> rubbed"
-	line "the CAPTAIN's"
-	cont "back!"
+	para "<PLAYER> masse"
+	line "le dos du"
+	cont "CAPITAINE!"
 
-	para "Rub-rub<...>"
-	line "Rub-rub<...>@"
+	para "Scratch..."
+	line "Scratch...@"
 	text_end
 
 _SSAnneCaptainsRoomCaptainIFeelMuchBetterText::
-	text "CAPTAIN: Whew!"
-	line "Thank you! I"
-	cont "feel much better!"
+	text "CAPITAINE: Merci"
+	line "moussaillon!"
+	cont "Ca va beaucoup"
+	cont "mieux..."
 
-	para "You want to see"
-	line "my CUT technique?"
+	para "Mille sabords!"
+	line "Tu veux voir"
+	cont "la technique"
+	cont "COUPE?"
 
-	para "I could show you"
-	line "if I wasn't ill<...>"
+	para "Je pourrais te la"
+	line "montrer, mais"
+	cont "j'suis malade."
 
-	para "I know! You can"
-	line "have this!"
+	para "Je sais!"
+	line "Prends ça!"
 
-	para "Teach it to your"
-	line "#MON and you"
-	cont "can see it CUT"
-	cont "any time!"
+	para "C'est la technique"
+	line "COUPE."
+	cont "Enseigne-la à"
+	cont "tes #MON!"
 	prompt
 
 _SSAnneCaptainsRoomCaptainNotSickAnymoreText::
-	text "CAPTAIN: Whew!"
+	text "CAPITAINE: Haaaa!"
 
-	para "Now that I'm not"
-	line "sick any more, I"
-	cont "guess it's time."
+	para "Maintenant que"
+	line "je suis guéri, on"
+	cont "va lever l'ancre!"
 	done
 
 _SSAnneCaptainsRoomCaptainFeelingABitBetter::
-	text "CAPTAIN: What?!"
-	para "You're telling me"
-	line "you beat that"
-	cont "<RIVAL> kid in a"
-	cont "#MON battle?!"
+	text "CAPITAINE: Quoi?!"
+	para "Tu me dis que tu"
+	line "as battu ce"
+	cont "gamin <RIVAL> en"
+	cont "combat #MON?!"
 
-	para "He wouldn't leave"
-	line "me alone!"
+	para "Il ne voulait pas"
+	line "me laisser seul!"
 
-	para "Thanks!"
+	para "Merci!"
 
-	para "Now you did me"
-	line "two favors!"
+	para "Maintenant tu m'as"
+	line "rendu deux"
+	cont "services!"
 
-	para "You know what?"
+	para "Tu sais quoi?"
 
-	para "I feel great now!"
+	para "Je me sens"
+	line "mieux maintenant!"
 
-	para "Check this out!"
+	para "Regarde ça!"
 	prompt
 
 _SSAnneCaptainCutYourTicket::
-	text "The CAPTAIN used"
-	line "CUT on your"
-	cont "S.S.TICKET!"
-	para "He CUT it to"
-	line "shreds!"
+	text "Le CAPITAINE a"
+	line "utilisé COUPE sur"
+	cont "ton PASS. BATEAU!"
+	para "Il l'a coupé en"
+	line "lambeaux!"
 	prompt
 
 _SSAnneWontBeNeedingThatAnymore::
-	text "CAPTAIN: You won't"
-	line "be needing that"
-	cont "ticket anymore!"
-	para "You're always"
-	line "welcome on the"
-	cont "S.S.ANNE!"
-	para "I'll tell my crew"
-	line "not to hassle you!"
+	text "CAPITAINE: Tu n'as"
+	line "plus besoin de ce"
+	cont "ticket!"
+	para "Tu es toujours"
+	line "le bienvenu sur"
+	cont "l'OCEANE!"
+	para "Je dirai à mon"
+	line "équipage de ne"
+	cont "pas t'embêter!"
 	done
 
 _SSAnneCaptainsRoomCaptainHM01NoRoomText::
-	text "Oh no! You have"
-	line "no room for this!"
+	text "Ha zut! Tu n'as"
+	line "plus de place"
+	cont "pour cet objet!"
 	done
 
 _SSAnneCaptainsRoomTrashText::
-	text "Yuck! Shouldn't"
-	line "have looked!"
+	text "Quoi?!?"
+	line "Il a mangé ça???"
 	done
 
 _SSAnneCaptainsRoomSeasickBookText::
-	text "How to Conquer"
-	line "Seasickness<...>"
-	cont "The CAPTAIN's"
-	cont "reading this!"
+	text "Comment guérir"
+	line "le mal de mer..."
+	cont "Le CAPITAINE lit"
+	cont "ce manuel!"
 	done
 
 _SSAnneCaptainsRoomCutBookText::
-	text "STUDY SCYTHER:"
-	line "STUDY THE BLADE@"
+	text "ETUDE DE"
+	cont "SCARABRUTE:"
+	line "ETUDE DE LA LAME@"
 	text_end
 
 _SSAnneCaptainsRoomCutBookText2::
-	text "<PARA>Outdoorsmen far"
-	line "out in the wilds"
-	cont "encounter areas"
-	cont "of forests that"
-	cont "were CUT down"
-	cont "inexplicably."
-	para "If you come across"
-	line "such an area,"
-	cont "you have entered"
-	cont "the territory of"
-	cont "a SCYTHER."
+	text "<PARA>Les aventuriers"
+	line "dans la nature"
+	cont "rencontrent des"
+	cont "zones de forêts"
+	cont "qui ont été"
+	cont "COUPEES"
+	cont "inexplicablement."
+	para "Si tu rencontres"
+	line "une telle zone,"
+	cont "tu es entré dans"
+	cont "le territoire d'un"
+	cont "SCARABRUTE."
 	done

@@ -1,87 +1,96 @@
 _LabColorChangerGreeting::
-	text "Hallo!"
-	para "Das machine ist"
-	line "very useful!"
-	para "Not only for"
-	line "reviving fossils,"
-	cont "yes?"
-	para "Can change colors"
-	line "of ein #MON!"
-	para "Wunderbar!"
-	para "Sprechen sie"
-	line "Deutsch?@"
+	text "Bonjour!"
+	para "Cette machine est"
+	line "très utile!"
+	para "Pas seulement pour"
+	line "réanimer les"
+	cont "fossiles, oui?"
+	para "Peut changer les"
+	line "couleurs d'un"
+	cont "#MON!"
+	para "Merveilleux!"
+	para "Parlez-vous"
+	line "français?@"
 	text_end
 
 _LabColorChangerGreetingYes::
-	text "Wir haben hier"
-	line "ein genie!"
+	text "Nous avons ici"
+	line "un génie!"
 	prompt
 	
 _LabColorChangerGreetingNo::
-	text "Das ist okay!"
+	text "C'est pas grave!"
 	prompt
 
 _LabColorChangerStart::
-	text "You want color"
-	line "switch for your"
-	cont "#MON, yes?@"
+	text "Tu veux changer"
+	line "la couleur de ton"
+	cont "#MON, oui?@"
 	text_end
 
 _LabColorChangerNext::
-	text "1 change per 10"
-	line "#MON caught!"
-	para "Use wisely!"
+	text "1 changement pour"
+	line "10 #MON capturés!"
+	para "Utilise avec"
+	line "sagesse!"
 	prompt
 
 _LabColorChangerPics::
-	text "Here ist before"
-	line "und after photos."
+	text "Voici les photos"
+	line "avant et après."
 	prompt
 
 _LabColorChangerPicsShown::
-	text "Ist good?"
-	line "Change color?"
+	text "C'est bon?"
+	line "Changer la"
+	cont "couleur?"
 	prompt
 
 _LabColorChangerGoodbye::
-	text "Auf wiedersehen!"
+	text "Au revoir!"
 	done
 
 _LabColorChangerStartColorChange::
-	text "Achtung!"
-	line "We start now!"
-	cont "You ist helping!"
+	text "Attention!"
+	line "On commence"
+	cont "maintenant!"
+	cont "Tu vas aider!"
 	prompt
 
 _LabColorChangerColorChangeDone::
-	text "Das ist gut!"
-	para "Color swap ist"
-	line "complete!@"
+	text "C'est bon!"
+	para "Le changement de"
+	line "couleur est"
+	cont "terminé!@"
 	text_end
 
 _LabColorChangerNoChangesLeft::
-	text "You don't have"
-	line "any color changes"
-	cont "left!"
-	para "1 change per 10"
-	line "#MON caught!"
+	text "Tu n'as plus de"
+	line "changements de"
+	cont "couleur!"
+	para "1 changement pour"
+	line "10 #MON capturés!"
 	prompt
 
 _LabColorChangerVasIsDas::
-	text "Vas is das?"
-	para "A note from meine"
-	line "colleague?!"
-	para "Wau!"
-	para "You ist ein"
-	line "protégé mit"
-	cont "PROF.OAK?!"
-	para "Meine gute!"
-	para "You get 10 extra"
-	line "color changes!@"
+	text "Qu'est-ce que"
+	line "c'est?"
+	para "Une note de mon"
+	line "collègue?!"
+	para "Waouh!"
+	para "Tu es un"
+	line "protégé du"
+	cont "PROF.CHEN?!"
+	para "Mon Dieu!"
+	para "Tu reçois 10"
+	line "changements de"
+	cont "couleur en plus!@"
 	text_end
 
 _LabColorChangerResearchingColors::
-	text "I am researching"
-	line "how to change"
-	cont "#MON colors!"
+	text "Je fais des"
+	line "recherches sur"
+	cont "comment changer"
+	cont "les couleurs des"
+	cont "#MON!"
 	done

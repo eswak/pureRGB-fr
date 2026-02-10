@@ -1265,8 +1265,9 @@ DEF LEARNSET_FLAGS_END EQU const_value
 	const EVENT_SEAFOAM4_BOULDER2_DOWN_HOLE
 	const_skip 8
 	const EVENT_BEAT_ARTICUNO
+	const EVENT_REMATCH_DELAY ; shinpokerednote: ADDED: prevents rematching until talking to any defeated trainer
 
-	; pureRGBnote: 37 bits of unused space (large)
+	; pureRGBnote: 36 bits of unused space (large)
 
 ; End of events
 	const_next $A00

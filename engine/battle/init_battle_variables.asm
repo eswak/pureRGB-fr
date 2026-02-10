@@ -17,6 +17,7 @@ InitBattleVariables:
 	ld [wPlayerMonNumber], a
 	ld [wEscapedFromBattle], a
 	ld [wMapPalOffset], a
+	ld [wUnusedD366], a ; shinpokerednote: ADDED: initialize shiny flag byte
 ;;;;;;;;;; PureRGBnote: ADDED: clear various new AI-related variables.
 	ld [wAIMoveSpamAvoider], a
 	ld [wEnemyLastSelectedMove], a

@@ -2,6 +2,8 @@
 
 A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly.
 
+**Traduction française (French translation):** Les textes du jeu peuvent être traduits en français (fichiers `text/*.asm`, `data/text_boxes.asm`, menus, Pokédex, etc.). La traduction s'appuie sur pokered-fr et respecte la limite d'environ 18 caractères par ligne pour l'affichage.
+
 To download the latest version of this romhack, [**go here**](https://github.com/Vortyne/pureRGB/releases/latest)
 
 To see the full list of features, bugfixes, and everything else, see [**FEATURES.md**](FEATURES.md)

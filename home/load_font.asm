@@ -30,6 +30,23 @@ LoadTextBoxTilePatterns::
 	lb bc, BANK(TextBoxGraphics), (TextBoxGraphicsEnd - TextBoxGraphics) / $10
 	jp CopyVideoData ; if LCD is on, transfer during V-blank
 
+; Copy font_extra tile $78 (index 24) to VRAM $61 so <SHINY> displays the star from font_extra.png, not font_battle_extra
+LoadShinyTileFromFontExtra::
+	ldh a, [rLCDC]
+	bit rLCDC_ENABLE, a
+	jr nz, .lcdOn
+.off
+	ld hl, TextBoxGraphics + 24 * 16
+	ld de, vChars2 tile $61
+	ld bc, 16
+	ld a, BANK(TextBoxGraphics)
+	jp FarCopyData2
+.lcdOn
+	ld de, TextBoxGraphics + 24 * 16
+	ld hl, vChars2 tile $61
+	lb bc, BANK(TextBoxGraphics), 1
+	jp CopyVideoData
+
 LoadHpBarAndStatusTilePatterns::
 	ldh a, [rLCDC]
 	bit rLCDC_ENABLE, a

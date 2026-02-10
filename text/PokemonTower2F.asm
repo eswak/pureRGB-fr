@@ -1,126 +1,134 @@
 _PokemonTower2FRivalWhatBringsYouHereText::
-	text "<RIVAL>: Hey,"
-	line "<PLAYER>! What"
-	cont "brings you here?"
-	cont "Your #MON"
-	cont "don't look dead!"
+	text "<RIVAL>: Hé,"
+	line "<PLAYER>!"
+	cont "Kesstu fais là?"
+	cont "Tes #MON sont"
+	cont "pas morts!"
 
-	para "I can at least"
-	line "make them faint!"
-	cont "Let's go, pal!"
+	para "Je peux quand"
+	line "même les mettre"
+	cont "K.O.! Minable!"
 	done
 
 _PokemonTower2FRivalDefeatedText::
-	text "What?"
-	line "You stinker!"
+	text "Hein?"
+	line "Petit fennec!"
 
-	para "I took it easy on"
-	line "you too!"
+	para "Je ne t'ai pas"
+	line "pris au sérieux!"
+	cont "M-I-N-A-B-L-E!"
 	prompt
 
 _PokemonTower2FRivalVictoryText::
-	text "Well,"
-	line "look at all your"
-	cont "wimpy #MON!"
+	text "<RIVAL>: Haha,"
+	line "Tes #MON sont"
+	cont "minables..."
+	cont "Comme toi!"
 
-	para "Toughen them up a"
-	line "bit more!"
+	para "Tu devrais les"
+	line "entraîner un peu!"
 	prompt
 
 _PokemonTower2FRivalHowsYourDexText::
-	text "How's your #DEX"
-	line "coming, pal?"
-	cont "I just caught a"
-	cont "CUBONE!"
+	text "Où en est ton"
+	line "#DEX? Je"
+	cont "viens de capturer"
+	cont "un OSSELAIT!"
 
-	para "I can't find the"
-	line "grown-up MAROWAK"
-	cont "yet!"
+	para "Je n'ai pas"
+	line "encore trouvé de"
+	cont "OSSATUEUR!"
 
-	para "I doubt there are"
-	line "any left! Well, I"
-	cont "better get going!"
-	cont "I've got a lot to"
-	cont "accomplish, pal!"
+	para "Je crois qu'il"
+	line "n'en existe plus!"
+	cont "Je dois y aller,"
+	cont "minable! J'ai du"
+	cont "pain sur la"
+	cont "planche, minable!"
 
-	para "Smell ya later!"
+	para "A bientôt..."
+	line "Gros minable!"
 	done
 
 _PokemonTower2FChannelerText::
-	text "Even we could not"
-	line "identify the"
-	cont "wayward GHOSTs!"
+	text "Nous ne pouvons"
+	line "identifier les"
+	cont "SPECTRES!"
 
-	para "A @"
+	para "Un @"
 	text_ram wNameBuffer
 	text_start
-	line "might be able to"
-	cont "unmask them."
+	line "pourrait les"
+	cont "démasquer."
 	done
 
 _PokemonTower2FChannelerText2::
-	text "Thanks for"
-	line "getting rid of"
-	cont "<TEAM><ROCKET>"
-	cont "in our tower!"
+	text "Merci d'avoir"
+	line "débarrassé notre"
+	cont "tour de la"
+	cont "TEAM ROCKET!"
 	done
 
 _PokemonTower2FChannelerText3::
-	text "Thanks for all"
-	line "your help!"
+	text "Merci pour toute"
+	line "ton aide!"
 	done
 
 _PokemonTower2FChannelerTextBorrowSilphScope::
-	text "Before you go,"
-	line "maybe you could"
-	cont "lend me that"
-	cont "@"
+	text "Avant que tu"
+	line "partes, tu"
+	cont "pourrais me prêter"
+	cont "ton @"
 	text_ram wNameBuffer
 	text "?"
-	para "It'd help us"
-	line "with the wayward"
-	cont "spirits!"
-	para "I'll give it"
-	line "back whenever"
-	cont "you visit here!"
-	para "How about it?"
+	para "Ca nous aiderait"
+	line "avec les esprits"
+	cont "errants!"
+	para "Je te le rendrai"
+	line "quand tu"
+	cont "reviendras"
+	cont "ici!"
+	para "Qu'est-ce que tu"
+	line "en dis?"
 	done
 
 _PokemonTower2FChannelerTextBorrowSilphScopeYes::
-	text "Perfect!"
-	para "<PLAYER> handed"
-	line "the channeler the"
+	text "Parfait!"
+	para "<PLAYER> a donné"
+	line "à l'exorciste le"
 	cont "@"
 	text_ram wNameBuffer
 	text "."
 	done
 
 _PokemonTower2FChannelerTextBack::
-	text "Do you want your"
-	line "@"
+	text "Tu veux récupérer"
+	line "ton @"
 	text_ram wNameBuffer
-	text " back?"
+	text "?"
 	done
 
 _PlayerGotBackItem::
-	text "<PARA><PLAYER> got back"
-	line "the @"
+	text "<PARA><PLAYER> a récupéré"
+	line "le @"
 	text_ram wNameBuffer
 	text "!"
 	done
 
 _PokemonTower2FChannelerTextBorrowAgain::
-	text "By the way<...>"
-	para "May I borrow your"
-	line "@"
+	text "Au fait..."
+	para "Je peux te"
+	line "re-emprunter ton"
+	cont "@"
 	text_ram wNameBuffer
-	text " again?"
+	text "?"
 	done
 
 _GenericWaitText::
-	text "Wait!"
+	text "Attends!"
 	done
 
 _OhHelloAgainText::
-	text "Oh, hello again!"
+	text "Oh, bonjour"
+	cont "encore!"
 	done

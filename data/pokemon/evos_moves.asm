@@ -544,6 +544,8 @@ MewEvosMoves:
 	db 0
 ; Learnset
 	db 51, TRANSFORM
+	db 52, TRI_ATTACK
+	db 53, CONVERSION
 	db 55, MEGA_PUNCH
 	db 59, METRONOME
 	db 63, SUBSTITUTE

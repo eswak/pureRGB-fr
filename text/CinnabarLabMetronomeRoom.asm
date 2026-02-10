@@ -1,65 +1,70 @@
 _CinnabarLabMetronomeRoomScientist1Text::
 	text "Tch-tch-tch!"
-	line "I made a cool <TM>!"
+	line "Je viens de créer"
+	cont "une CT sympa!"
 
-	para "It can cause all"
-	line "kinds of fun!"
+	para "Elle provoque des"
+	line "trucs étranges!"
 	prompt
 
 _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
 	text "Tch-tch-tch!"
-	line "That's the sound"
-	cont "a KINGLER makes!"
+	line "C'est le bruit"
+	cont "que fait un"
+	cont "KRABBOSS!"
 
-	para "CRABHAMMER is"
-	line "its signature"
-	cont "move!"
+	para "PINCE-MASSE est"
+	line "sa technique"
+	cont "signature!"
 
-	para "I love that move"
-	line "so much, I made a"
-	cont "<TM> to teach it to"
-	cont "other #MON!"
+	para "J'aime tellement"
+	line "cette technique"
+	cont "que j'ai créé une"
+	cont "CT pour"
+	cont "l'enseigner"
+	cont "à d'autres #MON!"
 
-	para "When in doubt:"
-	para "Drop a HAMMER on"
-	line "'em!"
+	para "En cas de doute:"
+	para "Laisse tomber un"
+	line "MARTEAU sur eux!"
 	done
 
 _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
-	text "Your pack is"
-	line "crammed full!"
+	text "Votre inventaire"
+	line "est plein!"
 	done
 
 _CinnabarLabMetronomeRoomScientist2Text::
-	text "EEVEE can evolve"
-	line "into 1 of 3 kinds"
-	cont "of #MON."
+	text "EVOLI évolue en"
+	line "3 #MON de"
+	cont "type différent."
 	done
 
 _CinnabarLabMetronomeRoomPCText::
-	text "There's an e-mail"
-	line "message!"
+	text "Il y a un e-mail!"
 
-	para "<...>"
+	para "..."
 
-	para "The 3 legendary"
-	line "bird #MON are"
-	cont "ARTICUNO, ZAPDOS"
-	cont "and MOLTRES."
+	para "Les 3 #MON"
+	line "légendaires sont:"
+	cont "ARTIKODIN,"
+	cont "ELECTHOR et"
+	cont "SULFURA."
 
-	para "Their whereabouts"
-	line "are unknown."
+	para "On ne sait rien"
+	line "d'eux."
 
-	para "We plan to explore"
-	line "the cavern close"
-	cont "to CERULEAN."
+	para "Nous allons"
+	line "explorer les"
+	cont "grottes près de"
+	cont "AZURIA."
 
-	para "From: #MON"
-	line "RESEARCH <TEAM>"
+	para "De : L'EQUIPE DE"
+	line "RECHERCHE #MON"
 
-	para "<...>"
+	para "..."
 	done
 
 _CinnabarLabMetronomeRoomAmberPipeText::
-	text "An amber pipe!"
+	text "Un tuyau à ambre!"
 	done

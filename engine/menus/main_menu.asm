@@ -146,6 +146,7 @@ InitOptions:
 	ld [wLetterPrintingDelayFlags], a
 	ld a, TEXT_DELAY_MEDIUM
 	ld [wOptions], a
+	; PureRGBnote: Bonbons dresseurs default is set in PrepareOakSpeech for new game only (so loading a save keeps player choice)
 	ret
 
 LinkMenu:
@@ -375,13 +376,13 @@ ContinueText:
 	; fallthrough
 
 NewGameText:
-	db   "NEW GAME"
-	next "OPTION@"
+	db   "NOUVEAU JEU"
+	next "OPTIONS@"
 
 CableClubOptionsText:
-	db   "TRADE CENTER"
-	next "COLOSSEUM"
-	next "CANCEL@"
+	db   "CENTRE TROC"
+	next "COLISEE"
+	next "RETOUR@"
 
 VersionText:
 db " "
@@ -479,10 +480,10 @@ PrintPlayTime:
 	jp PrintNumber
 
 SaveScreenInfoText:
-	db   "PLAYER"
+	db   "JOUEUR"
 	next "BADGES    "
 	next "#DEX    "
-	next "TIME@"
+	next "TEMPS@"
 
 CheckForPlayerNameInSRAM:
 ; Check if the player name data in SRAM has a string terminator character

@@ -1,60 +1,62 @@
 _PokemonMansion3FSuperNerdBattleText::
-	text "This place is"
-	line "like, huge!"
+	text "Fouiii..."
+	line "C'est grand ici!"
 	done
 
 _PokemonMansion3FSuperNerdEndBattleText::
-	text "Ayah!"
+	text "Yargl!"
 	prompt
 
 _PokemonMansion3FSuperNerdAfterBattleText::
-	text "I wonder where"
-	line "my partner went."
+	text "Mais où est donc"
+	line "mon complice?"
 	done
 
 _PokemonMansion3FScientistBattleText::
-	text "My mentor once"
-	line "lived here."
+	text "Mon mentor vivait"
+	line "ici autrefois."
 	done
 
 _PokemonMansion3FScientistEndBattleText::
-	text "Whew!"
-	line "Overwhelming!"
+	text "!!!"
+	line "Impressionnant!"
 	prompt
 
 _PokemonMansion3FScientistAfterBattleText::
-	text "So, you're stuck?"
-	line "Try jumping off"
-	cont "over there!"
+	text "T'es perdu?"
+	line "Essaie de sauter"
+	cont "par là-bas!"
 	done
 
 _Mansion3BattleText3::
-	text "I came here"
-	line "because I sensed"
-	cont "spirits."
-	para "#MON spirits"
-	line "that need putting"
-	cont "to rest!"
+	text "Je suis venu ici"
+	line "car j'ai senti"
+	cont "des esprits."
+	para "Des esprits de"
+	line "#MON qui ont"
+	cont "besoin de repos!"
 	done
 
 _Mansion3EndBattleText3::
-	text "Ahh<...>"
+	text "Ahh..."
 	prompt
 
 _Mansion3AfterBattleText3::
-	text "The #MON may"
-	line "have fallen"
-	cont "during strange"
-	cont "research"
-	cont "experiments."
-	para "What a horrible"
-	line "thought."
+	text "Les #MON ont"
+	line "peut-être péri"
+	cont "durant d'étranges"
+	cont "expériences de"
+	cont "recherche."
+	para "Quelle horrible"
+	line "pensée."
 	done
 
 _PokemonMansion3FDiaryText::
-	text "Diary: Feb. 6"
-	line "MEW gave birth."
+	text "Rapport:"
+	line "6 Février."
+	cont "MEW est papa "
+	cont "(ou maman?)"
 
-	para "We named the"
-	line "newborn MEWTWO."
+	para "Le petit fut"
+	line "baptisé MEWTWO."
 	done

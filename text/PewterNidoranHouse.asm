@@ -1,47 +1,48 @@
 _PewterNidoranHouseNidoranText::
-	text "NIDORAN: Bowbow!@"
+	text "NIDORAN: Nidoni!@"
 	text_end
 
 _PewterNidoranHouseLittleBoyText::
-	text "NIDORAN sit!"
+	text "NIDORAN, assis!"
 	done
 
 _PewterNidoranHouseMiddleAgedManText::
-	text "Our #MON's an"
-	line "outsider, so it's"
-	cont "hard to handle."
+	text "Notre #MON est"
+	line "un échangé, il"
+	cont "est difficile à"
+	cont "maîtriser."
 
-	para "An outsider is a"
-	line "#MON that you"
-	cont "get in a trade."
+	para "Un échangé est"
+	line "un #MON reçu"
+	cont "dans un échange."
 
-	para "It grows fast, but"
-	line "it may ignore an"
-	cont "unskilled trainer"
-	cont "in battle!"
+	para "Il grandit vite,"
+	line "mais il peut"
+	cont "ignorer un"
+	cont "dresseur peu"
+	cont "expérimenté!"
 
-	para "If only we had"
-	line "some BADGEs<...>"
+	para "Si on avait"
+	line "des BADGES..."
 	done
 
 _PewterHouse1Text4Color::
-	text "Down south, near"
-	line "FUCHSIA CITY,"
-	para "I hear NIDORAN♂"
-	line "are blue, and"
-	cont "NIDORAN♀ are"
-	cont "purple!"
-	para "The opposite of"
-	line "up here."
-	para "Interesting how"
-	line "#MON colors"
-	cont "vary by region!"
+	text "Au sud, vers"
+	line "PARMANIE,"
+	para "les NIDORAN♂"
+	line "sont bleus et"
+	cont "les NIDORAN♀"
+	cont "violets!"
+	para "L'inverse d'ici."
+	para "Les couleurs"
+	line "#MON varient"
+	cont "selon la région!"
 	done
 
 _PewterHouse1Text4::
-	text "NIDORAN is such"
-	line "a nice shade of"
-	cont "purplish pink!"
-	para "What a stunning"
-	line "#MON!"
+	text "NIDORAN a une"
+	line "belle couleur"
+	cont "rose violacé!"
+	para "Quel #MON"
+	line "magnifique!"
 	done

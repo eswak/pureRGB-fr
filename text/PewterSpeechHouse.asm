@@ -1,95 +1,100 @@
 _PewterSpeechHouseGamblerText::
-	text "#MON learn new"
-	line "techniques as"
-	cont "they grow!"
+	text "Les #MON"
+	line "apprennent des"
+	cont "capacités en"
+	cont "gagnant des"
+	cont "niveaux!"
 
-	para "But, some moves"
-	line "must be taught by"
-	cont "the trainer!"
+	para "Mais certaines"
+	line "s'attrapent"
+	cont "seulement"
+	cont "chez des"
+	cont "dresseurs!"
 	done
 
 _PewterSpeechHouseYoungsterText::
-	text "#MON become"
-	line "easier to catch"
-	cont "when they are"
-	cont "hurt or asleep!"
+	text "Les #MON sont"
+	line "plus faciles à"
+	cont "capturer endormis"
+	cont "ou blessés!"
 
-	para "But, it's not a"
-	line "sure thing!"
+	para "Mais c'est jamais"
+	line "gagné d'avance!"
 	done
 
 _PewterHouse2Text3Intro::
-	text "My husband lost"
-	line "his wallet!"
+	text "Mon mari a perdu"
+	line "son portefeuille!"
 
-	para "He's very absent-"
-	line "minded! He's not"
-	cont "even concerned!"
+	para "Il est très"
+	line "tête en l'air!"
+	cont "Il s'en fait"
+	cont "même pas!"
 
-	para "I'll reward who-"
-	line "ever finds it!"
+	para "Je récompense"
+	line "qui le trouve!"
 
-	para "He probably"
-	line "left it at the"
-	cont "PEWTER MUSEUM."
+	para "Il l'a sûrement"
+	line "oublié au MUSEE"
+	cont "D'ARGENTA."
 	done
 
 _PewterHouse2Text3Found::
-	text "You found it!"
-	line "Thank goodness!"
+	text "Tu l'as trouvé!"
+	line "Dieu merci!"
 
-	para "Our S.S.TICKETs"
-	line "were in there!"
+	para "Nos billets"
+	line "BATEAU étaient"
+	cont "dedans!"
 
-	para "We're going on"
-	line "an ocean cruise"
-	cont "vacation soon!"
+	para "On part bientôt"
+	line "en croisière!"
 
-	para "I'm a fashion"
-	line "designer and"
-	cont "#MON Breeder!"
+	para "Je suis styliste"
+	line "et éleveuse"
+	cont "#MON!"
 
-	para "This is my newest"
-	line "idea:"
+	para "Voilà ma dernière"
+	line "idée:"
 
-	para "#MON fit in"
-	line "your pocket when"
-	cont "in their Poké"
-	cont "Balls."
+	para "Les #MON tiennent"
+	line "dans la poche en"
+	cont "BALL!"
 
-	para "But cute #MON"
-	line "are meant to be"
-	cont "seen!"
+	para "Mais les mignons"
+	line "doivent être"
+	cont "visibles!"
 
-	para "We need #MON"
-	line "to carry around"
-	cont "and show off!"
+	para "Il nous faut des"
+	line "#MON à porter"
+	cont "et montrer!"
 
-	para "So I'm breeding"
-	line "tinier #MON!"
+	para "Donc j'élève des"
+	line "#MON tout"
+	cont "petits!"
 
-	para "POCKET #MON,"
-	line "if you will!"
+	para "#MON DE POCHE,"
+	line "si tu veux!"
 
-	para "My first one!"
-	line "The POCKET ABRA!"
+	para "Mon premier!"
+	line "L'ABRA DE POCHE!"
 
-	para "It fits in your"
-	line "bag, and can"
-	cont "TELEPORT you back"
-	cont "home whenever you"
-	cont "like! Useful!"
+	para "Il tient dans ton"
+	line "sac et peut te"
+	cont "TELEPORT à la"
+	cont "maison quand tu"
+	cont "veux! Pratique!"
 
-	para "I want you to"
-	line "have one!"
+	para "Je veux t'en"
+	line "donner un!"
 	prompt
 
 
 _PewterHouse2Text3After::
-	text "How's ABRA doing?@"
+	text "ABRA va bien?@"
 	text_end
 
 _ReceivedPocketAbraText::
-	text "<PLAYER> received"
-	line "a POCKET ABRA!@"
+	text "<PLAYER> reçoit"
+	line "un ABRA DE POCHE!@"
 	text_end

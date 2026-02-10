@@ -7,6 +7,15 @@ GiveItem::
 	ld [wCurItem], a
 	ld a, c
 	ld [wItemQuantity], a
+	jr GiveItem_AddToInventory
+
+; PureRGBnote: Give item using wCurItem and wItemQuantity (for callfar from other banks, since callfar clobbers b)
+GiveItemFromWram::
+	ld a, [wCurItem]
+	ld [wNamedObjectIndex], a
+	ld a, [wItemQuantity]
+	; wCurItem and wItemQuantity already set by caller
+GiveItem_AddToInventory:
 	ld hl, wNumBagItems
 	call AddItemToInventory
 	ret nc

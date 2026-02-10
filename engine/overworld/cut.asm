@@ -46,6 +46,9 @@ UsedCut:
 	call Delay3
 	call LoadGBPal
 	call LoadCurrentMapView
+	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors after Cut animation
+	farcall MakeAndTransferOverworldBGMapAttributes_OpenText
+	farcall MakeAndTransferOverworldBGMapAttributes_CloseText
 	call SaveScreenTilesToBuffer2
 	call Delay3
 	xor a

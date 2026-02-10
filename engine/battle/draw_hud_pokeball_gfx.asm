@@ -131,9 +131,35 @@ PlacePlayerHUDTiles:
 	ld de, wHUDGraphicsTiles
 	ld bc, $3
 	rst _CopyData
+	
+	;shinpokerednote: ADDED: draw shiny symbol if applicable. (9,7) = one tile left of player name (name at 10,7)
+	; Only show when a Pokémon is actually in battle (avoids "A" + shiny on trainer tile at battle start)
+	ld a, [wBattleMonSpecies]
+	and a
+	jr z, .noshiny
+	ld a, [wUnusedD366]
+	bit 0, a
+	jr z, .noshiny
+	push hl
+	push de
+	push bc
+	coord hl, 9, 7
+	ld a, "<SHINY>"
+	ld [hl], a
+	pop bc
+	pop de
+	pop hl
+	jr .doneShinyTile
+.noshiny
+	; Clear (8,7)-(9,11) to remove leftover BOLD_A/shinny at (8,10) and (9,7) from overworld
+	hlcoord 8, 7
+	lb bc, 5, 2
+	call ClearScreenArea
+.doneShinyTile
+	
 	hlcoord 18, 10
 	ld de, -1
-	jr PlaceHUDTiles
+	jp PlaceHUDTiles
 
 PlayerBattleHUDGraphicsTiles:
 ; The tile numbers for specific parts of the battle display for the player's pokemon
@@ -146,9 +172,25 @@ PlaceEnemyHUDTiles:
 	ld de, wHUDGraphicsTiles
 	ld bc, $3
 	rst _CopyData
+	
+	;shinpokerednote: ADDED: draw shiny symbol if applicable (bit 7 set by ShinyEnemyAnimation)
+	; Position: (0,0) = left of enemy name row. <SHINY> = $61 = font_extra.png tile $78 (copied at battle load)
+	ld a, [wUnusedD366]
+	bit 7, a
+	jr z, .noshiny
+	push hl
+	push de
+	push bc
+	coord hl, 0, 0
+	ld a, "<SHINY>"
+	ld [hl], a
+	pop bc
+	pop de
+	pop hl
+.noshiny
 	hlcoord 1, 2
 	ld de, $1
-	jr PlaceHUDTiles
+	jp PlaceHUDTiles
 
 EnemyBattleHUDGraphicsTiles:
 ; The tile numbers for specific parts of the battle display for the enemy

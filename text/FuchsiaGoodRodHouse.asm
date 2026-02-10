@@ -1,75 +1,73 @@
 _FuchsiaGuruIntro::
-	text "I'm the FISHING"
-	line "GURU's second"
-	cont "cousin!"
+	text "Je suis le"
+	line "cousin du GURU"
+	cont "PECHE!"
 	prompt
 
 _LastTwoGurusTextQuestion::
-	text "I simply Looove"
-	line "fishing!"
+	text "J'adore la"
+	line "peche!"
 
-	para "Do you like to"
-	line "fish?"
+	para "Tu aimes"
+	line "pecher?"
 	done
 
 _LastTwoGurusTextYes::
-	text "Grand! I like"
-	line "your style!"
+	text "Super! J'aime"
+	line "ton style!"
 
-	para "Take this and"
-	line "fish, young one!"
+	para "Tiens ça et"
+	line "peche, jeune!"
 	prompt
 
 _LastTwoGurusTextAlreadyHaveSuperRod::
-	text "What!? Someone"
-	line "already gave you"
-	cont "a SUPER ROD?!"
+	text "Quoi?! On t'a"
+	line "deja donne une"
+	cont "SUPER CANNE?!"
 
-	para "That's my job!"
+	para "C'est mon role!"
 
-	para "What to do<...>"
+	para "Que faire..."
 
-	para "Hmm, maybe this"
-	line "will be useful"
-	cont "to you instead?"
+	para "Tiens, peut-etre"
+	line "que ça te servira"
+	cont "mieux?"
 	prompt
 
 _LastTwoGurusTextNo::
-	text "Oh<...> That's so"
-	line "disappointing<...>"
+	text "Oh... C'est"
+	line "tellement"
+	cont "decevant..."
 	done
 
 _LastTwoGurusTextBagFull::
-	text "Oh no!"
+	text "Oh non!"
 
-	para "You have no room"
-	line "for my gift!"
+	para "Tu n'as plus"
+	line "de place!"
 	done
 
 _FuchsiaGuruEnd::
-	text "Fishing-It's a"
-	line "man's romance!"
+	text "La peche,"
+	line "c'est l'aventure!"
 
-	para "With a beautiful"
-	line "SUPER ROD at your"
-	cont "side, you can"
-	cont "catch just about"
-	cont "anything!"
+	para "Avec une belle"
+	line "SUPER CANNE"
+	cont "tu peux tout"
+	cont "attraper!"
 
-	para "I feel like"
-	line "hitting the docks"
-	cont "just talking"
-	cont "about it!"
+	para "Rien qu d'en"
+	line "parler j'ai"
+	cont "envie d'y aller!"
 
-	para "Get out there"
-	line "and fish!"
+	para "Vas-y, peche!"
 	done
 	
 _FuchsiaGoodRodHouseGarbageText::
-	text "There's a crumpled"
-	line "up ad in here."
-	para "Build your own"
-	line "fishing pond!"
-	para "Learn everything"
-	line "step-by-step!"
+	text "Une pub froissee"
+	line "dedans."
+	para "Construisez"
+	line "votre etang!"
+	para "Guide pas"
+	line "a pas!"
 	done

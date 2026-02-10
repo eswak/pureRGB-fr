@@ -1,248 +1,252 @@
 _SchoolB1FLeftTeacherInit::
-	text "We have a visitor"
-	line "in class-wot wot!"
+	text "On a une visite"
+	line "en cours, coco!"
 	prompt
 
 _SchoolB1FLeftTeacherNoParcel::
-	text "Is that so?"
-	para "You're from"
-	line "PALLET TOWN?"
-	para "I heard they were"
-	line "looking for a lad"
-	cont "from PALLET TOWN"
-	cont "at the #MART!"
-	para "Have a look"
-	line "over there!"
+	text "Ah oui?"
+	para "Tu viens de"
+	line "BOURG PALETTE?"
+	para "J'ai entendu qu'on"
+	line "cherchait un gamin"
+	cont "de BOURG PALETTE"
+	cont "au #MART!"
+	para "Va voir par"
+	line "là-bas!"
 	prompt
 
 _SchoolB1FLeftTeacherNoPokedex::
-	text "Blimey! A PARCEL!"
-	para "Is it for me?"
-	para "No? Deliver it,"
-	line "my boy!"
+	text "Bigre! Un COLIS!"
+	para "C'est pour moi?"
+	para "Non? Livre-le,"
+	line "mon gaillard!"
 	prompt
 
 _SchoolB1FLeftTeacherLater::
-	text "Come talk to me"
-	line "later on-wot wot!"
+	text "Reviens me parler"
+	line "plus tard, coco!"
 	done
 
 _SchoolB1FLeftTeacherFirst::
-	text "Welcome to my"
-	line "class for #MON"
-	cont "moves-wot wot!"
-	para "I'm quite chuffed"
-	line "at the moment!"
-	para "I created a"
-	line "way to record"
-	cont "info about loads"
-	cont "of #MON moves"
-	cont "digitally!"
-	para "Brilliant stuff!"
-	para "I call it the"
-	line "MOVEDEX!"
-	para "Proper useful!"
-	para "Want one?"
+	text "Bienvenue à mon"
+	line "cours sur les"
+	cont "capacités #MON!"
+	para "Je suis tout"
+	line "content!"
+	para "J'ai créé un"
+	line "système pour"
+	cont "enregistrer des"
+	cont "infos sur plein"
+	cont "de capacités!"
+	para "Génial, non?"
+	para "Je l'appelle le"
+	line "CAPADEX!"
+	para "Vraiment utile!"
+	para "Tu en veux un?"
 	done
 
 _SchoolB1FLeftTeacherNo::
-	text "Don't be cheeky-"
-	line "wot wot!"
-	para "Lets not faff"
-	line "about!"
-	para "Come talk to me"
-	line "again if you've"
-	cont "an interest!"
+	text "Sois pas insolent,"
+	line "coco!"
+	para "Pas de"
+	line "blabla!"
+	para "Reviens me voir"
+	line "si ça t'intéresse!"
 	done
 
 _SchoolB1FLeftTeacherYes::
-	text "Capital!"
-	para "Tell you what"
-	line "good chap:"
-	para "Have a gander"
-	line "about the school-"
-	cont "learn some new"
-	cont "bits and bobs."
-	para "I'll give you"
-	line "a bit of a quiz"
-	cont "to see what you"
-	cont "learned after!"
-	para "A perfect score"
-	line "nets you the"
-	cont "MOVEDEX!"
-	para "Off you go!"
-	line "Wot wot!"
+	text "Parfait!"
+	para "Ecoute bien,"
+	line "mon gaillard:"
+	para "Promène-toi"
+	line "dans l'école,"
+	cont "apprends des"
+	cont "trucs."
+	para "Ensuite je te"
+	line "ferai un quiz"
+	cont "sur ce que t'as"
+	cont "appris!"
+	para "Un sans-faute"
+	line "et le CAPADEX"
+	cont "est à toi!"
+	para "Allez, vas-y!"
+	line "Coco!"
 	done
 
 _SchoolB1FLeftTeacherReadyStart::
-	text "Here we are!"
-	para "How goes it?"
-	para "Ready for the"
+	text "Nous y voilà!"
+	para "Comment ça va?"
+	para "Prêt pour le"
 	line "quiz?"
 	done
 
 _SchoolB1FLeftTeacherReadyNo::
-	text "Take your time."
+	text "Prends ton temps."
 	done
 
 _SchoolB1FLeftTeacherReadyYes::
-	text "Righto!"
-	para "Let the quiz"
+	text "Parfait!"
+	para "Que le quiz"
 	line "commence!"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuestion1::
 	text "Question 1:"
-	para "Which move TYPE"
-	line "is great against"
-	cont "WATER #MON?"
+	para "Quel TYPE est"
+	line "super contre les"
+	cont "#MON EAU?"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuestion2::
 	text "Question 2:"
-	para "Which move always"
-	line "goes first?"
+	para "Quelle capacité"
+	line "frappe toujours"
+	cont "en premier?"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuickAttack::
-	text "Ah, QUICK ATTACK."
-	para "Quite the"
-	line "bog-standard move"
-	cont "shall we say?"
-	para "Terribly useful"
-	line "though. Wot-wot!"
+	text "Ah, COUP D'BOULE."
+	para "Une capacité"
+	line "basique, disons."
+	para "Mais très utile."
+	line "Coco!"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuestion3::
 	text "Question 3:"
-	para "Which status cuts"
-	line "the ATTACK stat?"
+	para "Quel statut"
+	line "baisse l'ATTAQUE?"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuestion4::
 	text "Question 4:"
-	para "Which move has"
-	line "properties of"
-	cont "multiple TYPEs?"
+	para "Quelle capacité"
+	line "a des propriétés"
+	cont "de plusieurs"
+	cont "TYPEs?"
 	prompt
 
 _SchoolB1FLeftTeacherQuizQuestion5::
 	text "Question 5:"
-	para "Which move gets"
-	line "bonus damage when"
-	cont "used by SQUIRTLE?"
+	para "Quelle capacité"
+	line "fait plus de"
+	cont "dégâts"
+	cont "avec CARAPUCE?"
 	prompt
 
 _SchoolB1FLeftTeacherQuizCorrect::
-	text "That's correct!"
-	line "Brilliant work!"
+	text "Correct!"
+	line "Bon travail!"
 	prompt
 
 _SchoolB1FLeftTeacherQuizWrong::
-	text "I'm afraid you've"
-	line "got this one"
-	cont "wrong-wot wot!"
-	para "Fiddlesticks!"
-	para "Try again after"
-	line "learning more!"
+	text "Tu t'es trompé"
+	line "sur celle-là,"
+	cont "coco!"
+	para "Zut alors!"
+	para "Réessaie après"
+	line "avoir appris!"
 	done
 
 _SchoolB1FLeftTeacherQuizFinish::
-	text "That's the lot!"
-	para "You've done it!"
-	para "You answered all"
+	text "C'est tout!"
+	para "Tu as réussi!"
+	para "Tu as répondu aux"
 	line "5 questions!"
-	para "The MOVEDEX is"
-	line "yours!"
+	para "Le CAPADEX est"
+	line "à toi!"
 	prompt
 
 _ReceivedMovedexText::
-	text "<PLAYER> received"
-	line "the MOVEDEX!"
+	text "<PLAYER> reçoit"
+	line "le CAPADEX!"
 	done
 
 
 _SchoolB1FLeftTeacherQuizFinalInfo::
-	text "Every time you"
-	line "see a #MON use"
-	cont "a new move, it'll"
-	cont "show up in the"
-	cont "MOVEDEX-wot wot!"
-	para "Just open up your"
-	line "#DEX and press"
+	text "Chaque fois qu'un"
+	line "#MON utilise"
+	cont "une nouvelle"
+	cont "capabilité, elle"
+	cont "apparaît dans le"
+	cont "CAPADEX!"
+	para "Ouvre ton #DEX"
+	line "et appuie sur"
 	cont "START!"
 	done
 
 _SchoolB1FLeftTeacherEnd::
-	text "That's it then!"
-	para "On a #MON"
-	line "adventure was it?"
-	para "Off to VIRIDIAN"
-	line "FOREST I presume?"
-	para "Head north out"
-	line "of the city!"
-	para "Good luck!"
-	line "Wot wot!"
+	text "Voilà!"
+	para "Tu pars en"
+	line "aventure #MON?"
+	para "Vers la FORET"
+	line "DE JADE, non?"
+	para "Prends la sortie"
+	line "nord de la ville!"
+	para "Bonne chance!"
+	line "Coco!"
 	done
 
 
 
 _SchoolB1FLeftBookcaseA::
-	text "HAUNTED SITES"
-	line "OF THE WORLD@"
+	text "LIEUX HANTES"
+	line "DU MONDE@"
 	text_end
 _FlippedToARandomPage::
-	text "<PARA>Flipped to a"
-	line "random page<...>@"
+	text "<PARA>Ouvert à une"
+	line "page au hasard...@"
 	text_end
 _SchoolB1FLeftBookcaseA2::
-	text "<PARA>UNEXPLAINED"
-	line "PHENOMENA"
-	para "Many trainers"
-	line "have reported"
-	cont "strange eerie"
+	text "<PARA>PHENOMENES"
+	line "INEXPLIQUES"
+	para "Des dresseurs"
+	line "ont signalé"
+	cont "d'étranges"
 	cont "hallucinations"
-	cont "along the eastern"
-	cont "coast of CINNABAR"
-	cont "ISLAND."
+	cont "sur la côte est"
+	cont "de l'ILE"
+	cont "CRAMOISIE."
 	done
 
 _SchoolB1FLeftBookcaseB::
-	text "TWO YEARS WITH"
-	line "THE CLEFAIRY@"
+	text "DEUX ANS AVEC"
+	line "LES MELOFEE@"
 	text_end
 _SchoolB1FLeftBookcaseB2::
-	text "<PARA>On day 234,"
-	line "I witnessed many"
-	cont "CLEFAIRY dancing"
-	cont "around a giant"
-	cont "glimmering stone."
+	text "<PARA>Jour 234:"
+	line "J'ai vu des"
+	cont "MELOFEE danser"
+	cont "autour d'une"
+	cont "pierre géante"
+	cont "lumineuse."
 	done
 
 _SchoolB1FRightBookcaseA::
-	text "THE BIG BOOK"
-	line "OF RATTATA@"
+	text "LE GRAND LIVRE"
+	line "DES RATTATA@"
 	text_end
 _SchoolB1FRightBookcaseA2::
-	text "<PARA>RATTATA often"
-	line "sneak into"
-	cont "homes to pilfer"
-	cont "food, warm"
-	cont "fabric, or even"
-	cont "chewable wood!"
+	text "<PARA>Les RATTATA"
+	line "s'introduisent"
+	cont "souvent pour"
+	cont "voler nourriture,"
+	cont "tissus ou même"
+	cont "ronger du bois!"
 	done
 
 _SchoolB1FRightBookcaseB::
-	text "ALL-NATURAL"
-	line "LAWN TRIMMING@"
+	text "TONTE DE PELOUSE"
+	line "NATURELLE@"
 	text_end
 _SchoolB1FRightBookcaseB2::
-	text "<PARA>There's no need"
-	line "for tools!"
-	para "Simply teach a"
-	line "#MON the move"
-	cont "CUT and let it"
-	cont "hack away!"
-	para "Watch that tall"
-	line "grass disappear!"
+	text "<PARA>Pas besoin"
+	line "d'outils!"
+	para "Apprends COUPE"
+	line "à un #MON et"
+	cont "laisse-le"
+	cont "s'occuper de"
+	cont "l'herbe!"
+	para "Regarde l'herbe"
+	line "haute disparaître!"
 	done

@@ -10,7 +10,7 @@
 *.gbc
 *.gb
 *.patch
-
+*.ips
 # rgbds extras
 *.map
 *.sym

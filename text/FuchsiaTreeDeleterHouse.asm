@@ -1,125 +1,122 @@
 _FuchsiaTreeDeleterText1::
-	text "Huh? <...>Oh, Yes,"
-	line "I'm the TREE"
-	cont "DELETER."
+	text "Heu? ...Oui,"
+	line "je suis l'EFFACEUR"
+	cont "D'ARBRES."
 
-	para "Did you expect"
-	line "someone else?"
+	para "Tu t'attendais"
+	line "a quelqu'un"
+	cont "d'autre?"
 
-	para "I can delete"
-	line "the most annoying"
-	cont "trees for you!"
+	para "Je peux supprimer"
+	line "les arbres les"
+	cont "plus genants!"
 
 	prompt
 
 _FuchsiaTreeDeleterText2::
-	text "Where should I"
-	line "delete a tree?@"
+	text "Ou dois-je"
+	line "supprimer un"
+	cont "arbre?@"
 	text_end
 
 _FuchsiaTreeDeleterRoute2::
-	text "I can carve a"
-	line "path from"
-	cont "VIRIDIAN CITY"
-	cont "to PEWTER CITY."
+	text "Je peux ouvrir"
+	line "un chemin de"
+	cont "JADE au"
+	cont "MONT SELENITE."
 
-	para "You won't need"
-	line "to cut down any"
-	cont "trees to travel"
-	cont "between the two,"
-	cont "and can avoid"
-	cont "VIRIDIAN FOREST."
+	para "Plus besoin de"
+	line "couper pour"
+	cont "aller de l'un"
+	cont "a l'autre, et"
+	cont "eviter la FORET"
+	cont "DE JADE."
 
-	para "It'll cost you"
-	line "¥8000. Fair?@"
+	para "Ca te fera"
+	line "¥8000. D'accord?@"
 	text_end
 
 _FuchsiaTreeDeleterCerulean::
-	text "That tree at the"
-	line "south end of"
-	cont "CERULEAN CITY?"
+	text "L'arbre au sud"
+	line "de AZURIA?"
 
-	para "Sure thing."
-	line "It'll run you"
-	cont "¥4000. Fair?@"
+	para "Pas de souci."
+	line "¥4000. D'accord?@"
 	text_end
 
 _FuchsiaTreeDeleterRoute9::
-	text "The tree at the"
-	line "start of the"
-	cont "route leading to"
-	cont "ROCK TUNNEL?"
+	text "L'arbre au debut"
+	line "de la route vers"
+	cont "le TUNNEL ROCHEUX?"
 
-	para "Easy!"
-	line "It'll cost you"
-	cont "¥4000. Fair?@"
+	para "Facile!"
+	line "¥4000. D'accord?@"
 	text_end
 
 _FuchsiaTreeDeleterFuchsiaCity::
-	text "Clear out every"
-	line "cuttable tree in"
-	cont "FUCHSIA CITY?"
+	text "Supprimer tous"
+	line "les arbres a"
+	cont "couper a"
+	cont "PARMANIE?"
 
-	para "That's quite"
-	line "the job! But I"
-	cont "like a challenge."
+	para "Du boulot! Mais"
+	line "j'aime les defis."
 
-	para "The fee is"
-	line "¥10000. Fair?"
+	para "La note:"
+	line "¥10000. D'accord?"
 	done
 
 _FuchsiaTreeDeleterAlreadyDeletedText::
-	text "Already been"
-	line "deleted!"
+	text "Deja supprime!"
 	prompt
 
 _FuchsiaTreeDeleterTreeDelete::
-	text "It shall be done!"
+	text "Ce sera fait!"
 	prompt
 
 _FuchsiaTreeDeleterDoneText::
-	text "I'm here for all"
-	line "your tree needs!"
+	text "Je suis la pour"
+	line "tous tes arbres!"
 	done
 
 _FuchsiaTreeDeleterFinalText::
-	text "You cleared out"
-	line "every tree worth"
-	cont "clearing out!"
+	text "Tu as fait"
+	line "supprimer tous"
+	cont "les arbres utiles!"
 
-	para "Thanks for the"
-	line "business!@"
+	para "Merci pour"
+	line "les affaires!@"
 	text_end
 
 _FuchsiaTreeDeleterFinalText2::
-	text "As you can see"
-	line "I have lots of"
-	cont "potted trees."
+	text "Comme tu vois"
+	line "j'ai plein de"
+	cont "pots d'arbres."
 
-	para "It's where I keep"
-	line "the trees I take"
-	cont "out until someone"
-	cont "buys them!"
+	para "C'est la que je"
+	line "mets les arbres"
+	cont "en attendant"
+	cont "qu'on les achete!"
 
-	para "SNORLAX loves to"
-	line "knock them over"
-	cont "when it gets"
-	cont "hungry!"
+	para "RONFLEX adore"
+	line "les faire tomber"
+	cont "quand il a"
+	cont "faim!"
 	done
 
 _FuchsiaTreeDeleterSnorlax::
-	text "SNORLAX: Snooore-"
+	text "RONFLEX: Ronnnn-"
 
-	para "<...>"
+	para "..."
 
-	para "<...>"
+	para "..."
 
-	para "<...>"
+	para "..."
 
-	para "-laaaaaaaaax@"
+	para "-flexxxxxx@"
 	text_end
 
 _FuchsiaTreeDeleterSnorlax2::
-	text "What a couch"
-	line "potato!"
+	text "Quel patate"
+	line "de canape!"
 	done

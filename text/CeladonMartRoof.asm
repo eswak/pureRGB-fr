@@ -1,19 +1,18 @@
 _CeladonMartRoofLittleGirlGiveHerWhichDrinkText::
-	text "Give her which"
-	line "drink?"
+	text "Quelle boisson"
+	line "lui offrir?"
 	done
 
 _CeladonMartRoofLittleGirlYayText::
-	text "Yay!"
+	text "Ouaiiis!"
 
 	para "@"
 	text_ram wNameBuffer
 	text "!"
 
-	para "Thank you!"
+	para "Merciiii!"
 
-	para "You can have this"
-	line "from me!@"
+	para "Tiens, prends ça!@"
 	text_end
 
 _CeladonMartRoofLittleGirlTM13ExplanationText::
@@ -21,11 +20,12 @@ _CeladonMartRoofLittleGirlTM13ExplanationText::
 
 	para "@"
 	text_ram wStringBuffer
-	text " contains"
-	line "ICE BEAM!"
+	text ":"
+	line "LASER GLACE!"
 
-	para "It can freeze the"
-	line "target sometimes!@"
+	para "Cette attaque"
+	line "pourra geler"
+	cont "l'ennemi!@"
 	text_end
 
 _CeladonMartRoofLittleGirlTM48ExplanationText::
@@ -33,11 +33,12 @@ _CeladonMartRoofLittleGirlTM48ExplanationText::
 
 	para "@"
 	text_ram wStringBuffer
-	text " contains"
-	line "ROCK SLIDE!"
+	text ":"
+	line "EBOULEMENT!"
 
-	para "It can spook the"
-	line "target sometimes!@"
+	para "Cette attaque"
+	line "peut faire peur"
+	cont "à l'ennemi!@"
 	text_end
 
 _CeladonMartRoofLittleGirlTM49ExplanationText::
@@ -45,71 +46,70 @@ _CeladonMartRoofLittleGirlTM49ExplanationText::
 
 	para "@"
 	text_ram wStringBuffer
-	text " contains"
-	line "GLARE!"
-	para "It paralyzes the"
-	line "target with a"
-	cont "piercing gaze!@"
+	text ":"
+	line "INTIMIDATION!"
+	para "Elle paralyse"
+	line "l'ennemi avec un"
+	cont "regard perçant!@"
 	text_end
 
 _CeladonMartRoofLittleGirlNoRoomText::
-	text "You don't have"
-	line "space for this!@"
+	text "Plus de place!@"
 	text_end
 
 _CeladonMartRoofLittleGirlImNotThirstyText::
-	text "No thank you!"
-	line "I'm not thirsty"
-	cont "after all!@"
+	text "Heu..."
+	line "Non merci."
+	cont "A pu soif!@"
 	text_end
 
 _CeladonMartRoofSuperNerdText::
-	text "My sister is a"
-	line "trainer, believe"
-	cont "it or not."
+	text "Ma soeur est"
+	line "dresseur. Tu le"
+	cont "crois, ça?"
 
-	para "But, she's so"
-	line "immature, she"
-	cont "drives me nuts!"
+	para "Mais c'est une"
+	line "p'tite peste!"
+	cont "Elle m'agace!"
 	done
 
 _CeladonMartRoofLittleGirlImThirstyText::
-	text "I'm thirsty!"
-	line "I want something"
-	cont "to drink!"
+	text "N'ai soif!"
+	line "Ne veux boire!"
 	done
 
 _CeladonMartRoofLittleGirlGiveHerADrinkText::
-	text "Give her a drink?"
+	text "Lui donner une"
+	line "boisson?"
 	done
 
 _VendingMachineText1::
-	text "A vending machine!"
-	line "Here's the menu!"
+	text "Un distributeur!"
+	line "Que choisir?"
 	prompt
 
 _VendingMachineText4::
-	text "Oops, not enough"
-	line "money!"
+	text "Oups! Pas assez"
+	line "d'argent!"
 	done
 
 _VendingMachineText5::
+	text "Et hop!"
+	line "@"
 	text_ram wStringBuffer
-	text_start
-	line "popped out!"
-	prompt
+	text "!"
 	done
 
 _VendingMachineText6::
-	text "There's no more"
-	line "room for stuff!"
+	text "L'inventaire est"
+	line "plein!"
 	done
 
 _VendingMachineText7::
-	text "Not thirsty!"
+	text "Pas soif!"
 	done
 
 _VendingMachineText8::
-	text "That's enough"
-	line "of that!"
+	text "C'est assez"
+	line "comme ça!"
 	done

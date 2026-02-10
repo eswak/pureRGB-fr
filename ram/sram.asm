@@ -16,13 +16,15 @@ sHallOfFame:: ds HOF_TEAM * HOF_TEAM_CAPACITY
 
 SECTION "Save Data", SRAM
 
-	ds $595
+	ds $594
 	
 ; PureRGBnote: ADDED: duplicate options variables, used to set these options on game load so the palettes match your settings from game initialization
 sExtraOptions::
+sEnhancedColorFlag:: db ; PureRGBnote: ADDED: persist enhanced GBC color flag (bit 7 of wUnusedD721) across resets
 sSpriteOptions3:: db
 sSpriteOptions:: db
-sOptions2:: db 
+sOptions2:: db
+sOptions3:: db
 sExtraOptionsEnd::
 
 sGameData::

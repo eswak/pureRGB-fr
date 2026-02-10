@@ -1,22 +1,25 @@
 _MrPsychicsHouseMrPsychicYouWantedThisText::
-	text "<...>Wait! Don't"
-	line "say a word!"
+	text "...Attends! Pas"
+	line "un mot!"
 
-	para "You wanted this!"
+	para "C'est ça que"
+	line "tu voulais!"
 	prompt
 
 _MrPsychicsHouseMrPsychicTM29ExplanationText::
-	text "<TM>46 is PSYBEAM!"
+	text "La <TM>46 est"
+	line "PSYKO!"
 
-	para "It can confuse"
-	line "the target."
+	para "Elle peut"
+	line "confondre"
+	cont "la cible."
 
-	para "It's a great"
-	line "PSYCHIC-type"
-	cont "move!"
+	para "C'est une super"
+	line "capacite de type"
+	cont "PSY!"
 	done
 
 _MrPsychicsHouseMrPsychicTM29NoRoomText::
-	text "Where do you plan"
-	line "to put this?"
+	text "Ou vas-tu"
+	line "mettre ça?"
 	done

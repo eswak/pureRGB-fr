@@ -1,40 +1,41 @@
 _Route12Gate2FBrunetteGirlYouCanHaveThisText::
-	text "My #MON's"
-	line "ashes are stored"
-	cont "in #MON TOWER."
+	text "Les cendres de mon"
+	line "#MON sont à la"
+	cont "TOUR #MON."
 
-	para "You can have this"
-	line "<TM>. I don't need"
-	cont "it any more<...>"
+	para "Tu peux prendre"
+	line "cette CT. Je n'en"
+	cont "ai plus besoin..."
 	prompt
 
 _Route12Gate2FBrunetteGirlTM39ExplanationText::
-	text "<TM>39 is a move"
-	line "called"
-	cont "FILTHY SLAM."
+	text "La CT39 s'appelle"
+	line "DETRICANON."
 
-	para "It's a strong"
-	line "POISON type move."
-	para "Use it in battles"
-	line "you can't afford"
-	cont "to lose."
+	para "C'est une forte"
+	line "capacité POISON."
+	para "Utilise-la dans"
+	line "les combats"
+	cont "décisifs."
 	done
 
 _Route12Gate2FBrunetteGirlTM39NoRoomText::
-	text "You don't have"
-	line "room for this."
+	text "Tu n'as plus de"
+	line "place."
 	done
 
 _Route12Gate2FLeftBinocularsText::
-	text "Looked into the" ; TODO: parameterize "looked into the binoculars"
-	line "binoculars."
+	text "Regard dans les"
+	line "jumelles."
 
-	para "A man fishing!"
+	para "Un homme qui"
+	line "pêche!"
 	done
 
 _Route12Gate2FRightBinocularsText::
-	text "Looked into the"
-	line "binoculars."
+	text "Regard dans les"
+	line "jumelles."
 
-	para "It's #MON TOWER!"
+	para "C'est la TOUR"
+	line "#MON!"
 	done

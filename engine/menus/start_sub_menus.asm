@@ -218,6 +218,8 @@ StartMenu_Pokemon::
 	;rst _PrintText
 	;jp .loop
 .canTeleport
+	call LoadScreenTilesFromBuffer1 ; restore saved screen and close menu
+	call EnableAutoTextBoxDrawing
 	ld hl, .warpToLastPokemonCenterText
 	rst _PrintText
 	ld hl, wStatusFlags6
@@ -273,6 +275,7 @@ StartMenu_Pokemon::
 	ld [wPartyAndBillsPCSavedMenuItem], a
 	jp .loop
 .notHealthyEnough ; if current HP is less than 1/5 of max HP
+	call LoadScreenTilesFromBuffer1 ; restore saved screen and close menu
 	ld hl, .notHealthyEnoughText
 	rst _PrintText
 	jp .loop
@@ -631,9 +634,9 @@ TrainerInfo_FarCopyData:
 	jp FarCopyData2
 
 TrainerInfo_NameMoneyTimeText:
-	db   "NAME/"
-	next "MONEY/"
-	next "TIME/@"
+	db   "NOM/"
+	next "ARGENT/"
+	next "TEMPS/@"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
@@ -719,6 +722,13 @@ StartMenu_Option::
 	call LoadScreenTilesFromBuffer2 ; restore saved screen
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
+	ld a, [wDoUnlockFromOptions]
+	cp 2
+	jr nz, .afterOptionsNormal
+	xor a
+	ld [wDoUnlockFromOptions], a
+	jp CloseStartMenu
+.afterOptionsNormal
 	jp RedisplayStartMenu
 
 SwitchPartyMon::

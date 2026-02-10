@@ -1,79 +1,86 @@
 _ViridianMartClerkSayHiToOakText::
-	text "Okay! Say hi to"
-	line "PROF.OAK for me!"
+	text "Cool! Tu diras"
+	line "bonjour au PROF."
+	cont "CHEN de ma part!"
 	done
 
 _ViridianMartClerkYouCameFromPalletTownText::
-	text "Hey! You came from"
-	line "PALLET TOWN?"
+	text "Hé! Tu viens de"
+	line "BOURG PALETTE?"
 	done
 
 _ViridianMartClerkParcelQuestText::
-	text "You know PROF."
-	line "OAK, right?"
+	text "Tu connais le"
+	line "PROF. CHEN?"
 
-	para "His order came in."
-	line "Will you take it"
-	cont "to him?"
+	para "Sa commande vient"
+	line "d'arriver."
+	cont "Peux-tu la lui"
+	cont "apporter?"
 
-	para "<PLAYER> got"
-	line "OAK's PARCEL!@"
+	para "<PLAYER> obtient"
+	line "le COLIS DE CHEN!@"
 	text_end
 
 _ViridianMartYoungsterText::
-	text "This shop sells"
-	line "many ANTIDOTEs."
+	text "On vend des"
+	line "ANTIDOTES dans"
+	cont "cette boutique."
 	done
 
 _ViridianMartCooltrainerMText::
-	text "No! POTIONs are"
-	line "all sold out."
+	text "Plus de POTIONS!"
+	line "Nous sommes en"
+	cont "rupture de stock."
 	done
 
 _ViridianMartTMKid::
-	text "Yo! Can you"
-	line "believe they don't"
-	cont "sell <TM>s?" 
+	text "Hé! Tu y crois"
+	line "qu'ils ne vendent"
+	cont "pas de CT?" 
 
-	para "How are trainers"
-	line "supposed to get"
-	cont "by without any"
-	cont "quality moves on"
-	cont "their #MON?"
+	para "Comment les"
+	line "dresseurs peuvent"
+	cont "s'en sortir sans"
+	cont "de bonnes"
+	cont "capacités pour"
+	cont "leurs #MON?"
 	done
 
 _TMKidStockingUp::
-	text "I'm all out of"
-	line "stock right now."
+	text "Je n'ai plus rien"
+	line "en stock pour"
+	cont "l'instant."
 
-	para "Just checking"
-	line "if competition"
-	cont "has caught up"
-	cont "with the times!"
+	para "Je vérifie juste"
+	line "si la concurrence"
+	cont "a rattrapé le"
+	cont "niveau!"
 
-	para "Not yet!"
+	para "Pas encore!"
 	
-	para "Look for me in"
-	line "another MART,"
-	cont "I should have"
-	cont "plenty of <TM>s!" 
+	para "Cherche-moi dans"
+	line "une autre"
+	cont "BOUTIQUE,"
+	cont "j'aurai plein de"
+	cont "CT!" 
 	done
 
 _TMKidBigStockIndigo::
-	text "Back here again"
-	line "are you?"
+	text "Tu reviens encore"
+	line "ici?"
 
-	para "I'm all out of"
-	line "copied <TM>s!"
+	para "Je n'ai plus de"
+	line "CT copiées!"
 
-	para "Listen. Look"
-	line "for me at"
-	cont "INDIGO PLATEAU."
+	para "Ecoute. Cherche-"
+	line "moi au PLATEAU"
+	cont "INDIGO."
 
-	para "I'm putting"
-	line "together the best"
-	cont "stock of <TM>s yet!"
+	para "Je prépare le"
+	line "meilleur stock de"
+	cont "CT jamais vu!"
 
-	para "I'll be waiting!"
-	line "Catch you later!"
+	para "Je t'attendrai!"
+	line "À plus tard!"
 	done

@@ -1,83 +1,88 @@
 _LavenderCuboneHouseCuboneText::
-	text "CUBONE: Kyarugoo!@"
+	text "OSSELAIT:"
+	cont "Kyarugoo!@"
 	text_end
 
 _LavenderCuboneHouseBrunetteGirlPoorCubonesMotherText::
-	text "I hate those"
-	line "horrible <ROCKET>s!"
+	text "Je deteste ces"
+	line "horribles"
+	cont "<ROCKET>!"
 
-	para "That poor CUBONE's"
-	line "mother<...>"
+	para "La mere du"
+	line "pauvre OSSELAIT..."
 
-	para "It was killed"
-	line "trying to escape"
-	cont "from <TEAM><ROCKET>!"
+	para "Elle a ete tuee"
+	line "en essayant"
+	cont "d'echapper a"
+	cont "<TEAM><ROCKET>!"
 	done
 
 _LavenderCuboneHouseBrunetteGirlGhostIsGoneText::
-	text "The GHOST of"
-	line "#MON TOWER is"
-	cont "gone!"
+	text "Le FANTOME"
+	line "de la TOUR"
+	cont "#MON a disparu!"
 
-	para "Someone must have"
-	line "soothed its"
-	cont "restless soul!"
+	para "Quelqu'un a du"
+	line "apaiser son"
+	cont "ame tourmentee!"
 	done
 
 _LightChannelerGreeting::
-	text "I'm the LIGHT"
-	line "CHANNELER."
-	para "I love charms,"
-	line "divination,"
-	cont "enchantments,"
-	cont "and especially"
+	text "Je suis la"
+	line "LUMIERE CHANNELEE."
+	para "J'adore les"
+	line "talismans,"
+	cont "la divination,"
+	cont "les enchantements"
+	cont "et les"
 	cont "purifications!"
-	para "I can lift any"
-	line "curse."
-	para "If you have a"
-	line "#MON you think"
-	cont "has been cursed,"
-	cont "come to me."
+	para "Je peux lever"
+	line "toute malediction."
+	para "Si un #MON"
+	line "est maudit,"
+	cont "viens me voir."
 	done
 
 _LightChannelerHaunter::
-	text "I can sense it,"
-	line "your HAUNTER has"
-	cont "been cursed."
-	para "Want me to remove"
-	line "this curse?"
-	para "It should go back"
-	line "to looking like a"
-	cont "GENGAR again."
+	text "Je le sens,"
+	line "ton SPECTRUM"
+	cont "est maudit."
+	para "Tu veux que"
+	line "je leve la"
+	cont "malediction?"
+	para "Il redeviendra"
+	line "un ECTOPLASMA."
 	done
 
 _LightChannelerHaunterNo::
-	text "Curses are not"
-	line "to be trifled"
-	cont "with."
-	para "Come speak to me"
-	line "when you wish to"
-	cont "remove the curse."
+	text "Les maledictions"
+	line "ne se prennent"
+	cont "pas a la legere."
+	para "Reviens quand"
+	line "tu voudras"
+	cont "la faire lever."
 	done
 
 _LightChannelerHaunterYes::
-	text "So be it!"
-	para "Let's start the"
+	text "Qu'il en soit"
+	line "ainsi!"
+	para "Commencons la"
 	line "purification!"
 	prompt
 
 _LightChannelerPurificationTime::
-	text "CAST PURIFYING"
-	line "LIGHT ON THIS"
-	cont "CORRUPT SOUL!"
+	text "LANCER LA LUMIERE"
+	line "PURIFICATRICE"
+	cont "SUR CETTE AME"
+	cont "CORROMPUE!"
 	prompt
 
 _LightChannelerPurificationComplete::
-	text "Wonderful!"
-	para "The curse is gone."
-	para "It looks just"
-	line "like a GENGAR"
-	cont "should again."
-	para "Safe travels!"
+	text "Merveilleux!"
+	para "La malediction"
+	line "est partie."
+	para "Il a l'air"
+	line "d'un ECTOPLASMA"
+	cont "comme il faut."
+	para "Bon voyage!"
 	done
-	

@@ -1,121 +1,127 @@
 _PokemonMansion2FSuperNerdBattleText::
-	text "I can't get out!"
-	line "This old place is"
-	cont "one big puzzle!"
+	text "Mais... J'suis"
+	line "complètement"
+	cont "paumé!"
 	done
 
 _PokemonMansion2FSuperNerdEndBattleText::
-	text "Oh no!"
-	line "My bag of loot!"
+	text "Non!"
+	line "Mon butin!"
 	prompt
 
 _PokemonMansion2FSuperNerdAfterBattleText::
-	text "Switches open and"
-	line "close alternating"
-	cont "sets of doors!"
+	text "Les interrupteurs"
+	line "ouvrent et"
+	cont "ferment alterna-"
+	cont "tivement les"
+	cont "portes!"
 	done
 
 _Mansion2BattleText2::
-	text "Man."
-	para "Exploring"
-	line "abandoned places"
-	cont "is amazing."
+	text "Mec."
+	para "Explorer des"
+	line "endroits"
+	cont "abandonnés,"
+	cont "c'est génial."
 	done
 
 _Mansion2EndBattleText2::
 	text ""
-	line "Whoops!"
+	line "Oups!"
 	prompt
 
 _Mansion2AfterBattleText2::
-	text "An abandoned"
-	line "researcher's"
-	cont "mansion."
-	para "So cool."
-	para "Wonder if they"
-	line "did any weird"
-	cont "experiments?"
+	text "Un manoir de"
+	line "chercheur"
+	cont "abandonné."
+	para "Trop cool."
+	para "Je me demande"
+	line "s'ils ont fait"
+	cont "des expériences"
+	cont "bizarres?"
 	done
 
 _Mansion2BattleText3::
-	text "I'm an urban"
-	line "spelunker!"
+	text "Je suis un"
+	line "spéléologue"
+	cont "urbain!"
 	done
 
 _Mansion2EndBattleText3::
-	text "Ker-"
-	line "plunk!"
+	text "Plouf!"
 	prompt
 
 _Mansion2AfterBattleText3::
-	text "It's my hobby"
-	line "to explore"
-	cont "abandoned places."
-	para "Have you been to"
-	line "the POWER PLANT?"
-	para "That place is"
-	line "so cool!"
-	para "But this place"
-	line "really takes the"
-	cont "cake."
+	text "C'est mon hobby"
+	line "d'explorer des"
+	cont "endroits"
+	cont "abandonnés."
+	para "Tu es allé à la"
+	line "CENTRALE?"
+	para "Cet endroit est"
+	line "trop cool!"
+	para "Mais celui-ci"
+	line "remporte vraiment"
+	cont "la palme."
 	done
 
 _Mansion2BattleText4::
-	text "Don't touch"
-	line "anything!"
+	text "Ne touche"
+	line "à rien!"
 	done
 
 _Mansion2EndBattleText4::
-	text "Hey!"
-	line "Careful!"
+	text "Hé!"
+	line "Attention!"
 	prompt
 
 _Mansion2AfterBattleText4::
-	text "Sometimes data"
-	line "that was hidden"
-	cont "from the public"
-	cont "is sequestered"
-	cont "away in these"
-	cont "facilities."
-	para "Then they forget"
-	line "to destroy data"
-	cont "when the research"
-	cont "lab is abandoned."
-	para "As a researcher"
-	line "it's my job to"
-	cont "uncover these"
-	cont "experiments!"
+	text "Parfois des"
+	line "données cachées"
+	cont "du public sont"
+	cont "séquestrées dans"
+	cont "ces installations."
+	para "Puis ils oublient"
+	line "de détruire les"
+	cont "données quand le"
+	cont "labo de recherche"
+	cont "est abandonné."
+	para "En tant que"
+	line "chercheur, c'est"
+	cont "mon travail de"
+	cont "révéler ces"
+	cont "expériences!"
 	done
 
 _Mansion2BattleText5::
-	text "Groan! Another"
-	line "dead end?"
+	text "Grr! Encore un"
+	line "cul-de-sac?"
 	done
 
 _Mansion2EndBattleText5::
 	text ""
-	line "Augh!!"
+	line "Argh!!"
 	prompt
 
 _Mansion2AfterBattleText5::
-	text "I'm getting"
-	line "totally fed up"
-	cont "with this place!"
+	text "J'en ai vraiment"
+	line "marre de cet"
+	cont "endroit!"
 	done
 
 _PokemonMansion2FDiary1Text::
-	text "Diary: July 5"
-	line "Guyana,"
-	cont "South America"
+	text "Rapport:"
+	line "5 Juillet."
+	cont "Jungle X."
 
-	para "A new #MON was"
-	line "discovered deep"
-	cont "in the jungle."
+	para "Un nouveau type "
+	line "de #MON fut"
+	cont "découvert."
 	done
 
 _PokemonMansion2FDiary2Text::
-	text "Diary: July 10"
-	line "We christened the"
-	cont "newly discovered"
-	cont "#MON, MEW."
+	text "Rapport:"
+	line "10 Juillet."
+	cont "Le #MON fut"
+	cont "baptisé MEW."
 	done

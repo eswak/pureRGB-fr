@@ -2318,7 +2318,8 @@ LoadMapData::
 	call LoadTextBoxTilePatterns
 	call LoadMapHeader
 
-	;call DisableLCD
+	; Disable LCD during VRAM copy to avoid 1-2 frame flash of garbage (Y3/enhanced colors, Fly, post-battle)
+	call DisableLCD
 	ld hl, hFlagsFFFA
 	set 3, [hl]
 
@@ -2346,11 +2347,38 @@ LoadMapData::
 	jr nz, .vramCopyLoop
 	ld a, $01
 	ld [wUpdateSpritesEnabled], a
-	;call EnableLCD
-	ld hl, hFlagsFFFA
-	res 3, [hl]
+	; Hide window so no battle/menu remnants (e.g. "ID KiNG", dialogue box) show on first frame
+	ld a, 144
+	ldh [hWY], a
+	ldh [rWY], a
+	; Hide sprites in wShadowOAM (Y=160) so next DMA does not show old battle sprites
+	call HideSprites
+	; Clear OAM in VRAM (LCD is off) so old sprites are not visible on first frame
+	ld hl, $FE00
+	ld a, 160
+	ld b, 40
+.clearOAMLoop
+	ld [hli], a
+	inc hl
+	inc hl
+	inc hl
+	dec b
+	jr nz, .clearOAMLoop
+	; For fly/dungeon warp: start with white so EnterMapAnim's GBFadeInFromWhite doesn't show a flash of overworld
+	ld hl, wStatusFlags6
+	ld a, [hl]
+	and (1 << BIT_FLY_WARP) | (1 << BIT_DUNGEON_WARP)
+	jr z, .setOverworldPalette
+	call GBPalWhiteOut
+	jr .lcdOn
+.setOverworldPalette
+	; Set overworld palette before enabling LCD to avoid one frame of wrong colors (flicker)
 	ld b, SET_PAL_OVERWORLD
 	call RunPaletteCommand
+.lcdOn
+	call EnableLCD
+	ld hl, hFlagsFFFA
+	res 3, [hl]
 	call LoadPlayerSpriteGraphics
 	ld a, [wStatusFlags6]
 	and (1 << BIT_FLY_WARP) | (1 << BIT_DUNGEON_WARP)

@@ -58,15 +58,15 @@ ShinyDVsChecker:	;return z flag set if not shiny or cleared z flag if shiny
 	xor a
 	ret
 
-;Generate DVs for wild pokemon with 50% shiny chance
+;Generate DVs for wild pokemon with 1/32 shiny chance
 ; PureRGBnote: writes result to wEnemyMonDVs (farcall clobbers a/b on return)
 ; Uses Random + hRandomAdd so we get the value after farcall
 DetermineWildMonDVs:
-	; 50% chance to generate shiny DVs (bit 7 == 0 for 128/256 = 50%)
+	; 1/32 chance to generate shiny DVs (8/256)
 	farcall Random
 	ldh a, [hRandomAdd]
-	and $80
-	jr nz, .do_random
+	cp 8
+	jr nc, .do_random
 	;shiny DVs: MSB $2A, LSB $AA
 	ld hl, wEnemyMonDVs
 	ld a, $2A

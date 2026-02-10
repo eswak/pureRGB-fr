@@ -164,6 +164,8 @@ HealEffectCommon:
 	ret z
 	ld c, 50
 	rst _DelayFrames
+	ld a, 1
+	ld [wEffectAlreadyPrintedFailure], a
 	ld hl, PrintButItFailedText_
 	jp EffectCallBattleCore
 ;;;;;;;;;; PureRGBnote: ADDED: withdraw and growth heal around 1/3rd health instead of 1/2

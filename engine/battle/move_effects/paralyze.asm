@@ -40,8 +40,12 @@ ParalyzeEffect_:
 .didntAffect
 	ld c, 50
 	rst _DelayFrames
+	ld a, 1
+	ld [wEffectAlreadyPrintedFailure], a
 	jpfar PrintDidntAffectText
 .doesntAffect
 	ld c, 50
 	rst _DelayFrames
+	ld a, 1
+	ld [wEffectAlreadyPrintedFailure], a
 	jpfar PrintDoesntAffectText

@@ -550,6 +550,8 @@ wEnemyUsedMove:: db
 wEnemyMonMinimized:: db
 
 wMoveDidntMiss:: db
+; When set, the current move's effect already printed its own failure/evasion message; core must not call PrintMoveFailureText again.
+wEffectAlreadyPrintedFailure:: db
 
 ; flags that indicate which party members have fought the current enemy mon
 wPartyFoughtCurrentEnemyFlags:: flag_array PARTY_LENGTH
@@ -560,7 +562,7 @@ wLowHealthAlarmDisabled:: db
 
 wPlayerMonMinimized:: db
 
-	ds 13
+	ds 12
 
 ; number of hits by enemy in attacks like Double Slap, etc.
 wEnemyNumHits:: db

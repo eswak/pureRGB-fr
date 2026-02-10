@@ -15,6 +15,8 @@ MistEffect_:
 .mistAlreadyInUse
 	ld c, 50
 	rst _DelayFrames
+	ld a, 1
+	ld [wEffectAlreadyPrintedFailure], a
 	jpfar PrintButItFailedText_
 
 ShroudedInMistText:

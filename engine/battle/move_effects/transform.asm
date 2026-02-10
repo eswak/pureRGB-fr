@@ -162,6 +162,8 @@ TransformEffect_:
 .failed
 	ld c, 50
 	rst _DelayFrames
+	ld a, 1
+	ld [wEffectAlreadyPrintedFailure], a
 	ld hl, PrintButItFailedText_
 	jp EffectCallBattleCore
 

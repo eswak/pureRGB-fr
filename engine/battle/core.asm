@@ -3429,6 +3429,7 @@ ExecutePlayerMove:
 	ld [wMoveMissed], a
 	ld [wMonIsDisobedient], a
 	ld [wMoveDidntMiss], a
+	ld [wEffectAlreadyPrintedFailure], a
 	ld a, EFFECTIVE
 	ld [wDamageMultipliers], a
 	ld a, [wActionResultOrTookBattleTurn]
@@ -3606,7 +3607,9 @@ MirrorMoveCheck:
 	ld a, [wMoveMissed]
 	and a
 	jr z, .moveDidNotMiss
-	call PrintMoveFailureText
+	ld a, [wEffectAlreadyPrintedFailure]
+	and a
+	call z, PrintMoveFailureText
 	ld a, [wPlayerMoveEffect]
 	cp EXPLODE_EFFECT ; even if Explosion or Selfdestruct missed, its effect still needs to be activated
 	jr z, .notDone
@@ -3649,8 +3652,14 @@ MirrorMoveCheck:
 	ld a, [wPlayerMoveEffect]
 	and a
 	jp z, ExecutePlayerMoveDone
-	ld hl, SpecialEffects
+	ld hl, ResidualEffects1
 	ld de, 1
+	call IsInArray
+	jp c, ExecutePlayerMoveDone
+	ld hl, ResidualEffects2
+	call IsInArray
+	jp c, ExecutePlayerMoveDone
+	ld hl, SpecialEffects
 	call IsInArray
 	call nc, JumpMoveEffect ; move effects not included in SpecialEffects or in either of the ResidualEffect arrays,
 	; which are the effects not covered yet. Rage effect will be executed for a second time (though it's irrelevant).
@@ -6128,6 +6137,7 @@ ExecuteEnemyMove:
 	xor a
 	ld [wMoveMissed], a
 	ld [wMoveDidntMiss], a
+	ld [wEffectAlreadyPrintedFailure], a
 	ld a, EFFECTIVE
 	ld [wDamageMultipliers], a
 	call CheckEnemyStatusConditions
@@ -6316,7 +6326,9 @@ EnemyCheckIfMirrorMoveEffect:
 	ld a, [wMoveMissed]
 	and a
 	jr z, .moveDidNotMiss
-	call PrintMoveFailureText
+	ld a, [wEffectAlreadyPrintedFailure]
+	and a
+	call z, PrintMoveFailureText
 	ld a, [wEnemyMoveEffect]
 	cp EXPLODE_EFFECT
 	jr z, .handleExplosionMiss
@@ -6358,8 +6370,14 @@ EnemyCheckIfMirrorMoveEffect:
 	ld a, [wEnemyMoveEffect]
 	and a
 	jr z, ExecuteEnemyMoveDone
-	ld hl, SpecialEffects
+	ld hl, ResidualEffects1
 	ld de, $1
+	call IsInArray
+	jr c, ExecuteEnemyMoveDone
+	ld hl, ResidualEffects2
+	call IsInArray
+	jr c, ExecuteEnemyMoveDone
+	ld hl, SpecialEffects
 	call IsInArray
 	call nc, JumpMoveEffect
 	jr ExecuteEnemyMoveDone

@@ -741,9 +741,10 @@ MapEntryAfterBattle::
 ;;;;;;;;;;
 	; fall through
 MapFadeAfterBattle::
-	ld a, [wMapPalOffset]
-	and a
-	jp z, GBFadeInFromWhite
+	; No white fade after battle; just apply the correct palette for the map.
+	;ld a, [wMapPalOffset]
+	;and a
+	;jp z, GBFadeInFromWhite
 	jp LoadGBPal
 
 HandleBlackOut::

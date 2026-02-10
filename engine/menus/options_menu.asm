@@ -15,7 +15,7 @@ ArrowYcoordXVariableOffsetList:
 	db PAGE_CONTROLS_Y_COORD, MAX_OPTIONS_PER_PAGE
 
 OptionsNextBackText::
-	db "SUIV.  PREC.  @"
+	db "SUIV. PREC.  @"
 
 OptionsDoNothing:
 	ret
@@ -345,6 +345,13 @@ OptionsMenuLoop:
 .updateMenuVariables
 	ld [hl], a
 	ld e, a
+	; When page has 2 options (e.g. options 3), sync wCurrentMenuItem so PlaceMenuCursor row = base + index
+	ld a, [wOptionsPageOptionCount]
+	cp 2
+	jr nz, .afterSetCurrentMenuItem
+	ld a, [hl]
+	ld [wCurrentMenuItem], a
+.afterSetCurrentMenuItem
 	call GetYCoordAndXVariable
 	ld [wTopMenuItemY], a
 	ld a, [hl]

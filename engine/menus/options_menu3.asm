@@ -24,9 +24,9 @@ DisplayOptions3:
 	ld bc, Options3Data
 	jp DisplayOptionMenuCommon
 
-; Cursor Y: option 0 on "ON/OFF" line (row 2), option 1 on "DEBLOCAGE" line (row 3)
+; Cursor: base row 3 so arrows align with "ON/OFF" and "DEBLOCAGE" lines
 Options3YCoordVariableOffsetList:
-	db 2, 0
+	db 3, 0
 	db 3, 1
 	db PAGE_CONTROLS_Y_COORD, MAX_OPTIONS_PER_PAGE
 
@@ -80,6 +80,15 @@ DrawOptions3Menu:
 	hlcoord 1, 1
 	ld de, Options3MenuText
 	call PlaceString
+	; So PlaceMenuCursor draws at row 3+index: fix base and index when on option 0 or 1
+	ld a, [wCurrentOptionIndex]
+	cp 2
+	jr nc, .skipCursorFix
+	ld a, 3
+	ld [wTopMenuItemY], a
+	ld a, [wCurrentOptionIndex]
+	ld [wCurrentMenuItem], a
+.skipCursorFix
 	hlcoord 0, 15
 	lb bc, 3, SCREEN_WIDTH
 	jp ClearScreenArea
@@ -109,7 +118,14 @@ OptionsPage3AorSelectButton:
 	ret
 .doUnlock
 	call DoUnlockFromOptions
+	; If they cancelled (B on map), wDoUnlockFromOptions is still 0: redraw menu (return carry)
+	ld a, [wDoUnlockFromOptions]
 	and a
+	jr z, .redrawMenu
+	and a
+	ret
+.redrawMenu
+	scf
 	ret
 
 DoUnlockFromOptions:

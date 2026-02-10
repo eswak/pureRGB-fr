@@ -206,14 +206,14 @@ LoadTownMap_Fly_Common:
 	ld [de], a
 	push hl
 	push hl
-	hlcoord 3, 0
-	lb bc, 1, 15
+	hlcoord 5, 0
+	lb bc, 1, 13
 	call ClearScreenArea
 	pop hl
 	ld a, [hl]
 	ld b, BIRD_BASE_TILE
 	call DrawPlayerOrBirdSprite
-	hlcoord 3, 0
+	hlcoord 5, 0
 	ld de, wNameBuffer
 	call PlaceString
 	ld c, 5 ; PureRGBnote: CHANGED: cut the artificial delay between fly selections to 1/3 of what it was in the vanilla game

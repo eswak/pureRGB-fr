@@ -1129,7 +1129,7 @@ _IsConfusedText::
 
 _HurtItselfText::
 	text "Sa folie lui in-"
-	line "flige des dégâts!"
+	line "flige des degats!"
 	prompt
 
 _ConfusedNoMoreText::

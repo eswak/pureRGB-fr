@@ -456,8 +456,33 @@ ItemUseBall:
 	ld [wPokeBallAnimData], a
 
 .skipShakeCalculations
+	; Easter egg: during this window, B+Down forces 100% catch and plays Armor animation on enemy
 	ld c, 20
+.ballTossEasterEggLoop
+	push bc
+	call Joypad
+	ldh a, [hJoyHeld]
+	and B_BUTTON | D_DOWN
+	pop bc
+	jr nz, .ballTossEasterEggTriggered
+	push bc
+	ld c, 1
 	rst _DelayFrames
+	pop bc
+	dec c
+	jr nz, .ballTossEasterEggLoop
+	jr .ballTossEasterEggDone
+.ballTossEasterEggTriggered
+	ld a, $43
+	ld [wPokeBallAnimData], a
+	ld d, 1
+	ld e, DEFENSE_CURL
+	callfar PlaySelectedAnimation
+	ld a, SFX_BATTLE_33
+	rst _PlaySound
+	ld c, 30
+	rst _DelayFrames
+.ballTossEasterEggDone
 
 	; Do the animation.
 	call MapBallToAnimation ; PureRGBnote: CHANGED: choose which toss animation to use before entering animation code

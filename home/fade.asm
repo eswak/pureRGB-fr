@@ -89,6 +89,13 @@ GBFadeInFromWhite::
 	ld hl, FadePal5 + 2
 	lb bc, 1, 1
 	jr z, GBFadeDecCommon.delayset
+	; DMG path: if LCD was left off (fly/dungeon warp), enable it with white so first frame is not a flash
+	ldh a, [rLCDC]
+	bit rLCDC_ENABLE, a
+	jr nz, .dmgFade
+	call GBPalWhiteOut
+	call EnableLCD
+.dmgFade
 	ld hl, FadePal7 + 2
 	ld b, 3
 

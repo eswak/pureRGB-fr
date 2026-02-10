@@ -2364,19 +2364,18 @@ LoadMapData::
 	inc hl
 	dec b
 	jr nz, .clearOAMLoop
-	; For fly/dungeon warp: start with white so EnterMapAnim's GBFadeInFromWhite doesn't show a flash of overworld
+	; For fly/dungeon warp: don't enable LCD here; GBCFadeInFromWhite will enable it on first fade frame to avoid overworld flash
 	ld hl, wStatusFlags6
 	ld a, [hl]
 	and (1 << BIT_FLY_WARP) | (1 << BIT_DUNGEON_WARP)
 	jr z, .setOverworldPalette
-	call GBPalWhiteOut
-	jr .lcdOn
+	jr .skipEnableLCD
 .setOverworldPalette
 	; Set overworld palette before enabling LCD to avoid one frame of wrong colors (flicker)
 	ld b, SET_PAL_OVERWORLD
 	call RunPaletteCommand
-.lcdOn
 	call EnableLCD
+.skipEnableLCD
 	ld hl, hFlagsFFFA
 	res 3, [hl]
 	call LoadPlayerSpriteGraphics

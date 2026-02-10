@@ -754,8 +754,22 @@ GBCFadeInFromWhite::
 	call SetFadeDoubleCPUSpeedIfNecessary
 	push af
 	
+	; When LCD was left off (fly/dungeon warp), apply first fade frame then enable LCD to avoid one frame of overworld
+	ldh a, [rLCDC]
+	bit rLCDC_ENABLE, a
+	jr nz, .lcdAlreadyOn
+	push de
+	ld de, FadePal4
+	call BufferAllColorsGBC_helper
+	ld bc, 0
+	call IncrementAllColorsGBC
+	callfar EnableLCD
+	pop de
+	jr .afterDelayFrame
+.lcdAlreadyOn
 	push de
 	call DelayFrame ; allow player sprite to refresh before doing the fadeout
+.afterDelayFrame
 	ld de, FadePal4
 	; pureGREENFRnote: CHANGED: use helper that routes to enhanced palette buffering when in enhanced mode
 	call BufferAllColorsGBC_helper		;back up all colors to a buffer space in wram

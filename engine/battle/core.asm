@@ -22,10 +22,53 @@ MACRO debug_wild_step
 ENDM
 
 INCLUDE "data/battle/residual_effects_1.asm"
+
+; pureGREENFRnote: Wrapper - must be in same bank as ResidualEffects1 for IsInArray
+; Now uses 'call' instead of 'jp' to preserve return address for Bankswitch
+CheckResidualEffects1InBank::
+	ld hl, ResidualEffects1
+	ld de, 1
+	call IsInArray
+	ret
+
 INCLUDE "data/battle/set_damage_effects.asm"
 INCLUDE "data/battle/residual_effects_2.asm"
+
+; pureGREENFRnote: Wrapper - must be in same bank as ResidualEffects2 for IsInArray
+; Now uses 'call' instead of 'jp' to preserve return address for Bankswitch
+CheckResidualEffects2InBank::
+	ld hl, ResidualEffects2
+	ld de, 1
+	call IsInArray
+	ret
+
 INCLUDE "data/battle/always_happen_effects.asm"
+
+; pureGREENFRnote: Wrapper - must be in same bank as AlwaysHappenSideEffects for IsInArray
+; Now uses 'call' instead of 'jp' to preserve return address for Bankswitch
+CheckAlwaysHappenSideEffectsInBank::
+	ld hl, AlwaysHappenSideEffects
+	ld de, 1
+	call IsInArray
+	ret
+
 INCLUDE "data/battle/special_effects.asm"
+
+; pureGREENFRnote: Wrapper - must be in same bank as SpecialEffects for IsInArray
+; Now uses 'call' instead of 'jp' to preserve return address for Bankswitch
+CheckSpecialEffectsInBank::
+	ld hl, SpecialEffects
+	ld de, 1
+	call IsInArray
+	ret
+
+; pureGREENFRnote: Helper function to clear multi-hit flags at start of turn (saves 3 bytes vs inline)
+ClearMultiHitFlags::
+	ld hl, wPlayerBattleStatus1
+	res ATTACKING_MULTIPLE_TIMES, [hl]
+	ld hl, wEnemyBattleStatus1
+	res ATTACKING_MULTIPLE_TIMES, [hl]
+	ret
 
 SlidePlayerAndEnemySilhouettesOnScreen:
 	; TODO: optional trainer colors
@@ -3430,6 +3473,8 @@ ExecutePlayerMove:
 	ld [wMonIsDisobedient], a
 	ld [wMoveDidntMiss], a
 	ld [wEffectAlreadyPrintedFailure], a
+	; pureGREENFRnote: FIXED: Clear multi-hit flags at start of turn to prevent carryover (fixes Fury Swipes → Slam bug)
+	call ClearMultiHitFlags
 	ld a, EFFECTIVE
 	ld [wDamageMultipliers], a
 	ld a, [wActionResultOrTookBattleTurn]
@@ -3624,9 +3669,7 @@ MirrorMoveCheck:
 	ld [wMoveDidntMiss], a
 .notDone
 	ld a, [wPlayerMoveEffect]
-	ld hl, AlwaysHappenSideEffects
-	ld de, 1
-	call IsInArray
+	call CheckAlwaysHappenSideEffectsInBank
 	call c, JumpMoveEffect ; not done after executing effects of AlwaysHappenSideEffects
 	ld hl, wEnemyMonHP
 	ld a, [hli]
@@ -3651,21 +3694,21 @@ MirrorMoveCheck:
 .executeOtherEffects
 	ld a, [wPlayerMoveEffect]
 	and a
-	jp z, ExecutePlayerMoveDone
-	ld hl, ResidualEffects1
-	ld de, 1
-	call IsInArray
-	jp c, ExecutePlayerMoveDone
-	ld hl, ResidualEffects2
-	call IsInArray
-	jp c, ExecutePlayerMoveDone
-	ld hl, SpecialEffects
-	call IsInArray
+	jr z, ExecutePlayerMoveDone
+	ld c, a ; pureGREENFRnote: CRITICAL: Save effect in 'c' as IsInArray modifies 'a'
+	ld a, c
+	call CheckResidualEffects1InBank
+	jr c, ExecutePlayerMoveDone
+	ld a, c
+	call CheckResidualEffects2InBank
+	jr c, ExecutePlayerMoveDone
+	ld a, c
+	call CheckSpecialEffectsInBank
 	call nc, JumpMoveEffect ; move effects not included in SpecialEffects or in either of the ResidualEffect arrays,
 	; which are the effects not covered yet. Rage effect will be executed for a second time (though it's irrelevant).
 	; Includes side effects that only need to be called if the target didn't faint.
 	; Responsible for executing Twineedle's second side effect (poison).
-	jp ExecutePlayerMoveDone
+	jr ExecutePlayerMoveDone
 
 MultiHitText:
 	text_far _MultiHitText
@@ -6120,6 +6163,8 @@ ExecuteEnemyMove:
 	ld a, [wEnemySelectedMove]
 	inc a
 	jp z, ExecuteEnemyMoveDone
+	; pureGREENFRnote: FIXED: Clear multi-hit flags at start of turn to prevent carryover (fixes Fury Swipes → Slam bug)
+	call ClearMultiHitFlags
 	call PrintGhostText
 	jp z, ExecuteEnemyMoveDone
 	ld a, [wLinkState]
@@ -6343,9 +6388,7 @@ EnemyCheckIfMirrorMoveEffect:
 	ld [wMoveDidntMiss], a
 .handleExplosionMiss
 	ld a, [wEnemyMoveEffect]
-	ld hl, AlwaysHappenSideEffects
-	ld de, $1
-	call IsInArray
+	call CheckAlwaysHappenSideEffectsInBank
 	call c, JumpMoveEffect
 	ld hl, wBattleMonHP
 	ld a, [hli]
@@ -6370,15 +6413,15 @@ EnemyCheckIfMirrorMoveEffect:
 	ld a, [wEnemyMoveEffect]
 	and a
 	jr z, ExecuteEnemyMoveDone
-	ld hl, ResidualEffects1
-	ld de, $1
-	call IsInArray
+	ld c, a ; pureGREENFRnote: CRITICAL: Save effect in 'c' as IsInArray modifies 'a'
+	ld a, c
+	call CheckResidualEffects1InBank
 	jr c, ExecuteEnemyMoveDone
-	ld hl, ResidualEffects2
-	call IsInArray
+	ld a, c
+	call CheckResidualEffects2InBank
 	jr c, ExecuteEnemyMoveDone
-	ld hl, SpecialEffects
-	call IsInArray
+	ld a, c
+	call CheckSpecialEffectsInBank
 	call nc, JumpMoveEffect
 	jr ExecuteEnemyMoveDone
 

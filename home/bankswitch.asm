@@ -28,5 +28,10 @@ SetCurBank:: ; PureRGBnote: CHANGED: a lot of functions in home bank ran the nex
 	ld [MBC1RomBank], a
 	ret
 
+; pureGREENFRnote: ADDED: Helper to restore Battle Core bank (saves space vs inline ld a + call SetCurBank)
+RestoreBattleCoreBank::
+	ld a, BANK(UpdateCurMonHPBar) ; Battle Core bank
+	jr SetCurBank
+
 hl_caller::
 	jp hl

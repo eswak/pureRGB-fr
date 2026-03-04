@@ -12,11 +12,11 @@ LoadBillsPCExtraTiles::
 	lb bc, BANK(HpBarAndStatusGraphics), 1
 	call CopyVideoData
 	ld de, ExtraMenuBorderConnectors
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(ExtraMenuBorderConnectors), 8
 	call CopyVideoDataDouble
 	ld de, FromToChangeBoxPrompt
-	ld hl, vChars1 tile $48
+	ld hl, vChars2 tile $48
 	lb bc, BANK(FromToChangeBoxPrompt), 5
 	jp CopyVideoDataDouble
 
@@ -52,18 +52,18 @@ DisplayChangeBoxMenu:
 	lb bc, 12, 12
 	call TextBoxBorder
 .addExtraBorder
-	ld a, $C0 ; menu connector 1
+	ld a, $40 ; menu connector 1
 	ldcoord_a 6, 0 
-	ld a, $C1 ; menu connector 2
+	ld a, $41 ; menu connector 2
 	ldcoord_a 19, 13 
-	ld a, $C4 ; menu connector 5
+	ld a, $44 ; menu connector 5
 	ldcoord_a 6, 4 
 	ldcoord_a 6, 12
 	ld de, 1
-	lb bc, $C8, 3 ; start of FROM prompt
+	lb bc, $48, 3 ; start of FROM prompt
 	hlcoord 1, 0
 	call DrawTileLineIncrement
-	lb bc, $CB, 2 ; start of TO prompt
+	lb bc, $4B, 2 ; start of TO prompt
 	hlcoord 7, 0
 	call DrawTileLineIncrement
 

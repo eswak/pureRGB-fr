@@ -22,11 +22,11 @@ _CopycatsHouse1FChanseyText::
 	text_end
 
 _CopycatsHouse1FChanseyText2::
-	text "LADY: That's our"
-	line "CHANSEY."
-	para "She's named"
-	line "SMILY."
-	para "She loves to lay"
-	line "eggs for us!"
-	para "Very nutritious!"
+	text "DAME: C'est notre"
+	line "LEVEINARD."
+	para "Elle s'appelle"
+	line "SMILE."
+	para "Elle adore nous"
+	line "pondre des oeufs!"
+	para "Très nutritifs!"
 	prompt

@@ -76,8 +76,8 @@ _IsEvolvingText::
 	done
 
 _YoureAnExpertText::
-	text "You're an expert"
-	line "with @"
+	text "Tu es un expert"
+	line "de @"
 	text_ram_namebuffer
 	text "!@"
 	sound_get_item_2
@@ -85,10 +85,11 @@ _YoureAnExpertText::
 	text_end
 
 _LearnsetUnlockedText::
-	text "@"
+	text "Le répertoire de"
+	line "@"
 	text_ram_namebuffer
-	text "'s learn-"
-	line "set was recorded!"
+	text " est"
+	cont "enregistré!"
 	done
 
 _FellAsleepText::
@@ -389,32 +390,33 @@ _AllDamageHalvedText::
 
 _SiphonSnagHealedUserText::
 	text "<USER>"
-	line "siphoned energy,"
-	cont "curing itself!"
+	line "siphonne l'éner-"
+	cont "gie et se soigne!"
 	prompt
 
 _SiphonSnagHealedPartyText::
 	text "<USER>"
-	line "siphoned energy,"
-	para "curing team member"
-	line "@"
+	line "siphonne l'éner-"
+	cont "gie et soigne"
+	para "@"
 	text_ram_namebuffer
 	text "!"
 	prompt
 
 _ScreechesEchoedText::
-	text "Screeches echoed"
-	line "everywhere!"
+	text "Des grincements"
+	line "résonnent!"
 	prompt
 
 _ScreechesPreventedSleepText::
-	text "Echoing screeches"
-	line "prevented sleep!"
+	text "Les grincements"
+	line "empêchent le"
+	cont "sommeil!"
 	prompt
 
 _LetOutAScreechText::
-	text "But wait! At the"
-	line "last moment,"
-	para "<TARGET> let"
-	line "out a SCREECH!"
+	text "Mais au dernier"
+	line "moment,"
+	para "<TARGET> pousse"
+	line "un GRINCEMENT!"
 	prompt

@@ -14,110 +14,110 @@ _GameCornerPrizeRoomGamblerText::
 	done
 
 _GameCornerPrizeRoomPrizeMasterText::
-	text "They call me"
-	line "the @"
+	text "On m'appelle"
+	line "le @"
 	text_ram wTrainerName
 	text "!"
-	para "I've purchased one"
-	line "of every prize!"
-	para "That's why they"
-	line "gave me this"
-	cont "commemorative"
-	cont "paper crown!"
-	para "Jealous?"
+	para "J'ai acheté un"
+	line "de chaque prix!"
+	para "C'est pour ça"
+	line "qu'on m'a donné"
+	cont "cette couronne en"
+	cont "papier!"
+	para "Jaloux?"
 	prompt
 
 _GameCornerPrizeRoomPrizeMasterAgainText::
-	text "I'm the @"
+	text "Je suis le @"
 	text_ram wTrainerName
 	text "!"
 	prompt
 
 _GameCornerPrizeRoomInfoText::
-	text "Show me one of the"
-	line "prize #MON!"
-	para "I'll fill you in"
-	line "about it!"
-	para "So, got any prize"
-	line "#MON to show?"
+	text "Montre-moi un"
+	line "#MON du magasin!"
+	para "Je t'en dirai"
+	line "plus!"
+	para "Alors, t'as un"
+	line "#MON à montrer?"
 	done
 
 _GameCornerPrizeRoomLetsSeeText::
-	text "Woohoo!"
-	line "Which one?"
+	text "Youhou!"
+	line "Lequel?"
 	prompt
 
 _JynxPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " is a"
-	line "powerful and fast"
-	cont "#MON that"
-	cont "is great with"
-	cont "SPECIAL attacks!"
+	text " est un"
+	line "#MON puissant et"
+	cont "rapide, idéal"
+	cont "pour les attaques"
+	cont "SPECIALES!"
 	done
 
 _ElectabuzzPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " can"
-	line "dish out both"
-	cont "strong PHYSICAL"
-	cont "or SPECIAL moves!"
-	para "It can heal up"
-	line "with DRAIN PUNCH!"
+	text " peut"
+	line "frapper en"
+	cont "PHYSIQUE comme"
+	cont "en SPECIAL!"
+	para "Il se soigne avec"
+	line "DRAIN PUNCH!"
 	done
 
 _TangelaPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " has"
-	line "crazy DEFENSE!"
-	para "It learns SPORE"
-	line "and DREAM EATER!"
-	para "On top of that,"
+	text " a"
+	line "une DEFENSE folle!"
+	para "Il apprend SPORE"
+	line "et DREAM EATER!"
+	para "En plus,"
 	line "DEFENSE CURL!"
-	para "What else could"
-	line "you want?!"
+	para "Quoi demander"
+	line "de plus?!"
 	done
 
 _DratiniPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " is a rare"
-	line "DRAGON #MON."
-	para "It may seem weak,"
-	para "But if you evolve"
-	line "it, it'll become"
-	cont "unstoppable!"
+	text " est un"
+	line "#MON DRAGON rare."
+	para "Il semble faible,"
+	para "Mais si tu le fais"
+	line "évoluer, il sera"
+	cont "inarrêtable!"
 	done
 
 _DittoPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " can do only"
-	line "one thing:"
-	para "Transform into a"
-	line "copy of your foe!"
+	text " ne fait"
+	line "qu'une chose:"
+	para "Se transformer en"
+	line "copie de l'ennemi!"
 	done
 
 _PorygonPrizeKingText::
 	text "@"
 	text_ram_namebuffer
-	text " huh."
-	para "So you managed to"
-	line "get one as well."
-	para "That makes only"
-	line "two people ever!"
+	text " hein."
+	para "T'as réussi à en"
+	line "avoir un aussi."
+	para "Ça ne fait que"
+	line "deux au monde!"
 	para "@"
 	text_ram_namebuffer
-	text " gets some"
-	line "crazy good moves!"
+	text " a des"
+	line "coups dingues!"
 	para "TRI ATTACK"
-	line "and CONVERSION"
-	cont "are insane!"
+	line "et CONVERSION"
+	cont "c'est du délire!"
 	done
 
 _PrizeKingGotAnotherText::
-	text "Got another?"
+	text "T'en as un autre?"
 	done

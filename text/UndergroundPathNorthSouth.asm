@@ -63,11 +63,11 @@ _UndergroundPathNorthSouthAfterBattleText3::
 	done
 
 _LearnsetKrabbyKid::
-	text "My @"
+	text "Mon @"
 	text_ram_namebuffer
-	text " always"
-	line "likes a good"
-	cont "scrap!"
-	para "What a great"
-	line "little guy!"
+	text " aime"
+	line "toujours une"
+	cont "bonne bagarre!"
+	para "Quel petit"
+	line "bonhomme génial!"
 	prompt

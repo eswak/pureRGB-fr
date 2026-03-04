@@ -124,10 +124,11 @@ _FuchsiaGymTamer1AfterBattleText::
 	done
 
 _FuchsiaGymTamer1AfterBattleGymDefeatedText::
-	text "I've never seen a"
-	line "ninja master lose"
-	cont "until today!"
-	para "You're insane!"
+	text "J'ai jamais vu un"
+	line "maître ninja"
+	cont "perdre avant"
+	cont "aujourd'hui!"
+	para "T'es dingue!"
 	done
 
 _FuchsiaGymTamer2BattleText::

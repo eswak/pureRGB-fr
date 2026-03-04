@@ -108,7 +108,7 @@ DrawOptionsPageInfo:
 ; add SELECT:INFO prompt to top of menu
 	push bc
 	hlcoord 14, 0
-	lb bc, $C3, 5 ; start of SELECT:INFO prompt
+	lb bc, $43, 5 ; start of SELECT:INFO prompt
 	ld de, 1
 	call DrawTileLineIncrement
 	pop bc
@@ -138,15 +138,15 @@ GetOptionCoordOffsetsList:
 
 OptionsLoadExtraTiles:
 	ld de, EditPrompt
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(EditPrompt), 3
 	call CopyVideoDataDouble
 	ld de, PokedexPromptGraphics
-	ld hl, vChars1 tile $43
+	ld hl, vChars2 tile $43
 	lb bc, BANK(PokedexPromptGraphics), 3
 	call CopyVideoData
 	ld de, InfoPromptGraphics
-	ld hl, vChars1 tile $46
+	ld hl, vChars2 tile $46
 	lb bc, BANK(InfoPromptGraphics), 2
 	jp CopyVideoData
 

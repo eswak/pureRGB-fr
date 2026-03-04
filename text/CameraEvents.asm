@@ -1,67 +1,68 @@
 ; CUTE BALL event
 
 _Route2JigglypuffText::
-	text "A JIGGLYPUFF is"
-	line "sitting on a tree"
-	cont "branch, singing"
-	cont "gently."
+	text "Un JIGGLYPUFF est"
+	line "posé sur une"
+	cont "branche, chantant"
+	cont "doucement."
 	done
 
 _Route2JigglypuffCameraText::
-	text "This is a good"
-	line "subject for a"
+	text "C'est un bon"
+	line "sujet pour une"
 	cont "photo!"
 	prompt
 
 _Route2JigglypuffPeacefulText::
-	text "So cute!"
-	para "It looks so happy"
-	line "and content!"
+	text "Trop mignon!"
+	para "Il a l'air si"
+	line "heureux!"
 	prompt
 
 ; FOREST BALL event
 
 _Route5BugCatcherText::
-	text "I'm just a lowly"
-	line "BUG CATCHER"
-	cont "tendin' a field!"
-	para "Nothin' like a"
-	line "straw hat and a"
-	cont "good day's work!"
-	para "I work for the"
-	line "DAYCARE."
+	text "Je suis un simple"
+	line "SCOUT qui"
+	cont "cultive un champ!"
+	para "Rien de tel qu'un"
+	line "chapeau de paille"
+	cont "et une bonne"
+	cont "journée de labeur!"
+	para "Je travaille pour"
+	line "la PENSION."
 	done
 
 _Route5BugCatcherCameraText::
-	text "Wow! That's"
-	line "a cool CAMERA!"
-	para "Take a picture"
-	line "of me, would ya?"
-	para "Get this wild"
-	line "BULBASAUR too!"
-	para "It keeps following"
-	line "me around!"
+	text "Waouh! C'est"
+	line "une super CAMERA!"
+	para "Prends-moi en"
+	line "photo!"
+	para "Prends aussi ce"
+	line "BULBIZARRE sauvage!"
+	para "Il n'arrête pas de"
+	line "me suivre!"
 	prompt
 
 _Route5BugCatcherBulbasaurText::
-	text "Hoho! BULBASAUR"
-	line "is curious about"
-	cont "the CAMERA!"
+	text "Hoho! BULBIZARRE"
+	line "est curieux de la"
+	cont "CAMERA!"
 	prompt
 
 _PerfectPhotoText::
-	text "Beautiful photo!"
+	text "Magnifique photo!"
 	done
 
 _PerfectPhotoBallDesignerText::
-	text "The #BALL"
-	line "DESIGNER will"
-	cont "want to see this!"
+	text "Le DESIGNER de"
+	line "#BALL va vouloir"
+	cont "voir ça!"
 	prompt
 
 _NoPhotosText::
-	text "Nothing cool to"
-	line "photograph here."
+	text "Rien d'intéressant"
+	line "à photographier."
 	prompt
 
 _PhotosToTurnIn::
@@ -69,355 +70,361 @@ _PhotosToTurnIn::
 	text_decimal w2CharStringBuffer, 1, 2
 	text " photo@"
 	text_pluralize w2CharStringBuffer
-	text " to show"
-	line "to the DESIGNER."
+	text " à montrer"
+	line "au DESIGNER."
 	prompt
 
 _PhotoOpText::
-	text "Feels like there's"
-	line "something good to"
-	cont "photograph here!"
+	text "On dirait qu'il y"
+	line "a quelque chose à"
+	cont "photographier ici!"
 	prompt
 
 _Route6ShadowText::
-	text "There's a #MON"
-	line "swimming around"
-	cont "underwater."
+	text "Il y a un #MON"
+	line "qui nage sous"
+	cont "l'eau."
 	done
 
 _Route6CameraText::
-	text "Time to wait to"
-	line "snap a pic of"
-	cont "this swimming"
-	cont "#MON!"
+	text "Attendons pour"
+	line "prendre en photo"
+	cont "ce #MON qui nage!"
 	prompt
 
 _Route6PsyduckText::
-	text "Oh! It's a"
-	line "PSYDUCK!"
+	text "Oh! C'est un"
+	line "PSYKOKWAK!"
 	prompt
 
 
 _Route6Psyduck2Text::
-	text "Amazing!"
-	para "It's looking at"
-	line "its reflection in"
-	cont "the pond water!"
+	text "Incroyable!"
+	para "Il regarde son"
+	line "reflet dans l'eau"
+	cont "de la mare!"
 	prompt
 
 _Route8JolteonCameraText::
-	text "Yes! A photo of a"
-	line "JOLTEON would be"
-	cont "perfect!"
+	text "Oui! Une photo de"
+	line "VOLTALI serait"
+	cont "parfaite!"
 	prompt
 
 _Route8JolteonText::
-	text "A JOLTEON sits"
-	line "on top of the"
-	cont "SAFFRON CITY GATE."
+	text "Un VOLTALI est"
+	line "perché sur la"
+	cont "PORTE DE SAFFRANIA"
 	done
 
 _Route8JolteonCameraAngleText::
-	text "There's a #MON"
-	line "on the roof of"
-	cont "this building!"
-	para "Can't see it"
-	line "well from here!"
-	para "Maybe from the"
-	line "other side?"
+	text "Il y a un #MON"
+	line "sur le toit de ce"
+	cont "bâtiment!"
+	para "On ne le voit pas"
+	line "bien d'ici!"
+	para "Peut-être de"
+	line "l'autre côté?"
 	done
 
 _Route8JolteonCameraAbsorbingText::
-	text "Fascinating! It's"
-	line "absorbing energy"
-	para "from SAFFRON CITY"
-	line "power lines!"
+	text "Fascinant! Il"
+	line "absorbe l'énergie"
+	para "des lignes haute"
+	line "tension de"
+	cont "SAFFRON CITY!"
 	prompt
 
 _Route10FlareonText::
-	text "A FLAREON is"
-	line "relaxing on the"
-	cont "cliffside."
+	text "Un PYROLI se"
+	line "repose sur la"
+	cont "falaise."
 	done
 
 _Route10FlareonCameraText::
-	text "Got a good angle"
-	line "for a photo of"
-	cont "the FLAREON!"
+	text "Bon angle pour"
+	line "une photo du"
+	cont "PYROLI!"
 	prompt
 
 _Route10FlareonPoseText::
-	text "Ah! That's a"
-	line "great pose!"
+	text "Ah! Quelle pose"
+	line "magnifique!"
 	prompt
 
 _Route10FlareonMajesticText::
-	text "WOW! So majestic!"
-	para "Fiery cinders are"
-	line "floating down!"
+	text "WAOUH! Majestueux!"
+	para "Des braises"
+	line "ardentes tombent!"
 	prompt
 
 ; TRI BALL event
 
 _PorygonNothingMuch::
-	text "Nothing much to"
-	line "see here<...>"
+	text "Pas grand-chose à"
+	line "voir ici<...>"
 	prompt
 
 _PorygonOnScreen::
-	text "Huh?!"
-	para "A PORYGON suddenly"
-	line "appeared on the"
-	cont "screen!"
-	para "Did it travel"
-	line "via cyberspace?"
+	text "Hein?!"
+	para "Un PORYGON est"
+	line "apparu soudain"
+	cont "sur l'écran!"
+	para "Il a voyagé dans"
+	line "le cyberespace?"
 	done
 
 _PorygonCameraText::
-	text "May as well take"
-	line "a picture of this"
-	cont "weird PORYGON"
-	cont "screen!"
+	text "Autant prendre en"
+	line "photo cet étrange"
+	cont "écran PORYGON!"
 	prompt
 
 _PorygonVirtualWorldText::
-	text "It's in its own"
-	line "little virtual"
-	cont "world!"
+	text "Il est dans son"
+	line "propre monde"
+	cont "virtuel!"
 	prompt
 
 ; BOULDER BALL event
 
 _FossilCameraText::
-	text "Photos of fossils"
-	line "are always cool!"
+	text "Les fossiles font"
+	line "de belles photos!"
 	prompt
 
 _MysteriousFossilsText::
-	text "What mysterious"
-	line "ancient relics!"
+	text "Quels mystérieux"
+	line "vestiges anciens!"
 	prompt
 
 ; SUBZERO BALL events
 
 _UseCameraArticunoDragonair::
-	text "WOW! Need to take"
-	line "a picture of this"
-	cont "rare #MON!"
+	text "WAOUH! Il faut"
+	line "prendre ce rare"
+	cont "#MON en photo!"
 	prompt
 
 _UseCameraArticunoDragonairAurora::
-	text "Its icy powers are"
-	line "bending light"
-	cont "into aurora!"
-	para "Ethereal glory!"
+	text "Ses pouvoirs de"
+	line "glace transforment"
+	cont "la lumière en"
+	cont "aurore!"
+	para "Gloire éthérée!"
 	prompt
 
 _UseCameraSurfing::
-	text "Can't hold the"
-	line "CAMERA straight"
-	cont "while SURFing!"
+	text "Impossible de"
+	line "tenir la CAMERA"
+	cont "droite en SURFant!"
 	prompt
 
 _SeafoamIslandsB4FDragonairText::
-	text "Huh? A DRAGONAIR"
-	line "is floating here!"
+	text "Hein? Un DRACO"
+	line "flotte ici!"
 	done
 
 _SeafoamIslandsB4FDragonairText2::
-	text "Could it be"
-	line "investigating"
-	para "ARTICUNO's previous"
-	line "territory?"
+	text "Serait-il en"
+	line "train d'explorer"
+	para "l'ancien domaine"
+	line "d'ARTICODIN?"
 	done
 
 ; MIND BALL events
 
 _AbraCameraEventFakeNothing::
-	text "Nothing cool to<...>"
-	para "<...>Huh?!"
+	text "Rien de cool ici<...>"
+	para "<...>Hein?!"
 	prompt
 
 _AbraCameraEventSleep::
-	text "An ABRA just"
-	line "TELEPORTed in!"
-	para "Snap a picture"
-	line "quick!"
+	text "Un ABRA vient de"
+	line "se TELEPORTER!"
+	para "Vite, prends-le"
+	line "en photo!"
 	prompt
 
 _AbraCameraEventSnoozing::
-	text "It's having a"
-	line "snooze beneath"
-	cont "the tree!"
-	para "Looks comfy!"
+	text "Il fait la sieste"
+	line "sous l'arbre!"
+	para "Il a l'air bien!"
 	prompt
 
 ; TORNADO BALL events
 
 _Route13PidgeotText::
-	text "A PIDGEOT is"
-	line "perched on a"
-	cont "lone tree."
+	text "Un ROUCOOL est"
+	line "perché sur un"
+	cont "arbre isolé."
 	done
 
 _UseCameraPidgeotText::
-	text "PIDGEOT is a"
-	line "gorgeous bird!"
-	para "Photo time!"
+	text "ROUCOOL est un"
+	line "oiseau superbe!"
+	para "C'est l'heure de"
+	line "la photo!"
 	prompt
 
 _PidgeotPlumageText::
-	text "Cool! PIDGEOT"
-	line "took wing!"
-	para "Look at that"
-	line "magnificent"
+	text "Cool! ROUCOOL"
+	line "s'est envolé!"
+	para "Regarde ce"
+	line "magnifique"
 	cont "plumage!"
 	prompt
 
 ; VENOM BALL events
 
 _GrimerCameraText::
-	text "Whoa! What's"
-	line "that?!"
+	text "Whoa! C'est"
+	line "quoi ça?!"
 	prompt
 
 _GrimerCrazyText::
-	text "Crazy! A GRIMER"
-	line "is living under"
-	cont "the sewer grate!"
+	text "Dingue! Un TADMORV"
+	line "vit sous la grille"
+	cont "d'égout!"
 	prompt
 
 _GrimerCameraStandingOnSewerGrate::
-	text "Is there something"
-	line "in this sewer"
-	cont "grate?"
-	para "Move down off of"
-	line "standing on it"
-	cont "and check again!"
+	text "Il y a quelque"
+	line "chose dans cette"
+	cont "grille d'égout?"
+	para "Descends de la"
+	line "grille et regarde"
+	cont "de nouveau!"
 	prompt
 
 _GrimerEventGirlText::
-	text "I'm off to shop"
-	line "in CELADON CITY!"
-	para "Like my outfit?"
-	para "I had it tailored"
-	line "over there!"
+	text "Je vais faire les"
+	line "boutiques à"
+	cont "CELADOPOLE!"
+	para "Tu aimes ma tenue?"
+	para "Je l'ai fait faire"
+	line "là-bas!"
 	done
 
 ; SPOOKY BALL
 
 _GastlyCameraText::
-	text "GIRL: Oh, you"
-	line "want to take my"
-	cont "picture?"
-	para "Hehehe. Okay!"
-	para "Just don't get"
-	line "freaked out!"
+	text "FEMME: Tu veux"
+	line "me prendre en"
+	cont "photo?"
+	para "Héhéhé. D'accord!"
+	para "Mais n'aie pas"
+	line "peur!"
 	prompt
 
 _GastlyYikesText::
-	text "YIKES!"
-	para "There's a GASTLY"
-	line "right in front"
-	cont "of the CAMERA!"
+	text "AAAH!"
+	para "Il y a un FANTOME"
+	line "juste devant la"
+	cont "CAMERA!"
 	para "GIRL: Hahaha!"
-	para "Did my GASTLY"
-	line "scare you?"
-	para "It was hiding"
-	line "from view!"
+	para "Mon FANTOME t'a"
+	line "fait peur?"
+	para "Il se cachait!"
 	prompt
 
 ; CLEAVE BALL
 
 _ScytherCameraText::
-	text "Can't see anything"
-	line "here<...>"
+	text "On ne voit rien"
+	line "ici<...>"
 	para "<...>"
-	para "Wait!"
-	para "Something is"
-	line "coming!"
+	para "Attends!"
+	para "Quelque chose"
+	line "approche!"
 	prompt
 
 _ScytherCoolText::
-	text "Awesome!!"
-	para "A SCYTHER's flying"
-	line "low at high speed"
-	cont "over the grass!"
+	text "Génial!!"
+	para "Un INSECATEUR vole"
+	line "à toute vitesse"
+	cont "au ras de l'herbe!"
 	prompt
 
 ; ANGEL BALL
 
 _LassCameraText::
-	text "Oh, you want to"
-	line "take my picture?"
-	para "Only if I can"
-	line "take yours too!"
-	para "Hehe!"
-	para "Take a pic of me"
-	line "and my CLEFAIRY!"
+	text "Oh, tu veux me"
+	line "prendre en photo?"
+	para "Seulement si je"
+	line "peux prendre la"
+	cont "tienne aussi!"
+	para "Héhé!"
+	para "Prends-moi en"
+	line "photo avec mon"
+	cont "MELOFEE!"
 	prompt
 
 _LassCuteText::
-	text "Ah! The lovely"
-	line "LASS is smiling!"
-	para "Your heart is"
-	line "beating fast!"
+	text "Ah! La jolie"
+	line "fille sourit!"
+	para "Ton cœur bat la"
+	line "chamade!"
 	prompt
 
 ; BOMB BALL
 
 _Route16MankeyText::
-	text "A MANKEY's hanging"
-	line "off of a tree."
+	text "Un FEROSINGE est"
+	line "accroché à un"
+	cont "arbre."
 	done
 
 _Route16MankeyText2::
-	text "It's glaring at"
-	line "you angrily."
+	text "Il te fixe d'un"
+	line "air furieux."
 	done
 
 _MankeyCameraText::
-	text "This MANKEY is"
-	line "seething!"
-	para "Such emotion"
-	line "warrants a photo!"
+	text "Ce FEROSINGE est"
+	line "furieux!"
+	para "Une telle émotion"
+	line "mérite une photo!"
 	prompt
 
 _MankeyScowlText::
-	text "Now that's a"
-	line "scowl!"
+	text "Ça, c'est un"
+	line "regard noir!"
 	prompt
 
 _GamblerCameraText::
-	text "GAMBLER: A photo?"
-	para "I'm not exactly"
-	line "photogenic!"
-	para "Here! This'll be"
+	text "JOUEUR: Une"
+	line "photo?"
+	para "Je ne suis pas"
+	line "très photogénique!"
+	para "Tiens! Ça va être"
 	line "cool!"
-	para "Try to get an"
-	line "action shot of"
-	cont "my dice throw!"
-	para "Ready?"
-	para "Go! Huah!"
+	para "Essaie de prendre"
+	line "mon lancer de dés"
+	cont "en action!"
+	para "Prêt?"
+	para "C'est parti! Hah!"
 	done
 
 _GamblerArtText::
-	text "Perfect form!"
-	para "It's like an art"
-	line "piece on luck!"
-	para "That'll be ¥5000!"
+	text "Forme parfaite!"
+	para "On dirait une"
+	line "oeuvre d'art sur"
+	cont "la chance!"
+	para "Ça fera ¥5000!"
 	para "Huah ha ha!"
-	line "Just kidding!"
+	line "Je plaisante!"
 	prompt
 
 _LastBallPhotoHintNotUnlocked::
-	text "Find the other 15"
-	line "photos to unlock"
-	cont "this last photo."
+	text "Trouve les 15"
+	line "autres photos pour"
+	cont "débloquer cette"
+	cont "dernière photo."
 	prompt
 
 _CameraDisabled::
-	text "The BALLDESIGN"
-	line "option has to be"
-	cont "ON to use this."
+	text "L'option"
+	line "BALLDESIGN doit"
+	cont "être sur ON."
 	prompt

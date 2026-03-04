@@ -21,17 +21,18 @@ _RocketSNESText::
 	done
 
 _CeruleanRocketHouse1FBookCaseText::
-	text "DROWZEE's SURREAL"
-	line "ADVENTURE"
-	para "A comic book"
-	line "about DROWZEE.@"
+	text "L'AVENTURE"
+	line "SURREALISTE DE"
+	cont "SOPORIFIK"
+	para "Une BD sur"
+	line "SOPORIFIK.@"
 	text_end
 _CeruleanRocketHouse1FBookCase2Text::
-	text "<PARA>DROWZEE's striking"
-	line "a cool pose as"
-	cont "it faces down a"
-	cont "LICKITUNG before"
-	cont "a stylish battle."
+	text "<PARA>SOPORIFIK prend"
+	line "une pose cool"
+	cont "avant un combat"
+	cont "stylé contre"
+	cont "EXCELANGUE."
 	done
 
 _CeruleanRocketHouseB1FEntranceDoorSignText::

@@ -21,7 +21,7 @@ LoadLearnsetTiles:
 	ld [wPokedexNum], a
 	; load menu graphics
 	ld de, LearnsetMenuUI2BPP
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(LearnsetMenuUI2BPP), 23
 	call CopyVideoData
 	ld de, LearnsetMenuUI1BPP
@@ -30,13 +30,13 @@ LoadLearnsetTiles:
 	call CopyVideoDataDouble
 	; draw basic border tiles that will stay the same regardless of page
 	hlcoord 0, 4
-	lb bc, $CC, 7 
+	lb bc, $4C, 7 
 	ld de, 1
 	call DrawTileLine
 	hlcoord 19, 4
-	ld [hl], $CD
+	ld [hl], $4D
 	hlcoord 19, 5
-	lb bc, $D3, 13
+	lb bc, $53, 13
 	ld de, SCREEN_WIDTH
 	call DrawTileLine
 	; draw "(POKEMON)'s"
@@ -694,20 +694,20 @@ ShowEvolutions:
 
 
 NonCurrentLearnsetTabTiles:
-	db $D0, $D1, $D1, $D2
-	db $D5, $D6, $D6, $CA
+	db $50, $51, $51, $52
+	db $55, $56, $56, $4A
 
 LevelUpLearnsetTabTiles:
-	db $C0, $C1, $C2, $C3
-	db $CB, $75, $76, $CE
+	db $40, $41, $42, $43
+	db $4B, $75, $76, $4E
 
 TMLearnsetTabTiles:
-	db $C4, $C5, $C6, $C3
-	db $CF, $77, $78, $CE
+	db $44, $45, $46, $43
+	db $4F, $77, $78, $4E
 
 EvoTabTiles:
-	db $C4, $C7, $C8, $C9
-	db $CF, $79, $7A, $D4
+	db $44, $47, $48, $49
+	db $4F, $79, $7A, $54
 
 DrawNonCurrentLearnsetTab:
 	ld de, NonCurrentLearnsetTabTiles

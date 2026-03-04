@@ -171,18 +171,18 @@ _VermilionGymGuideApexChipElectricText::
 	prompt
 
 _VermilionGymGentlemanAfterLocksText::
-	text "There you go."
-	para "The gates opened!"
-	line "Good job!"
+	text "Et voilà."
+	para "Les portes sont"
+	line "ouvertes! Bravo!"
 	done
 
 _VermilionGymSuperNerdAfterLocksText::
-	text "Hey! You figured"
-	line "it out! Cool!"
+	text "Hé! T'as trouvé!"
+	line "Cool!"
 	done
 
 _VermilionGymSailorAfterLocksText::
-	text "You found the"
-	line "locks?"
-	para "You're sharp!"
+	text "T'as trouvé les"
+	line "verrous?"
+	para "T'es malin!"
 	done

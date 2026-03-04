@@ -90,54 +90,54 @@ DrawMonAreaButtonPrompt:
 	jr z, .superRodState
 .grassCaveState
 	hlcoord 13, 17
-	ld a, $C0
+	ld a, $40
 	ld b, 6
 	call DrawPrompt
 	jr .drawArrows
 .waterState
 	hlcoord 15, 17
-	ld a, $D2
+	ld a, $52
 	ld b, 4
 	call DrawPrompt
 	hlcoord 14, 17
 	jr .drawArrows
 .oldRodState
 	hlcoord 15, 17
-	ld a, $CC
+	ld a, $4C
 	ld b, 4
 	call DrawPrompt
 	hlcoord 14, 17
 	jr .drawArrows
 .goodRodState
 	hlcoord 14, 17
-	ld a, $C9
+	ld a, $49
 	ld b, 3
 	call DrawPrompt
 	hlcoord 17, 17
-	ld a, $CE
+	ld a, $4E
 	ld b, 2
 	call DrawPrompt
 	hlcoord 13, 17
 	jr .drawArrows
 .superRodState
 	hlcoord 14, 17
-	ld a, $C6
+	ld a, $46
 	ld b, 3
 	call DrawPrompt
 	hlcoord 17, 17
-	ld a, $CE
+	ld a, $4E
 	ld b, 2
 	call DrawPrompt
 	hlcoord 13, 17
 .drawArrows ; assumes hl will be pointing to the location the left arrow should be at (if there needs to be one)
 	call FindPrevMonAreaState
 	jr z, .nextArrow
-	ld [hl], $D0
+	ld [hl], $50
 .nextArrow
 	call FindNextMonAreaState
 	ret z
 	hlcoord 19, 17
-	ld [hl], $D1 ; right prompt
+	ld [hl], $51 ; right prompt
 	ret
 
 ; draw prompt of tile length b starting at tile a at coord hl 
@@ -166,7 +166,7 @@ DisplayWildLocations:
 	call SaveScreenTilesToBuffer1
 
 	ld de, MapAreasUI
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(MapAreasUI), (MapAreasUIEnd - MapAreasUI) / $10
 	call CopyVideoData
 

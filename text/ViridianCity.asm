@@ -92,13 +92,14 @@ _ViridianCityFisherTM42ExplanationText::
 
 _ViridianCityFisherGastlyLearnset::
 	text "Hmm?"
-	para "Describe the dream"
-	line "I had in detail?"
-	para "It was about"
-	line "a giant @"
+	para "Décrire mon rêve"
+	line "en détail?"
+	para "C'était à propos"
+	line "d'un @"
 	text_ram_namebuffer
-	text "."
-	para "Here goes<...>"
+	text ""
+	cont "géant."
+	para "C'est parti<...>"
 	prompt
 
 

@@ -16,11 +16,12 @@ _Route9CooltrainerF1AfterBattleText::
 	done
 
 _LearnsetGloom::
-	text "My @"
+	text "Mon @"
 	text_ram_namebuffer
-	text " can use"
-	line "FLASH to get rid"
-	cont "of the darkness!"
+	text " peut"
+	line "utiliser FLASH"
+	cont "contre l'obscuri-"
+	cont "té!"
 	para "@"
 	text_end
 
@@ -40,14 +41,14 @@ _Route9CooltrainerM1AfterBattleText::
 	done
 
 _RhyhornLearnset::
-	text "Yeah!"
-	para "Saw you eyeing my"
-	line "rough-and-tumble"
+	text "Ouais!"
+	para "Je t'ai vu mater"
+	line "mon coriace"
 	cont "@"
 	text_ram_namebuffer
 	text "!"
-	para "You know it's"
-	line "drop dead cool!"
+	para "Tu sais qu'il est"
+	line "trop cool!"
 	prompt
 
 _Route9CooltrainerM2BattleText::
@@ -105,12 +106,14 @@ _Route9Hiker1AfterBattleText::
 	done
 
 _LearnsetSandslash::
-	text "Love my @"
+	text "J'adore mon"
+	line "@"
 	text_ram_namebuffer
 	text "."
-	para "He's a trooper, eh?"
-	para "My anchor, eh?"
-	para "I could go on!"
+	para "Un vrai soldat!"
+	para "Mon pilier!"
+	para "J'pourrais en"
+	line "parler des heures!"
 	prompt
 
 _Route9Hiker2BattleText::
@@ -131,14 +134,13 @@ _Route9Hiker2AfterBattleText::
 
 
 _GeodudeLearnset::
-	text "Resilient and"
-	line "hardy, like my"
-	cont "@"
+	text "Résistant et"
+	line "robuste, comme"
+	cont "mon @"
 	text_ram_namebuffer
 	text "!"
-	para "Talk about a"
-	line "classic HIKER"
-	cont "#MON choice!"
+	para "Le #MON classique"
+	line "du MONTAGNARD!"
 	prompt
 
 _Route9Youngster1BattleText::

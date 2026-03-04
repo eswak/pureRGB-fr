@@ -67,14 +67,14 @@ _WardensHouseWardenHM04ExplanationText::
 	done
 
 _WardensHouseWardenHM03AlreadyText::
-	text "Oh! You found the"
-	line "SECRET HOUSE in"
-	cont "the SAFARI ZONE?"
+	text "Oh! Tu as trouvé"
+	line "la MAISON SECRETE"
+	cont "du PARC SAFARI?"
 
-	para "Congratulations!"
+	para "Félicitations!"
 	
-	para "Have fun with"
-	line "that SURF HM too!"
+	para "Amuse-toi bien"
+	line "avec la CS SURF!"
 	done
 
 _WardensHouseWardenHM04NoRoomText::

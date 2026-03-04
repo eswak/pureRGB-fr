@@ -1,67 +1,68 @@
 _FightingDojoMasterGoodChoice::
-	text "Good choice!"
+	text "Bon choix!"
 	done
 
 _FightingDojoMasterJustATest::
-	text "So!"
-	para "You passed our"
-	line "entrance test."
-	para "Yes, that's right,"
-	line "it was a test!"
-	para "This DOJO is for"
-	line "newcomers."
+	text "Alors!"
+	para "Tu as réussi"
+	line "notre examen"
+	cont "d'entrée."
+	para "Oui, c'est ça,"
+	line "c'était un test!"
+	para "Ce DOJO est pour"
+	line "les débutants."
 	prompt
 
 _FightingDojoMasterJustATest2::
-	text "Our true DOJO is"
-	line "behind these"
-	cont "scrolls!"
-	para "To enter you must"
-	line "do one more feat."
-	para "Beat the ninja"
-	line "master KOGA in"
+	text "Notre vrai DOJO"
+	line "est derrière ces"
+	cont "parchemins!"
+	para "Pour y entrer,"
+	line "un dernier défi."
+	para "Bats le maître"
+	line "ninja KOGA à"
 	cont "FUCHSIA CITY!"
 	done
 
 _FightingDojoMasterGotBadge::
-	text "That pink sheen!"
-	para "You've got the"
+	text "Cet éclat rose!"
+	para "Tu as le"
 	line "SOULBADGE!"
-	para "So you beat"
+	para "Tu as battu"
 	line "KOGA."
-	para "Have a look at"
-	line "our true DOJO!"
+	para "Viens voir notre"
+	line "vrai DOJO!"
 	prompt
 
 _FightingDojoMasterOpenUp::
-	text "OPEN UP, BOYS!"
+	text "OUVREZ, LES GARS!"
 	done
 
 _FightingDojoExpertRulesSign::
-	text "Here, your #MON"
-	line "can undergo<...>"
-	para "EXPERT SUPER"
-	line "HEAVY TRAINING!"
+	text "Ici, tes #MON"
+	line "subissent<...>"
+	para "UN ENTRAÎNEMENT"
+	line "EXPERT INTENSIF!"
 _FightingDojoExpertRulesSignJump:	
-	para "Just have them"
-	line "wear our special"
-	cont "training weights!"
-	para "#MON under lvl"
-	line "45 will receive"
-	cont "triple EXP!"
-	para "Above level 45"
-	line "receive 0 EXP."
+	para "Fais-leur porter"
+	line "nos poids spéciaux"
+	cont "d'entraînement!"
+	para "#MON sous niv. 45"
+	line "gagnent le triple"
+	cont "d'EXP!"
+	para "Au-dessus du niv."
+	line "45: 0 EXP."
 	done
 
 _FightingDojoSparringGuysLeftText::
 	text "TSET!"
-	para "One point!"
+	para "Un point!"
 	done
 
 _FightingDojoSparringGuysRightText::
-	text "Always remember:"
-	para "NO kicking below"
-	line "the belt!"
+	text "N'oublie jamais:"
+	para "PAS de coups sous"
+	line "la ceinture!"
 	done
 
 _FightingDojoSparringmonsNidokingText::
@@ -73,115 +74,116 @@ _FightingDojoSparringmonsMachampText::
 	done
 
 _FightingDojoSparringmonsText::
-	text "A NIDOKING and a"
-	line "MACHAMP grapple"
-	cont "fiercely."
+	text "Un NIDOKING et un"
+	line "MACHAMP luttent"
+	cont "férocement."
 	done
 
 _FightingDojoExpertClubClerkText::
-	text "Welcome to the"
+	text "Bienvenue au"
 	line "FIGHTING DOJO"
 	cont "EXPERT CLUB!"
 	prompt
 
 _FightingDojoExpertClubClerkIntroText::
-	text "A great place"
-	line "for heavy #MON"
-	cont "training!@"
+	text "L'endroit idéal"
+	line "pour entraîner"
+	cont "tes #MON!@"
 	text_jump _FightingDojoExpertRulesSignJump
 
 _FightingDojoExpertClubClerkBattleText::
-	text "HUAGH! Ready for"
-	line "HEAVY training?"
+	text "HUAGH! Prêt pour"
+	line "l'entraînement?"
 	done
 
 _FightingDojoOpponentBlackbeltIntro1::
 	text "HYAH!"
-	line "ROUNDHOUSE KICK!"
+	line "COUP CIRCULAIRE!"
 	done
 
 _FightingDojoOpponentBlackbeltIntro2::
-	text "HONESTY!"
-	line "INTEGRITY!"
-	cont "SELF-RESPECT!"
+	text "HONNETETE!"
+	line "INTEGRITE!"
+	cont "RESPECT DE SOI!"
 	done
 
 _FightingDojoOpponentBlackbeltIntro3::
-	text "I just levelled up"
-	line "from a BROWNBELT!"
+	text "Je viens de passer"
+	line "de BROWNBELT!"
 	done
 
 _FightingDojoOpponentBlackbeltIntro4::
-	text "Check out my"
-	line "battle stance!"
+	text "Mate ma posture"
+	line "de combat!"
 	para "Tsha!"
-	line "Come at me!"
+	line "Viens te battre!"
 	done
 
 _FightingDojoOpponentFistFighterIntro1::
-	text "Put up your hands!"
-	line "Give me energy!"
+	text "Lève les mains!"
+	line "Donne-moi du jus!"
 	done
 
 _FightingDojoOpponentFistFighterIntro2::
-	text "Whoever blinks"
-	line "first loses!"
+	text "Le premier qui"
+	line "cligne a perdu!"
 	done
 
 _FightingDojoOpponentFistFighterIntro3::
-	text "Got any hair gel?"
+	text "T'as du gel?"
 	done
 
 _FightingDojoOpponentFistFighterIntro4::
-	text "I fight by pure"
-	line "instinct!"
+	text "Je me bats à"
+	line "l'instinct pur!"
 	done
 
 _FightingDojoOpponentTamerIntro1::
 	text "Mmm!"
-	para "This root beer"
-	line "lollipop rules!"
+	para "Cette sucette au"
+	line "caramel déchire!"
 	done
 
 _FightingDojoOpponentTamerIntro2::
-	text "What's a TAMER's"
-	line "favorite food?"
-	para "WHIP'd cream!"
+	text "Le plat préféré"
+	line "d'un DOMPTEUR?"
+	para "De la crème"
+	line "FOUETTEE!"
 	done
 
 _FightingDojoOpponentTamerIntro3::
-	text "My #MON are"
-	line "born to be wild!"
+	text "Mes #MON sont"
+	line "nés sauvages!"
 	done
 
 _FightingDojoOpponentTamerIntro4::
-	text "Sic'em boys!"
+	text "À l'attaque!"
 	done
 
 _FightingDojoOpponentCooltrainerFIntro1::
-	text "I'm here to kick"
-	line "some butt!"
+	text "Je suis là pour"
+	line "botter des fesses!"
 	done
 
 _FightingDojoOpponentCooltrainerFIntro2::
-	text "What makes a"
-	line "COOLTRAINER cool?"
-	para "A great fashion"
-	line "sense!"
+	text "Un COOLTRAINER"
+	line "est cool comment?"
+	para "Avec un super"
+	line "style!"
 	done
 
 _FightingDojoOpponentCooltrainerFIntro3::
-	text "Do you appreciate"
-	line "a good ponytail?"
+	text "T'aimes les belles"
+	line "queues de cheval?"
 	done
 
 _FightingDojoOpponentCooltrainerFIntro4::
-	text "Ohohoho! You dare"
-	line "challenge a high-"
-	cont "class girl?"
+	text "Ohohoho! Tu oses"
+	line "défier une fille"
+	cont "de haut rang?"
 	done
 
 _FightingDojoBuddhaStatueText::
-	text "A bronze statue."
-	line "It looks pensive."
+	text "Une statue en"
+	line "bronze. Pensive."
 	done

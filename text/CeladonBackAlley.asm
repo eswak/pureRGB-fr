@@ -1,230 +1,231 @@
 _CeladonBackAlleyCircleBiker1Text::
-	text "What're you"
-	line "lookin' at?"
+	text "Tu m'regardes"
+	line "ou quoi?"
 	done
 
 _CeladonBackAlleyCircleBiker2Text::
-	text "Beat it, kid!"
+	text "Dégage, gamin!"
 	done
 
 _CeladonBackAlleyCircleBiker3Text::
-	text "Heh, you admiring"
-	line "my motorbike?"
+	text "Hé, t'admires"
+	line "ma bécane?"
 	done
 
 _CeladonBackAlleyCircleGamblerText::
-	text "Any bets on the"
-	line "next fight?"
+	text "Des paris sur le"
+	line "prochain combat?"
 	done
 
 _CeladonBackAlleyCircleRocker1Text::
-	text "Join the circle"
-	line "and fight!"
+	text "Rejoins le cercle"
+	line "et bats-toi!"
 	done
 
 _CeladonBackAlleyCircleRocker2Text::
-	text "Ready to rock"
-	line "and roll!"
+	text "Prêt à tout"
+	line "déchirer!"
 	done
 
 _CeladonBackAlleyCircleLeftBikerText::
-	text "This alley's our"
-	line "turf!"
-	para "NO <ROCKET>s"
-	line "ALLOWED!"
+	text "Cette ruelle,"
+	line "c'est chez nous!"
+	para "PAS de <ROCKET>s"
+	line "ICI!"
 	done
 
 _CeladonBackAlleyCircleRightRockerText::
-	text "I want to join"
-	line "the BATTLE CLUB,"
-	para "but I'm trying to"
-	line "come up with a"
-	cont "battle cry first."
-	para "How about this:"
-	para "Time to ROCK OUT"
-	line "with ARBOK OUT!"
+	text "Je veux rejoindre"
+	line "le CLUB,"
+	para "mais je cherche"
+	line "un cri de guerre"
+	cont "d'abord."
+	para "Que dis-tu de ça:"
+	para "On va ROCKER"
+	line "avec ARBOK!"
 	done
 
 _CeladonBackAlleyCircleRightRockerThinkText::
-	text "What do you think?"
-	line "Was it cool?"
+	text "T'en penses quoi?"
+	line "C'était cool?"
 	done
 
 _CeladonBackAlleyCircleRightRockerYesText::
-	text "I'm not so sure."
+	text "J'suis pas sûr..."
 	done
 
 _CeladonBackAlleyCircleRightRockerNoText::
-	text "Back to the"
-	line "drawing board!"
+	text "Retour à la"
+	line "case départ!"
 	done
 
 _CeladonBackAlleyCircleHooliganText::
-	text "BACK ALLEY"
-	line "BATTLE CLUB!"
+	text "CLUB"
+	line "DE LA RUELLE!"
 	prompt
 
 _CeladonBackAlleyCircleHooliganExplainText::
-	text "We allow #MON"
-	line "under level 32!"
-	para "We hype them up so"
-	line "much they'll earn"
-	cont "triple EXP!"
+	text "On accepte les"
+	line "#MON de niv. 32"
+	cont "ou moins!"
+	para "On les motive tant"
+	line "qu'ils gagnent le"
+	cont "triple d'EXP!"
 	prompt
 
 _CeladonBackAlleyCircleHooliganBattleText::
-	text "You want in?"
+	text "Tu veux entrer?"
 	done
 
 _CeladonBackAlleyOpponentBikerIntro1::
-	text "I'm the steel"
-	line "lord on wheels!"
+	text "Je suis le maître"
+	line "d'acier sur roues!"
 	done
 
 _CeladonBackAlleyOpponentBikerIntro2::
-	text "I've got a date"
-	line "with a BEAUTY!"
+	text "J'ai rencard"
+	line "avec une CANON!"
 	done
 
 _CeladonBackAlleyOpponentBikerIntro3::
-	text "Four strokes of"
-	line "fury coming down!"
+	text "Quatre temps de"
+	line "furie en approche!"
 	done
 
 _CeladonBackAlleyOpponentBikerIntro4::
-	text "CAN'T HEAR YOU!"
-	para "MOTOR'S TOO LOUD!"
+	text "J'ENTENDS RIEN!"
+	para "MOTEUR TROP FORT!"
 	done
 
 _CeladonBackAlleyOpponentCueBallIntro1::
-	text "How do you like my"
-	line "WEEPINBELL belt"
-	cont "buckle?"
+	text "T'aimes ma boucle"
+	line "de ceinture"
+	cont "BOUSTIFLOR?"
 	done
 
 _CeladonBackAlleyOpponentCueBallIntro2::
-	text "Don't chicken out"
-	line "now!"
+	text "Te dégonfle pas"
+	line "maintenant!"
 	done
 
 _CeladonBackAlleyOpponentCueBallIntro3::
-	text "Nice #MON"
-	line "you've got there."
-	para "Can I have them?"
+	text "Jolis #MON"
+	line "que t'as là."
+	para "Je peux les avoir?"
 	done
 
 _CeladonBackAlleyOpponentCueBallIntro4::
-	text "I'm hungrier than"
-	line "a SNORLAX!"
+	text "J'ai plus faim"
+	line "qu'un RONFLEX!"
 	done
 
 _CeladonBackAlleyOpponentRockerIntro1::
-	text "No fate! Only the"
-	line "power of will!"
+	text "Pas de destin!"
+	line "Juste la volonté!"
 	done
 	
 _CeladonBackAlleyOpponentRockerIntro2::
-	text "Hear this cry of"
-	line "a restless soul!"
+	text "Ecoute le cri"
+	line "d'une âme agitée!"
 	done
 	
 _CeladonBackAlleyOpponentRockerIntro3::
-	text "I prefer guitar"
-	line "battles."
-	para "Oh well! Let's go!"
+	text "Je préfère les"
+	line "duels de guitare."
+	para "Bon! Allons-y!"
 	done
 	
 _CeladonBackAlleyOpponentRockerIntro4::
 	text "RAOH!"
 	line "YAOW!"
-	para "I specialize in"
-	line "growled vocals!"
+	para "Ma spécialité:"
+	line "le chant guttural!"
 	done
 
 _CeladonBackAlleyOpponentGamblerIntro1::
-	text "I'm the break-"
-	line "dancing GAMBLER!"
-	para "Hit that funky"
-	line "music!"
+	text "C'est moi le"
+	line "JOUEUR danseur!"
+	para "Mets la musique"
+	line "funky!"
 	done
 	
 _CeladonBackAlleyOpponentGamblerIntro2::
-	text "Want to see a"
-	line "magic trick?"
-	para "Your #MON's"
-	line "HP will disappear!"
+	text "Un tour de magie?"
+	para "Les PV de tes"
+	line "#MON vont fondre!"
 	done
 	
 _CeladonBackAlleyOpponentGamblerIntro3::
-	text "It's snake eyes"
-	line "for you!"
+	text "C'est perdu"
+	line "d'avance pour toi!"
 	done
 	
 _CeladonBackAlleyOpponentGamblerIntro4::
-	text "Don't gamble"
-	line "with your life!"
-	para "That's my job!"
+	text "Ne joue pas avec"
+	line "ta vie!"
+	para "C'est mon boulot!"
 	done
 
 _CeladonBackAlleyKoffingGraffiti::
-	text "Spray painted"
-	line "graffiti art of"
-	cont "a KOFFING!"
-	para "Wow! So detailed."
-	line "What a frown!"
+	text "Un graffiti peint"
+	line "à la bombe d'un"
+	cont "TADMORV!"
+	para "Quel détail!"
+	line "Quelle grimace!"
 	done
 
 _CeladonSeniorHouseGrampsText::
-	text "Nothing like a"
-	line "good book!"
-	para "My wife and I"
-	line "love to read!"
-	para "We've got a"
-	line "beautiful library!"
+	text "Rien de tel qu'un"
+	line "bon livre!"
+	para "Ma femme et moi"
+	line "adorons lire!"
+	para "On a une superbe"
+	line "bibliothèque!"
 	done
 
 _CeladonSeniorHouseGrannyText::
-	text "Oh, looks like the"
-	line "boys out back are"
-	cont "playing again!"
-	para "I should bake them"
-	line "some cookies!"
+	text "Oh, on dirait que"
+	line "les garçons"
+	cont "jouent dehors!"
+	para "Je devrais leur"
+	line "faire des gâteaux!"
 	done
 
 _CeladonRuffianHouseHooliganText::
-	text "Not much to see"
-	line "here kid."
-	para "But check out"
-	line "back!"
-	para "That's where the"
-	line "real action is!"
+	text "Pas grand-chose à"
+	line "voir ici, gamin."
+	para "Mais va voir"
+	line "derrière!"
+	para "C'est là que ça"
+	line "se passe!"
 	done
 
 _CeladonRuffianHouseRockerText::
-	text "Damn!"
-	para "This place is"
-	line "a dump!"
+	text "Merde!"
+	para "Cet endroit est"
+	line "un taudis!"
 	done
 
 _CeladonRuffianHouseBikerText::
-	text "Only I'm permitted"
-	line "to bike indoors!"
-	para "Got a problem"
-	line "with that?"
+	text "Moi seul ai le"
+	line "droit de rouler"
+	cont "à l'intérieur!"
+	para "Un problème"
+	line "avec ça?"
 	done
 
 ; TODO: add back in?
 ;_CeladonBackAlleyCircleHooliganNoKidsAllowedText::
-;	text "Hey! No kids"
-;	line "allowed!"
-;	para "Oh, a wiseguy,"
-;	line "huh?"
-;	para "Alright, if you"
-;	line "want in, prove"
-;	cont "yourself to us!"
-;	para "Find the <ROCKET>"
-;	line "HQ in this city"
-;	cont "and cause havoc!"
-;	para "Then we'll let"
-;	line "you join!"
+;	text "Hé! Pas d'gamins"
+;	line "admis!"
+;	para "Oh, un malin,"
+;	line "hein?"
+;	para "OK, si tu veux"
+;	line "entrer, fais tes"
+;	cont "preuves!"
+;	para "Trouve le QG"
+;	line "<ROCKET> en ville"
+;	cont "et sème le chaos!"
+;	para "Après ça on te"
+;	line "laissera entrer!"
 ;	done

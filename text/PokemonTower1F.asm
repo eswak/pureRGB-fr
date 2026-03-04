@@ -29,10 +29,10 @@ _PokemonTower1FGirlText::
 
 _PokemonTower1FGirl2Text::
 	text "Sniff<...>"
-	para "What's that?"
-	para "You want to hear"
-	line "about my darling"
-	cont "@"
+	para "Comment?"
+	para "Tu veux entendre"
+	line "parler de mon"
+	cont "cher @"
 	text_ram_namebuffer
 	text "?"
 	prompt

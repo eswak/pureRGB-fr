@@ -35,7 +35,7 @@ ShowMovedexMenu:
 	callfar LoadPokedexTilePatterns
 
 	ld de, MovedexPromptGraphics
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(MovedexPromptGraphics), (MovedexPromptGraphicsEnd - MovedexPromptGraphics) / $10
 	call CopyVideoData
 
@@ -91,7 +91,7 @@ HandleMovedexListMenu:
 	xor a
 	ldh [hAutoBGTransferEnabled], a
 	hlcoord 1, 17
-	ld a, $C0 ; tile in VRAM that this prompt starts at, it's 5 tiles horizontally across
+	ld a, $40 ; tile in VRAM that this prompt starts at, it's 5 tiles horizontally across
 	ld [hli], a
 	inc a
 	ld [hli], a
@@ -103,7 +103,7 @@ HandleMovedexListMenu:
 	ld [hl], a
 .pokedexPrompt
 	hlcoord 7, 17
-	ld a, $C5
+	ld a, $45
 	ld [hli], a
 	inc a
 	ld [hli], a
@@ -293,9 +293,9 @@ HandleMovedexListMenu:
 ; ABC or 123 depending on sorting state
 DrawMovedexSortPrompt:
 	CheckFlag FLAG_MOVEDEX_SORTING_MODE
-	ld a, $CC ; 123
+	ld a, $4C ; 123
 	jr z, .gotSortState
-	ld a, $CE ; ABC
+	ld a, $4E ; ABC
 .gotSortState
 	hlcoord 17, 17
 	ld [hli], a
@@ -342,7 +342,7 @@ ShowMoveDataExternal:
 	; load movedex data page UI tiles
 	ld de, MovedexUI
 	lb bc, BANK(MovedexUI), 21
-	ld hl, vChars1 tile $44
+	ld hl, vChars2 tile $44
 	call CopyVideoDataDouble
 
 	call DrawDataBorder
@@ -387,7 +387,7 @@ ShowNextMoveData:
 	ld [wMovedexMoveID], a
 
 	hlcoord 1, 3
-	ld a, $C0 ; type icon first tile
+	ld a, $40 ; type icon first tile
 	ld [hli], a
 	inc a
 	ld [hl], a
@@ -407,13 +407,13 @@ ShowNextMoveData:
 .needsMarker
 	ld a, [wPlayerMoveType]
 	cp GHOST
-	ld b, $D5
+	ld b, $55
 	jr z, .copyMarker
 	cp SPECIAL
-	ld b, $CD
+	ld b, $4D
 	jr nc, .copyMarker
 	; physical
-	ld b, $D1
+	ld b, $51
 .copyMarker
 	ld c, 4
 	ld de, 1
@@ -675,7 +675,7 @@ DrawBottomDataBorder: ; can change if there's no previous or next move
 	jr z, .noPrev
 
 	hlcoord 1, 17
-	ld a, $C4 ; start of <prev prompt
+	ld a, $44 ; start of <prev prompt
 	ld [hli], a
 	inc a
 	ld [hli], a
@@ -706,7 +706,7 @@ DrawBottomDataBorder: ; can change if there's no previous or next move
 	cp b
 	jr z, .noNext
 	hlcoord 16, 17 ; now we do the next> prompt
-	ld a, $C7 ; start of <prev prompt
+	ld a, $47 ; start of next> prompt
 	ld [hli], a
 	inc a
 	ld [hli], a

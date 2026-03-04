@@ -164,13 +164,14 @@ _Route25Hiker3AfterBattleText::
 _MankeyLearnsetText::
 	text "@"
 	text_ram_namebuffer
-	text " and I hike"
-	line "it every day!"
+	text " et moi"
+	line "on randonne"
+	cont "chaque jour!"
 	para "@"
 	text_ram_namebuffer
-	text " is always"
-	line "brimming with"
-	cont "energy!"
+	text " déborde"
+	line "toujours"
+	cont "d'énergie!"
 	para "@"
 	text_end
 

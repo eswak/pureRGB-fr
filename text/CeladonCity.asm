@@ -10,16 +10,16 @@ _CeladonCityLittleGirlText::
 	done
 
 _CeladonCityLittleGirlText2::
-	text "Want to see?"
+	text "Tu veux voir?"
 	done
 
 _CeladonCityLittleGirlText3::
-	text "Haha, it is pretty"
-	line "cool after all!"
+	text "Haha, il est"
+	line "plutôt cool!"
 	done
 
 _KoffingLearnsetText::
-	text "Watch this!"
+	text "Regarde ça!"
 	para "Go, KOFFING!@"
 	text_asm
 	ld a, [wPlayerDirection]
@@ -75,15 +75,16 @@ _CeladonCityGramps3Text::
 	prompt
 
 _CeladonCityGramps3Text2::
-	text "Hello again!"
-	para "Do your #MON"
-	line "want to learn?"
+	text "Re-bonjour!"
+	para "Tes #MON"
+	line "veulent apprendre?"
 	prompt
 
 _CeladonPoolGrampsAfterTeachText::
-	text "A new move is"
-	line "always exciting!"
-	para "Use it well!"
+	text "Une nouvelle"
+	line "attaque, c'est"
+	cont "toujours cool!"
+	para "Utilise-la bien!"
 	done
 
 _GenericPlayerReceivedText::
@@ -137,12 +138,12 @@ _CeladonCityFisherText::
 	done
 
 _CeladonCityFisher2Text::
-	text "Want to see some"
-	line "of its moves?"
+	text "Tu veux voir"
+	line "ses attaques?"
 	done
 
 _PoliwrathLearnsetText::
-	text "Ready, @"
+	text "Prêt, @"
 	text_ram_namebuffer
 	text "?"
 	prompt

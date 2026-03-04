@@ -22,43 +22,45 @@ _CeladonChiefHouseSailorText::
 	done
 
 _CeladonChiefHouseBookCaseLeftText::
-	text "LICKITUNG's"
-	line "SUSHI SHOP"
-	para "A comic book about"
-	line "a LICKITUNG that"
-	cont "makes sushi.@"
+	text "LE RESTO SUSHI"
+	line "DE EXCELANGUE"
+	para "Une BD sur un"
+	line "EXCELANGUE qui"
+	cont "fait des sushis.@"
 	text_end
 
 _CeladonChiefHouseBookCaseLeft2Text::
-	text "<PARA>LICKITUNG sweats"
-	line "as a master chef"
-	cont "analyzes its"
-	cont "every move."
+	text "<PARA>EXCELANGUE sue"
+	line "pendant qu'un"
+	cont "chef cuisinier"
+	cont "analyse chaque"
+	cont "geste."
 	done
 
 _CeladonChiefHouseBookCaseRightText::
-	text "MIMING FOR DUMMIES"
-	para "A starter's guide"
-	line "to miming."
-	para "Starring MR MIME!@"
+	text "MIMER POUR"
+	line "LES NULS"
+	para "Un guide pour"
+	line "débutants."
+	para "Avec MR MIME!@"
 	text_end
 
 _CeladonChiefHouseBookCaseRight2Text::
-	text "<PARA>MR MIME is miming"
-	line "pulling someone"
-	cont "toward it as if"
-	cont "it had thrown a"
-	cont "lasso onto them."
+	text "<PARA>MR MIME mime"
+	line "qu'il tire"
+	cont "quelqu'un vers"
+	cont "lui comme avec"
+	cont "un lasso."
 	para "Hahaha!"
-	para "The person looks"
-	line "weirded out."
+	para "La personne fait"
+	line "une drôle de tête."
 	done
 
 _CeladonChiefHousePlaqueText::
-	text "A gold plaque"
-	line "that reads:"
-	para "WHAT THE CHIEF"
-	line "SAYS GOES!"
-	para "THE HOUSE ALWAYS"
-	line "WINS!"
+	text "Une plaque en or"
+	line "qui dit:"
+	para "LE CHEF A"
+	line "TOUJOURS RAISON!"
+	para "LA MAISON GAGNE"
+	line "TOUJOURS!"
 	done

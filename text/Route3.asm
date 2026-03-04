@@ -171,13 +171,14 @@ _Route3CooltrainerF3AfterBattleText::
 	done
 
 _Route3CooltrainerF3AfterBattleText2::
-	text "But @"
+	text "Mais @"
 	text_ram_namebuffer
 	text_start
-	line "and I met here"
-	cont "on ROUTE 3!"
-	para "What a sweet"
-	line "memory."
+	line "et moi on s'est"
+	cont "rencontrés ici"
+	cont "sur la ROUTE 3!"
+	para "Quel doux"
+	line "souvenir."
 	para "@"
 	text_end
 

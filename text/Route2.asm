@@ -31,22 +31,22 @@ _Route2AfterBattleText1::
 	done
 
 _Route2AfterBattle1Learnset::
-	text "What do you"
-	line "think?"
-	para "Who'd be better at"
-	line "braving a storm?"
-	para "SCYTHER or PINSIR?"
+	text "Qu'en penses-tu?"
+	para "Qui résisterait"
+	line "mieux à un orage?"
+	para "INSECATEUR"
+	line "ou SCARABRUTE?"
 	prompt
 
 _Route2AfterBattle2Learnset::
-	text "Everybody loves"
-	line "@"
+	text "Tout le monde"
+	line "adore @"
 	text_ram_namebuffer
 	text "!"
-	para "Come on! Let's"
-	line "hang out."
-	para "I'll tell you"
-	line "more about it."
+	para "Allez! Viens"
+	line "traîner."
+	para "Je t'en dirai"
+	line "plus."
 	prompt
 
 _Route2BattleText2::

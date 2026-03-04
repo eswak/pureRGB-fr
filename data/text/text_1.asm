@@ -209,65 +209,67 @@ _EnhancedGBCColorsInfoText::
 	done
 
 _FuchsiaMeetingRoomOaksAideGreeting::
-	text "Hey <PLAYER>!"
-	line "How's it going?"
-	para "I'm one of PROF."
-	line "OAK's AIDEs!"
-	para "If you've caught 50"
-	line "or more #MON,"
-	para "I'll upgrade"
-	line "your TOWN MAP!"
+	text "Hé, <PLAYER>!"
+	line "Comment ça va?"
+	para "Je suis un des"
+	line "aides du PROF."
+	cont "CHEN!"
+	para "Si tu as attrapé"
+	line "50 #MON ou plus,"
+	para "j'améliore ta"
+	line "CARTE!"
 	prompt
 
 _FuchsiaMeetingRoomOaksAideHowMany::
-	text "How many #MON"
-	line "have you caught?"
+	text "Combien de #MON"
+	line "as-tu attrapés?"
 	prompt
 
 _FuchsiaMeetingRoomOaksAideNotEnough::
 	text "@"
 	text_decimal wNumSetBits, 1, 3
-	text "? Not enough"
-	line "yet! Come on!"
-	para "I believe in you,"
-	line "you can do it!"
+	text "? Pas assez!"
+	line "Allez, courage!"
+	para "Je crois en toi,"
+	line "tu peux y arriver!"
 	done
 
 _FuchsiaMeetingRoomOaksAideEnough::
 	text "@"
 	text_decimal wNumSetBits, 1, 3
-	text "? Fantastic!"
-	line "MAP upgrade time!"
-	para "A new function"
-	line "will be added."
-	para "It'll have wild"
-	line "#MON data for"
-	cont "each area!"
-	para "Just press A on an"
-	line "area to check."
-	para "Alright let's see"
-	line "your MAP<...>"
+	text "? Fantastique!"
+	line "On améliore la"
+	cont "CARTE!"
+	para "Une fonction sera"
+	line "ajoutée."
+	para "Elle affichera"
+	line "les #MON"
+	cont "sauvages par zone!"
+	para "Appuie sur A sur"
+	line "une zone!"
+	para "Montre-moi ta"
+	line "CARTE<...>"
 	done
 
 
 _FuchsiaMeetingRoomOaksAideNoTownmap::
-	text "What?!"
-	para "You don't have a"
-	line "TOWN MAP?"
-	para "Head back to"
-	line "PALLET TOWN and"
-	cont "ask around!"
-	para "I'm sure someone'll"
-	line "give you a MAP!"
+	text "Quoi?!"
+	para "Tu n'as pas de"
+	line "CARTE?"
+	para "Retourne à BOURG"
+	line "PALETTE et"
+	cont "demande aux gens!"
+	para "Quelqu'un te"
+	line "donnera une CARTE!"
 	done
 
 _FuchsiaMeetingRoomOaksAideGoodLuck::
-	text "Good luck on"
-	line "your journey!"
-	para "I'm rooting for"
-	line "you, <PLAYER>!"
+	text "Bonne chance pour"
+	line "ton voyage!"
+	para "Je suis avec toi,"
+	line "<PLAYER>!"
 	done
 
 _GenericThereWeGoText::
-	text "There we go!"
+	text "Et voilà!"
 	prompt

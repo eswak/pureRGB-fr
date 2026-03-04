@@ -97,12 +97,11 @@ _Museum1FScientist2GetTheOldAmberCheckText::
 
 _Museum1FScientist2GetTheOldAmberRevivedText::
 	text "WOW!"
-	para "You revived the"
-	line "AMBER into a live"
-	cont "AERODACTYL?!"
-	para "I'm gonna go brag"
-	line "to my colleagues"
-	cont "now!"
+	para "Tu as régénéré"
+	line "l'AMBRE en un vrai"
+	cont "PTERA?!"
+	para "Je vais me vanter"
+	line "à mes collègues!"
 	done
 
 _Museum1FScientist2YouDontHaveSpaceText::

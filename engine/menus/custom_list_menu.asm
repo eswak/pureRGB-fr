@@ -101,9 +101,9 @@ CheckLoadTypes:
 	lb bc, 3, 14  ; height, width
 	call TextBoxBorder
 	callfar IsMonTypeRemapped
-	ld a, $C0
+	ld a, $40
 	jr nc, .new
-	ld a, $C2
+	ld a, $42
 .new
 	hlcoord 5, 13
 	ld [hli], a
@@ -153,7 +153,7 @@ CheckSaveHoverTextScreenTiles::
 
 CheckSaveTypeTextScreenTiles:
 	; load some special tiles that are used when displaying this list menu
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	ld de, OldNewTypes
 	lb bc, BANK(OldNewTypes), 4
 	call CopyVideoDataDouble

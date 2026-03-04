@@ -501,12 +501,12 @@ DarkChannelerEyesAndHandsFiddling:
 LoadHaunterTiles:
 	ld de, HaunterFace
 	lb bc, BANK(HaunterFace), 12
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	jp CopyVideoData
 
 ; draw a haunter face on the screen with top left tile at hlcoord
 DrawHaunterFace:
-	ld a, $C0
+	ld a, $40
 	ld c, 3
 .loop2
 	push hl

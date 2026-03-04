@@ -36,16 +36,19 @@ _MrFujisHousePsyduckText::
 	text_end
 
 _MrFujisHousePsyduck2Text::
-	text "GIRL: Our PSYDUCK"
-	line "is named DUCKET."
-	para "It's a bit dopey."
-	para "It fell into a"
-	line "well."
-	para "We got it out"
-	line "with a bucket!"
-	para "I'm keeping an eye"
-	line "on it so it stays"
-	cont "out of trouble!"
+	text "FILLE: Notre"
+	line "PSYKOKWAK"
+	cont "s'appelle CANARD."
+	para "Il est un peu"
+	line "bêta."
+	para "Il est tombé dans"
+	line "un puits."
+	para "On l'a sorti avec"
+	line "un seau!"
+	para "Je le surveille"
+	line "pour qu'il ne"
+	cont "fasse pas de"
+	cont "bêtises!"
 	done
 
 _MrFujisHouseNidorinoText::

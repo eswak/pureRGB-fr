@@ -1370,7 +1370,7 @@ CeruleanBallDesignerPhotoHintMenu::
 CeruleanBallDesignerPhotoText:
 	db "Photo @"
 CeruleanBallDesignerHintText:
-	db "HINTS@"
+	db "INDI.@"
 
 ; Each ref is expected to be 5 bytes long with a single text far and then text end and in the correct order
 ; Do not separate the below entries or change order

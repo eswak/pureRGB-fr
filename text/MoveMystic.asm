@@ -36,7 +36,7 @@ _MoveMysticAhYes::
 	line "Je le vois."
 	para "@"
 	text_ram_stringbuffer
-	text ", the@"
+	text "...@"
 	text_end
 
 _BeedrillMoveMysticText::
@@ -137,17 +137,17 @@ _WigglytuffMoveMysticText::
 
 _GolduckMoveMysticText::
 	text_start
-	line "dangerous duck."
+	line "canard dangereux."
 	prompt
 
 _DewgongMoveMysticText::
 	text_start
-	line "splendid seal."
+	line "phoque splendide."
 	prompt
 
 _ArcanineMoveMysticText::
 	text_start
-	line "heroic hound."
+	line "chien héroïque."
 	prompt
 
 _MoveMysticMasterOfMoveText::
@@ -195,8 +195,8 @@ _MoveMysticAccuracy85::
 	done
 
 _MoveMysticAccuracy100::
-	text "Its ACCURACY"
-	line "increases to 100%!"
+	text "Sa PRECISION"
+	line "monte à 100%!"
 	done
 
 _MoveMysticJigglyWigglyOnlyLevel20Text::
@@ -214,18 +214,19 @@ _GenericMovePowerIncreasesText::
 	done
 
 _MoveMysticInfoText::
-	text "If ON, a new house"
-	line "will be available"
-	cont "in SAFFRON CITY."
-	para "The MOVE MYSTIC"
-	line "here will tell"
-	cont "you about #MON"
-	cont "SIGNATURE MOVEs."
-	para "Some #MON will"
-	line "have bonus power"
-	cont "or accuracy when"
-	cont "using some moves."
-	para "If turned OFF,"
-	line "these bonuses are"
-	cont "turned off too."
+	text "Si ACTIF, une"
+	line "maison apparaît"
+	cont "à SAFRANIA."
+	para "Le MYSTIQUE DES"
+	line "CAPS te parlera"
+	cont "des CAPS"
+	cont "SIGNATURES #MON."
+	para "Certains #MON"
+	line "ont un bonus de"
+	cont "puissance ou de"
+	cont "précision avec"
+	cont "certaines caps."
+	para "Si DESACTIVE,"
+	line "ces bonus le"
+	cont "sont aussi."
 	prompt

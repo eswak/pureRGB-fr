@@ -70,10 +70,11 @@ _CinnabarLabMetronomeRoomAmberPipeText::
 	done
 
 _CinnabarLabKinglerLearnset::
-	text "I think I'll HAMMER"
-	line "some awesome"
-	cont "@"
+	text "Je vais te"
+	line "MARTELER des"
+	cont "infos géniales"
+	cont "sur @"
 	text_ram_namebuffer
-	text " facts"
-	cont "into your skull!"
+	text ""
+	cont "dans le crâne!"
 	prompt

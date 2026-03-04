@@ -32,13 +32,13 @@ _Route11Gambler2AfterBattleText::
 	done
 
 _LearnsetBellsprout::
-	text "You've got to be"
-	line "flexible, like my"
+	text "Faut être souple,"
+	line "comme mon"
 	cont "@"
 	text_ram_namebuffer
 	text "!"
-	para "Move, sway, and"
-	line "adapt!"
+	para "Bouge, ondule et"
+	line "adapte-toi!"
 	prompt
 
 _Route11Youngster1BattleText::
@@ -76,13 +76,13 @@ _Route11SuperNerd1AfterBattleText::
 	done
 
 _LearnsetMagneton::
-	text "@"
+	text "Les @"
 	text_ram_namebuffer
-	text " gather"
-	line "in places that"
-	cont "overuse energy."
-	para "They can cause"
-	line "big blackouts!"
+	text " se"
+	line "rassemblent où"
+	cont "l'énergie coule."
+	para "Ils causent de"
+	line "grosses pannes!"
 	para "@"
 	text_end
 
@@ -156,14 +156,14 @@ _Route11Youngster3AfterBattleText::
 	done
 
 _LearnsetStaryu::
-	text "But I've already"
-	line "got this @"
+	text "Mais j'ai déjà"
+	line "ce @"
 	text_ram_namebuffer
 	text "!"
-	para "It has such a"
-	line "peculiar shape."
-	para "Reminds me of"
-	line "outer space!"
+	para "Il a une forme"
+	line "si étrange."
+	para "Ca me rappelle"
+	line "l'espace!"
 	para "@"
 	text_end
 
@@ -173,10 +173,11 @@ _Route11SuperNerd2BattleText::
 	done
 
 _LearnsetVulpixLuckyNumber::
-	text "Six is my lucky"
-	line "number!"
-	para "That's why I"
-	line "raised a @"
+	text "Six est mon"
+	line "chiffre porte-"
+	cont "bonheur!"
+	para "C'est pour ça que"
+	line "j'élève un @"
 	text_ram_namebuffer
 	text "!"
 	prompt

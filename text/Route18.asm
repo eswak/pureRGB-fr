@@ -33,13 +33,13 @@ _Route18CooltrainerM2AfterBattleText::
 	done
 
 _Route18AerodactylLearnsetText::
-	text "Bet you didn't"
-	line "expect me to have"
-	cont "an @"
+	text "Tu t'attendais"
+	line "pas à ce que"
+	cont "j'aie un @"
 	text_ram_namebuffer
 	text "!"
-	para "I revived it from"
-	line "OLD AMBER!"
+	para "Je l'ai régénéré"
+	line "du VIEIL AMBRE!"
 	prompt
 
 _Route18CooltrainerM3BattleText::
@@ -114,13 +114,15 @@ _Route18CyclingRoadSignText::
 
 _Route18TipsSign::
 	text "<TIPS>"
-	para "Press SELECT"
-	line "when viewing a"
-	cont "#MON's STATS"
-	cont "to view STAT EXP!"
-	para "STAT EXP is raised"
-	line "by battling and"
-	cont "using vitamins!"
-	para "More EXP means"
-	line "a higher STAT!"
+	para "Appuie sur SELECT"
+	line "en regardant les"
+	cont "STATS d'un #MON"
+	cont "pour voir l'EXP"
+	cont "de STAT!"
+	para "L'EXP de STAT"
+	line "monte en combat-"
+	cont "tant et avec des"
+	cont "vitamines!"
+	para "Plus d'EXP ="
+	line "meilleure STAT!"
 	done

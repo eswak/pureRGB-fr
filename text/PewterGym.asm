@@ -20,10 +20,10 @@ _PewterGymBrockPreBattleText::
 	done
 
 _PewterGymGuideCallOverText::
-	text "GYM GUIDE: Hey"
-	line "kid! You won!"
-	para "That was a rock-"
-	line "solid battle!"
-	para "Come over"
-	line "here for a sec."
+	text "GYM GUIDE: Hé"
+	line "gamin! T'as gagné!"
+	para "C'était un combat"
+	line "solide comme roc!"
+	para "Viens voir ici"
+	line "une seconde."
 	done

@@ -27,11 +27,11 @@ WorldOptionsHeader:
 	; fall through
 DisplayWorldOptions::
 	ld de, PokedexPromptGraphics
-	ld hl, vChars1 tile $43
+	ld hl, vChars2 tile $43
 	lb bc, BANK(PokedexPromptGraphics), 3
 	call CopyVideoData
 	ld de, InfoPromptGraphics
-	ld hl, vChars1 tile $46
+	ld hl, vChars2 tile $46
 	lb bc, BANK(InfoPromptGraphics), 2
 	call CopyVideoData
 	ld hl, WorldOptionsHeader

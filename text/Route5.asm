@@ -58,9 +58,9 @@ _Route5AfterBattleText2::
 	done
 
 _Route5CharmeleonLearnset::
-	text "Here are some"
-	line "positive aspects"
-	cont "of training a"
+	text "Voici des aspects"
+	line "positifs du"
+	cont "dressage d'un"
 	cont "@"
 	text_ram_namebuffer
 	text ":"
@@ -89,14 +89,16 @@ _Route5AfterBattleText3::
 	done
 
 _Route5SquirtleLearnset::
-	text "I put my @"
+	text "J'ai mis mon"
+	line "@"
 	text_ram_namebuffer
 	text_start
-	line "in the DAYCARE"
-	cont "while I studied"
-	cont "how to raise it!"
-	para "That's why it"
-	line "hasn't evolved!"
+	line "à la PENSION"
+	cont "pendant que"
+	cont "j'étudiais!"
+	para "C'est pour ça"
+	line "qu'il n'a pas"
+	cont "évolué!"
 	prompt
 
 _Route5BattleText4::

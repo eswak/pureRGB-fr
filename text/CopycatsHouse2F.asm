@@ -77,11 +77,11 @@ _CopycatsHouse2FDoduoText::
 _DoduoLearnsetText::
 	text "@"
 	text_ram wTrainerName
-	text ": That's"
-	line "KIWI, my DODUO."
-	para "I like how its"
-	line "heads copy"
-	cont "each other!"
+	text ": C'est"
+	line "KIWI, mon DODUO."
+	para "J'adore quand"
+	line "ses têtes se"
+	cont "copient!"
 	prompt
 
 _CopycatsHouse2FRareDollText::

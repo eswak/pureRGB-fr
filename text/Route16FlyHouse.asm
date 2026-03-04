@@ -34,12 +34,12 @@ _Route16FlyHouseFearowText::
 _Route16FlyHouseFearow2Text::
 	text "@"
 	text_ram wTrainerName
-	text ": That's"
-	line "my FEAROW, POLLY."
-	para "She FLYs me around"
-	line "everywhere for"
-	cont "maximum privacy!"
-	para "Such a beautiful"
-	line "affectionate"
-	cont "birdy!"
+	text ": C'est"
+	line "mon RAPASDEPIC,"
+	cont "POLLY."
+	para "Elle me fait"
+	line "VOLER partout"
+	cont "pour l'intimité!"
+	para "Un si bel oiseau"
+	line "affectueux!"
 	done

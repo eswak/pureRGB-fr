@@ -25,32 +25,32 @@ _MrPsychicsHouseMrPsychicTM29NoRoomText::
 	done
 
 _MrPsychicsHouseBookText::
-	text "THE KADABRA BOOK"
-	line "OF PSYCHIC THEORY@"
+	text "LE LIVRE KADABRA"
+	line "DE THEORIE PSY@"
 	text_end
 
 _MrPsychicsHouseBookText2::
-	text "<PARA>KADABRA's powerful"
-	line "PSYCHIC presence"
-	cont "causes strange"
-	cont "shadows on TVs"
-	cont "and computer"
-	cont "monitors."
-	para "If you see one"
-	line "of these shadows,"
-	cont "it's considered"
-	cont "very bad luck."
+	text "<PARA>La puissante aura"
+	line "PSY de KADABRA"
+	cont "crée d'étranges"
+	cont "ombres sur les"
+	cont "télés et les"
+	cont "écrans."
+	para "Si tu en vois"
+	line "une, c'est un"
+	cont "très mauvais"
+	cont "présage."
 	done
 
 _MrPsychicsHouseIKnowWhatYouWantText::
-	text "I know what you"
-	line "want!"
-	para "But first do this"
-	line "for me:"
-	para "Go rough up the"
-	line "trainers in the"
-	cont "FIGHTING DOJO!"
-	para "It's on the north"
-	line "side of town."
+	text "Je sais ce que"
+	line "tu veux!"
+	para "Mais d'abord,"
+	line "fais ça pour moi:"
+	para "Va rosser les"
+	line "dresseurs du DOJO"
+	cont "DE COMBAT!"
+	para "C'est au nord de"
+	line "la ville."
 	done
 

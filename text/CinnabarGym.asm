@@ -40,16 +40,16 @@ _CinnabarGymBlainePostBattleAdviceText::
 	done
 
 _CinnabarGymBlaineMoltres::
-	text "It can't be<...>"
-	para "You caught the"
-	line "flaming bird"
-	cont "#MON, MOLTRES!"
-	para "A MOLTRES saved"
-	line "my life!"
-	para "It guided me out"
-	line "of a mountain"
-	cont "range when I lost"
-	cont "my way!"
+	text "C'est pas vrai<...>"
+	para "Tu as attrapé"
+	line "l'oiseau de feu,"
+	cont "SULFURA!"
+	para "Un SULFURA m'a"
+	line "sauvé la vie!"
+	para "Il m'a guidé hors"
+	line "d'une montagne"
+	cont "quand j'étais"
+	cont "perdu!"
 	done
 
 _CinnabarGymBlaineVolcanoBadgeInfoText::

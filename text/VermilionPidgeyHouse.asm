@@ -8,15 +8,15 @@ _VermilionPidgeyHouseYoungsterText::
 _VermilionPidgeyHouseYoungsterLearnset::
 	text "@"
 	text_ram_namebuffer
-	text " is actually"
-	line "a very capable"
-	cont "letter deliverer!"
-	para "Amazing sense of"
-	line "direction!"
-	para "So useful."
-	para "Interested in"
-	line "hearing more?"
-	para "Have a seat!"
+	text " est un"
+	line "excellent facteur!"
+	para "Un sens de"
+	line "l'orientation"
+	cont "incroyable!"
+	para "Si utile."
+	para "Ca t'intéresse"
+	line "d'en savoir plus?"
+	para "Assieds-toi!"
 	prompt
 
 _VermilionPidgeyHousePidgeyText::

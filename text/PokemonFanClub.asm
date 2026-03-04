@@ -65,7 +65,7 @@ _PokemonFanClubChairmanStoryText::
 
 	para "Il est...mignon..."
 	line "beau...malin..."
-	cont "plus...incroyable..."
+	cont "plus...incroyable"
 	cont "tu trouves pas?..."
 	cont "oh oui...il est..."
 	cont "splendide..."
@@ -145,15 +145,16 @@ _PokemonFanClubSign2Text::
 
 _PokemonFanClubChairMoreText::
 	text "Oh, <PLAYER>!"
-	para "Want to hear"
-	line "another story"
-	cont "about my RAPIDASH?"
+	para "Tu veux entendre"
+	line "une autre"
+	cont "histoire sur mon"
+	cont "GALOPA?"
 	done
 
 _PokemonFanClubChairLongOne::
-	text "Okay, get ready!"
-	para "This is a long"
-	line "story!"
+	text "OK, prépare-toi!"
+	para "C'est une longue"
+	line "histoire!"
 	done
 
 _PokemonFanClubPikachuFanYoursText::

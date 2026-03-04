@@ -27,7 +27,7 @@ ShowPokedexMenu:
 	call CopyVideoDataDouble ; load pokeball tile for marking caught mons
 .noMetric
 	ld de, PokedexPromptGraphics
-	ld hl, vChars1 tile $40
+	ld hl, vChars2 tile $40
 	lb bc, BANK(PokedexPromptGraphics), (PokedexPromptGraphicsEnd - PokedexPromptGraphics) / $10
 	call CopyVideoData
 ;;;;;;;;;;
@@ -240,13 +240,13 @@ HandlePokedexListMenu:
 	CheckEvent EVENT_GOT_TOWN_MAP
 	jr z, .movedexPrompt
 	hlcoord 1, 17
-	lb bc, $C0, 5
+	lb bc, $40, 5
 	call DrawTileLineIncrement
 .movedexPrompt
 	CheckEvent EVENT_GOT_MOVEDEX
 	jr z, .noSelectPrompt
 	hlcoord 7, 17
-	lb bc, $C5, 7
+	lb bc, $45, 7
 	call DrawTileLineIncrement
 .noSelectPrompt
 ;;;;;;;;;;;
@@ -395,7 +395,7 @@ HandlePokedexListMenu:
 	pop hl
 	push hl
 	dec hl
-	ld [hl], $CC ; mark learnset unlocked if flag set and pokemon is seen
+	ld [hl], $4C ; mark learnset unlocked if flag set and pokemon is seen
 .skipLearnsetIcon
 	call PokedexToIndex
 	call GetMonName
@@ -573,7 +573,7 @@ ShowPokedexDataInternal:
 	; load pokedex data page UI tiles (left + right arrows)
 	ld de, PokedexDataUI
 	lb bc, BANK(PokedexDataUI), 2
-	ld hl, vChars1 tile $4D
+	ld hl, vChars2 tile $4D
 	call CopyVideoDataDouble
 
 	ld a, B_BUTTON
@@ -710,7 +710,7 @@ ShowNextPokemonData:
 	ld b, a
 	ld a, [wPokedexNum]
 	cp b
-	ld a, $CD ; < prompt
+	ld a, $4D ; < prompt
 	jr nz, .loadLeftPrompt
 	ld a, $6f ; border tile instead
 .loadLeftPrompt
@@ -721,7 +721,7 @@ ShowNextPokemonData:
 	ld b, a
 	ld a, [wPokedexNum]
 	cp b
-	ld a, $CE ; > prompt
+	ld a, $4E ; > prompt
 	jr nz, .loadRightPrompt
 	ld a, $6f ; border tile instead
 .loadRightPrompt

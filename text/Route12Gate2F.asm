@@ -20,13 +20,12 @@ _Route12Gate2FBrunetteGirlTM39ExplanationText::
 	done
 
 _ArbokLearnset::
-	text "What #MON"
-	line "did I have?"
-	para "Ah<...>my lovely"
-	line "@"
+	text "Quel #MON"
+	line "j'avais?"
+	para "Ah<...>mon bel @"
 	text_ram_namebuffer
 	text "<...>"
-	para "I'll miss you"
+	para "Tu vas me manquer"
 	line "QUEENIE<...>"
 	prompt
 

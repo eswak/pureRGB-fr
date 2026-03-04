@@ -2,82 +2,82 @@
 ; Separated into two files because it doesn't fit in a single bank.
 
 _SharpenDexEntry::
-	text "The user sharpens"
-	next "its claws or"
-	next "edges."
+	text "Le lanceur"
+	next "aiguise ses"
+	next "griffes ou lames."
 
-	bage "Raises ATTACK"
-	next "and ACCURACY."
-	next "(+1 Each)"
+	bage "Augmente ATTACK"
+	next "et ACCURACY."
+	next "(+1 chaque)"
 	dex
 
 _ConversionDexEntry::
-	text "The user analyzes"
-	next "the opponent and"
-	next "upgrades its body"
+	text "Le lanceur"
+	next "analyse l'ennemi"
+	next "et adapte son"
 
-	bage "to be better"
-	next "suited for taking"
-	next "down its enemy."
+	bage "corps pour être"
+	next "mieux adapté face"
+	next "à l'ennemi."
 
-	bage "Greatly raises"
-	next "user's SPECIAL."
+	bage "Augmente beaucoup"
+	next "le SPECIAL."
 	next "(+2 SPECIAL)"
 	dex
 
 _TriAttackDexEntry::
-	text "Shoots triangles"
-	next "with properties"
-	next "of 3 elements:"
+	text "Tire des triangles"
+	next "aux propriétés"
+	next "de 3 éléments:"
 
-	bage "Fire, ice, and"
-	next "electricity."
+	bage "Feu, glace et"
+	next "électricité."
 
-	bage "10% chance each"
-	next "of burn, freeze"
-	next "or paralysis"
+	bage "10% de chance"
+	next "chacun: brûlure,"
+	next "gel ou paralysie"
 	dex
 
 _SuperFangDexEntry::
-	text "The user chomps"
-	next "hard on the"
-	next "foe with razor"
+	text "Le lanceur mord"
+	next "fort l'ennemi"
+	next "avec ses crocs"
 
-	bage "-sharp front"
-	next "fangs."
+	bage "de devant"
+	next "très acérés."
 
-	bage "Always does 2/3"
-	next "of the opponent's"
-	next "current HP"
+	bage "Inflige toujours"
+	next "2/3 des HP actuels"
+	next "de l'ennemi."
 	dex
 
 _SlashDexEntry::
-	text "User heavily"
-	next "slashes the foe"
-	next "with claws or"
+	text "Le lanceur"
+	next "tranche l'ennemi"
+	next "avec ses griffes"
 
-	bage "anything sharp."
-	next "Often lands"
-	next "critical hits"
+	bage "ou objet coupant."
+	next "Touche souvent en"
+	next "coup critique."
 	dex
 
 _SubstituteDexEntry::
-	text "A decoy doll"
-	next "replaces the user"
-	next "and takes damage"
+	text "Un clone remplace"
+	next "le lanceur et"
+	next "subit les dégâts"
 
-	bage "instead of it."
-	next "Need to sacrifice"
-	next "1/4 HP to use"
+	bage "à sa place."
+	next "Sacrifie 1/4 des"
+	next "HP du lanceur."
 	dex
 
 _StruggleDexEntry::
-	text "A last ditch"
-	next "move only usable"
-	next "when all moves"
+	text "Attaque de dernier"
+	next "recours, utilisée"
+	next "quand les attaques"
 
-	bage "have 0 PP left."
-	next "Does heavy recoil"
-	next "to the user"
+	bage "ont 0 PP restants."
+	next "Cause un fort"
+	next "recul au lanceur."
 	dex
 

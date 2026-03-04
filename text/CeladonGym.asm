@@ -108,9 +108,9 @@ _CeladonGymAfterBattleText2::
 
 _CeladonGymAfterBattleText2GymDefeated::
 	text "Whoa!?"
-	line "You beat ERIKA?!"
-	para "You're cooler than"
-	line "I thought!"
+	line "T'as battu ERIKA?!"
+	para "T'es plus cool"
+	line "que je pensais!"
 	done
 
 _CeladonGymBattleText3::

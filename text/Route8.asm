@@ -47,30 +47,34 @@ _Route8SuperNerd2AfterBattleText::
 	done
 
 _MukLearnset::
-	text "But if they switch"
-	line "then I should<...>"
-	para "<...>and use"
-	line "MINIMIZE<...>"
-	para "<...>then they'll"
-	line "run out of PP<...>"
-	para "it was so perfect"
-	line "<...>how could I"
-	cont "blah blah blah<...>"
+	text "Mais s'ils"
+	line "changent, je"
+	cont "devrais<...>"
+	para "<...>utiliser"
+	line "LILLIPUT<...>"
+	para "<...>puis ils"
+	line "n'ont plus de"
+	cont "PP<...>"
+	para "c'était parfait"
+	line "<...>comment j'ai"
+	cont "bla bla bla<...>"
 	prompt
 
 _MukLearnset2::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "revealed their"
-	cont "battle strategy"
-	cont "in detail-"
-	para "Saying it out"
-	line "loud so everyone"
-	cont "here knows it."
-	para "You didn't ask for"
-	line "it, but you heard"
-	cont "a lot about MUK."
+	line "a révélé sa"
+	cont "stratégie de"
+	cont "combat en détail-"
+	para "En le disant tout"
+	line "haut pour que"
+	cont "tout le monde"
+	cont "l'entende."
+	para "T'as pas demandé,"
+	line "mais t'as appris"
+	cont "plein de trucs"
+	cont "sur GROTADMORV."
 	prompt
 
 _Route8CooltrainerF1BattleText::
@@ -91,18 +95,20 @@ _Route8CooltrainerF1AfterBattleText::
 	done
 
 _NidorinaLearnset::
-	text "Hmm? Some of"
-	line "them stay cute?!"
-	para "Should I evolve"
-	line "@"
+	text "Hmm? Certains"
+	line "restent mignons?!"
+	para "Je devrais faire"
+	line "évoluer @"
 	text_ram_namebuffer
-	text " with"
-	cont "a MOON STONE?"
-	para "I can't decide!"
-	para "Why don't we go"
-	line "on a walk and"
-	cont "talk about it!"
-	para "Tee hee!"
+	text ""
+	cont "avec une PIERRE"
+	cont "LUNE?"
+	para "J'arrive pas à"
+	line "me décider!"
+	para "Si on allait se"
+	line "promener pour en"
+	cont "parler!"
+	para "Hihihi!"
 	prompt
 
 _Route8SuperNerd3BattleText::
@@ -140,11 +146,13 @@ _Route8CooltrainerF2AfterBattleText::
 	done
 
 _LearnsetMeowth::
-	text "But cats are the"
-	line "cutest!"
-	para "They curl up and"
-	line "love to cuddle!"
-	para "Meow meow meow!"
+	text "Mais les chats"
+	line "sont les plus"
+	cont "mignons!"
+	para "Ils ronronnent et"
+	line "adorent les"
+	cont "câlins!"
+	para "Miaou miaou!"
 	prompt
 
 _Route8CooltrainerF3BattleText::
@@ -208,15 +216,17 @@ _Route8CooltrainerF4AfterBattleText::
 	done
 
 _ClefableLearnset::
-	text "That's how I got"
-	line "my CLEFABLE!"
-	para "I hear @"
+	text "C'est comme ça"
+	line "que j'ai eu mon"
+	cont "MELODELFE!"
+	para "@"
 	text_ram_namebuffer
-	text "<LINE>and CLEFABLE came"
-	cont "from outer space!"
-	para "I like to imagine"
-	line "them on a little"
-	cont "flying saucer!"
+	text " et"
+	line "MELODELFE viennent"
+	cont "de l'espace!"
+	para "Je les imagine"
+	line "sur une petite"
+	cont "soucoupe volante!"
 	para "@"
 	text_end
 

@@ -36,13 +36,13 @@ _Route12Fisher1AfterBattleText::
 	done
 
 _LearnsetGoldeen::
-	text "I usually have"
+	text "D'habitude"
 	line "@"
 	text_ram_namebuffer
-	text " use"
-	cont "SUPERSONIC to"
-	cont "unsnag it."
-	para "Gotta love"
+	text " utilise"
+	cont "ULTRASON pour"
+	cont "décrocher."
+	para "J'adore"
 	line "@"
 	text_ram_namebuffer
 	text "!"
@@ -68,15 +68,15 @@ _Route12Fisher2AfterBattleText::
 	done
 
 _LearnsetTentacool::
-	text "Not just a bunch"
-	line "of @"
+	text "Pas juste un tas"
+	line "de @"
 	text_ram_namebuffer
 	text "!"
 	para "<...>"
-	para "Well actually,"
-	line "I think TENTACOOL"
-	cont "is kind of rad."
-	para "Do you agree?"
+	para "En fait, je"
+	line "trouve TENTACOOL"
+	cont "plutôt cool."
+	para "T'es d'accord?"
 	para "@"
 	text_end
 
@@ -132,17 +132,18 @@ _Route12Fisher3AfterBattleText::
 	done
 
 _SeadraLearnset::
-	text "It's not every day"
-	line "you meet someone"
-	cont "who can catch a"
+	text "C'est pas tous"
+	line "les jours qu'on"
+	cont "rencontre un qui"
+	cont "attrape un"
 	cont "@"
 	text_ram_namebuffer
 	text "!"
-	para "They live pretty"
-	line "deep underwater!"
-	para "So elusive!"
-	para "So!" 
-	line "#MON KID,"
+	para "Ils vivent très"
+	line "profond!"
+	para "Si insaisissables!"
+	para "Alors!" 
+	line "KID #MON,"
 	para "@"
 	text_end
 
@@ -203,13 +204,13 @@ _Route12AfterBattleText8::
 	done
 
 _ShellderLearnset::
-	text "I heard SHELLDER"
-	line "evolves into a"
-	cont "#MON with"
-	cont "monstrously good"
-	cont "stats!"
-	para "That's why I"
-	line "got one!"
+	text "Il paraît que"
+	line "KOKIYAS évolue en"
+	cont "un #MON avec"
+	cont "des stats"
+	cont "monstrueuses!"
+	para "C'est pour ça que"
+	line "j'en ai un!"
 	para "@"
 	text_end
 

@@ -28,13 +28,13 @@ _LavenderCuboneHouseBrunetteGirlGhostIsGoneText::
 	done
 
 _LavenderCuboneLearnset::
-	text "You were the one"
-	line "who did it??"
-	para "Thank you!"
-	para "Maybe CUBONE"
-	line "will get some"
-	cont "peace of mind."
-	para "The poor thing!"
+	text "C'est toi qui as"
+	line "fait ça??"
+	para "Merci!"
+	para "Peut-être"
+	line "qu'OSSELAIT aura"
+	cont "enfin la paix."
+	para "Le pauvre!"
 	prompt
 
 _LightChannelerGreeting::

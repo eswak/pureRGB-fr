@@ -76,12 +76,12 @@ _FightingDojoBlackbelt2AfterBattleText::
 	done
 
 _MachokeLearnsetText2::
-	text "He beat my @"
+	text "Il a battu mon @"
 	text_ram_namebuffer
 	text_start
-	line "at grappling!"
-	para "I still can't"
-	line "believe that!"
+	line "au corps à corps!"
+	para "J'arrive pas à"
+	line "y croire!"
 	para "@"
 	text_end
 
@@ -107,16 +107,16 @@ _FightingDojoBlackbelt3AfterBattleText::
 	done
 
 _PrimeapeLearnsetText::
-	text "Even my @"
+	text "Même mon @"
 	text_ram_namebuffer
 	text_start
-	line "doesn't like it."
-	para "I'm going to train"
-	line "it further so it"
-	cont "learns SONICBOOM!"
-	para "Then it'll be able"
-	line "to deal with"
-	cont "PSYCHIC #MON."
+	line "n'aime pas ça."
+	para "Je vais continuer"
+	line "à l'entraîner"
+	cont "pour SONICBOOM!"
+	para "Il pourra ensuite"
+	line "gérer les #MON"
+	cont "PSY."
 	para "@"
 	text_end
 
@@ -157,31 +157,31 @@ _FightingDojoBetterNotGetGreedyText::
 	done
 
 _FightingDojoKarateMasterOthersText::
-	text "Defeat the others"
-	line "if you wish to"
-	cont "challenge me!"
+	text "Bats les autres"
+	line "si tu veux me"
+	cont "défier!"
 	done
 
 _FightingDojoHitmonleeScrollText::
-	text "DO NOT FEAR HE"
-	line "WHO PRACTICES"
-	cont "10000 KICKS ONCE."
-	para "FEAR HE WHO"
-	line "PRACTICES 1 KICK"
-	cont "10000 TIMES."
-	para "It's a scroll"
-	line "with ancient"
-	cont "knowledge about"
-	cont "kick techniques."
+	text "NE CRAINS PAS"
+	line "CELUI QUI A FAIT"
+	cont "10000 COUPS DE"
+	cont "PIED UNE FOIS."
+	para "CRAINS CELUI QUI"
+	line "EN A FAIT UN"
+	cont "10000 FOIS."
+	para "C'est un parchemin"
+	line "de sagesse sur"
+	cont "les coups de pied."
 	done
 
 _FightingDojoHitmonchanScrollText::
-	text "ROLL WITH THE"
-	line "PUNCHES"
-	para "CAN'T HIT WHAT"
-	line "YOU CAN'T SEE"
-	para "It's a scroll"
-	line "with ancient"
-	cont "knowledge about"
-	cont "punch techniques."
+	text "ENCAISSE LES"
+	line "COUPS"
+	para "TU NE PEUX PAS"
+	line "FRAPPER CE QUE TU"
+	cont "NE VOIS PAS"
+	para "C'est un parchemin"
+	line "de sagesse sur les"
+	cont "coups de poing."
 	done

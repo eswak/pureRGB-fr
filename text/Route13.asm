@@ -168,16 +168,16 @@ _Route13CooltrainerM3AfterBattleText::
 	done
 
 _FearowLearnset::
-	text "Ah, to be a bird"
-	line "in the sky!"
-	para "I'll just have to"
-	line "settle for riding"
-	cont "FEAROW instead!"
-	para "The views from"
-	line "up there are so"
-	cont "stupendous!"
-	para "Makes me proud to"
-	line "be a BIRD KEEPER!"
+	text "Ah, être un"
+	line "oiseau dans le"
+	cont "ciel!"
+	para "Je me contenterai"
+	line "de chevaucher"
+	cont "RAPASDEPIC!"
+	para "La vue de là-haut"
+	line "est magnifique!"
+	para "Fier d'être un"
+	line "ORNITHOLOGUE!"
 	prompt
 
 _Route13TrainerTips1Text::

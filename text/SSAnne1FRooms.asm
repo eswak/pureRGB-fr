@@ -116,9 +116,11 @@ _SSAnne1FRoomsGentleman3Text::
 	done
 
 _GrowlitheLearnset::
-	text "Now I've got to"
-	line "go heal my@"
-	text_ram_cont wNameBuffer
+	text "Maintenant je"
+	line "dois aller"
+	cont "soigner mon"
+	cont "@"
+	text_ram_namebuffer
 	text "!"
 	para "@"
 	text_end

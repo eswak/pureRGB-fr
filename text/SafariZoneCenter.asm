@@ -101,10 +101,10 @@ _SafariZoneCenterJugglerAfterBattleText::
 	done
 
 _TaurosLearnsetText::
-	text "“The Matador” will"
-	line "now tell you a"
-	cont "famous folk tale"
-	cont "about @"
+	text "“Le Matador” va"
+	line "te raconter un"
+	cont "conte célèbre"
+	cont "sur @"
 	text_ram_namebuffer
 	text "<...>"
 	prompt

@@ -15,8 +15,8 @@ _ViridianForestSouthGateLittleGirlText::
 	done
 
 _ViridianForestSouthGateLittleGirl2Text::
-	text "You did?!"
-	para "Right on!"
-	para "You're on the path"
-	line "to cool school!"
+	text "C'est vrai?!"
+	para "Trop bien!"
+	para "Tu es sur la voie"
+	line "de la classe!"
 	done

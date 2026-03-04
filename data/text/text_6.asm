@@ -347,6 +347,7 @@ _BoxFullCannotThrowBallText::
 	prompt
 
 _ItemUseCameraInBattleText::
-	text "No time to frame a"
-	line "photo in battle!"
+	text "Pas le temps de"
+	line "prendre une photo"
+	cont "en combat!"
 	prompt

@@ -17,14 +17,14 @@ _Route10SuperNerd1AfterBattleText::
 	done
 
 _ElectabuzzLearnsetText::
-	text "I caught this rare"
-	line "@"
+	text "J'ai attrapé ce"
+	line "rare @"
 	text_ram_namebuffer
-	text " at the"
-	cont "POWER PLANT."
-	para "I read a lot about"
-	line "it and decided"
-	cont "I had to get one!"
+	text " à"
+	cont "la CENTRALE."
+	para "J'ai lu plein de"
+	line "choses et j'ai dû"
+	cont "en attraper un!"
 	para "@"
 	text_end
 

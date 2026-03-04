@@ -1,234 +1,239 @@
 _FightingBrosRocketText::
-	text "Ow<...>"
-	para "They roughed me"
-	line "up for trying to"
-	cont "block their door."
-	para "Now I'm cleaning"
-	line "up the mess<...>"
+	text "Aïe<...>"
+	para "Ils m'ont tabassé"
+	line "parce que j'ai"
+	cont "bloqué leur porte."
+	para "Maintenant je"
+	line "nettoie<...>"
 	prompt
 
 _FightingBrosRocketText2::
-	text "BRO: We'll sort"
-	line "this <ROCKET> out!"
-	para "He needs courtesy,"
-	line "integrity,"
-	cont "perseverance,"
-	cont "self-control,"
-	para "and indomitable"
-	line "spirit!"
-	para "Those are the five"
-	line "tenets of the"
-	cont "FIGHTING DOJO!"
-	para "You're going there"
-	line "tomorrow for some"
-	cont "tough guidance!"
-	para "Understand,"
-	line "trainee?"
+	text "BRO: On va"
+	line "régler ça avec"
+	cont "ce <ROCKET>!"
+	para "Il lui faut:"
+	line "courtoisie,"
+	cont "intégrité,"
+	cont "persévérance,"
+	para "maîtrise de soi,"
+	line "et un esprit"
+	cont "indomptable!"
+	para "Les cinq préceptes"
+	line "du FIGHTING DOJO!"
+	para "Tu iras là-bas"
+	line "demain pour une"
+	cont "bonne leçon!"
+	para "Compris,"
+	line "apprenti?"
 	prompt
 
 _FightingBrosRocketText3::
-	text "<ROCKET>: Yipes!"
-	line "Y-yes sir!"
+	text "<ROCKET>: Aïe!"
+	line "O-oui monsieur!"
 	done
 
 _FightingBrosWelcomeText::
-	text "We're the"
+	text "Nous sommes les"
 	line "FIGHTING BROS.!"
-	para "Members of the"
+	para "Membres du"
 	line "FIGHTING DOJO."
 	prompt
 
 _FightingBrosSabrinaText::
-	text "SABRINA defeated"
-	line "the DOJO<...>"
-	para "she made us lose"
-	line "<PK><MN> GYM status!"
-	para "We're looking for"
-	line "someone to beat"
-	cont "her as revenge!"
-	para "Get into SAFFRON"
-	line "GYM and show her"
-	cont "who's boss for us!"
-	para "If you do, we'll"
-	line "treat you as a"
-	cont "brother!"
+	text "SABRINA a battu"
+	line "le DOJO<...>"
+	para "elle nous a fait"
+	line "perdre le statut"
+	cont "de <PK><MN> GYM!"
+	para "On cherche"
+	line "quelqu'un pour la"
+	cont "battre!"
+	para "Va à la SAFFRON"
+	line "GYM et montre-lui"
+	cont "qui commande!"
+	para "Si tu le fais, on"
+	line "te traitera comme"
+	cont "un frère!"
 	done
 
 _FightingBrosGotMarshBadge::
-	text "The golden glare"
-	line "of the MARSHBADGE"
-	cont "is unmissable!"
-	para "So you beat"
-	line "SABRINA, brother!"
-	para "The FIGHTING BROS."
-	line "will reward you"
-	cont "any way we can!"
+	text "L'éclat doré du"
+	line "MARSHBADGE est"
+	cont "reconnaissable!"
+	para "Tu as battu"
+	line "SABRINA, frère!"
+	para "Les FIGHTING BROS."
+	line "te récompenseront"
+	cont "comme on peut!"
 	prompt
 
 _FightingBrosRightBro::
-	text "As the older"
-	line "FIGHTING BRO,"
-	para "I'm the calm,"
-	line "collected one."
-	para "I use reason"
-	line "before violence,"
-	cont "meditating daily."
-	para "Do you know the"
-	line "moves FIRE PUNCH,"
-	cont "ICE PUNCH, and"
+	text "En tant qu'aîné"
+	line "des FIGHTING BRO,"
+	para "je suis le calme,"
+	line "le posé."
+	para "La raison avant"
+	line "la violence,"
+	cont "méditer chaque"
+	cont "jour."
+	para "Tu connais les"
+	line "coups FIRE PUNCH,"
+	cont "ICE PUNCH et"
 	cont "THUNDERPUNCH?"
-	para "You may have seen"
-	line "ALAKAZAM cannot"
-	cont "learn them."
-	para "Actually<...>"
-	line "it can!"
-	para "It's a genius"
-	line "you know!"
-	para "But it refuses to!"
-	para "It sees the moves"
-	line "as barbaric."
-	para "I can convince"
-	line "your ALAKAZAM to"
-	cont "learn them-"
-	para "through pure"
-	line "logic!"
-	para "But it isn't easy."
-	para "So I'll only do"
-	line "it once!"
-	para "How about it?"
+	para "ALAKAZAM ne peut"
+	line "pas les apprendre."
+	para "En fait<...>"
+	line "il peut!"
+	para "C'est un génie,"
+	line "tu sais!"
+	para "Mais il refuse!"
+	para "Il voit ces coups"
+	line "comme barbares."
+	para "Je peux convaincre"
+	line "ton ALAKAZAM de"
+	cont "les apprendre-"
+	para "par la pure"
+	line "logique!"
+	para "Mais c'est dur."
+	para "Je ne le ferai"
+	line "qu'une seule fois!"
+	para "Qu'en dis-tu?"
 	done
 
 _FightingBrosRightBroShort::
-	text "So, how about it?"
-	para "Shall I teach your"
-	line "ALAKAZAM an"
-	cont "elemental punch?"
-	para "Remember, I'll"
-	line "only do it once!"
+	text "Alors, qu'en"
+	line "dis-tu?"
+	para "J'enseigne un"
+	line "coup élémentaire"
+	cont "à ton ALAKAZAM?"
+	para "Rappelle-toi, une"
+	line "seule fois!"
 	done
 
 _FightingBrosRightBroWhich::
-	text "Which punch move"
-	line "should I teach?"
+	text "Quel coup de poing"
+	line "enseigner?"
 	done
 
 _FightingBrosRightBroConvene::
-	text "Perfect."
+	text "Parfait."
 	line "@"
 	text_ram_namebuffer
 	text "!"
-	para "Give me some time"
-	line "to speak with"
-	cont "@"
+	para "Laisse-moi le"
+	line "temps de parler"
+	cont "avec @"
 	text_ram_stringbuffer
-	text "<CONT>to convince it!"
+	text "<CONT>pour convaincre!"
 	prompt
 
 _FightingBrosRightBroConvene2::
-	text "It took a while,"
-	para "but @"
+	text "Ça a pris du"
+	line "temps,"
+	para "mais @"
 	text_ram_stringbuffer
-	text "<LINE>trusts your"
-	cont "judgement!"
-	para "It'll allow it."
-	line "Here we go!"
+	text "<LINE>te fait"
+	cont "confiance!"
+	para "Il accepte."
+	line "C'est parti!"
 	prompt
 
 _FightingBrosRightBroEnd::
-	text "You might have the"
-	line "only ALAKAZAM in"
-	cont "the whole world"
-	cont "with that move!"
-	para "Isn't that cool"
-	line "to think of?"
+	text "Tu as peut-être"
+	line "le seul ALAKAZAM"
+	cont "au monde avec"
+	cont "ce coup!"
+	para "C'est pas génial"
+	line "ça?"
 	done
 
 _FightingBrosRightBroAfter::
 	text "ALAKAZAM!"
-	para "Go forth and punch"
-	line "the heavens!"
+	para "Va de l'avant et"
+	line "frappe les cieux!"
 	done
 
 _FightingBrosLeftBro::
-	text "As the younger"
-	line "FIGHTING BRO,"
-	para "I'm the go-getter"
-	line "and mood-maker!"
-	para "I love learning"
-	line "and teaching"
-	cont "many techniques!"
+	text "En tant que cadet"
+	line "des FIGHTING BRO,"
+	para "je suis le fonceur"
+	line "et le boute-en-"
+	cont "train!"
+	para "J'adore apprendre"
+	line "et enseigner"
+	cont "des techniques!"
 .showMe
-	para "Show me a #MON"
-	line "and I'll tell you"
-	cont "the moves I can"
-	cont "teach it!"
+	para "Montre-moi un"
+	line "#MON et je te"
+	cont "dirai les coups"
+	cont "que je connais!"
 	prompt
 
 _FightingBrosLeftBroShort::
-	text "Hey, brother!@"
+	text "Salut, frère!@"
 	text_jump _FightingBrosLeftBro.showMe
 
 _FightingBrosLeftBroAfterTeachText::
-	text "Good choice!"
-	line "That move rules!"
+	text "Bon choix!"
+	line "Ce coup déchire!"
 	done
 
 _MoveTutorChooseMoveToLearnText::
 	text "@"
 	text_ram_namebuffer
 	text "?"
-	para "I can teach it"
-	line "these moves."
+	para "Je peux lui"
+	line "apprendre ceci."
 	prompt
 
 _MoveTutorCantTeach::
 	text "@"
 	text_ram_namebuffer
 	text "?"
-	line "Ah, sorry!"
-	para "It can't learn any"
-	line "of my moves!"
+	line "Ah, désolé!"
+	para "Il ne peut rien"
+	line "apprendre de moi!"
 	prompt
 
 _MoveTutorLearnMoveCost::
-	text "Learning a move"
-	line "costs ¥@"
+	text "Apprendre un coup"
+	line "coûte ¥@"
 	text_bcd hMoney, 3 | LEADING_ZEROES | LEFT_ALIGN
 	text "."
 	prompt
 
 _MoveTutorFreebie::
-	text "This time only"
-	line "it'll be free!"
+	text "Cette fois c'est"
+	line "gratuit!"
 	prompt
 
 _MoveTutorNotEnoughCash::
-	text "Whoops! You don't"
-	line "have enough cash!"
+	text "Oups! Tu n'as pas"
+	line "assez d'argent!"
 	done
 
 _FightingBrosHouseCatalogueText::
-	text "FIGHTING BROS."
-	line "sensei services!"
-	para "Choose any move"
-	line "from our catalog!"
+	text "Services sensei"
+	line "des FIGHTING BROS."
+	para "Choisis un coup"
+	line "dans le catalogue!"
 	prompt
 
 _FightingBrosHouseCatalogue2Text::
-	text "Join the FIGHTING"
-	line "BROS. family!"
-	para "NEVER GIVE UP!"
+	text "Rejoins la famille"
+	line "FIGHTING BROS.!"
+	para "ON LÂCHE RIEN!"
 	done
 
 _FightingBrosRocketText4::
-	text "I'm a humble"
-	line "WHITEBELT at the"
+	text "Je suis un humble"
+	line "WHITEBELT au"
 	cont "FIGHTING DOJO!"
-	para "I'm just starting"
-	line "out now,"
-	para "but it beats a"
-	line "life of crime"
-	cont "as a ROCKET!"
+	para "Je débute"
+	line "maintenant,"
+	para "mais c'est mieux"
+	line "qu'une vie de"
+	cont "crime en ROCKET!"
 	para "FIGHTING BROS."
-	line "NEVER GIVE UP!"
+	line "ON LÂCHE RIEN!"
 	done

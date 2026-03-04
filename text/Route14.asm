@@ -97,29 +97,29 @@ _Route14CooltrainerM5AfterBattleText::
 	done
 
 _LegendaryBirdLearnsetAn::
-	text "WHAT?!?"
-	para "You caught an"
+	text "QUOI?!?"
+	para "Tu as attrapé un"
 	line "@"
 	text_ram_namebuffer
 	text "?!"
 	prompt
 
 _LegendaryBirdLearnsetA::
-	text "WHAT?!?"
-	para "You caught a"
+	text "QUOI?!?"
+	para "Tu as attrapé un"
 	line "@"
 	text_ram_namebuffer
 	text "?!"
 	prompt
 
 _LegendaryBirdLearnset::
-	text "You're a legend!"
-	para "That's one of the"
-	line "legendary birds!"
-	para "Can I see it?!"
-	para "I'll tell you"
-	line "everything I know"
-	cont "about it!"
+	text "T'es une légende!"
+	para "C'est un des"
+	line "oiseaux"
+	cont "légendaires!"
+	para "Je peux le voir?!"
+	para "Je te dirai tout"
+	line "ce que je sais!"
 	done
 
 _Route14CooltrainerM6BattleText::

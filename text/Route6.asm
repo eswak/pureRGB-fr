@@ -45,11 +45,11 @@ _Route6Youngster1AfterBattleText::
 _Route6VenonatLearnsetText::
 	text "@"
 	text_ram_namebuffer
-	text " started"
-	line "showing up there"
-	cont "recently!"
-	para "I've been reading"
-	line "books about them!"
+	text " est"
+	line "apparu là-bas"
+	cont "récemment!"
+	para "Je lis des livres"
+	line "sur eux!"
 	prompt
 
 _Route6CooltrainerM2BattleText::
@@ -103,8 +103,8 @@ _Route6Youngster2AfterBattleText::
 	done
 
 _Route6ButterfreeLearnsetText::
-	text "I try so hard to"
-	line "train @"
+	text "Je m'entraîne dur"
+	line "avec @"
 	text_ram_namebuffer
 	text "!<PARA>@"
 	text_end

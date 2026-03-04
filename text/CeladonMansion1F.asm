@@ -27,35 +27,37 @@ _CeladonMansion1FManagersSuiteSignText::
 	done
 
 _CeladonMansion1FBookCaseLeftText::
-	text "THE SUNNY SIDE:"
-	line "EXEGGCUTE's STORY"
-	para "A children's fable"
-	line "about EXEGGCUTE.@"
+	text "LE BON COTE:"
+	line "L'HISTOIRE"
+	cont "DE NOEUNOEUF"
+	para "Un conte pour"
+	line "enfants sur"
+	cont "NOEUNOEUF.@"
 	text_end
 
 _CeladonMansion1FBookCaseLeft2Text::
-	text "<PARA>All 6 of them"
-	line "finally team up!"
-	para "They calm a raging"
-	line "TAUROS with each"
-	cont "of their own"
-	cont "unique skills."
+	text "<PARA>Les 6 font"
+	line "enfin équipe!"
+	para "Ils calment un"
+	line "TAUROS enragé"
+	cont "grâce à leurs"
+	cont "talents uniques."
 	done
 
 _CeladonMansion1FBookCaseRightText::
-	text "THREE HEADS ARE"
-	line "BETTER THAN TWO"
-	para "A legend about"
+	text "TROIS TETES"
+	line "MIEUX QUE DEUX"
+	para "Une légende sur"
 	line "DODRIO.@"
 	text_end
 
 _CeladonMansion1FBookCaseRight2Text::
-	text "<PARA>Two of DODRIO's"
-	line "heads just ignore"
-	cont "the third, who"
-	cont "jokes around."
-	para "It turns out this"
-	line "goofy head's idea"
-	cont "was needed to"
-	cont "save the flock."
+	text "<PARA>Deux têtes de"
+	line "DODRIO ignorent"
+	cont "la troisième qui"
+	cont "fait le pitre."
+	para "Au final, l'idée"
+	line "de cette tête"
+	cont "farfelue sauve"
+	cont "tout le groupe."
 	done

@@ -128,11 +128,13 @@ _PokemonMansion2FDiary2Text::
 
 
 _PokemonMansion2FDiary3Text::
-	text "Diary: Sept 6"
-	para "We have tested"
-	line "the abilities of"
-	cont "the captive MEW."
-	para "Its learning"
-	line "capacity seems"
-	cont "almost limitless."
+	text "Rapport:"
+	line "6 Septembre."
+	para "Nous avons testé"
+	line "les capacités du"
+	cont "MEW captif."
+	para "Sa capacité"
+	line "d'apprentissage"
+	cont "semble presque"
+	cont "illimitée."
 	done

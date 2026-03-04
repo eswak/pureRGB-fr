@@ -47,12 +47,12 @@ _MtMoonPokecenterMagikarpSalesmanNoRefundsText::
 	done
 
 _MtMoonPokecenterMagikarpSalesmanArentYouGladText::
-	text "WHAT?"
-	para "It evolved into"
-	line "GYARADOS?!"
-	para "Aren't you glad"
-	line "you bought it?"
-	para "I've heard many"
-	line "legends about"
-	cont "that #MON!"
+	text "QUOI?"
+	para "Il a évolué en"
+	line "LEVIATOR?!"
+	para "T'es pas content"
+	line "de l'avoir acheté?"
+	para "J'ai entendu"
+	line "plein de légendes"
+	cont "sur ce #MON!"
 	prompt

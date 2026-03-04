@@ -1,179 +1,186 @@
 _LearnsetCuteTalk::
-	text "I could talk"
-	line "about my cute"
+	text "J'pourrais parler"
+	line "de mon adorable"
 	cont "@"
 	text_ram_namebuffer
-	text " all"
-	cont "day!"
+	text " toute"
+	cont "la journée!"
 	prompt
 
 _LearnsetBeautyTalk::
-	text "Do you even"
-	line "recognize the"
-	cont "absolute serene"
-	cont "beauty of a @"
-	text_ram_cont wNameBuffer
+	text "Reconnais-tu la"
+	line "pure et sereine"
+	cont "beauté d'un"
+	cont "@"
+	text_ram_namebuffer
 	text "?"
 	prompt
 
 _LearnsetLove::
-	text "Oh I just want"
-	line "to tell every-"
-	cont "one about @"
+	text "Je veux crier au"
+	line "monde entier:"
+	cont "@"
 	text_ram_cont wNameBuffer
 	text "!"
-	para "I love it!"
+	para "Je l'adore!"
 	prompt
 
 _LearnsetRude::
-	text "Hey!"
-	para "It's rude to beat"
-	line "a girl and not"
-	cont "walk her back to"
-	cont "a #MON CENTER."
-	para "My poor @"
-	text_ram_line wNameBuffer
+	text "Hé!"
+	para "C'est malpoli de"
+	line "battre une fille"
+	cont "sans la raccom-"
+	cont "pagner au CENTRE"
+	cont "#MON."
+	para "Mon pauvre"
+	line "@"
+	text_ram_namebuffer
 	text "!"
 	prompt
 
 _LearnsetKnowAlotAbout::
-	text "I know a lot"
-	line "about @"
+	text "J'en sais long"
+	line "sur @"
 	text_ram_namebuffer
 	text "."
-	para "I'll share some"
-	line "of my secrets!"
+	para "Je vais partager"
+	line "mes secrets!"
 	prompt
 
 _LearnsetKnowEverythingAbout::
-	text "I know everything"
-	line "about @"
+	text "Je sais tout sur"
+	line "@"
 	text_ram_namebuffer
 	text "!"
-	para "Time to hear"
-	line "from an expert!"
+	para "Ecoute donc un"
+	line "expert!"
 	prompt
 
 _LearnsetKnowMoreThanYou::
-	text "I know more than"
-	line "you when it comes"
-	cont "to @"
-	text_ram_namebuffer
-	text "."
-	para "I'll prove it!"
-	prompt
-
-_LearnsetBoring::
-	text "You're boring."
-	para "You'd never train"
-	line "a cool #MON"
-	cont "like @"
-	text_ram_namebuffer
-	text "."
-	para "You just wouldn't"
-	line "get it!"
-	prompt
-
-_LearnsetAppreciator::
-	text "It's time for"
-	line "you to join<...>"
-	para "<...>"
-	para "<...>"
-	para "The @"
-	text_ram_namebuffer
-	text_start
-	line "APPRECIATOR CLUB!"
-	prompt
-
-_LearnsetMastering::
-	text "I've spent years"
-	line "mastering the art"
-	cont "of training this"
+	text "J'en sais plus"
+	line "que toi sur"
 	cont "@"
 	text_ram_namebuffer
 	text "."
-	para "Listen well!"
+	para "Je vais le"
+	line "prouver!"
+	prompt
+
+_LearnsetBoring::
+	text "T'es ennuyeux."
+	para "T'entraînerais"
+	line "jamais un #MON"
+	cont "cool comme"
+	cont "@"
+	text_ram_namebuffer
+	text "."
+	para "Tu comprendrais"
+	line "pas!"
+	prompt
+
+_LearnsetAppreciator::
+	text "Il est temps de"
+	line "rejoindre<...>"
+	para "<...>"
+	para "<...>"
+	para "Le @"
+	text_ram_namebuffer
+	text_start
+	line "CLUB DES FANS!"
+	prompt
+
+_LearnsetMastering::
+	text "J'ai passé des"
+	line "années à maîtri-"
+	cont "ser le dressage"
+	cont "de @"
+	text_ram_namebuffer
+	text "."
+	para "Ecoute bien!"
 	prompt
 
 _LearnsetCool::
-	text "The coolness level"
-	line "of @"
+	text "Le niveau de cool"
+	line "de @"
 	text_ram_namebuffer
-	text " is"
-	cont "off the charts!"
-	para "Listen up bro!"
+	text " est"
+	cont "hors limites!"
+	para "Ecoute bien, bro!"
 	prompt
 
 _LearnsetTough::
-	text "You'll never find"
-	line "a #MON tougher"
-	cont "than @"
+	text "Tu trouveras pas"
+	line "de #MON plus dur"
+	cont "que @"
 	text_ram_namebuffer
 	text "!"
-	para "You should train"
-	line "one!"
+	para "Tu devrais en"
+	line "dresser un!"
 	prompt
 
 _LearnsetMystery::
-	text "Are you also"
-	line "interested in the"
-	cont "mysterious nature"
-	cont "of @"
+	text "Toi aussi, tu"
+	line "t'intéresses à"
+	cont "la nature mysté-"
+	cont "rieuse de"
+	cont "@"
 	text_ram_namebuffer
 	text "?"
 	prompt
 
 _WhileGoingBackToPkmnCenter::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "taught you about"
+	line "t'a parlé de"
 	cont "@"
 	text_ram_namebuffer
-	text " while"
-	cont "on a trip to the"
-	cont "#MON CENTER."
+	text " en"
+	cont "allant au CENTRE"
+	cont "#MON."
 	prompt
 
 _StartedTalkingAboutDetails::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "started talking"
-	cont "about @"
+	line "a parlé de"
+	cont "@"
 	text_ram_namebuffer
 	text_start
-	cont "in great detail."
+	cont "en grand détail."
 	prompt
 
 _ToldAThrillingStory::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "told a riveting"
-	cont "story about @"
-	text_ram_cont wNameBuffer
+	line "a raconté une"
+	cont "histoire palpi-"
+	cont "tante sur"
+	cont "@"
+	text_ram_namebuffer
 	text "."
 	prompt
 
 _ShowedCoolMoves::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "showed off a few"
-	cont "of @"
+	line "a montré les"
+	cont "meilleurs coups"
+	cont "de @"
 	text_ram_namebuffer
-	text "'s"
-	cont "best abilities."
+	text "."
 	prompt
 
 _ReadAlotAboutPkmn::
-	text "You read a lot"
-	line "about @"
+	text "Tu as beaucoup"
+	line "lu sur @"
 	text_ram_namebuffer
 	text "."
-	para "Wow, this is"
-	line "so @"
+	para "Wow, c'est"
+	line "si @"
 	text_asm
 	call Random
 	and %111
@@ -192,82 +199,81 @@ _ReadAlotAboutPkmn::
 	call TextCommandProcessor
 	rst TextScriptEnd
 .astonishing
-	text "astonishing!"
+	text "étonnant!"
 	prompt
 .fascinating
-	text "fascinating!"
+	text "fascinant!"
 	prompt
 .tantalizing
-	text "tantalizing!"
+	text "captivant!"
 	prompt
 .engrossing
-	text "engrossing!"
+	text "passionnant!"
 	prompt
 .enthralling
-	text "enthralling!"
+	text "palpitant!"
 	prompt
 .interesting
-	text "interesting!"
+	text "intéressant!"
 	prompt
 .intriguing
-	text "intriguing!"
+	text "intrigant!"
 	prompt
 .enlightening
-	text "enlightening!"
+	text "enrichissant!"
 	prompt
 
 _KeepReadingText::
-	text "Keep reading?"
+	text "Continuer?"
 	done
 
 _CheckDexToSeeIt::
-	text "Check your #DEX"
-	line "to read it!"
+	text "Vérifie ton #DEX"
+	line "pour le lire!"
 	done
 
 _WhileGoingHeadingToShipInfirmary::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "taught you about"
+	line "t'a parlé de"
 	cont "@"
 	text_ram_namebuffer
-	text " while"
-	cont "heading to the"
-	cont "ship infirmary."
+	text " en"
+	cont "allant vers"
+	cont "l'infirmerie."
 	prompt
 
 _LearnsetFondMemories::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "recounted fond"
-	cont "memories made"
-	cont "with @"
+	line "a évoqué de bons"
+	cont "souvenirs avec"
+	cont "@"
 	text_ram_namebuffer
 	text "."
 	prompt
 
 
 _PlayedAroundWith::
-	text "<PLAYER> and the"
+	text "<PLAYER> et le"
 	line "@"
 	text_ram wTrainerName
-	text " played"
-	cont "around with"
+	text " ont"
+	cont "joué un peu avec"
 	cont "@"
 	text_ram_namebuffer
-	text " a bit."
+	text "."
 	prompt
 
 _LearnsetDream::
-	text "The @"
+	text "Le @"
 	text_ram wTrainerName
 	text_start
-	line "described the"
-	cont "strange dream"
-	cont "they had about"
-	cont "@"
+	line "a décrit un rêve"
+	cont "étrange à propos"
+	cont "de @"
 	text_ram_namebuffer
 	text "."
 	prompt
@@ -275,19 +281,19 @@ _LearnsetDream::
 _BlaineStory::
 	text "@"
 	text_ram wTrainerName
-	text " told"
-	line "his epic story"
-	cont "about being saved"
-	cont "by @"
+	text " a"
+	line "raconté comment"
+	cont "@"
 	text_ram_namebuffer
-	text "."
+	text " l'a"
+	cont "sauvé la vie."
 	prompt
 
 _LearnsetNaturalHabitatText::
-	text "<PLAYER> observed"
+	text "<PLAYER> observe"
 	line "@"
 	text_ram_namebuffer
-	text " in its"
-	cont "natural habitat."
+	text " dans"
+	cont "son habitat"
+	cont "naturel."
 	prompt
-

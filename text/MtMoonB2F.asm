@@ -203,10 +203,11 @@ _MtMoonB2FRocket4AfterBattleText::
 	done
 
 _MtMoonB2fRocket4AfterBattleLearnsetText::
-	text "So kid, how'd you"
-	line "like my @"
+	text "Alors gamin, t'as"
+	line "aimé mon"
+	cont "@"
 	text_ram_namebuffer
 	text "?"
-	para "Pretty scary, huh?"
+	para "Plutôt flippant?"
 	para "@"
 	text_end

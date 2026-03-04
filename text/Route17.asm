@@ -85,12 +85,12 @@ _Route17Biker5AfterBattleText::
 	done
 
 _LearnsetElectrode::
-	text "It wasn't easy"
-	line "to catch one"
-	cont "before it used"
-	cont "EXPLOSION."
-	para "I had to use a"
-	line "HYPER BALL!"
+	text "C'était pas"
+	line "facile d'en"
+	cont "attraper un avant"
+	cont "qu'il EXPLOSE."
+	para "J'ai dû utiliser"
+	line "une HYPER BALL!"
 	para "@"
 	text_end
 

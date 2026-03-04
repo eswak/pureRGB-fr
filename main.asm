@@ -469,10 +469,9 @@ INCLUDE "engine/battle/volcano_battle_init.asm"
 INCLUDE "engine/gfx/enter_map_replace_tiles_check.asm"
 INCLUDE "engine/battle/move_effects/defense_curl_effect.asm"
 INCLUDE "engine/battle/remap_move_data.asm"
-INCLUDE "engine/battle/move_effects/conversion.asm"
-
 SECTION "newCode2", ROMX
 
+INCLUDE "engine/battle/move_effects/conversion.asm"
 INCLUDE "engine/overworld/overworld_animation.asm"
 INCLUDE "custom_functions/func_enhancedcolor.asm"
 INCLUDE "custom_functions/func_shiny.asm"

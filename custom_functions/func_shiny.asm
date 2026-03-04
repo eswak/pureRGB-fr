@@ -26,7 +26,7 @@ CheckPlayerShinyDVs:
 	pop hl
 	ret
 	
-CheckLoadedShinyDVs:
+CheckLoadedShinyDVs::
 	push hl
 	ld hl, wLoadedMonDVs
 	call ShinyDVsChecker

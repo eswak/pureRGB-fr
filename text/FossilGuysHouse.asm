@@ -43,6 +43,7 @@ _FossilGuyHaveFossil::
 	para "Ca te va?"
 	done
 
+_GenericSuitYourselfText::
 _FossilGuyDenied::
 	text "Comme tu veux!"
 	done

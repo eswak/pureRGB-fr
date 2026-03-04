@@ -5,6 +5,20 @@ _VermilionPidgeyHouseYoungsterText::
 	cont "au nord!"
 	done
 
+_VermilionPidgeyHouseYoungsterLearnset::
+	text "@"
+	text_ram_namebuffer
+	text " is actually"
+	line "a very capable"
+	cont "letter deliverer!"
+	para "Amazing sense of"
+	line "direction!"
+	para "So useful."
+	para "Interested in"
+	line "hearing more?"
+	para "Have a seat!"
+	prompt
+
 _VermilionPidgeyHousePidgeyText::
 	text "ROUCOOL:"
 	cont "Kurukkoo!@"

@@ -31,6 +31,16 @@ _Route11Gambler2AfterBattleText::
 	cont "pas de lâches!"
 	done
 
+_LearnsetBellsprout::
+	text "You've got to be"
+	line "flexible, like my"
+	cont "@"
+	text_ram_namebuffer
+	text "!"
+	para "Move, sway, and"
+	line "adapt!"
+	prompt
+
 _Route11Youngster1BattleText::
 	text "On y va!"
 	line "Mais triche pas!"
@@ -64,6 +74,18 @@ _Route11SuperNerd1AfterBattleText::
 	line "économiser"
 	cont "l'énergie!"
 	done
+
+_LearnsetMagneton::
+	text "@"
+	text_ram_namebuffer
+	text " gather"
+	line "in places that"
+	cont "overuse energy."
+	para "They can cause"
+	line "big blackouts!"
+	para "@"
+	text_end
+
 
 _Route11Youngster2BattleText::
 	text "Je suis nouveau,"
@@ -133,7 +155,28 @@ _Route11Youngster3AfterBattleText::
 	line "peux l'attraper."
 	done
 
+_LearnsetStaryu::
+	text "But I've already"
+	line "got this @"
+	text_ram_namebuffer
+	text "!"
+	para "It has such a"
+	line "peculiar shape."
+	para "Reminds me of"
+	line "outer space!"
+	para "@"
+	text_end
+
 _Route11SuperNerd2BattleText::
 	text "Fais gaffe"
 	line "aux câbles!"
 	done
+
+_LearnsetVulpixLuckyNumber::
+	text "Six is my lucky"
+	line "number!"
+	para "That's why I"
+	line "raised a @"
+	text_ram_namebuffer
+	text "!"
+	prompt

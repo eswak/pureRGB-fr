@@ -217,3 +217,59 @@ _DeblocageInfoText::
 	cont "au dernier centre"
 	cont "si en interieur."
 	prompt
+
+_LearnsetsInfoText::
+	text "Si ON et avec le"
+	line "MOVEDEX,"
+	para "tu peux debloquer"
+	line "les infos sur les"
+	cont "capacites apprises"
+	cont "en montant tes"
+	cont "#MON de niveau"
+	cont "ou en parlant a"
+	cont "des <TRAINER>s."
+	prompt
+
+_IntroInfoText::
+	text "Tu peux passer"
+	line "l'animation"
+	cont "d'intro au"
+	cont "demarrage du jeu."
+	prompt
+
+_FlashingInfoText::
+	text "Si MOINS, les"
+	line "animations"
+	cont "clignotantes"
+	cont "seront reduites."
+	prompt
+
+_UnitsInfoText::
+	text "Alterne entre"
+	line "unites metriques"
+	cont "/ imperiales dans"
+	cont "les entrees du"
+	cont "#DEX."
+	prompt
+
+_CatchupInfoText::
+	text "Si ON, des clubs"
+	line "ou entrainer tes"
+	cont "#MON faibles"
+	cont "a un niveau"
+	cont "limite apparaitront"
+	cont "dans:"
+	para "SAFRANIA, CELADOPOLE"
+	line "+ CARMIN SUR MER."
+	para "Pas vraiment utile"
+	line "sauf si tu changes"
+	cont "souvent les #MON"
+	cont "de ton equipe."
+	prompt
+
+_TitleInfoText::
+	text "Tu peux changer"
+	line "l'ecran titre"
+	cont "pour une version"
+	cont "mise a jour."
+	prompt

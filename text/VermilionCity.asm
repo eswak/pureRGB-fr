@@ -167,3 +167,44 @@ _VermilionCityDockBeautyEndText::
 	cont "calme des vagues"
 	cont "douces."
 	done
+
+_VermilionCityTradeHouseGameboyKidText::
+	text "Echanger mon"
+	line "CANARTICHO?"
+	para "Pourquoi je"
+	line "ferais ca?!"
+	para "DUX est mon"
+	line "meilleur #MON!"
+	para "Va attraper le"
+	line "tien."
+	done
+
+_VermilionCityTradeHouseGameboyKidLearnsetText::
+	text "He! Tu vois pas"
+	line "que je suis"
+	cont "occupe?"
+	para "Tiens!"
+	para "Prends mes notes"
+	line "d'entrainement"
+	cont "de DUX!"
+	prompt
+
+_VermilionCityTradeHouseDUXText::
+	text "DUX: Coin!"
+	done
+
+_VermilionCityTradeHouseDUX2Text::
+	text "Il te tend un"
+	line "brin de poireau."
+	para "Il a l'air d'en"
+	line "avoir en reserve!"
+	done
+
+_VermilionCityTradeHouseClipboardText::
+	text "Astuces secretes"
+	line "pour son jeu"
+	cont "video."
+	para "Il a du appeler"
+	line "la HOTLINE"
+	cont "NINTENDO!"
+	done

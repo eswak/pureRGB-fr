@@ -27,6 +27,16 @@ _PokemonTower1FGirlText::
 	line "Reviens..."
 	done
 
+_PokemonTower1FGirl2Text::
+	text "Sniff<...>"
+	para "What's that?"
+	para "You want to hear"
+	line "about my darling"
+	cont "@"
+	text_ram_namebuffer
+	text "?"
+	prompt
+
 _PokemonTower1FChannelerText::
 	text "Je suis une"
 	line "EXORCISTE! Je"

@@ -48,6 +48,26 @@ _Route3Youngster2AfterBattleText::
 	cont "20 #MON!"
 	done
 
+_Route3Youngster2AfterBattleText2::
+	text "Tu aimes les"
+	line "shorts?"
+	done
+
+_Route3Youngster2AfterBattleText3Yes::
+	text "Genial!"
+	done
+
+_Route3Youngster2AfterBattleText3Yes2::
+	text "Voici des infos"
+	line "sur RATTATA-"
+	para "de fan de shorts"
+	line "a fan de shorts!"
+	prompt
+
+_Route3Youngster2AfterBattleText3No::
+	text "Nul!"
+	done
+
 _Route3CooltrainerF1BattleText::
 	text "Tu veux ma"
 	line "photo?"
@@ -149,6 +169,17 @@ _Route3CooltrainerF3AfterBattleText::
 	line "est au pied du"
 	cont "MONT SELENITE."
 	done
+
+_Route3CooltrainerF3AfterBattleText2::
+	text "But @"
+	text_ram_namebuffer
+	text_start
+	line "and I met here"
+	cont "on ROUTE 3!"
+	para "What a sweet"
+	line "memory."
+	para "@"
+	text_end
 
 _Route3SignText::
 	text "ROUTE 3 vers le"

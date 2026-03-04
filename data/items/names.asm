@@ -1,109 +1,255 @@
-ItemNames::
-	list_start
-	li "MASTER BALL"
-	li "BALL ULTRA" ; ULTRA BALL
-	li "SUPER BALL" ; GREAT BALL
-	li "POKé BALL"
-	li "HYPER BALL"
-	li "BICYCLETTE"
-	li "?????" ; SURFBOARD
-	li "SAFARI BALL"
-	li "POKéDEX"
-	li "PIERRE LUNE"
-	li "ANTIDOTE"
-	li "ANTI-BRULE"
-	li "ANTIGEL"
-	li "REVEIL"
-	li "ANTI-PARA"
-	li "GUERISON"
-	li "POTION MAX"
-	li "HYPER POTION"
-	li "SUPER POTION"
-	li "POTION"
-	li "APPAT" ; BAIT
-	li "PIERRE" ; ROCK
-	li "VIEILLE PIECE" ; OLD COIN
-	li "CLE TOP SECRET" ; TOPSECRETKEY
-	li "INUTILISE3" ; UNUSED3
-	li "INUTILISE4" ; UNUSED4
-	li "INUTILISE5" ; UNUSED5
-	li "INUTILISE6" ; UNUSED6
-	li "CORDE SORTIE"
-	li "REPOUSSE"
-	li "VIEIL AMBRE"
-	li "PIERRE FEU"
-	li "PIERREFOUDRE"
-	li "PIERRE EAU"
-	li "PV PLUS"
-	li "PROTEINE"
-	li "FER"
-	li "CARBONE"
-	li "CALCIUM"
-	li "SUPER BONBON"
-	li "FOSSILE DOME"
-	li "NAUTILE"
-	li "CLE SECRETE"
-	li "ABRA POCHE" ; POCKET ABRA
-	li "BON VELO" ; BIKE VOUCHER
-	li "PRECISION +"
-	li "PIERREPLANTE"
-	li "CARTE MAGN."
-	li "PEPITE"
-	li "PUCE APEX" ; APEX CHIP
-	li "POKéPOUPEE"
-	li "TOTAL SOIN"
-	li "RAPPEL"
-	li "RAPPEL MAX"
-	li "DEFENSE SPEC"
-	li "SUPEREPOUSSE"
-	li "MAX REPOUSSE"
-	li "MUSCLE +"
-	li "JETONS"
-	li "EAU FRAICHE"
-	li "SODA COOL"
-	li "LIMONADE"
-	li "PASSE BATEAU"
-	li "DENT D'OR"
-	li "ATTAQUE +"
-	li "DEFENSE +"
-	li "VITESSE +"
-	li "SPECIAL +"
-	li "PORTEFEUILLE" ; LOST WALLET
-	li "COLIS CHEN"
-	li "CHERCH'OBJET"
-	li "SCOPE SYLPHE"
-	li "POKéFLUTE"
-	li "CLE ASC."
-	li "PUCE BOOST" ; BOOSTER CHIP
-	li "CANNE"
-	li "SUPER CANNE"
-	li "MEGA CANNE"
-	li "PP PLUS"
-	li "HUILE"
-	li "HUILE MAX"
-	li "ELIXIR"
-	li "MAX ELIXIR"
-	assert_list_length NUM_ITEMS
-	li "2EME SS"
-	li "1ER SS"
-	li "RDC"
-	li "1ER ETAGE"
-	li "2EME ETAGE"
-	li "3EME ETAGE"
-	li "4EME ETAGE"
-	li "5EME ETAGE"
-	li "6EME ETAGE"
-	li "7EME ETAGE"
-	li "8EME ETAGE"
-	li "9EME ETAGE"
-	li "10EME ETAGE"
-	li "4EME SS"
-	assert_list_length NUM_ITEMS + NUM_FLOORS
-	li "BADGE ROCHE"
-	li "BADGECASCADE"
-	li "BADGE FOUDRE"
-	li "BADGE PRISME"
-	li "BADGE AME"
-	li "BADGE MARAIS"
-	li "BADGE VOLCAN"
-	li "BADGE TERRE"
+; PureRGBnote: names here were converted to a jump table to reduce execution time in getting an item name
+; the downside is it takes up extra space
+ItemNameJumpTable::
+	table_width 2
+	dw MASTERBALLName
+	dw ULTRABALLName
+	dw GREATBALLName
+	dw POKEBALLName
+	dw HYPERBALLName
+	dw BICYCLEName
+	dw SURFBOARDName
+	dw SAFARIBALLName
+	dw POKEDEXName
+	dw MOONSTONEName
+	dw ANTIDOTEName
+	dw BURNHEALName
+	dw ICEHEALName
+	dw AWAKENINGName
+	dw PARLYZHEALName
+	dw FULLRESTOREName
+	dw MAXPOTIONName
+	dw HYPERPOTIONName
+	dw SUPERPOTIONName
+	dw POTIONName
+	dw BAITName
+	dw ROCKName
+	dw OLDCOINName
+	dw TOPSECRETKEYName
+	dw CAMERAName
+	dw UNUSED4Name
+	dw UNUSED5Name
+	dw UNUSED6Name
+	dw ESCAPEROPEName
+	dw REPELName
+	dw OLDAMBERName
+	dw FIRESTONEName
+	dw THUNDERSTONEName
+	dw WATERSTONEName
+	dw HPUPName
+	dw PROTEINName
+	dw IRONName
+	dw CARBOSName
+	dw CALCIUMName
+	dw RARECANDYName
+	dw DOMEFOSSILName
+	dw HELIXFOSSILName
+	dw SECRETKEYName
+	dw POCKETABRAName
+	dw BIKEVOUCHERName
+	dw XACCURACYName
+	dw LEAFSTONEName
+	dw CARDKEYName
+	dw NUGGETName
+	dw APEXCHIPName
+	dw POKEDOLLName
+	dw FULLHEALName
+	dw REVIVEName
+	dw MAXREVIVEName
+	dw GUARDSPECName
+	dw SUPERREPELName
+	dw MAXREPELName
+	dw DIREHITName
+	dw COINName
+	dw FRESHWATERName
+	dw SODAPOPName
+	dw LEMONADEName
+	dw SSTICKETName
+	dw GOLDTEETHName
+	dw XATTACKName
+	dw XDEFENDName
+	dw XSPEEDName
+	dw XSPECIALName
+	dw LOSTWALLETName
+	dw OAKSPARCELName
+	dw ITEMFINDERName
+	dw SILPHSCOPEName
+	dw POKEFLUTEName
+	dw LIFTKEYName
+	dw BOOSTERCHIPName
+	dw OLDRODName
+	dw GOODRODName
+	dw SUPERRODName
+	dw PPUPName
+	dw ETHERName
+	dw MAXETHERName
+	dw ELIXERName
+	dw MAXELIXERName
+	assert_table_length NUM_ITEMS
+
+MASTERBALLName:
+	db "MASTER BALL@"
+ULTRABALLName:
+	db "BALL ULTRA@"
+GREATBALLName:
+	db "SUPER BALL@"
+POKEBALLName:
+	db "POKé BALL@"
+HYPERBALLName:
+	db "HYPER BALL@"
+BICYCLEName:
+	db "BICYCLETTE@"
+SURFBOARDName:
+	db "?????@" ; SURFBOARD
+SAFARIBALLName:
+	db "SAFARI BALL@"
+POKEDEXName:
+	db "POKéDEX@"
+MOONSTONEName:
+	db "PIERRE LUNE@"
+ANTIDOTEName:
+	db "ANTIDOTE@"
+BURNHEALName:
+	db "ANTI-BRULE@"
+ICEHEALName:
+	db "ANTIGEL@"
+AWAKENINGName:
+	db "REVEIL@"
+PARLYZHEALName:
+	db "ANTI-PARA@"
+FULLRESTOREName:
+	db "GUERIS.TOUT@"
+MAXPOTIONName:
+	db "POT.MAX@"
+HYPERPOTIONName:
+	db "HYPER POT.@"
+SUPERPOTIONName:
+	db "SUPER POT.@"
+POTIONName:
+	db "POTION@"
+BAITName:
+	db "APPAT@"
+ROCKName:
+	db "PIERRE@"
+OLDCOINName:
+	db "VIEILLE PIECE@"
+TOPSECRETKEYName:
+	db "CLE TOP SEC.@"
+CAMERAName:
+	db "CAMERA@"
+UNUSED4Name:
+	db "UNUSED4@"
+UNUSED5Name:
+	db "UNUSED5@"
+UNUSED6Name:
+	db "UNUSED6@"
+ESCAPEROPEName:
+	db "CORDE SORT.@"
+REPELName:
+	db "REPOUSSE@"
+OLDAMBERName:
+	db "VIEIL AMBRE@"
+FIRESTONEName:
+	db "PIERRE FEU@"
+THUNDERSTONEName:
+	db "PIERRE FODR@"
+WATERSTONEName:
+	db "PIERR'EAU@"
+HPUPName:
+	db "PV PLUS@"
+PROTEINName:
+	db "PROTEINE@"
+IRONName:
+	db "FER@"
+CARBOSName:
+	db "CARBONE@"
+CALCIUMName:
+	db "CALCIUM@"
+RARECANDYName:
+	db "SUPER BONBON@"
+DOMEFOSSILName:
+	db "FOSSILE DOME@"
+HELIXFOSSILName:
+	db "NAUTILE@"
+SECRETKEYName:
+	db "CLE SECRETE@"
+POCKETABRAName:
+	db "ABRA POCHE@"
+BIKEVOUCHERName:
+	db "BON VELO@"
+XACCURACYName:
+	db "PRECISION +@"
+LEAFSTONEName:
+	db "PIERREPLANTE@"
+CARDKEYName:
+	db "CARTE CLE@"
+NUGGETName:
+	db "PEPITE@"
+APEXCHIPName:
+	db "PUCE APEX@"
+POKEDOLLName:
+	db "POKéPOUPEE@"
+FULLHEALName:
+	db "TOTAL SOIN@"
+REVIVEName:
+	db "RAPPEL@"
+MAXREVIVEName:
+	db "RAPPEL MAX@"
+GUARDSPECName:
+	db "DEFENSE SPEC@"
+SUPERREPELName:
+	db "SUPER REPOU.@"
+MAXREPELName:
+	db "REPOU. MAX@"
+DIREHITName:
+	db "MUSCLE +@"
+COINName:
+	db "JETONS@"
+FRESHWATERName:
+	db "EAU FRAICHE@"
+SODAPOPName:
+	db "SODA@"
+LEMONADEName:
+	db "LIMONADE@"
+SSTICKETName:
+	db "TICKET@"
+GOLDTEETHName:
+	db "DENTIER@"
+XATTACKName:
+	db "ATTAQUE +@"
+XDEFENDName:
+	db "DEFENSE +@"
+XSPEEDName:
+	db "VITESSE +@"
+XSPECIALName:
+	db "SPECIAL +@"
+LOSTWALLETName:
+	db "PORTEFEUILLE@"
+OAKSPARCELName:
+	db "COLIS CHEN@"
+ITEMFINDERName:
+	db "CHERCH'OBJET@"
+SILPHSCOPEName:
+	db "SCOPE SYLPH@"
+POKEFLUTEName:
+	db "POKé FLUTE@"
+LIFTKEYName:
+	db "CLE ASCENS.@"
+BOOSTERCHIPName:
+	db "PUCE BOOST@"
+OLDRODName:
+	db "CANNE@"
+GOODRODName:
+	db "SUPER CANNE@"
+SUPERRODName:
+	db "MEGA CANNE@"
+PPUPName:
+	db "PP PLUS@"
+ETHERName:
+	db "ETHER@"
+MAXETHERName:
+	db "ETHER MAX@"
+ELIXERName:
+	db "ELIXIR@"
+MAXELIXERName:
+	db "ELIXIR MAX@"

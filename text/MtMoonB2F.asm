@@ -11,7 +11,7 @@ _MtMoonB2FHelixFossilYouWantText::
 _MtMoonB2FReceivedFossilText::
 	text "<PLAYER> obtient"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!@"
 	text_end
 
@@ -201,3 +201,12 @@ _MtMoonB2FRocket4AfterBattleText::
 	line "existaient bien"
 	cont "avant l'homme..."
 	done
+
+_MtMoonB2fRocket4AfterBattleLearnsetText::
+	text "So kid, how'd you"
+	line "like my @"
+	text_ram_namebuffer
+	text "?"
+	para "Pretty scary, huh?"
+	para "@"
+	text_end

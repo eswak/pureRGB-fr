@@ -118,3 +118,56 @@ _CeruleanBadgeHouseGarbageText::
 	para "C'est un"
 	line "designer?"
 	done
+
+_CeruleanBadgeHouseLeftPaperText::
+	text "Si tu as un"
+	line "MOVEDEX, tu peux"
+	cont "enregistrer les"
+	cont "capacites des"
+	cont "#MON du #DEX!"
+	para "Lis des livres ou"
+	line "parle a des"
+	cont "experts #MON"
+	cont "pour enregistrer"
+	cont "leurs capacites!"
+	done
+
+_CeruleanBadgeHouseCenterLeftPaperText::
+	text "Quand tu"
+	line "enregistres les"
+	cont "capacites d'un"
+	cont "#MON,"
+	para "celles de toute"
+	line "sa famille"
+	cont "d'evolution"
+	cont "seront aussi"
+	cont "enregistrees!"
+	done
+
+_CeruleanBadgeHouseCenterRightPaperText::
+	text "Les capacites"
+	line "n'affichent que"
+	cont "les noms des"
+	cont "attaques deja"
+	cont "vues en combat."
+	para "Si tu n'as pas vu"
+	line "l'attaque,"
+	para "tu peux au moins"
+	line "voir a quel"
+	cont "niveau le #MON"
+	cont "apprend une"
+	cont "nouvelle attaque!"
+	done
+
+_CeruleanBadgeHouseRightPaperText::
+	text "Si tu entraines"
+	line "ton #MON a un"
+	cont "niveau assez"
+	cont "eleve,"
+	para "tu le maitriseras"
+	line "parfaitement!"
+	para "Cela debloquera"
+	line "ses capacites!"
+	para "Si tu ne les as"
+	line "pas encore."
+	done

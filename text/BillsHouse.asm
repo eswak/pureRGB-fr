@@ -102,3 +102,11 @@ _BillsHouseGardenInfo::
 	para "Utilise juste les"
 	line "portes là-bas."
 	done
+
+_BillsHousePCInfo::
+	text "L'ecran affiche"
+	line "plein d'infos"
+	cont "sur @"
+	text_ram_namebuffer
+	text "!"
+	prompt

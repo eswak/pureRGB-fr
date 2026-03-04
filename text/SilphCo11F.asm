@@ -21,7 +21,7 @@ _SilphCo11FSilphPresidentText::
 _SilphCo11FSilphPresidentReceivedMasterBallText::
 	text "<PLAYER> obtient:"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!@"
 	text_end
 

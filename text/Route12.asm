@@ -35,6 +35,20 @@ _Route12Fisher1AfterBattleText::
 	line "une touche!"
 	done
 
+_LearnsetGoldeen::
+	text "I usually have"
+	line "@"
+	text_ram_namebuffer
+	text " use"
+	cont "SUPERSONIC to"
+	cont "unsnag it."
+	para "Gotta love"
+	line "@"
+	text_ram_namebuffer
+	text "!"
+	para "@"
+	text_end
+
 _Route12Fisher2BattleText::
 	text "Patience! Pour"
 	line "pêcher, faut être"
@@ -52,6 +66,19 @@ _Route12Fisher2AfterBattleText::
 	cont "gros, il me faut"
 	cont "une super CANNE!"
 	done
+
+_LearnsetTentacool::
+	text "Not just a bunch"
+	line "of @"
+	text_ram_namebuffer
+	text "!"
+	para "<...>"
+	para "Well actually,"
+	line "I think TENTACOOL"
+	cont "is kind of rad."
+	para "Do you agree?"
+	para "@"
+	text_end
 
 _Route12CooltrainerMBattleText::
 	text "As-tu trouvé une"
@@ -103,6 +130,21 @@ _Route12Fisher3AfterBattleText::
 	cont "j'suis plus fort"
 	cont "à la pêche!"
 	done
+
+_SeadraLearnset::
+	text "It's not every day"
+	line "you meet someone"
+	cont "who can catch a"
+	cont "@"
+	text_ram_namebuffer
+	text "!"
+	para "They live pretty"
+	line "deep underwater!"
+	para "So elusive!"
+	para "So!" 
+	line "#MON KID,"
+	para "@"
+	text_end
 
 _Route12Fisher4BattleText::
 	text "Bon, j'ai du pain"
@@ -160,6 +202,18 @@ _Route12AfterBattleText8::
 	cont "ça?"
 	done
 
+_ShellderLearnset::
+	text "I heard SHELLDER"
+	line "evolves into a"
+	cont "#MON with"
+	cont "monstrously good"
+	cont "stats!"
+	para "That's why I"
+	line "got one!"
+	para "@"
+	text_end
+
+
 _Route12BattleText9::
 	text "Certains #MON"
 	line "peuvent respirer"
@@ -194,4 +248,45 @@ _SnorlaxWentBackToSleepText::
 	text "L'air ennuyé,"
 	line "RONFLEX se"
 	cont "rendort."
+	done
+
+_Route12MetronomeGamblerText::
+	text "Je vais te montrer"
+	line "la puissance de"
+	cont "ma chance!"
+	done
+
+_Route12MetronomeGamblerEndBattleText::
+	text "Ma chance a perdu"
+	line "face au talent!"
+	para "He l'ami!"
+	para "Si j'apprenais"
+	line "METRONOME a ton"
+	cont "#MON?"
+	para "C'est marrant!"
+	prompt
+
+_Route12MetronomeGamblerMetronomeTeachText::
+	text "Un coup de des"
+	line "peut changer"
+	cont "une vie!"
+	para "Alors, partant?"
+	para "J'apprends"
+	line "METRONOME a un"
+	cont "#MON?"
+	done
+
+_Route12MetronomeGamblerMetronomeTeach2Text::
+	text "Va repandre le"
+	line "chaos METRONOME!"
+	para "Reviens si tu"
+	line "veux que je"
+	cont "l'apprenne encore!"
+	done
+
+_Route12MetronomeGamblerNoDitto::
+	text "METAMORPH?!"
+	para "Pas besoin!"
+	para "C'est deja un"
+	line "maitre de l'alea!"
 	done

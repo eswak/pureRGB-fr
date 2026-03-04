@@ -169,3 +169,20 @@ _VermilionGymGuideApexChipElectricText::
 	cont "éclairs et"
 	cont "tonnerre!"
 	prompt
+
+_VermilionGymGentlemanAfterLocksText::
+	text "There you go."
+	para "The gates opened!"
+	line "Good job!"
+	done
+
+_VermilionGymSuperNerdAfterLocksText::
+	text "Hey! You figured"
+	line "it out! Cool!"
+	done
+
+_VermilionGymSailorAfterLocksText::
+	text "You found the"
+	line "locks?"
+	para "You're sharp!"
+	done

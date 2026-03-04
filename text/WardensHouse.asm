@@ -66,6 +66,17 @@ _WardensHouseWardenHM04ExplanationText::
 	cont "SURF!"
 	done
 
+_WardensHouseWardenHM03AlreadyText::
+	text "Oh! You found the"
+	line "SECRET HOUSE in"
+	cont "the SAFARI ZONE?"
+
+	para "Congratulations!"
+	
+	para "Have fun with"
+	line "that SURF HM too!"
+	done
+
 _WardensHouseWardenHM04NoRoomText::
 	text "Ton sac est"
 	line "plein!"
@@ -87,4 +98,19 @@ _WardensHouseDeskPapersText::
 	line "dit:"
 	para "REQUISITION DE"
 	line "DENTIER"
+	done
+
+_WardensHouseWardenHM03ExplanationText::
+	text "Ah oui,"
+	line "as-tu trouve la"
+	cont "MAISON SECRETE"
+	cont "dans le PARC"
+	cont "SAFARI?"
+
+	para "Si oui, tu gagnes"
+	line "une CS!"
+
+	para "Il parait que"
+	line "c'est la rare"
+	cont "CS SURF."
 	done

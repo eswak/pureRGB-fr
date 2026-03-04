@@ -20,6 +20,10 @@ _Route24CooltrainerM3EndBattleText::
 	line "Trop fort!"
 	prompt
 
+_Route24CooltrainerF1AfterBattleText::
+_Route24Youngster2AfterBattleText::
+_Route24CooltrainerF2AfterBattleText::
+_Route24Youngster1AfterBattleText::
 _Route24CooltrainerM3AfterBattleText::
 	text "J'ai fait de mon"
 	line "mieux, pas de"
@@ -36,12 +40,6 @@ _Route24CooltrainerF1EndBattleText::
 	line "perdu aussi!"
 	prompt
 
-_Route24CooltrainerF1AfterBattleText::
-	text "J'ai fait de mon"
-	line "mieux, pas de"
-	cont "regrets!"
-	done
-
 _Route24Youngster1BattleText::
 	text "Voilà le 3e!"
 	line "Je serai pas"
@@ -53,12 +51,6 @@ _Route24Youngster1EndBattleText::
 	line "Ecrasé!"
 	prompt
 
-_Route24Youngster1AfterBattleText::
-	text "J'ai fait de mon"
-	line "mieux, pas de"
-	cont "regrets!"
-	done
-
 _Route24CooltrainerF2BattleText::
 	text "Je suis deuxième!"
 	line "Là c'est sérieux!"
@@ -68,12 +60,6 @@ _Route24CooltrainerF2EndBattleText::
 	text "Comment"
 	line "j'ai pu perdre?"
 	prompt
-
-_Route24CooltrainerF2AfterBattleText::
-	text "J'ai fait de mon"
-	line "mieux, pas de"
-	cont "regrets!"
-	done
 
 _Route24Youngster2BattleText::
 	text "C'est le PONT"
@@ -91,8 +77,3 @@ _Route24Youngster2EndBattleText::
 	line "Bon boulot!"
 	prompt
 
-_Route24Youngster2AfterBattleText::
-	text "J'ai fait de mon"
-	line "mieux, pas de"
-	cont "regrets!"
-	done

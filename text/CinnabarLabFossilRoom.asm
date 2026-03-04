@@ -44,7 +44,7 @@ _CinnabarLabFossilRoomScientist1FossilIsBackToLifeText::
 _CinnabarLabFossilRoomScientist1SeesFossilText::
 	text "Oh! C'est un"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 
 	para "C'est un fossile"

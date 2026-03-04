@@ -15,6 +15,15 @@ _Route9CooltrainerF1AfterBattleText::
 	cont "ce sombre tunnel."
 	done
 
+_LearnsetGloom::
+	text "My @"
+	text_ram_namebuffer
+	text " can use"
+	line "FLASH to get rid"
+	cont "of the darkness!"
+	para "@"
+	text_end
+
 _Route9CooltrainerM1BattleText::
 	text "Mais qui voilà,"
 	line "les bras chargés"
@@ -29,6 +38,17 @@ _Route9CooltrainerM1EndBattleText::
 _Route9CooltrainerM1AfterBattleText::
 	text "Passe ton chemin!"
 	done
+
+_RhyhornLearnset::
+	text "Yeah!"
+	para "Saw you eyeing my"
+	line "rough-and-tumble"
+	cont "@"
+	text_ram_namebuffer
+	text "!"
+	para "You know it's"
+	line "drop dead cool!"
+	prompt
 
 _Route9CooltrainerM2BattleText::
 	text "Je passe par la"
@@ -84,6 +104,15 @@ _Route9Hiker1AfterBattleText::
 	line "courageux toi!"
 	done
 
+_LearnsetSandslash::
+	text "Love my @"
+	text_ram_namebuffer
+	text "."
+	para "He's a trooper, eh?"
+	para "My anchor, eh?"
+	para "I could go on!"
+	prompt
+
 _Route9Hiker2BattleText::
 	text "Hahaha!"
 	line "T'es un p'tit"
@@ -99,6 +128,18 @@ _Route9Hiker2AfterBattleText::
 	text "Les gosses, c'est"
 	line "pas assez fort!"
 	done
+
+
+_GeodudeLearnset::
+	text "Resilient and"
+	line "hardy, like my"
+	cont "@"
+	text_ram_namebuffer
+	text "!"
+	para "Talk about a"
+	line "classic HIKER"
+	cont "#MON choice!"
+	prompt
 
 _Route9Youngster1BattleText::
 	text "Mes cocons de"

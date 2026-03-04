@@ -90,6 +90,18 @@ _ViridianCityFisherTM42ExplanationText::
 	cont "...(pionce)..."
 	done
 
+_ViridianCityFisherGastlyLearnset::
+	text "Hmm?"
+	para "Describe the dream"
+	line "I had in detail?"
+	para "It was about"
+	line "a giant @"
+	text_ram_namebuffer
+	text "."
+	para "Here goes<...>"
+	prompt
+
+
 _ViridianCityFisherTM42NoRoomText::
 	text "Tu es trop"
 	line "chargé."

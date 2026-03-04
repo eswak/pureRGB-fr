@@ -84,6 +84,16 @@ _Route17Biker5AfterBattleText::
 	cont "la CENTRALE."
 	done
 
+_LearnsetElectrode::
+	text "It wasn't easy"
+	line "to catch one"
+	cont "before it used"
+	cont "EXPLOSION."
+	para "I had to use a"
+	line "HYPER BALL!"
+	para "@"
+	text_end
+
 _Route17Biker6BattleText::
 	text "Hein? Faire"
 	line "évoluer mes"

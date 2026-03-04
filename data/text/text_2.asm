@@ -11,7 +11,7 @@ _AIBattleUseItemText::
 	text_ram wTrainerName
 	text " uti-"
 	line "lise @"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	cont "sur @"
 	text_ram wEnemyMonNick
@@ -19,7 +19,7 @@ _AIBattleUseItemText::
 	prompt
 
 _TradeWentToText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " va"
 	line "à @"
 	text_ram wLinkEnemyTrainerName
@@ -28,7 +28,7 @@ _TradeWentToText::
 
 _TradeForText::
 	text "Contre @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "de <PLAYER>,"
 	done
@@ -37,7 +37,7 @@ _TradeSendsText::
 	text_ram wLinkEnemyTrainerName
 	text_start
 	line "donne @"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 	done
 
@@ -48,7 +48,7 @@ _TradeWavesFarewellText::
 	done
 
 _TradeTransferredText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	line "(sniff sniff)"
 	done
@@ -56,7 +56,7 @@ _TradeTransferredText::
 _TradeTakeCareText::
 	text "Prends soin de"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 	done
 
@@ -64,13 +64,13 @@ _TradeWillTradeText::
 	text_ram wLinkEnemyTrainerName
 	text_start
 	line "offre @"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	done
 
 _TradeforText::
 	text "Contre @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "de <PLAYER>."
 	done
@@ -107,7 +107,7 @@ _OneMoreGoSlotMachineText::
 _LinedUpText::
 	text " en ligne!"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " jetons!"
 	done
 
@@ -132,32 +132,23 @@ _DexRatingText::
 	text "Eval. #DEX<COLON>"
 	done
 
-_GymStatueText1:: ; TODO: parameterize
-	text "ARENE #MON"
-	line "de @"
-	text_ram wStringBuffer
+_GymStatueText::
+	text_ram_stringbuffer
 	text_start
-	cont "CHAMPION:"
-	cont "@"
-	text_ram wNameBuffer
+	line "ARENE #MON"
+	cont "CHAMPION: @"
+	text_ram_namebuffer
 	text_start
 
-	para "VAINQUEURS:"
-	line "<RIVAL>"
+	para "VAINQUEURS:@"
+	text_end
+
+_GymStatueRival::
+	text "<LINE><RIVAL>"
 	done
 
-_GymStatueText2::
-	text "ARENE #MON"
-	line "de @"
-	text_ram wStringBuffer
-	text_start
-	cont "CHAMPION:"
-	cont "@"
-	text_ram wNameBuffer
-	text_start
-
-	para "VAINQUEURS:"
-	line "<RIVAL>"
+_GymStatueRivalPlayer::
+	text "<LINE><RIVAL>"
 	cont "<PLAYER>"
 	done
 
@@ -223,12 +214,12 @@ _UnusedBenchGuyText2::
 	cont "Me gagne..."
 	done
 
-_UnusedBenchGuyText3::
-	text "Le patron de la"
-	line "SYLPHE se cache"
-	cont "dans le PARC"
-	cont "SAFARI."
-	done
+;_UnusedBenchGuyText3::
+;	text "Le patron de la"
+;	line "SYLPHE se cache"
+;	cont "dans le PARC"
+;	cont "SAFARI."
+;	done
 
 _VermilionPokecenterGuyText::
 	text "C'est vrai qu'un"
@@ -812,25 +803,25 @@ _VermilionGymTrashSuccessText3::
 	para "La porte s'ouvre!@"
 	text_end
 
-_VermilionGymTrashFailText::
-	text "Une poubelle bien"
-	line "dégueulasse!"
-	cont "Oups... Les"
-	cont "verrouillages"
-	cont "sont en place!@"
-	text_end
+;_VermilionGymTrashFailText::
+;	text "Une poubelle bien"
+;	line "dégueulasse!"
+;	cont "Oups... Les"
+;	cont "verrouillages"
+;	cont "sont en place!@"
+;	text_end
 
 _FoundHiddenItemText::
 	text "<PLAYER> trouve:"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!@"
 	text_end
 
 _FoundHiddenItemMultiText::
 	text "<PLAYER> trouve:"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " ×@"
 	text_ram wTempStore1
 	text "!@"
@@ -1137,15 +1128,15 @@ _ConfusedNoMoreText::
 	line "se sent mieux!"
 	prompt
 
-_SavingEnergyText::
-	text "<USER>"
-	line "se concentre!"
-	prompt
+;_SavingEnergyText::
+;	text "<USER>"
+;	line "se concentre!"
+;	prompt
 
-_UnleashedEnergyText::
-	text "<USER>"
-	line "envoie la sauce!"
-	prompt
+;_UnleashedEnergyText::
+;	text "<USER>"
+;	line "envoie la sauce!"
+;	prompt
 
 _ThrashingAboutText::
 	text "<USER>"
@@ -1163,7 +1154,7 @@ _CantMoveText::
 	prompt
 
 _MoveIsDisabledText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " de"
 	line "<USER>"
 	cont "a disparu!"
@@ -1184,7 +1175,7 @@ _InsteadText::
 	text_end
 
 _MoveNameText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "@"
 
 _ExclamationPointText::
@@ -1280,7 +1271,7 @@ _HitXTimesText::
 	prompt
 
 _GainedText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " gagne"
 	line "@"
 	text_end
@@ -1301,7 +1292,7 @@ _ExpPointsText::
 	prompt
 
 _GrewLevelText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " monte"
 	line "au niveau @"
 	text_decimal wCurEnemyLevel, 1, 3
@@ -1471,7 +1462,7 @@ _PartyMenuEmptyText::
 	done
 
 _PotionText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "gagne @"
 	text_decimal wHPBarHPDifference, 2, 3
@@ -1479,52 +1470,52 @@ _PotionText::
 	done
 
 _AntidoteText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " est"
 	line "guéri du poison!"
 	done
 
 _ParlyzHealText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "peut bouger!"
 	done
 
 _BurnHealText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "ne brûle plus!"
 	done
 
 _IceHealText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "est dégelé!"
 	done
 
 _AwakeningText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "se réveille!"
 	done
 
 _FullHealText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "est soigné!"
 	done
 
 _ReviveText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "revient à lui!"
 	done
 
 _RareCandyText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " monte"
 	line "au niveau @"
-	text_decimal wCurEnemyLevel, $1,$3
+	text_decimal wCurEnemyLevel, 1, 3
 	text "!@"
 	text_end
 
@@ -1591,7 +1582,7 @@ _DepositHowManyText::
 _ItemWasStoredText::
 	text "L'objet"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " a"
 	cont "été stocké."
 	prompt
@@ -1618,7 +1609,7 @@ _WithdrawHowManyText::
 _WithdrewItemText::
 	text "Retrait de:"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 	prompt
 
@@ -1670,7 +1661,7 @@ _DepositWhichMonText::
 	done
 
 _MonWasStoredText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " est"
 	line "stocké dans la"
 	cont "boite @"
@@ -1692,7 +1683,7 @@ _BoxFullText::
 _MonIsTakenOutText::
 	text "Retrait de"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	cont "terminé."
 	prompt
@@ -1717,18 +1708,18 @@ _ReleaseWhichMonText::
 	done
 
 _OnceReleasedText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " sera"
 	line "à jamais perdu."
 	cont "Continuer?"
 	done
 
 _MonWasReleasedText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " est"
 	line "relâché. Adieu,"
 	cont "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!"
 	prompt
 
@@ -1757,8 +1748,12 @@ _HereYouGoText::
 	text "Et voilà!@"
 	text_end
 
+_GoodChoice::
+	text "Good choice!"
+	done
+
 _SoYouWantPrizeText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "?"
 	done
 
@@ -1883,7 +1878,7 @@ _DoYouWantToNicknameText::
 	text "Voulez-vous"
 	line "donner un surnom"
 	cont "à @"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "?"
 	done
 
@@ -1902,15 +1897,15 @@ _WillBeTradedText::
 	text_ram wNameOfPlayerMonToBeTraded
 	text " et"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " seront"
 	cont "échangés."
 	done
 
-_TextIDErrorText::
-	text_decimal hTextID, 1, 2
-	text " ERROR."
-	done
+;_TextIDErrorText::
+;	text_decimal hTextID, 1, 2
+;	text " ERROR."
+;	done
 
 _ContCharText::
 	text "<_CONT>@"
@@ -1971,6 +1966,11 @@ _SaveFileUpdateText2::
 _SaveFileUpdateTextConfirm::
 	text "Appuyez sur START"
 	line "pour confirmer."
+	done
+
+_SaveFileUpdating::
+	text "Updating<...>"
+	line "Please wait<...>"
 	done
 
 _SaveFileUpdateCompleteText::

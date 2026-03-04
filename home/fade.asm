@@ -96,6 +96,7 @@ GBFadeInFromWhite::
 	call GBPalWhiteOut
 	call EnableLCD
 .dmgFade
+GBFadeInFromWhiteForcedOriginal::
 	ld hl, FadePal7 + 2
 	ld b, 3
 

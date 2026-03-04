@@ -261,6 +261,7 @@ _SecretLabMewtwoReactionText3::
 	cont "ouverte d'abord."
 	done
 
+_GenericWrongMonText::
 _SecretLabMewtwoReactionText4::
 	text "Mauvais #MON."
 	done
@@ -305,4 +306,11 @@ _SecretLabMewtwoTransformCompleteText::
 	text "PROCESSUS"
 	line "D'ARMEMENT TERMINE"
 	para "EN ATTENTE"
+	done
+
+_SecretLabComputer3BText::
+	text "Attends, c'est"
+	line "MEWTWO??"
+	para "Ca pourrait"
+	line "etre utile!"
 	done

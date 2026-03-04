@@ -50,29 +50,45 @@ _ChooseABoxDataWillSaveText::
 	text_end
 
 _EvolvedText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " évolue"
 	done
 
 _IntoText::
 	text_start
 	line "en @"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	done
 
 _StoppedEvolvingText::
 	text "Hein? @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "n'évolue plus!"
 	prompt
 
 _IsEvolvingText::
 	text "Hein? @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "évolue!"
+	done
+
+_YoureAnExpertText::
+	text "You're an expert"
+	line "with @"
+	text_ram_namebuffer
+	text "!@"
+	sound_get_item_2
+	text_promptbutton
+	text_end
+
+_LearnsetUnlockedText::
+	text "@"
+	text_ram_namebuffer
+	text "'s learn-"
+	line "set was recorded!"
 	done
 
 _FellAsleepText::
@@ -114,10 +130,11 @@ _FireDefrostedText::
 _MonsStatsRoseText::
 	text "<USER>"
 	line "gagne @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "@"
 	text_end
 
+_GreatlyFellText::
 _GreatlyRoseText::
 	text "<SCROLL>à fond@"
 	text_end
@@ -129,13 +146,10 @@ _RoseText::
 _MonsStatsFellText::
 	text "<TARGET>"
 	line "perd @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "@"
 	text_end
 
-_GreatlyFellText::
-	text "<SCROLL>à fond@"
-	text_end
 
 _FellText::
 	text "!"
@@ -194,12 +208,12 @@ _MimicLearnedMoveText::
 	text "<USER>"
 	line "apprend"
 	cont "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	prompt
 
 _MoveWasDisabledText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " de"
 	line "<TARGET>"
 	cont "a disparu!"
@@ -313,7 +327,7 @@ _TransformedText::
 	text "<USER>"
 	line "se transforme en"
 	cont "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	prompt
 
@@ -371,4 +385,36 @@ _AllDamageHalvedText::
 	text "Tous les dégâts"
 	line "sont divisés par"
 	cont "deux!"
+	prompt
+
+_SiphonSnagHealedUserText::
+	text "<USER>"
+	line "siphoned energy,"
+	cont "curing itself!"
+	prompt
+
+_SiphonSnagHealedPartyText::
+	text "<USER>"
+	line "siphoned energy,"
+	para "curing team member"
+	line "@"
+	text_ram_namebuffer
+	text "!"
+	prompt
+
+_ScreechesEchoedText::
+	text "Screeches echoed"
+	line "everywhere!"
+	prompt
+
+_ScreechesPreventedSleepText::
+	text "Echoing screeches"
+	line "prevented sleep!"
+	prompt
+
+_LetOutAScreechText::
+	text "But wait! At the"
+	line "last moment,"
+	para "<TARGET> let"
+	line "out a SCREECH!"
 	prompt

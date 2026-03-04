@@ -68,3 +68,12 @@ _CinnabarLabMetronomeRoomPCText::
 _CinnabarLabMetronomeRoomAmberPipeText::
 	text "Un tuyau à ambre!"
 	done
+
+_CinnabarLabKinglerLearnset::
+	text "I think I'll HAMMER"
+	line "some awesome"
+	cont "@"
+	text_ram_namebuffer
+	text " facts"
+	cont "into your skull!"
+	prompt

@@ -1,166 +1,143 @@
-; PureRGBnote: ADDED: Options 3 page - "Bonbons dresseurs" ON/OFF. When ON, player receives 1 super bonbon after each trainer victory.
-DEF OPTIONS_PAGE_5_COUNT EQU 2
+DEF OPTIONS_PAGE_5_COUNT EQU 6 ; 5 upstream + 1 trainer candies
 DEF OPTIONS_PAGE_5_NUMBER EQU 5
 
 ; format: "bit set" x position, "bit not set" x position, which bit it is, pointer to wram variable
-; ON at x=1 (start of line), OFF at x=10 (same layout as " ON       OFF@" on second line)
 Options3XPosBitData:
+	db 15, 12, FLAG_LEARNSETS_DISABLED % 8
+	dw wEventFlags + (FLAG_LEARNSETS_DISABLED / 8)
+	db 14, 11, BIT_NEW_TITLE_SCREEN
+	dw wSpriteOptions2
+	db 14, 11, BIT_SKIP_INTRO
+	dw wSpriteOptions2
+	db 14, 11, FLAG_FLASHING_REDUCED % 8
+	dw wEventFlags + (FLAG_FLASHING_REDUCED / 8)
+	db 15, 11, FLAG_IMPERIAL_METRIC % 8
+	dw wEventFlags + (FLAG_IMPERIAL_METRIC / 8)
 	db 1, 10, BIT_TRAINER_CANDIES
 	dw wOptions3
-	db -1
 
-Options3Header:
-	dw DrawOptions3Menu
+
+OptionsMenu3Header:
+	dw DrawOptionsMenu3
 	dw Options3SetCursorPositionActions
 	dw SetOptions3FromCursorPositions
 	dw Options3LeftRightFuncs
 	dw DisplayOptionMenu
 	dw DisplaySpriteOptions
-	dw OptionsPage3AorSelectButton
+	dw OptionsPageAorSelectButtonDefault
 	dw Options3InfoTextJumpTable
 	; fall through
 DisplayOptions3:
-	ld hl, Options3Header
-	ld bc, Options3Data
+	ld hl, OptionsMenu3Header
+	ld bc, OptionsMenu3Data
 	jp DisplayOptionMenuCommon
 
-; Cursor: base row 3 so arrows align with "ON/OFF" and "DEBLOCAGE" lines
-Options3YCoordVariableOffsetList:
+; first byte = y coord
+; second byte = which option on the page it is (cancel always = max option value)
+Options3CoordOffsetList:
 	db 3, 0
-	db 3, 1
+	db 5, 1
+	db 7, 2
+	db 9, 3
+	db 11, 4
+	db 13, 5
 	db PAGE_CONTROLS_Y_COORD, MAX_OPTIONS_PER_PAGE
 
-Options3Data:
-	db OPTIONS_PAGE_5_COUNT
-	db OPTIONS_PAGE_5_NUMBER
-	db HOW_MANY_MAIN_OPTIONS_PAGES
-	dw Options3YCoordVariableOffsetList
+OptionsMenu3Data:
+	db OPTIONS_PAGE_5_COUNT ; length of list
+	db OPTIONS_PAGE_5_NUMBER ; current page
+	db HOW_MANY_MAIN_OPTIONS_PAGES ; how many pages in total
+	dw Options3CoordOffsetList
 
 Options3SetCursorPositionActions:
 	dw SetCursorPositionFromOptions3
-	dw SetDeblocageCursorPosition
-	dw CursorCancelRow
+	dw SetCursorPositionFromOptions3
+	dw SetCursorPositionFromOptions3
+	dw SetCursorPositionFromOptions3
+	dw SetCursorPositionFromOptions3
+	dw SetCursorPositionFromOptions3
+
+OptionsMenu3Text:
+	db   "OPTIONS 3"
+	next " LEARNSETS: ON OFF"
+	next " TITRE:    OG Pure"
+	next " INTRO:    ON  OFF"
+	next " FLASHS:   OG  <-"
+	next " UNITES:   IMP MET"
+	next " BONBONS:  ON  OFF@"
+
+DrawOptionsMenu3:
+	hlcoord 0, 0
+	lb bc, 15, 18
+	call TextBoxBorder
+	hlcoord 1, 1
+	ld de, OptionsMenu3Text
+	jp PlaceString
 
 Options3LeftRightFuncs:
-	dw GenericOptions3CursorToggleFunc
-	dw OptionsDoNothing
+	dw Options3CursorToggleFunc15
+	dw Options3CursorToggleFunc14
+	dw Options3CursorToggleFunc14
+	dw Options3CursorToggleFunc14
+	dw Options3CursorToggleFunc15b
+	dw Options3CursorToggleFunc_b
 	dw CursorCancelRow
 
-SetDeblocageCursorPosition:
-	ld a, 1
-	ld [wOptions2CursorX], a
-	ret
+Options3CursorToggleFunc14:
+	ld b, %101
+	jp GenericOptionsCursorToggleFunc
 
-GenericOptions3CursorToggleFunc:
-	ld b, $0b ; 11: toggle between x=1 (ON) and x=10 (OFF), since 1 xor 11 = 10 and 10 xor 11 = 1
+Options3CursorToggleFunc15:
+	ld b, %11
+	jp GenericOptionsCursorToggleFunc
+
+Options3CursorToggleFunc15b:
+	ld b, %100
+	jp GenericOptionsCursorToggleFunc
+
+Options3CursorToggleFunc_b:
+	ld b, $0b
 	jp GenericOptionsCursorToggleFunc
 
 SetOptions3FromCursorPositions:
 	ld de, wOptions1CursorX
 	ld hl, Options3XPosBitData
-	ld b, 1
-	xor a
+	ld b, OPTIONS_PAGE_5_COUNT
 	jp LoopGenericSetOptionsFromCursorPositions
 
 SetCursorPositionFromOptions3:
 	ld hl, Options3XPosBitData
-	ld de, 0
 	jp SetGenericCursorPositionFromOptions
 
-Options3MenuText:
-	db   " BONBONS DRESSEURS"
-	next " ON       OFF"
-	next " DEBLOCAGE@"
-
-DrawOptions3Menu:
-	; Box height 5 so border ends just below "DEBLOCAGE" (rows 1-3)
-	hlcoord 0, 0
-	lb bc, 5, 18
-	call TextBoxBorder
-	hlcoord 1, 1
-	ld de, Options3MenuText
-	call PlaceString
-	; So PlaceMenuCursor draws at row 3+index: fix base and index when on option 0 or 1
-	ld a, [wCurrentOptionIndex]
-	cp 2
-	jr nc, .skipCursorFix
-	ld a, 3
-	ld [wTopMenuItemY], a
-	ld a, [wCurrentOptionIndex]
-	ld [wCurrentMenuItem], a
-.skipCursorFix
-	hlcoord 0, 15
-	lb bc, 3, SCREEN_WIDTH
-	jp ClearScreenArea
-
-OptionsPage3AorSelectButton:
-	ldh a, [hJoy5]
-	bit BIT_SELECT, a
-	jr nz, .showInfo
-	bit BIT_A_BUTTON, a
-	jr z, .noAction
-	ld a, [wCurrentOptionIndex]
-	cp 1
-	jr z, .doUnlock
-.noAction
-	and a
-	ret
-.showInfo
-	ld h, b
-	ld l, c
-	inc hl
-	inc hl
-	hl_deref
-	ld a, [wCurrentOptionIndex]
-	call GetAddressFromPointerArray
-	call PrintText
-	scf
-	ret
-.doUnlock
-	call DoUnlockFromOptions
-	; If they cancelled (B on map), wDoUnlockFromOptions is still 0: redraw menu (return carry)
-	ld a, [wDoUnlockFromOptions]
-	and a
-	jr z, .redrawMenu
-	and a
-	ret
-.redrawMenu
-	scf
-	ret
-
-DoUnlockFromOptions:
-	xor a
-	ld [wDoUnlockFromOptions], a
-	callfar CheckIfInFlyMap
-	jr z, .canFly
-	ld hl, wStatusFlags6
-	set BIT_FLY_WARP, [hl]
-	set BIT_ESCAPE_WARP, [hl]
-	ld hl, wStatusFlags4
-	set BIT_UNKNOWN_4_1, [hl]
-	res BIT_NO_BATTLES, [hl]
-	ld a, 2
-	ld [wDoUnlockFromOptions], a
-	ret
-.canFly
-	callfar ChooseFlyDestination
-	ld a, [wStatusFlags6]
-	bit BIT_FLY_WARP, a
-	ret z
-	ld a, 2
-	ld [wDoUnlockFromOptions], a
-	ResetFlag FLAG_DIG_OVERWORLD_ANIMATION
-	callfar ClearSafariFlags
-	ret
 
 Options3InfoTextJumpTable:
+	dw LearnsetsInfoText
+	dw TitleInfoText
+	dw IntroInfoText
+	dw FlashingInfoText
+	dw UnitsInfoText
 	dw TrainerCandiesInfoText
-	dw DeblocageInfoText
+
+LearnsetsInfoText:
+	text_far _LearnsetsInfoText
+	text_end
+
+TitleInfoText:
+	text_far _TitleInfoText
+	text_end
+
+IntroInfoText:
+	text_far _IntroInfoText
+	text_end
+
+FlashingInfoText:
+	text_far _FlashingInfoText
+	text_end
+
+UnitsInfoText:
+	text_far _UnitsInfoText
+	text_end
 
 TrainerCandiesInfoText:
 	text_far _TrainerCandiesInfoText
-	text_end
-
-DeblocageInfoText:
-	text_far _DeblocageInfoText
 	text_end

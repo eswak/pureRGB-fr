@@ -158,7 +158,7 @@ _TeaReaction::
 	para "C'est tres"
 	line "revitalisant!"
 	para "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " "
 	line "regarde MARIE."
 	para "Il a l'air"

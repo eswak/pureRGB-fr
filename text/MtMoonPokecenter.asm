@@ -45,3 +45,14 @@ _MtMoonPokecenterMagikarpSalesmanNoRefundsText::
 	text "Ni repris,"
 	line "ni échangé!"
 	done
+
+_MtMoonPokecenterMagikarpSalesmanArentYouGladText::
+	text "WHAT?"
+	para "It evolved into"
+	line "GYARADOS?!"
+	para "Aren't you glad"
+	line "you bought it?"
+	para "I've heard many"
+	line "legends about"
+	cont "that #MON!"
+	prompt

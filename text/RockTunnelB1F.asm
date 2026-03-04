@@ -76,7 +76,6 @@ _RockTunnelB1FHiker2EndBattleText::
 	line "Je pleure."
 	prompt
 
-; TODO: learnset guy -> gives hitmonlee learnset?
 _RockTunnelB1FHiker2AfterBattleText::
 	text "Les montagnes"
 	line "regorgent de"

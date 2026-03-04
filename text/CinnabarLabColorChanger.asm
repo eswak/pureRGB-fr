@@ -94,3 +94,28 @@ _LabColorChangerResearchingColors::
 	cont "les couleurs des"
 	cont "#MON!"
 	done
+
+_CinnabarLabMetronomeRoomScientist3Text::
+	text "Je suis"
+	line "ornithologue!"
+	para "Un expert en"
+	line "oiseaux."
+	para "J'ai une <TEAM>"
+	line "qui cherche les"
+	cont "3 #MON oiseaux"
+	cont "legendaires."
+	para "Quand me"
+	line "donneront-ils"
+	cont "leurs resultats?"
+	para "Je m'impatiente"
+	line "<...>"
+	done
+
+_CinnabarLabMetronomeRoomScientist3Text2::
+	text "Merci de m'avoir"
+	line "montre ton #MON"
+	cont "oiseau legendaire!"
+	para "Ta generosite a"
+	line "beaucoup aide ma"
+	cont "recherche!"
+	done

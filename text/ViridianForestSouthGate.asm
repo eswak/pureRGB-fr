@@ -13,3 +13,10 @@ _ViridianForestSouthGateLittleGirlText::
 	cont "vicieux! En as-tu"
 	cont "capturé un?"
 	done
+
+_ViridianForestSouthGateLittleGirl2Text::
+	text "You did?!"
+	para "Right on!"
+	para "You're on the path"
+	line "to cool school!"
+	done

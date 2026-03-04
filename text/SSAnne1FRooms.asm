@@ -114,3 +114,11 @@ _SSAnne1FRoomsGentleman3Text::
 	cont "TEAM ROCKET!"
 	cont "Chut!"
 	done
+
+_GrowlitheLearnset::
+	text "Now I've got to"
+	line "go heal my@"
+	text_ram_cont wNameBuffer
+	text "!"
+	para "@"
+	text_end

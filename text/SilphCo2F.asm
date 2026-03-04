@@ -95,3 +95,32 @@ _SilphCo2FRocket2AfterBattleText::
 	line "la TEAM ROCKET"
 	cont "vont fusionner!"
 	done
+
+_SilphCo2FSilphWorkerFTM50ExplanationText::
+	text "<TM>50 c'est"
+	line "CLONAGE!"
+
+	para "Un leurre"
+	line "remplacera ton"
+	cont "#MON."
+	para "Il encaissera"
+	line "les degats!"
+	para "Un peu comme un"
+	line "imposteur<...>"
+
+	para "Beaucoup de mes"
+	line "collegues SYLPHE"
+	cont "etaient des"
+	cont "imposteurs!"
+	
+	para "Des espions"
+	line "<ROCKET>!"
+	cont "Ces serpents!"
+
+	para "Fais attention."
+	done
+
+_SilphCo2FSilphWorkerFTM50NoRoomText::
+	text "Tu n'as plus de"
+	line "place pour ca."
+	done

@@ -75,7 +75,7 @@ _ItemUseBallText06::
 _SurfingGotOnText::
 	text "<PLAYER> monte sur"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	prompt
 
@@ -94,7 +94,7 @@ _ApexChipPutOnPokeballText::
 	line "la PUCE APEX sur"
 	para "la Poké Ball de"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text ".@"
 	text_asm
 	ld a, SFX_SWITCH
@@ -112,7 +112,7 @@ _ApexChipPutOnPokeballText::
 _ApexChipDVsMaxedText::
 	text "Le potentiel de"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	cont "est maximisé!"
 	para "Les DV sont au"
@@ -124,7 +124,7 @@ _ApexChipAlreadyUsedText::
 	line "déjà installée sur"
 	para "la Poké Ball de"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 	prompt
 
@@ -140,10 +140,10 @@ _BoosterChipInstalledText::
 	text_end
 
 _VitaminStatRoseText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " de"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	cont "augmente."
 	prompt
@@ -218,14 +218,14 @@ _RestorePPWhichTechniqueText::
 
 _PPMaxedOutText::
 	text "PP de @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "sont au max."
 	prompt
 
 _PPIncreasedText::
 	text "PP de @"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	line "augmentés."
 	prompt
@@ -245,27 +245,27 @@ _BootedUpHMText::
 _TeachMachineMoveText::
 	text "Elle contient:"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!"
 
 	para "Apprendre"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " à"
 	cont "un #MON?"
 	done
 
 _MonCannotLearnMachineMoveText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text " est"
 	line "incompatible avec"
 	cont "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 
 	para "Instruction de"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text_start
 	cont "impossible."
 	prompt
@@ -336,7 +336,7 @@ _NoCyclingAllowedHereText::
 _NoSurfingHereText::
 	text "Pas de SURF sur"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text " ici!"
 	prompt
 
@@ -344,4 +344,9 @@ _BoxFullCannotThrowBallText::
 	text "La BOITE #MON"
 	line "est pleine! Objet"
 	cont "inutilisable!"
+	prompt
+
+_ItemUseCameraInBattleText::
+	text "No time to frame a"
+	line "photo in battle!"
 	prompt

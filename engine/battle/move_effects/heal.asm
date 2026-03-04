@@ -157,7 +157,11 @@ HealEffectCommon:
 	ld hl, DrawHUDsAndHPBars
 	call EffectCallBattleCore
 	ld hl, RegainedHealthText
-	jp PrintText
+	rst _PrintText
+	call GetMoveNumber
+	cp REST
+	ret nz
+	jr .checkScreech
 .failed
 	call GetMoveNumber
 	cp TELEPORT
@@ -193,6 +197,14 @@ HealEffectCommon:
 	pop hl
 	jp .gotHPAmountToHeal
 ;;;;;;;;;;
+.checkScreech
+	; if screeches are echoing, we will auto-wake the user for a fun move combo
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playersTurn
+	jpfar AutoWakeUpScreechEnemy
+.playersTurn
+	jpfar AutoWakeUpSleepScreechPlayer
 
 GetMoveNumber:
 	ldh a, [hWhoseTurn]

@@ -95,7 +95,7 @@ _SaffronAbandonedBuildingWeezing::
 	done
 
 _SaffronAbandonedBuildingWeezing2::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text ""
 	line "s'est rempli de"
 	cont "HELIUM super"

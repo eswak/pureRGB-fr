@@ -97,7 +97,7 @@ _PokemonTower2FChannelerTextBorrowSilphScopeYes::
 	para "<PLAYER> a donné"
 	line "à l'exorciste le"
 	cont "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "."
 	done
 

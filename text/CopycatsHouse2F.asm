@@ -74,6 +74,16 @@ _CopycatsHouse2FDoduoText::
 	cont "EN CE MIROIR!"
 	done
 
+_DoduoLearnsetText::
+	text "@"
+	text_ram wTrainerName
+	text ": That's"
+	line "KIWI, my DODUO."
+	para "I like how its"
+	line "heads copy"
+	cont "each other!"
+	prompt
+
 _CopycatsHouse2FRareDollText::
 	text "Ca, un #MON"
 	line "rare? Tu t'moques"
@@ -105,4 +115,91 @@ _CopycatsHouse2FPCMySecretsText::
 
 _CopycatsHouse2FPCCantSeeText::
 	text "J'vois rien!"
+	done
+
+_CopycatsHouse2FCopycatGaveDollText::
+	text "Oh wow!"
+	line "Une # POUPEE!"
+
+	para "Pour moi?"
+	line "Merci!"
+	prompt
+
+_CopyCatsHouse2FCopycatILikeYouText::
+	text "Je t'aime bien!"
+	line "Tu sais quoi?"
+
+	para "J'apprendrai a"
+	line "ton #MON ma"
+	cont "capacite preferee:"
+	para "MORPHING!"
+	para "A qui je"
+	line "l'apprends?"
+	prompt
+
+_CopycatsHouse2FCopycatCancelledFirstTimeText::
+	text "<PLAYER>: Pas"
+	line "question que"
+	cont "j'enseigne cette"
+	cont "attaque nulle!"
+	para "<PLAYER>: He!"
+	line "J'ai pas dit ca!"
+	para "COPIEUSE: Mais"
+	line "tu le pensais!"
+	para "Hehehe!"
+	done
+
+_CopyCatsHouse2FCopycatDittoText::
+	text "COPIEUSE: C'est"
+	line "un METAMORPH?!"
+	para "C'est le meilleur"
+	line "imitateur qui"
+	cont "existe!"
+	para "Je peux l'avoir?"
+	done
+
+_CopycatsHouse2FCopycatSuccessText::
+	text "<PLAYER>: Merci"
+	line "d'avoir appris"
+	cont "MORPHING a mon"
+	cont "#MON!"
+
+	para "<PLAYER>: Pardon?"
+
+	para "<PLAYER>: C'est"
+	line "aussi amusant que"
+	cont "ca de m'imiter?"
+
+	para "COPIEUSE: Et"
+	line "comment!"
+
+	para "Je t'apprendrai"
+	line "MORPHING quand"
+	cont "tu veux!"
+	done
+
+_CopycatsHouse2FCopycatAgainText::
+	text "<PLAYER>: He,"
+	line "bizarre!"
+	para "Je veux apprendre"
+	line "MORPHING encore!"
+	para "<PLAYER>: Oh la"
+	line "la! Je suis pas"
+	cont "si malpoli!"
+	para "COPIEUSE: Je"
+	line "blaguais! Hehehe!"
+	para "A qui je"
+	line "l'apprends?"
+	prompt
+
+_CopycatsHouse2FCopycatCancelledAgainText::
+	text "T'as change"
+	line "d'avis?"
+	done
+
+_CopycatsHouse2FDoduoText2::
+	text "MIROIR MIROIR"
+	line "DIS-MOI QUI EST"
+	cont "LA PLUS BELLE"
+	cont "DE TOUTES?"
 	done

@@ -20,3 +20,13 @@ _CopycatsHouse1FChanseyText::
 	text "LEVEINARD :"
 	line "Vénar! Vénar!@"
 	text_end
+
+_CopycatsHouse1FChanseyText2::
+	text "LADY: That's our"
+	line "CHANSEY."
+	para "She's named"
+	line "SMILY."
+	para "She loves to lay"
+	line "eggs for us!"
+	para "Very nutritious!"
+	prompt

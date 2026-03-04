@@ -89,6 +89,7 @@ _Museum2FWalletKidWalletGive::
 	cont "#MON de départ!@"
 	text_end
 
+_GenericReceivedTheText::
 _Museum2FReceivedLostWalletText::
 	text "<PLAYER> obtient"
 	line "le PORTEFEUILLE"

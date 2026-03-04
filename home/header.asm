@@ -33,10 +33,7 @@ SECTION "rst18", ROM0[$0018]
 _DelayFrames::
 	jp DelayFrames
 
-; PureRGBnote: MOVED: 5 extra bytes of space left here, may as well move something here that puts the space to some use	
-TextIDErrorText:: ; "[hTextID] ERROR."
-	text_far _TextIDErrorText
-	text_end
+	ds 5
 
 SECTION "rst20", ROM0[$0020]
 _CopyData::

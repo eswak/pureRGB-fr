@@ -46,6 +46,33 @@ _Route8SuperNerd2AfterBattleText::
 	cont "Et puis..."
 	done
 
+_MukLearnset::
+	text "But if they switch"
+	line "then I should<...>"
+	para "<...>and use"
+	line "MINIMIZE<...>"
+	para "<...>then they'll"
+	line "run out of PP<...>"
+	para "it was so perfect"
+	line "<...>how could I"
+	cont "blah blah blah<...>"
+	prompt
+
+_MukLearnset2::
+	text "The @"
+	text_ram wTrainerName
+	text_start
+	line "revealed their"
+	cont "battle strategy"
+	cont "in detail-"
+	para "Saying it out"
+	line "loud so everyone"
+	cont "here knows it."
+	para "You didn't ask for"
+	line "it, but you heard"
+	cont "a lot about MUK."
+	prompt
+
 _Route8CooltrainerF1BattleText::
 	text "Moi, j'aime les"
 	line "NIDORAN! Yaha!"
@@ -62,6 +89,21 @@ _Route8CooltrainerF1AfterBattleText::
 	cont "Je les préfère"
 	cont "tout petits!"
 	done
+
+_NidorinaLearnset::
+	text "Hmm? Some of"
+	line "them stay cute?!"
+	para "Should I evolve"
+	line "@"
+	text_ram_namebuffer
+	text " with"
+	cont "a MOON STONE?"
+	para "I can't decide!"
+	para "Why don't we go"
+	line "on a walk and"
+	cont "talk about it!"
+	para "Tee hee!"
+	prompt
 
 _Route8SuperNerd3BattleText::
 	text "L'école c'est"
@@ -96,6 +138,14 @@ _Route8CooltrainerF2AfterBattleText::
 	cont "RATTATA sont trop"
 	cont "cool!"
 	done
+
+_LearnsetMeowth::
+	text "But cats are the"
+	line "cutest!"
+	para "They curl up and"
+	line "love to cuddle!"
+	para "Meow meow meow!"
+	prompt
 
 _Route8CooltrainerF3BattleText::
 	text "Je sais, on a"
@@ -156,6 +206,19 @@ _Route8CooltrainerF4AfterBattleText::
 	cont "évoluer grâce à "
 	cont "une PIERRE LUNE."
 	done
+
+_ClefableLearnset::
+	text "That's how I got"
+	line "my CLEFABLE!"
+	para "I hear @"
+	text_ram_namebuffer
+	text "<LINE>and CLEFABLE came"
+	cont "from outer space!"
+	para "I like to imagine"
+	line "them on a little"
+	cont "flying saucer!"
+	para "@"
+	text_end
 
 _Route8UndergroundSignText::
 	text "SOUTERRAIN"

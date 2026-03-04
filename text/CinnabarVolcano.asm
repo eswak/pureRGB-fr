@@ -565,7 +565,7 @@ _CinnabarVolcanoWestMagmarTransformText3::
 	text "La puissance"
 	line "volcanique irradie"
 	cont "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 	done
 
@@ -601,4 +601,13 @@ _Route21CinnabarVolcanoSignText::
 	para "NE PAS ENTRER"
 	line "SANS COMBINAISON"
 	cont "ANTI-CHALEUR!"
+	done
+
+_VolcanoNeedSomeInfo::
+	text "Hmm<...>tu veux"
+	line "plus d'infos?"
+	done
+
+_VolcanoGetToIt2::
+	text "Au boulot, gamin!"
 	done

@@ -70,7 +70,6 @@ _FuchsiaCityGymSignText::
 	line "poisons infinis"
 	done
 
-; TODO: use string buffer?
 _FuchsiaCityChanseySignText::
 	text "Nom: LEVEINARD"
 
@@ -147,4 +146,14 @@ _FuchsiaCityFossilFanText2::
 
 _FuchsiaCityFossilFanText3::
 	text "Le voilà!"
+	done
+
+_FuchsiaCitySoMuchInfo::
+	text "Tellement d'infos"
+	line "sur @"
+	text_ram_namebuffer
+	text "!"
+	para "Son ecologie,"
+	line "physiologie,"
+	cont "anatomie<...>"
 	done

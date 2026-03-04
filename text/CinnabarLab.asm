@@ -14,7 +14,6 @@ _CinnabarLabPhotoText::
 	cont "LABO: Le DR.FUJI!"
 	done
 
-; TODO: genericize
 _CinnabarLabMeetingRoomSignText::
 	text "Salle de réunion"
 	line "du LABO #MON"

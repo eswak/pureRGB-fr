@@ -35,6 +35,19 @@ _MrFujisHousePsyduckText::
 	text "PSYKOKWAK: Kwak!@"
 	text_end
 
+_MrFujisHousePsyduck2Text::
+	text "GIRL: Our PSYDUCK"
+	line "is named DUCKET."
+	para "It's a bit dopey."
+	para "It fell into a"
+	line "well."
+	para "We got it out"
+	line "with a bucket!"
+	para "I'm keeping an eye"
+	line "on it so it stays"
+	cont "out of trouble!"
+	done
+
 _MrFujisHouseNidorinoText::
 	text "NIDORINO: Nido!@"
 	text_end
@@ -96,3 +109,23 @@ _MrFujisHouseMrFujiPokedexText::
 	para "...Hein? Il a"
 	line "disparu!"
 	done
+
+_MrFujisHouseNidorino2Text::
+	text "C'est notre"
+	line "NIDORINO."
+	para "Il s'appelle PIC."
+	para "On l'a sauve!"
+	para "Il s'est blesse"
+	line "la patte lors"
+	cont "d'un eboulement"
+	cont "sur la ROUTE 10."
+	para "Maintenant il est"
+	line "en pleine forme!"
+	done
+
+_GenericReceivedItemA::
+	text "<PLAYER> recoit"
+	line "un @"
+	text_ram_stringbuffer
+	text "!@"
+	text_end

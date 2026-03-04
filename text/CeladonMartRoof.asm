@@ -7,7 +7,7 @@ _CeladonMartRoofLittleGirlYayText::
 	text "Ouaiiis!"
 
 	para "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 
 	para "Merciiii!"

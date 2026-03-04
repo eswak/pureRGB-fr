@@ -142,3 +142,31 @@ _PokemonFanClubSign2Text::
 	text "Si on te vante,"
 	line "vante en retour!"
 	done
+
+_PokemonFanClubChairMoreText::
+	text "Oh, <PLAYER>!"
+	para "Want to hear"
+	line "another story"
+	cont "about my RAPIDASH?"
+	done
+
+_PokemonFanClubChairLongOne::
+	text "Okay, get ready!"
+	para "This is a long"
+	line "story!"
+	done
+
+_PokemonFanClubPikachuFanYoursText::
+	text "Pfff! Mon PIKACHU"
+	line "est deux fois"
+	cont "plus mignon que"
+	cont "le tien!"
+	done
+
+_PokemonFanClubSeelFanYoursText::
+	text "Oh la la!"
+
+	para "Mon OTARIA est"
+	line "bien plus beau"
+	cont "que le tien!"
+	done

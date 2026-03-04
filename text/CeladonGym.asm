@@ -106,6 +106,13 @@ _CeladonGymAfterBattleText2::
 	cont "c'est sûr!"
 	done
 
+_CeladonGymAfterBattleText2GymDefeated::
+	text "Whoa!?"
+	line "You beat ERIKA?!"
+	para "You're cooler than"
+	line "I thought!"
+	done
+
 _CeladonGymBattleText3::
 	text "Je m'ennuyais."
 	done

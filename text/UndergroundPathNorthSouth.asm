@@ -61,3 +61,13 @@ _UndergroundPathNorthSouthAfterBattleText3::
 	para "Tu es partant ou"
 	line "pas?"
 	done
+
+_LearnsetKrabbyKid::
+	text "My @"
+	text_ram_namebuffer
+	text " always"
+	line "likes a good"
+	cont "scrap!"
+	para "What a great"
+	line "little guy!"
+	prompt

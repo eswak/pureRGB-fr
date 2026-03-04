@@ -20,6 +20,20 @@ _RocketSNESText::
 	cont "Château Sylvain!"
 	done
 
+_CeruleanRocketHouse1FBookCaseText::
+	text "DROWZEE's SURREAL"
+	line "ADVENTURE"
+	para "A comic book"
+	line "about DROWZEE.@"
+	text_end
+_CeruleanRocketHouse1FBookCase2Text::
+	text "<PARA>DROWZEE's striking"
+	line "a cool pose as"
+	cont "it faces down a"
+	cont "LICKITUNG before"
+	cont "a stylish battle."
+	done
+
 _CeruleanRocketHouseB1FEntranceDoorSignText::
 	text "RAPPEL"
 	para "Garder la trappe"

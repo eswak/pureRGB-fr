@@ -161,6 +161,19 @@ _Route25Hiker3AfterBattleText::
 	cont "vers AZURIA."
 	done
 
+_MankeyLearnsetText::
+	text "@"
+	text_ram_namebuffer
+	text " and I hike"
+	line "it every day!"
+	para "@"
+	text_ram_namebuffer
+	text " is always"
+	line "brimming with"
+	cont "energy!"
+	para "@"
+	text_end
+
 _Route25BillSignText::
 	text "VILLA"
 	line "LEO habite ici!"

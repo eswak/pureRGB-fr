@@ -13,11 +13,11 @@ _Route1Youngster1MartSampleText::
 	cont "échantillon!"
 	prompt
 
-_SilphCo2FSilphWorkerFReceivedTM36Text::
+_SilphCo2FSilphWorkerFReceivedTM50Text::
 _Route1Youngster1GotPotionText::
 	text "<PLAYER> obtient:"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!@"
 	text_end
 

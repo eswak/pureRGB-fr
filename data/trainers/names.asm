@@ -23,7 +23,7 @@ TrainerNames::
 	li "DOMPTEUR"
 	li "ORNITHOLOGUE"
 	li "KARATEKA"
-	li "R1" ; rival 1, shortened for some free space
+	li "" ; rival 1, shortened for some free space
 	li "PROF.CHEN"
 	li "SCIENTIFIQUE"
 	li "GIOVANNI"
@@ -39,8 +39,8 @@ TrainerNames::
 	li "AUGUSTE"
 	li "MORGANE"
 	li "GENTLEMAN"
-	li "R2" ; rival 2, shortened for some free space
-	li "R3" ; champion rival, shortened for some free space 
+	li "" ; rival 2, shortened for some free space
+	li "" ; champion rival, shortened for some free space 
 	li "OLGA"
 	li "EXORCISTE"
 	li "AGATHA"
@@ -53,4 +53,7 @@ TrainerNames::
 	li "SOLDAT" ; SOLDIER
 	li "CHIEF"
 	li "GUIDE ARENE" ; GYM GUIDE
+	li "PRO FITNESS" ; FITNESS PRO
+	li "SPRINTER"
+	li "PUGILISTE" ; FISTFIGHTER
 	assert_list_length NUM_TRAINERS

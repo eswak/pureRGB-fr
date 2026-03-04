@@ -4,7 +4,7 @@ _PokemartGreetingText::
 	done
 
 _PokemonFaintedText::
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text_start
 	line "est K.O.!"
 	done
@@ -32,7 +32,7 @@ _PokemartBuyingGreetingText::
 	done
 
 _PokemartTellBuyPriceText::
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "?"
 	line "Cela fera"
 	cont "@"
@@ -45,6 +45,7 @@ _PokemartBoughtItemText::
 	line "Merci!"
 	prompt
 
+_GenericYouDontHaveEnoughMoneyText::
 _PokemartNotEnoughMoneyText::
 	text "Ah! Pas d'argent,"
 	line "pas d'copains!"
@@ -84,7 +85,7 @@ _LearnedMove1Text::
 	text_start
 	line "apprend..."
 	cont "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!@"
 	text_end
 
@@ -96,7 +97,7 @@ _WhichMoveToForgetText::
 _AbandonLearningText::
 	text "Ne pas apprendre"
 	line "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "?"
 	done
 
@@ -105,7 +106,7 @@ _DidNotLearnText::
 	text_start
 	line "n'a pas appris"
 	cont "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!"
 	prompt
 
@@ -114,7 +115,7 @@ _TryingToLearnText::
 	text " essaie"
 	line "d'apprendre"
 	cont "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "!"
 	prompt
 
@@ -133,7 +134,7 @@ _CantLearnMoreThanFourMoves::
 	line "attaque pour"
 	cont "apprendre"
 	cont "@"
-	text_ram wStringBuffer
+	text_ram_stringbuffer
 	text "?"
 	done
 
@@ -156,7 +157,7 @@ _ForgotAndText::
 	text_ram wLearnMoveMonName
 	text " oublie"
 	line "@"
-	text_ram wNameBuffer
+	text_ram_namebuffer
 	text "!"
 
 	para "Et..."

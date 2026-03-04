@@ -57,6 +57,15 @@ _Route5AfterBattleText2::
 	cont "de bonnes choses."
 	done
 
+_Route5CharmeleonLearnset::
+	text "Here are some"
+	line "positive aspects"
+	cont "of training a"
+	cont "@"
+	text_ram_namebuffer
+	text ":"
+	prompt
+
 _Route5BattleText3::
 	text "Es-tu allé à la"
 	line "PENSION?"
@@ -78,6 +87,17 @@ _Route5AfterBattleText3::
 	line "et il sera plus"
 	cont "fort!"
 	done
+
+_Route5SquirtleLearnset::
+	text "I put my @"
+	text_ram_namebuffer
+	text_start
+	line "in the DAYCARE"
+	cont "while I studied"
+	cont "how to raise it!"
+	para "That's why it"
+	line "hasn't evolved!"
+	prompt
 
 _Route5BattleText4::
 	text "Sur la route"

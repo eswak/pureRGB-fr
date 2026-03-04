@@ -44,8 +44,8 @@ ItemUsePtrTable:
 	dw ItemUseBait       ; SAFARI_BAIT
 	dw ItemUseRock       ; SAFARI_ROCK
 	dw ValuableItem 	 ; OLD_COIN
-	dw UseTopSecretKey  ; TOPSECRETKEY
-	dw UnusableItem      ; UNUSED_ITEM3
+	dw UseTopSecretKey   ; TOPSECRETKEY
+	dw UseCamera         ; CAMERA
 	dw UnusableItem      ; UNUSED_ITEM4
 	dw UnusableItem      ; UNUSED_ITEM5
 	dw UnusableItem      ; UNUSED_ITEM6
@@ -735,6 +735,17 @@ MapBallToAnimation:
 	ld a, [hl]
 	ld [wAnimationID], a
 	ld [wUnusedC000], a ; identifies to a couple places that we're doing a ball toss animation (and which)
+	; also, while we're at it, mark the enemy pokemon's data with this ball type in case it gets caught
+	ld a, [wCurItem]
+	ld hl, BallDataMap - 1
+	ld c, a
+	ld b, 0
+	add hl, bc 
+	ld a, [wIsAltPalettePkmnData]
+	and %111 ; high 5 bits will mark which pokeball it was caught in
+	ld b, [hl]
+	or b
+	ld [wIsAltPalettePkmnData], a
 	ret
 
 BallAnimationMap: ; this uses item indices, if item indices change then this won't work
@@ -746,6 +757,16 @@ BallAnimationMap: ; this uses item indices, if item indices change then this won
 	db 0
 	db 0
 	db SAFARITOSS_ANIM
+
+BallDataMap: ; this uses item indices, if item indices change then this won't work
+	db BALL_DATA_MASTER << 3
+	db BALL_DATA_ULTRA << 3
+	db BALL_DATA_GREAT << 3
+	db BALL_DATA_POKE << 3
+	db BALL_DATA_HYPER << 3
+	db 0
+	db 0
+	db BALL_DATA_SAFARI << 3
 ;;;;;;;;;;
 
 ItemUseTownMap:
@@ -832,11 +853,7 @@ ItemUseBicycle:
 	jr nz, .playGetOnBikeSound
 	ret
 .playDefaultMusic
-	ld a, [wCurMapConnections]
-	bit BIT_EXTRA_MUSIC_MAP, a
-	jp z, PlayDefaultMusic
-	ld d, 1
-	jpfar TryPlayExtraMusic
+	jp PlayDefaultMusicWithExtraCheck
 ;;;;;;;;;; PureRGBnote: ADDED: small sound effects for getting on/off bike
 .playGetOnBikeSound
 	ld a, SFX_PRESS_AB
@@ -959,8 +976,7 @@ ItemUseEvoStone:
 	push af
 	ld a, EVO_STONE_PARTY_MENU
 	ld [wPartyMenuTypeOrMessageID], a
-	ld a, $ff
-	ld [wUpdateSpritesEnabled], a
+	call DisableSpriteUpdates
 	call DisplayPartyMenu
 	pop bc
 	jr c, .canceledItemUse
@@ -1010,8 +1026,7 @@ ItemUseMedicine:
 	push af
 	ld a, USE_ITEM_PARTY_MENU
 	ld [wPartyMenuTypeOrMessageID], a
-	ld a, $ff
-	ld [wUpdateSpritesEnabled], a
+	call DisableSpriteUpdates
 	ld a, [wPseudoItemID]
 	and a ; using Softboiled?
 	jr z, .notUsingSoftboiled
@@ -1610,8 +1625,7 @@ ItemUseMedicine:
 	xor a
 	ld [wForceEvolution], a
 	callfar TryEvolvingMon ; evolve pokemon, if appropriate
-	ld a, $01
-	ld [wUpdateSpritesEnabled], a
+	call EnableSpriteUpdates
 	pop af
 	ld [wCurItem], a
 	pop af
@@ -1784,8 +1798,6 @@ ItemUseEscapeRope:
 	ld hl, .escapeText
 	rst _PrintText
 	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
 	ret nz
 ;;;;;;;;;;
 	ld hl, wStatusFlags6
@@ -1823,8 +1835,6 @@ ItemUsePocketAbra:
 	ld hl, .wantToTeleportText
 	rst _PrintText
 	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
 	jr z, .yes
 .no
 	ld hl, .pocketAbraNo
@@ -1955,6 +1965,11 @@ ItemUseSuperRepel:
 	jp ItemUseRepelCommon
 
 ItemUseMaxRepel:
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .skip
+	SetEvent EVENT_USING_MAX_REPEL
+.skip
 	ld b, 250
 	jp ItemUseRepelCommon
 
@@ -2089,8 +2104,7 @@ ItemUsePokeFlute:
 	jr nz, .skipMusic
 	call WaitForSoundToFinish ; wait for sound to end
 ;;;;;;;;;; PureRGBnote: ADDED: pause music here to make music work better when playing out-of-bank battle music
-	ld a, 1
-	ld [wMuteAudioAndPauseMusic], a
+	call PauseMusic
 ;;;;;;;;;; 
 	farcall Music_PokeFluteInBattle ; play in-battle pokeflute music
 .musicWaitLoop ; wait for music to finish playing
@@ -2098,8 +2112,7 @@ ItemUsePokeFlute:
 	and a ; music off?
 	jr nz, .musicWaitLoop
 ;;;;;;;;;; PureRGBnote: ADDED: resume music here to make music work better when playing out-of-bank battle music
-	; a = 0 here
-	ld [wMuteAudioAndPauseMusic], a
+	call ResumeMusic
 ;;;;;;;;;;
 .skipMusic
 	ld hl, FluteWokeUpText
@@ -2334,8 +2347,8 @@ ItemUseItemfinder:
 .doneLoop
 	; say itemfinder found an item if we haven't seen this text yet
 	ld hl, wNewInGameFlags
-	bit 2, [hl]
-	set 2, [hl]
+	bit VIEWED_ITEMFINDER_TEXT_ONCE, [hl]
+	set VIEWED_ITEMFINDER_TEXT_ONCE, [hl]
 	jr nz, .doDirectionFacing ; already have seen the text since restarting the cartridge
 	ld hl, ItemfinderFoundItemText
 	rst _PrintText
@@ -2437,6 +2450,8 @@ ItemUsePPRestore:
 	ld a, 1 ; 1 PP Up used
 	ld [wUsingPPUp], a
 	call RestoreBonusPP ; add the bonus PP to current PP
+	ld a, SFX_TELEPORT_EXIT_2
+	call PlaySoundOverrideCurrent
 	ld hl, PPIncreasedText
 	rst _PrintText
 .done
@@ -2634,10 +2649,6 @@ ItemUseTMHM:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .useMachine
-;;;;;;;;;; Vimescarrotnote: FIXED: fixes a rare bug where booting up a TM and then going back can freeze up the game on booting up another
-    ld a, ITEM_NAME
-    ld [wNameListType], a; if you decide not to use the machine, change the list type back to item list.
-;;;;;;;;;;
 	ld a, 2
 	ld [wActionResultOrTookBattleTurn], a ; item not used
 	ret
@@ -2651,8 +2662,7 @@ ItemUseTMHM:
 	ld de, wTempMoveNameBuffer
 	ld bc, 14
 	rst _CopyData ; save the move name because DisplayPartyMenu will overwrite it
-	ld a, $ff
-	ld [wUpdateSpritesEnabled], a
+	call DisableSpriteUpdates
 	ld a, TMHM_PARTY_MENU
 	ld [wPartyMenuTypeOrMessageID], a
 	call DisplayPartyMenu
@@ -2736,7 +2746,7 @@ ItemUseNoEffect:
 	ld hl, ItemUseNoEffectText
 	jr ItemUseFailed
 
-ItemUseNotTime:
+ItemUseNotTime::
 	ld hl, ItemUseNotTimeText
 	jr ItemUseFailed
 
@@ -2752,7 +2762,10 @@ ItemUseOnWildMons:
 NoPokeDollsOnSpirits::
 	ld hl, NoPokeDollsOnSpiritsText
 	jr ItemUseFailed
-;
+
+ItemUseCameraInBattle:
+	ld hl, ItemUseCameraInBattleText
+	jr ItemUseFailed
 
 ItemUseNotYoursToUse:
 	ld hl, ItemUseNotYoursToUseText
@@ -2801,6 +2814,10 @@ ItemUseFossilText:
 
 ItemUseInBattleText:
 	text_far _ItemUseInBattleText
+	text_end
+
+ItemUseCameraInBattleText:
+	text_far _ItemUseCameraInBattleText
 	text_end
 
 ItemUseWildMonText:
@@ -3329,8 +3346,7 @@ SendNewMonToBox:
 IsNextTileShoreOrWater::
 	ld a, [wCurMapTileset]
 	ld hl, WaterTilesets
-	ld de, 1
-	call IsInArray
+	call IsInSingleByteArray
 	jr nc, WaterTileSetIsNextTileShoreOrWater.notShoreOrWater
 	; fall through
 WaterTileSetIsNextTileShoreOrWater::
@@ -3384,9 +3400,8 @@ WaterTileSetIsNextTileShoreOrWater::
 	jr nc, .notShoreOrWater
 .volcanoTileCheck
 	ld a, [wTileInFrontOfPlayer]
-	ld de, 1
 	ld hl, LavaSurfTiles
-	call IsInArray
+	call IsInSingleByteArray
 	jr c, .shoreOrWater
 	jr .notShoreOrWater
 .cavern
@@ -3475,7 +3490,7 @@ INCLUDE "data/wild/super_rod.asm"
 
 ; reloads map view and processes sprite data
 ; for items that cause the overworld to be displayed
-ItemUseReloadOverworldData:
+ItemUseReloadOverworldData::
 	call LoadCurrentMapView
 	; pureGREENFRnote: ADDED: update BG map attributes for enhanced GBC colors
 	; This ensures the vBGMap1 space gets updated when the side menu goes away.
@@ -3589,3 +3604,9 @@ ItemEffectsDoMoveAnimation:
 	ld [wWhichPokemon], a
 	ret
 	
+UseCamera:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseCameraInBattle
+	call ItemUseReloadOverworldData
+	jpfar UseCameraItem

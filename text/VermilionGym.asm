@@ -46,3 +46,26 @@ _VermilionGymBookshelfText::
 	line "ESPIONS"
 	cont "METAMORPH..."
 	done
+
+_VermilionGymGentlemanAfterBattleGymDefeatedText::
+	text "La guerre c'est"
+	line "pas joli, gamin!"
+	para "Certains disent"
+	line "que c'est la 5eme"
+	cont "saison!"
+	done
+
+_VermilionGymSuperNerdAfterBattleGymDefeatedText::
+	text "Je vais bientot"
+	line "au camp!"
+	para "Je rejoins"
+	line "l'armee!"
+	done
+
+_VermilionGymSailorAfterBattleGymDefeatedText::
+	text "Le MAJOR BOB ne"
+	line "sera pas content"
+	cont "de sa defaite!"
+	para "Desolee, Major!"
+	line "On a echoue!"
+	done

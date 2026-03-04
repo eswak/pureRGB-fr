@@ -77,19 +77,16 @@ _Mansion1AfterBattleText4::
 	cont "piéger!"
 	done
 
-_PokemonMansion2FSwitchText::
 _PokemonMansion1FSwitchText::
 	text "Un bouton secret!"
 
 	para "On appuie?"
 	done
 
-_PokemonMansion2FSwitchPressedText::
 _PokemonMansion1FSwitchPressedText::
 	text "Sans blague!"
 	prompt
 
-_PokemonMansion2FSwitchNotPressedText::
 _PokemonMansion1FSwitchNotPressedText::
 	text "Pas vraiment..."
 	done

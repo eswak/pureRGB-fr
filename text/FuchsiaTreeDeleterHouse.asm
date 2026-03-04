@@ -120,3 +120,12 @@ _FuchsiaTreeDeleterSnorlax2::
 	text "Quel patate"
 	line "de canape!"
 	done
+
+_FuchsiaTreeDeleterSnorlax3::
+	text "@"
+	text_ram wTrainerName
+	text ":"
+	line "C'est mon RONFLEX."
+	para "Son nom c'est"
+	line "DODO."
+	prompt

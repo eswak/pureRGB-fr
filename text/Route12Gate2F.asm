@@ -19,6 +19,17 @@ _Route12Gate2FBrunetteGirlTM39ExplanationText::
 	cont "décisifs."
 	done
 
+_ArbokLearnset::
+	text "What #MON"
+	line "did I have?"
+	para "Ah<...>my lovely"
+	line "@"
+	text_ram_namebuffer
+	text "<...>"
+	para "I'll miss you"
+	line "QUEENIE<...>"
+	prompt
+
 _Route12Gate2FBrunetteGirlTM39NoRoomText::
 	text "Tu n'as plus de"
 	line "place."
@@ -39,3 +50,8 @@ _Route12Gate2FRightBinocularsText::
 	para "C'est la TOUR"
 	line "#MON!"
 	done
+
+_GenericLookedIntoTheBinocularsText::
+	text "Regard dans les" 
+	line "jumelles<...><PARA>@"
+	text_end

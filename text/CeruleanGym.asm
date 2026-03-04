@@ -147,3 +147,8 @@ _CeruleanGymGuideApexChipWaterText::
 	cont "beau biome océan"
 	cont "ou rivière."
 	prompt
+
+_GymGuideChampInMakingText::
+	text "Yo! Future"
+	line "champion!<PARA>@"
+	text_end

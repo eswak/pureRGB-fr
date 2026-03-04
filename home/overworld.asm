@@ -4,12 +4,6 @@ EnterMap::
 	ld [wJoyIgnore], a
 	call LoadMapData
 	farcall ClearVariablesOnEnterMap
-	ld hl, wStatusFlags2
-	bit BIT_WILD_ENCOUNTER_COOLDOWN, [hl]
-	jr z, .skipGivingThreeStepsOfNoRandomBattles
-	ld a, 3 ; minimum number of steps between battles
-	ld [wNumberOfNoRandomBattleStepsLeft], a
-.skipGivingThreeStepsOfNoRandomBattles
 	ld hl, wStatusFlags4
 	bit BIT_BATTLE_OVER_OR_BLACKOUT, [hl] ; did a battle happen immediately before this?
 	res BIT_BATTLE_OVER_OR_BLACKOUT, [hl] ; unset the "battle just happened" flag
@@ -29,8 +23,6 @@ EnterMap::
 	call UpdateSprites
 .didNotEnterUsingFlyWarpOrDungeonWarp
 	farcall CheckForceBikeOrSurf ; handle currents in SF islands and forced bike riding in cycling road
-	ld hl, wStatusFlags3
-	res BIT_NO_NPC_FACE_PLAYER, [hl]
 	call UpdateSprites
 	xor a
 	ld [wJoyIgnore], a
@@ -390,12 +382,12 @@ BattleOccurred::
 	set BIT_MAP_LOADED_AFTER_BATTLE, [hl] ; PureRGBnote: ADDED: new bit indicating we reloaded a map from a battle 
 	xor a
 	ldh [hJoyHeld], a
-;;;;; TODO: remove pointless crap?
-	ld a, [wCurMap]
-	cp CINNABAR_GYM
-	jr nz, .notCinnabarGym
-	SetEvent EVENT_2A7
-.notCinnabarGym
+;;;;; PureRGBnote: CHANGED: pointless
+;	ld a, [wCurMap]
+;	cp CINNABAR_GYM
+;	jr nz, .notCinnabarGym
+;	SetEvent EVENT_2A7
+;.notCinnabarGym
 ;;;;;
 	ld hl, wStatusFlags4
 	set BIT_BATTLE_OVER_OR_BLACKOUT, [hl]
@@ -646,6 +638,8 @@ CheckMapConnections::
 
 ; function to play a sound when changing maps
 PlayMapChangeSound::
+	CheckEvent FLAG_MAP_HAS_OVERWORLD_ANIMATION
+	call nz, StopChannel8
 	lda_coord 8, 8 ; upper left tile of the 4x4 square the player's sprite is standing on
 	cp $0b ; door tile in tileset 0
 ; PureRGBnote: OPTIMIZED
@@ -774,8 +768,7 @@ StopMusic::
 	jp StopAllSounds
 
 HandleFlyWarpOrDungeonWarp::
-	call UpdateSprites
-	call Delay3
+	call UpdateSpritesAndDelay3
 	xor a
 	ld [wBattleResult], a
 	ld [wIsInBattle], a
@@ -1916,7 +1909,7 @@ CollisionCheckOnWater::
 .stopSurfToWalking
 ;;;;;
 	ld [wWalkBikeSurfState], a
-	call nz, PlayDefaultMusic ; play default music if walking but not if lava suit
+	call nz, PlayDefaultMusicWithExtraCheck ; play default music if walking but not if lava suit
 	call LoadPlayerSpriteGraphics
 	jr .noCollision
 
@@ -2346,8 +2339,7 @@ LoadMapData::
 .noCarry
 	dec b
 	jr nz, .vramCopyLoop
-	ld a, $01
-	ld [wUpdateSpritesEnabled], a
+	call EnableSpriteUpdates
 	; Hide window so no battle/menu remnants (e.g. "ID KiNG", dialogue box) show on first frame
 	ld a, 144
 	ldh [hWY], a
@@ -2372,7 +2364,6 @@ LoadMapData::
 	jr z, .setOverworldPalette
 	jr .skipEnableLCD
 .setOverworldPalette
-	; Set overworld palette before enabling LCD to avoid one frame of wrong colors (flicker)
 	ld b, SET_PAL_OVERWORLD
 	call RunPaletteCommand
 	call EnableLCD

@@ -123,6 +123,13 @@ _FuchsiaGymTamer1AfterBattleText::
 	cont "les murs..."
 	done
 
+_FuchsiaGymTamer1AfterBattleGymDefeatedText::
+	text "I've never seen a"
+	line "ninja master lose"
+	cont "until today!"
+	para "You're insane!"
+	done
+
 _FuchsiaGymTamer2BattleText::
 	text "J'veux être un"
 	line "ninja et sauter"

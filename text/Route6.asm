@@ -42,6 +42,16 @@ _Route6Youngster1AfterBattleText::
 	cont "FORET DE JADE."
 	done
 
+_Route6VenonatLearnsetText::
+	text "@"
+	text_ram_namebuffer
+	text " started"
+	line "showing up there"
+	cont "recently!"
+	para "I've been reading"
+	line "books about them!"
+	prompt
+
 _Route6CooltrainerM2BattleText::
 	text "Hein? Tu veux"
 	line "me causer?"
@@ -91,6 +101,13 @@ _Route6Youngster2AfterBattleText::
 	line "nuls ou je suis"
 	cont "très mauvais?"
 	done
+
+_Route6ButterfreeLearnsetText::
+	text "I try so hard to"
+	line "train @"
+	text_ram_namebuffer
+	text "!<PARA>@"
+	text_end
 
 _Route6BattleText7::
 	text "Hé! Le garde"

@@ -233,7 +233,7 @@ RocketCharText::  db "ROCKET@"
 EnemyText::       db "@ Ennemi"
 ThreeDotsText::   db "...@"
 TrainerTipsText:: db "<TRAINER> TIPS@"
-UserText::        db "dresseur@"
+UserText::        db "<PKMN>@"
 OpponentText::    db "ennemi@"
 TheText::         db "t","he@" ; have to separate with a comma to avoid it entering the same macro again
 YouText::         db "y","ou@" ; have to separate with a comma to avoid it entering the same macro again

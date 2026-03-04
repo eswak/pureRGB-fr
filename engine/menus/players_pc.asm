@@ -1,6 +1,7 @@
 ; PureRGBnote: CHANGED: most of the players pc code was changed to remember your location in the item list after performing actions
 ; like withdrawing, depositing...etc.
 PlayerPC::
+	call LoadPCItemsFromSRAM
 	ld hl, wStatusFlags5
 	set BIT_NO_TEXT_DELAY, [hl]
 	call SaveScreenTilesToBuffer1
@@ -67,6 +68,7 @@ PlayerPCMenu:
 	jp z, WorldOptions
 
 ExitPlayerPC:
+	call SavePCItemsToSRAM
 	ld a, [wMiscFlags]
 	bit BIT_USING_GENERIC_PC, a
 	jr nz, .next
@@ -358,6 +360,7 @@ DepositItemFromItemMenu::
 	ret
 .notSSTicket
 ;;;;;
+	call LoadPCItemsFromSRAM
 	call IsKeyItem
 	ld a, 1
 	ld [wItemQuantity], a
@@ -401,6 +404,7 @@ DepositItemFromItemMenu::
 	ld hl, ItemWasStoredText
 	rst _PrintText
 .done
+	call SavePCItemsToSRAM
 	call RestoreItemListIndex
 	; wCurrentMenuItem's new value still currently loaded in a
 	ld [wBagSavedMenuItem], a
@@ -492,4 +496,34 @@ WhatToTossText:
 TossHowManyText:
 	text_far _TossHowManyText
 	text_end
+
+LoadPCItemsFromSRAM::
+	ld a, SRAM_ENABLE
+	ld [MBC1SRamEnable], a
+	ld a, $1
+	ld [MBC1SRamBankingMode], a
+	ld [MBC1SRamBank], a
+	ld hl, sMainData + (wNumBoxItems - wMainDataStart)
+	ld de, wNumBoxItems
+	ld bc, 128
+	rst _CopyData
+	xor a
+	ld [MBC1SRamBankingMode], a
+	ld [MBC1SRamEnable], a
+	ret
+
+SavePCItemsToSRAM::
+	ld a, SRAM_ENABLE
+	ld [MBC1SRamEnable], a
+	ld a, $1
+	ld [MBC1SRamBankingMode], a
+	ld [MBC1SRamBank], a
+	ld hl, wNumBoxItems
+	ld de, sMainData + (wNumBoxItems - wMainDataStart)
+	ld bc, 128
+	rst _CopyData
+	xor a
+	ld [MBC1SRamBankingMode], a
+	ld [MBC1SRamEnable], a
+	ret
 

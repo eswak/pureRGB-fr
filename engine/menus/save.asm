@@ -206,9 +206,17 @@ SaveSAVtoSRAM0:
 	ld de, sPlayerName
 	ld bc, NAME_LENGTH
 	rst _CopyData
+	; Copy main data in two parts, skipping the 128-byte UNION area where
+	; wGBCFullPalBuffer overlaps wNumBoxItems/wBoxItems.
+	; The palette buffer has active GBC color data during gameplay, so we must
+	; not overwrite the PC item data that's already correct in SRAM.
 	ld hl, wMainDataStart
 	ld de, sMainData
-	ld bc, wMainDataEnd - wMainDataStart
+	ld bc, wNumBoxItems - wMainDataStart
+	rst _CopyData
+	ld hl, wNumBoxItems + 128
+	ld de, sMainData + (wNumBoxItems - wMainDataStart) + 128
+	ld bc, wMainDataEnd - wNumBoxItems - 128
 	rst _CopyData
 	ld hl, wSpriteDataStart
 	ld de, sSpriteData
